@@ -1,0 +1,138 @@
+
+
+Clean Q3Radiant Level Editor
+
+by Justin Thyme
+http://tremor.quakedev.com            
+						
+based on the source included with Quake 3:Arena engine source release			
+by id Software				        
+						
+							
+-----------------------------				
+Overview						
+-----------------------------				  
+
+With the release of the Quake 3 Arena engine source code, id Software has
+continued it's tradition of releasing source code to their legacy games.
+
+The sole purpose of this project is to compile all the known bug fixes
+into one code base which others may use as a starting point for their
+own projects.  As such, there will be minimal changes other than what is
+essential in fixing existing bugs.  Additionally, any non-essential files
+have been removed from this Radiant editor code distribution, such as CGAME, 
+GAME, Q3_UI, UI and Quake3.  These are avialable through a seperate download.
+
+This package includes both source code and binarys.  In order to get the 
+compiled executable to work, you must first install the original Quake3 
+Tools release, Q3ToolSetup.exe.  For unknown reasons, the build created
+here works best with this version of the released tools.
+
+Check the ToDo list and Known Bugs below for a list of planned 
+features/changes and known issues.
+
+
+-----------------------------
+Contact Info
+-----------------------------
+
+Justin Thyme (justinthyme AT quakedev DOT com)
+http://tremor.quakedev.com
+
+Development system:
+
+Athlon 2600+, nVidia FX5700LE w/128MB, 1.5GB RAM, WinXP, MSVC2003
+
+
+-----------------------------
+Copyright
+-----------------------------
+
+This program and its contents are copyright by Mike Melzer, 2005, with the
+exception of materials which are covered under applicable copyright of the
+original creator.  This material may be modified and distributed under GPL
+with proper credit given to the creator.  Proprietary content from id
+Software or other individuals is still protected under applicable law.
+Refer to the section below titled "Special Thanks/Credits" for information
+on individuals rights.
+
+Where ever possible, explicit permission has been obtained for use of
+materials which I did not personally create, and proper credit given.
+
+
+-----------------------------
+Disclaimer
+-----------------------------
+
+I accept no responsibility if this file or program in any way causes a cold, 
+causes your wife/girlfriend to run off with your best friend, or blows up 
+your computer.  There is no warranty expressed or implied.
+
+This the fruits of this project requires the registered version of Quake3.  
+It can be found for under $15 in numerous places.  Support the developers w
+ho have put their effort into this game you love so much.
+
+
+-----------------------------
+Installation
+-----------------------------
+
+Extract this archive to your directory of choice and open radiant.vcproj.
+
+
+-----------------------------				
+Features						
+-----------------------------			
+
+- All releases are full rebuilds, not incremental
+- Great starting point for those wishing to offer a level editor with their
+games or mods
+
+
+-----------------------------
+Controls/Configuration
+-----------------------------
+
+Any changes will be outline in this section.
+
+
+-----------------------------
+Known Bugs/Issues
+-----------------------------
+
+- None at present
+
+
+-----------------------------
+Version History
+-----------------------------
+
+Clean Q3Radiant v0.5.0:
+
+- 
+
+
+-----------------------------
+ToDo List
+-----------------------------
+
+- Document install instructions to get compiled exe running with the game
+
+
+-----------------------------
+Special Thanks/Credits
+-----------------------------
+
+id Software - For not only releasing such a cutting edge program (of it's day), 
+but also for releasing the source code so that the community can continue to 
+make it flourish, long after the core game has gone past its prime.
+Spike, Echon, Entar, CheapHack and Tei - For patiently answering newbie 
+programming questions on www.quakeworld.nu and QuakeSrc.org.
+All the people at QuakeDev.com, QuakeSrc.org and Quake3World.com.
+
+
+
+
+-----------------------------
+Working Notes
+-----------------------------

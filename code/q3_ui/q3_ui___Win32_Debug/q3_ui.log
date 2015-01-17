@@ -1,0 +1,267 @@
+﻿Build started 12/26/2014 2:19:43 PM.
+     1>Project "C:\Documents and Settings\bret sheppard\Desktop\CleanQ3\code\q3_ui\q3_ui.vcxproj" on node 3 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating ".\q3_ui___Win32_Debug\q3_ui.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       MakeDirsForCl:
+         Creating directory "C:\Documents and Settings\bret sheppard\Desktop\CleanQ3\code\q3_ui\Debug".
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D UI_EXPORTS /D _VC80_UPGRADE=0x0600 /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug/" /Fd"Debug/vc100.pdb" /FR".\q3_ui___Win32_Debug\\" /Gd /TC /analyze- /errorReport:prompt ..\game\bg_misc.c ..\game\q_math.c ..\game\q_shared.c ui_addbots.c ui_atoms.c ui_cdkey.c ui_cinematics.c ui_confirm.c ui_connect.c ui_controls2.c ui_credits.c ui_demo2.c ui_display.c ui_gameinfo.c ui_ingame.c ui_main.c ui_menu.c ui_mfield.c ui_mods.c ui_network.c ui_options.c ui_playermodel.c ui_players.c ui_playersettings.c ui_preferences.c ui_qmenu.c ui_removebots.c ui_serverinfo.c ui_servers2.c ui_setup.c ui_sound.c ui_sparena.c ui_specifyserver.c ui_splevel.c ui_sppostgame.c ui_spreset.c ui_spskill.c ui_startserver.c ..\ui\ui_syscalls.c ui_team.c ui_teamorders.c ui_video.c
+         ui_video.c
+         ui_teamorders.c
+         ui_team.c
+         ui_syscalls.c
+         ui_startserver.c
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_startserver.c(186): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_startserver.c(199): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_startserver.c(1084): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_startserver.c(1142): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+         ui_spskill.c
+         ui_spreset.c
+         ui_sppostgame.c
+         ui_splevel.c
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_splevel.c(214): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_splevel.c(216): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+         ui_specifyserver.c
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_specifyserver.c(61): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+         ui_sparena.c
+         ui_sound.c
+         ui_setup.c
+         ui_servers2.c
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_servers2.c(398): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_servers2.c(414): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_servers2.c(417): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_servers2.c(742): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_servers2.c(931): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_servers2.c(936): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_servers2.c(1007): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_servers2.c(1011): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_servers2.c(1015): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_servers2.c(1019): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_servers2.c(1025): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(110) : see declaration of 'strcat'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_servers2.c(1029): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(110) : see declaration of 'strcat'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_servers2.c(1129): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+         ui_serverinfo.c
+         ui_removebots.c
+         ui_qmenu.c
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_qmenu.c(104): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_qmenu.c(108): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(110) : see declaration of 'strcat'
+         ui_preferences.c
+         ui_playersettings.c
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_playersettings.c(221): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+         ui_players.c
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_players.c(71): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_players.c(73): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(110) : see declaration of 'strcat'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_players.c(77): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_players.c(79): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(110) : see declaration of 'strcat'
+         Generating Code...
+         Compiling...
+         ui_playermodel.c
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_playermodel.c(320): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(110) : see declaration of 'strcat'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_playermodel.c(461): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(110) : see declaration of 'strcat'
+         ui_options.c
+         ui_network.c
+         ui_mods.c
+         ui_mfield.c
+         ui_menu.c
+         ui_main.c
+         ui_ingame.c
+         ui_gameinfo.c
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_gameinfo.c(101): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_gameinfo.c(108): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_gameinfo.c(175): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_gameinfo.c(176): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(110) : see declaration of 'strcat'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_gameinfo.c(362): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_gameinfo.c(363): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(110) : see declaration of 'strcat'
+         ui_display.c
+         ui_demo2.c
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_demo2.c(212): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+         ui_credits.c
+         ui_controls2.c
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_controls2.c(651): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_controls2.c(663): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(110) : see declaration of 'strcat'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_controls2.c(664): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(110) : see declaration of 'strcat'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_controls2.c(725): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+         ui_connect.c
+         ui_confirm.c
+         ui_cinematics.c
+         ui_cdkey.c
+         ui_atoms.c
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_atoms.c(21): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'vsprintf'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\q3_ui\ui_atoms.c(32): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'vsprintf'
+         ui_addbots.c
+         q_shared.c
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\game\q_shared.c(248): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'vsprintf'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\game\q_shared.c(260): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'vsprintf'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\game\q_shared.c(703): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(188) : see declaration of 'strncpy'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\game\q_shared.c(856): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'vsprintf'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\game\q_shared.c(892): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'vsprintf'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\game\q_shared.c(1052): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\game\q_shared.c(1107): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\game\q_shared.c(1182): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(110) : see declaration of 'strcat'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\game\q_shared.c(1183): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>c:\documents and settings\bret sheppard\desktop\cleanq3\code\game\q_shared.c(1230): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\string.h(110) : see declaration of 'strcat'
+         Generating Code...
+         Compiling...
+         q_math.c
+         bg_misc.c
+         Generating Code...
+       ManifestResourceCompile:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo".\q3_ui___Win32_Debug\q3_ui.dll.embed.manifest.res" .\q3_ui___Win32_Debug\q3_ui_manifest.rc 
+     1>C:\Program Files\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(990,5): warning MSB8012: TargetPath(C:\Documents and Settings\bret sheppard\Desktop\CleanQ3\code\q3_ui\.\q3_ui___Win32_Debug\q3_ui.dll) does not match the Linker's OutputFile property value (C:\Documents and Settings\bret sheppard\Desktop\CleanQ3\code\Debug\uix86.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+     1>C:\Program Files\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(992,5): warning MSB8012: TargetName(q3_ui) does not match the Linker's OutputFile property value (uix86). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+       Link:
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"../Debug/uix86.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /DEF:".\ui.def" /MANIFEST /ManifestFile:".\q3_ui___Win32_Debug\q3_ui.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\bret sheppard\Desktop\CleanQ3\code\q3_ui\q3_ui___Win32_Debug\q3_ui.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /BASE:"0x40000000" /DYNAMICBASE /NXCOMPAT /IMPLIB:"Debug/uix86.lib" /MACHINE:X86 /DLL .\q3_ui___Win32_Debug\q3_ui.dll.embed.manifest.res
+         Debug/bg_misc.obj
+         Debug/q_math.obj
+         Debug/q_shared.obj
+         Debug/ui_addbots.obj
+         Debug/ui_atoms.obj
+         Debug/ui_cdkey.obj
+         Debug/ui_cinematics.obj
+         Debug/ui_confirm.obj
+         Debug/ui_connect.obj
+         Debug/ui_controls2.obj
+         Debug/ui_credits.obj
+         Debug/ui_demo2.obj
+         Debug/ui_display.obj
+         Debug/ui_gameinfo.obj
+         Debug/ui_ingame.obj
+         Debug/ui_main.obj
+         Debug/ui_menu.obj
+         Debug/ui_mfield.obj
+         Debug/ui_mods.obj
+         Debug/ui_network.obj
+         Debug/ui_options.obj
+         Debug/ui_playermodel.obj
+         Debug/ui_players.obj
+         Debug/ui_playersettings.obj
+         Debug/ui_preferences.obj
+         Debug/ui_qmenu.obj
+         Debug/ui_removebots.obj
+         Debug/ui_serverinfo.obj
+         Debug/ui_servers2.obj
+         Debug/ui_setup.obj
+         Debug/ui_sound.obj
+         Debug/ui_sparena.obj
+         Debug/ui_specifyserver.obj
+         Debug/ui_splevel.obj
+         Debug/ui_sppostgame.obj
+         Debug/ui_spreset.obj
+         Debug/ui_spskill.obj
+         Debug/ui_startserver.obj
+         Debug/ui_syscalls.obj
+         Debug/ui_team.obj
+         Debug/ui_teamorders.obj
+         Debug/ui_video.obj
+            Creating library Debug/uix86.lib and object Debug/uix86.exp
+       Manifest:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:".\q3_ui___Win32_Debug\q3_ui.dll.embed.manifest" /manifest .\q3_ui___Win32_Debug\q3_ui.dll.intermediate.manifest
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo".\q3_ui___Win32_Debug\q3_ui.dll.embed.manifest.res" .\q3_ui___Win32_Debug\q3_ui_manifest.rc 
+       LinkEmbedManifest:
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"../Debug/uix86.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /DEF:".\ui.def" /MANIFEST /ManifestFile:".\q3_ui___Win32_Debug\q3_ui.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\bret sheppard\Desktop\CleanQ3\code\q3_ui\q3_ui___Win32_Debug\q3_ui.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /BASE:"0x40000000" /DYNAMICBASE /NXCOMPAT /IMPLIB:"Debug/uix86.lib" /MACHINE:X86 /DLL .\q3_ui___Win32_Debug\q3_ui.dll.embed.manifest.res
+         Debug/bg_misc.obj
+         Debug/q_math.obj
+         Debug/q_shared.obj
+         Debug/ui_addbots.obj
+         Debug/ui_atoms.obj
+         Debug/ui_cdkey.obj
+         Debug/ui_cinematics.obj
+         Debug/ui_confirm.obj
+         Debug/ui_connect.obj
+         Debug/ui_controls2.obj
+         Debug/ui_credits.obj
+         Debug/ui_demo2.obj
+         Debug/ui_display.obj
+         Debug/ui_gameinfo.obj
+         Debug/ui_ingame.obj
+         Debug/ui_main.obj
+         Debug/ui_menu.obj
+         Debug/ui_mfield.obj
+         Debug/ui_mods.obj
+         Debug/ui_network.obj
+         Debug/ui_options.obj
+         Debug/ui_playermodel.obj
+         Debug/ui_players.obj
+         Debug/ui_playersettings.obj
+         Debug/ui_preferences.obj
+         Debug/ui_qmenu.obj
+         Debug/ui_removebots.obj
+         Debug/ui_serverinfo.obj
+         Debug/ui_servers2.obj
+         Debug/ui_setup.obj
+         Debug/ui_sound.obj
+         Debug/ui_sparena.obj
+         Debug/ui_specifyserver.obj
+         Debug/ui_splevel.obj
+         Debug/ui_sppostgame.obj
+         Debug/ui_spreset.obj
+         Debug/ui_spskill.obj
+         Debug/ui_startserver.obj
+         Debug/ui_syscalls.obj
+         Debug/ui_team.obj
+         Debug/ui_teamorders.obj
+         Debug/ui_video.obj
+            Creating library Debug/uix86.lib and object Debug/uix86.exp
+         q3_ui.vcxproj -> C:\Documents and Settings\bret sheppard\Desktop\CleanQ3\code\q3_ui\.\q3_ui___Win32_Debug\q3_ui.dll
+       BscMake:
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\bscmake.exe /nologo /o".\q3_ui___Win32_Debug\q3_ui.bsc" .\q3_ui___Win32_Debug\bg_misc.sbr .\q3_ui___Win32_Debug\q_math.sbr .\q3_ui___Win32_Debug\q_shared.sbr .\q3_ui___Win32_Debug\ui_addbots.sbr .\q3_ui___Win32_Debug\ui_atoms.sbr .\q3_ui___Win32_Debug\ui_cdkey.sbr .\q3_ui___Win32_Debug\ui_cinematics.sbr .\q3_ui___Win32_Debug\ui_confirm.sbr .\q3_ui___Win32_Debug\ui_connect.sbr .\q3_ui___Win32_Debug\ui_controls2.sbr .\q3_ui___Win32_Debug\ui_credits.sbr .\q3_ui___Win32_Debug\ui_demo2.sbr .\q3_ui___Win32_Debug\ui_display.sbr .\q3_ui___Win32_Debug\ui_gameinfo.sbr .\q3_ui___Win32_Debug\ui_ingame.sbr .\q3_ui___Win32_Debug\ui_main.sbr .\q3_ui___Win32_Debug\ui_menu.sbr .\q3_ui___Win32_Debug\ui_mfield.sbr .\q3_ui___Win32_Debug\ui_mods.sbr .\q3_ui___Win32_Debug\ui_network.sbr .\q3_ui___Win32_Debug\ui_options.sbr .\q3_ui___Win32_Debug\ui_playermodel.sbr .\q3_ui___Win32_Debug\ui_players.sbr .\q3_ui___Win32_Debug\ui_playersettings.sbr .\q3_ui___Win32_Debug\ui_preferences.sbr .\q3_ui___Win32_Debug\ui_qmenu.sbr .\q3_ui___Win32_Debug\ui_removebots.sbr .\q3_ui___Win32_Debug\ui_serverinfo.sbr .\q3_ui___Win32_Debug\ui_servers2.sbr .\q3_ui___Win32_Debug\ui_setup.sbr .\q3_ui___Win32_Debug\ui_sound.sbr .\q3_ui___Win32_Debug\ui_sparena.sbr .\q3_ui___Win32_Debug\ui_specifyserver.sbr .\q3_ui___Win32_Debug\ui_splevel.sbr .\q3_ui___Win32_Debug\ui_sppostgame.sbr .\q3_ui___Win32_Debug\ui_spreset.sbr .\q3_ui___Win32_Debug\ui_spskill.sbr .\q3_ui___Win32_Debug\ui_startserver.sbr .\q3_ui___Win32_Debug\ui_syscalls.sbr .\q3_ui___Win32_Debug\ui_team.sbr .\q3_ui___Win32_Debug\ui_teamorders.sbr .\q3_ui___Win32_Debug\ui_video.sbr
+       FinalizeBuildStatus:
+         Deleting file ".\q3_ui___Win32_Debug\q3_ui.unsuccessfulbuild".
+         Touching ".\q3_ui___Win32_Debug\q3_ui.lastbuildstate".
+     1>Done Building Project "C:\Documents and Settings\bret sheppard\Desktop\CleanQ3\code\q3_ui\q3_ui.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:10.25

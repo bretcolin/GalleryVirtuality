@@ -1,0 +1,53 @@
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=Windows-1252">
+</head>
+<body>
+<pre>
+<table width=100% bgcolor=#CFCFE5><tr> <td> <font face=arial size=+3>
+Build Log
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+<h3>------- Build started: Project: ui, Configuration: Release|Win32 -------
+</h3>
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Command Lines
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Creating temporary file "c:\quake3\source\code\ui\Release\RSP000016.rsp" with contents
+[
+/O2 /G6 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "UI_EXPORTS" /FD /EHsc /ML /YX"stdafx.h" /Fp".\Release/ui.pch" /Fo".\Release/" /Fd".\Release/" /W3 /c /TC
+.\ui_syscalls.c
+.\ui_gameinfo.c
+]
+Creating command line "cl.exe @c:\quake3\source\code\ui\Release\RSP000016.rsp /nologo"
+Creating temporary file "c:\quake3\source\code\ui\Release\RSP000017.rsp" with contents
+[
+/OUT:"../Release/uix86_new.dll" /INCREMENTAL:NO /NOLOGO /DLL /PDB:".\Release/uix86_new.pdb" /MAP:".\Release/uix86_new.map" /BASE:"0x40000000" /IMPLIB:".\Release/uix86_new.lib" /MACHINE:X86 odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib
+.\Release\ui_gameinfo.obj
+.\Release\ui_syscalls.obj
+]
+Creating command line "link.exe @c:\quake3\source\code\ui\Release\RSP000017.rsp"
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Output Window
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Compiling...
+ui_syscalls.c
+ui_gameinfo.c
+Linking...
+ui_gameinfo.obj : error LNK2019: unresolved external symbol _UI_Alloc referenced in function _UI_ParseInfos
+ui_gameinfo.obj : error LNK2019: unresolved external symbol _va referenced in function _UI_ParseInfos
+ui_gameinfo.obj : error LNK2019: unresolved external symbol _Com_Printf referenced in function _UI_ParseInfos
+ui_gameinfo.obj : error LNK2019: unresolved external symbol _Info_SetValueForKey referenced in function _UI_ParseInfos
+ui_gameinfo.obj : error LNK2019: unresolved external symbol _Q_strncpyz referenced in function _UI_ParseInfos
+ui_gameinfo.obj : error LNK2019: unresolved external symbol _COM_ParseExt referenced in function _UI_ParseInfos
+ui_gameinfo.obj : error LNK2019: unresolved external symbol _COM_Parse referenced in function _UI_ParseInfos
+ui_gameinfo.obj : error LNK2019: unresolved external symbol _String_Alloc referenced in function _UI_LoadArenas
+ui_gameinfo.obj : error LNK2019: unresolved external symbol _Info_ValueForKey referenced in function _UI_LoadArenas
+ui_gameinfo.obj : error LNK2019: unresolved external symbol _UI_OutOfMemory referenced in function _UI_LoadArenas
+ui_gameinfo.obj : error LNK2019: unresolved external symbol _uiInfo referenced in function _UI_LoadArenas
+ui_gameinfo.obj : error LNK2019: unresolved external symbol _COM_Compress referenced in function _UI_LoadBotsFromFile
+ui_gameinfo.obj : error LNK2019: unresolved external symbol _Q_stricmp referenced in function _UI_GetBotInfoByName
+../Release/uix86_new.dll : fatal error LNK1120: 13 unresolved externals
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Results
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+Build log was saved at "file://c:\quake3\source\code\ui\Release\BuildLog.htm"
+ui - 14 error(s), 0 warning(s)</pre></table><table   width=100% height=20 bgcolor=#CFCFE5><tr><td><font face=arial size=+2>
+</font></table></body></html>

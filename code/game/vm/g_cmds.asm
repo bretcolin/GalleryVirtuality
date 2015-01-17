@@ -1,0 +1,14486 @@
+export DeathmatchScoreboardMessage
+code
+proc DeathmatchScoreboardMessage 2484 68
+file "../g_cmds.c"
+line 13
+;1:// Copyright (C) 1999-2000 Id Software, Inc.
+;2://
+;3:#include "g_local.h"
+;4:
+;5:#include "../../ui/menudef.h"			// for the voice chats
+;6:
+;7:/*
+;8:==================
+;9:DeathmatchScoreboardMessage
+;10:
+;11:==================
+;12:*/
+;13:void DeathmatchScoreboardMessage( gentity_t *ent ) {
+line 22
+;14:	char		entry[1024];
+;15:	char		string[1400];
+;16:	int			stringlength;
+;17:	int			i, j;
+;18:	gclient_t	*cl;
+;19:	int			numSorted, scoreFlags, accuracy, perfect;
+;20:
+;21:	// send the latest information on all clients
+;22:	string[0] = 0;
+ADDRLP4 1048
+CNSTI1 0
+ASGNI1
+line 23
+;23:	stringlength = 0;
+ADDRLP4 1032
+CNSTI4 0
+ASGNI4
+line 24
+;24:	scoreFlags = 0;
+ADDRLP4 2452
+CNSTI4 0
+ASGNI4
+line 26
+;25:
+;26:	numSorted = level.numConnectedClients;
+ADDRLP4 2448
+ADDRGP4 level+72
+INDIRI4
+ASGNI4
+line 28
+;27:	
+;28:	for (i=0 ; i < numSorted ; i++) {
+ADDRLP4 4
+CNSTI4 0
+ASGNI4
+ADDRGP4 $57
+JUMPV
+LABELV $54
+line 31
+;29:		int		ping;
+;30:
+;31:		cl = &level.clients[level.sortedClients[i]];
+ADDRLP4 0
+CNSTI4 784
+ADDRLP4 4
+INDIRI4
+CNSTI4 2
+LSHI4
+ADDRGP4 level+84
+ADDP4
+INDIRI4
+MULI4
+ADDRGP4 level
+INDIRP4
+ADDP4
+ASGNP4
+line 33
+;32:
+;33:		if ( cl->pers.connected == CON_CONNECTING ) {
+ADDRLP4 0
+INDIRP4
+CNSTI4 468
+ADDP4
+INDIRI4
+CNSTI4 1
+NEI4 $59
+line 34
+;34:			ping = -1;
+ADDRLP4 2456
+CNSTI4 -1
+ASGNI4
+line 35
+;35:		} else {
+ADDRGP4 $60
+JUMPV
+LABELV $59
+line 36
+;36:			ping = cl->ps.ping < 999 ? cl->ps.ping : 999;
+ADDRLP4 0
+INDIRP4
+CNSTI4 452
+ADDP4
+INDIRI4
+CNSTI4 999
+GEI4 $62
+ADDRLP4 2460
+ADDRLP4 0
+INDIRP4
+CNSTI4 452
+ADDP4
+INDIRI4
+ASGNI4
+ADDRGP4 $63
+JUMPV
+LABELV $62
+ADDRLP4 2460
+CNSTI4 999
+ASGNI4
+LABELV $63
+ADDRLP4 2456
+ADDRLP4 2460
+INDIRI4
+ASGNI4
+line 37
+;37:		}
+LABELV $60
+line 39
+;38:
+;39:		if( cl->accuracy_shots ) {
+ADDRLP4 0
+INDIRP4
+CNSTI4 712
+ADDP4
+INDIRI4
+CNSTI4 0
+EQI4 $64
+line 40
+;40:			accuracy = cl->accuracy_hits * 100 / cl->accuracy_shots;
+ADDRLP4 1040
+CNSTI4 100
+ADDRLP4 0
+INDIRP4
+CNSTI4 716
+ADDP4
+INDIRI4
+MULI4
+ADDRLP4 0
+INDIRP4
+CNSTI4 712
+ADDP4
+INDIRI4
+DIVI4
+ASGNI4
+line 41
+;41:		}
+ADDRGP4 $65
+JUMPV
+LABELV $64
+line 42
+;42:		else {
+line 43
+;43:			accuracy = 0;
+ADDRLP4 1040
+CNSTI4 0
+ASGNI4
+line 44
+;44:		}
+LABELV $65
+line 45
+;45:		perfect = ( cl->ps.persistant[PERS_RANK] == 0 && cl->ps.persistant[PERS_KILLED] == 0 ) ? 1 : 0;
+ADDRLP4 2468
+CNSTI4 0
+ASGNI4
+ADDRLP4 0
+INDIRP4
+CNSTI4 256
+ADDP4
+INDIRI4
+ADDRLP4 2468
+INDIRI4
+NEI4 $67
+ADDRLP4 0
+INDIRP4
+CNSTI4 280
+ADDP4
+INDIRI4
+ADDRLP4 2468
+INDIRI4
+NEI4 $67
+ADDRLP4 2460
+CNSTI4 1
+ASGNI4
+ADDRGP4 $68
+JUMPV
+LABELV $67
+ADDRLP4 2460
+CNSTI4 0
+ASGNI4
+LABELV $68
+ADDRLP4 1044
+ADDRLP4 2460
+INDIRI4
+ASGNI4
+line 47
+;46:
+;47:		Com_sprintf (entry, sizeof(entry),
+ADDRLP4 8
+ARGP4
+CNSTI4 1024
+ARGI4
+ADDRGP4 $69
+ARGP4
+ADDRLP4 2472
+ADDRLP4 4
+INDIRI4
+CNSTI4 2
+LSHI4
+ASGNI4
+ADDRLP4 2472
+INDIRI4
+ADDRGP4 level+84
+ADDP4
+INDIRI4
+ARGI4
+ADDRLP4 0
+INDIRP4
+CNSTI4 248
+ADDP4
+INDIRI4
+ARGI4
+ADDRLP4 2456
+INDIRI4
+ARGI4
+ADDRGP4 level+32
+INDIRI4
+ADDRLP4 0
+INDIRP4
+CNSTI4 552
+ADDP4
+INDIRI4
+SUBI4
+CNSTI4 60000
+DIVI4
+ARGI4
+ADDRLP4 2452
+INDIRI4
+ARGI4
+CNSTI4 808
+ADDRLP4 2472
+INDIRI4
+ADDRGP4 level+84
+ADDP4
+INDIRI4
+MULI4
+ADDRGP4 g_entities+188
+ADDP4
+INDIRI4
+ARGI4
+ADDRLP4 1040
+INDIRI4
+ARGI4
+ADDRLP4 0
+INDIRP4
+CNSTI4 284
+ADDP4
+INDIRI4
+ARGI4
+ADDRLP4 0
+INDIRP4
+CNSTI4 288
+ADDP4
+INDIRI4
+ARGI4
+ADDRLP4 0
+INDIRP4
+CNSTI4 300
+ADDP4
+INDIRI4
+ARGI4
+ADDRLP4 0
+INDIRP4
+CNSTI4 292
+ADDP4
+INDIRI4
+ARGI4
+ADDRLP4 0
+INDIRP4
+CNSTI4 296
+ADDP4
+INDIRI4
+ARGI4
+ADDRLP4 1044
+INDIRI4
+ARGI4
+ADDRLP4 0
+INDIRP4
+CNSTI4 304
+ADDP4
+INDIRI4
+ARGI4
+ADDRGP4 Com_sprintf
+CALLV
+pop
+line 58
+;48:			" %i %i %i %i %i %i %i %i %i %i %i %i %i %i", level.sortedClients[i],
+;49:			cl->ps.persistant[PERS_SCORE], ping, (level.time - cl->pers.enterTime)/60000,
+;50:			scoreFlags, g_entities[level.sortedClients[i]].s.powerups, accuracy, 
+;51:			cl->ps.persistant[PERS_IMPRESSIVE_COUNT],
+;52:			cl->ps.persistant[PERS_EXCELLENT_COUNT],
+;53:			cl->ps.persistant[PERS_GAUNTLET_FRAG_COUNT], 
+;54:			cl->ps.persistant[PERS_DEFEND_COUNT], 
+;55:			cl->ps.persistant[PERS_ASSIST_COUNT], 
+;56:			perfect,
+;57:			cl->ps.persistant[PERS_CAPTURES]);
+;58:		j = strlen(entry);
+ADDRLP4 8
+ARGP4
+ADDRLP4 2480
+ADDRGP4 strlen
+CALLI4
+ASGNI4
+ADDRLP4 1036
+ADDRLP4 2480
+INDIRI4
+ASGNI4
+line 59
+;59:		if (stringlength + j > 1024)
+ADDRLP4 1032
+INDIRI4
+ADDRLP4 1036
+INDIRI4
+ADDI4
+CNSTI4 1024
+LEI4 $74
+line 60
+;60:			break;
+ADDRGP4 $56
+JUMPV
+LABELV $74
+line 61
+;61:		strcpy (string + stringlength, entry);
+ADDRLP4 1032
+INDIRI4
+ADDRLP4 1048
+ADDP4
+ARGP4
+ADDRLP4 8
+ARGP4
+ADDRGP4 strcpy
+CALLP4
+pop
+line 62
+;62:		stringlength += j;
+ADDRLP4 1032
+ADDRLP4 1032
+INDIRI4
+ADDRLP4 1036
+INDIRI4
+ADDI4
+ASGNI4
+line 63
+;63:	}
+LABELV $55
+line 28
+ADDRLP4 4
+ADDRLP4 4
+INDIRI4
+CNSTI4 1
+ADDI4
+ASGNI4
+LABELV $57
+ADDRLP4 4
+INDIRI4
+ADDRLP4 2448
+INDIRI4
+LTI4 $54
+LABELV $56
+line 65
+;64:
+;65:	trap_SendServerCommand( ent-g_entities, va("scores %i %i %i%s", i, 
+ADDRGP4 $76
+ARGP4
+ADDRLP4 4
+INDIRI4
+ARGI4
+ADDRGP4 level+44+4
+INDIRI4
+ARGI4
+ADDRGP4 level+44+8
+INDIRI4
+ARGI4
+ADDRLP4 1048
+ARGP4
+ADDRLP4 2456
+ADDRGP4 va
+CALLP4
+ASGNP4
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRLP4 2456
+INDIRP4
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 68
+;66:		level.teamScores[TEAM_RED], level.teamScores[TEAM_BLUE],
+;67:		string ) );
+;68:}
+LABELV $52
+endproc DeathmatchScoreboardMessage 2484 68
+export Cmd_Score_f
+proc Cmd_Score_f 0 4
+line 78
+;69:
+;70:
+;71:/*
+;72:==================
+;73:Cmd_Score_f
+;74:
+;75:Request current scoreboard information
+;76:==================
+;77:*/
+;78:void Cmd_Score_f( gentity_t *ent ) {
+line 79
+;79:	DeathmatchScoreboardMessage( ent );
+ADDRFP4 0
+INDIRP4
+ARGP4
+ADDRGP4 DeathmatchScoreboardMessage
+CALLV
+pop
+line 80
+;80:}
+LABELV $81
+endproc Cmd_Score_f 0 4
+export CheatsOk
+proc CheatsOk 4 8
+line 89
+;81:
+;82:
+;83:
+;84:/*
+;85:==================
+;86:CheatsOk
+;87:==================
+;88:*/
+;89:qboolean	CheatsOk( gentity_t *ent ) {
+line 90
+;90:	if ( !g_cheats.integer ) {
+ADDRGP4 g_cheats+12
+INDIRI4
+CNSTI4 0
+NEI4 $83
+line 91
+;91:		trap_SendServerCommand( ent-g_entities, va("print \"Cheats are not enabled on this server.\n\""));
+ADDRGP4 $86
+ARGP4
+ADDRLP4 0
+ADDRGP4 va
+CALLP4
+ASGNP4
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRLP4 0
+INDIRP4
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 92
+;92:		return qfalse;
+CNSTI4 0
+RETI4
+ADDRGP4 $82
+JUMPV
+LABELV $83
+line 94
+;93:	}
+;94:	if ( ent->health <= 0 ) {
+ADDRFP4 0
+INDIRP4
+CNSTI4 732
+ADDP4
+INDIRI4
+CNSTI4 0
+GTI4 $87
+line 95
+;95:		trap_SendServerCommand( ent-g_entities, va("print \"You must be alive to use this command.\n\""));
+ADDRGP4 $89
+ARGP4
+ADDRLP4 0
+ADDRGP4 va
+CALLP4
+ASGNP4
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRLP4 0
+INDIRP4
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 96
+;96:		return qfalse;
+CNSTI4 0
+RETI4
+ADDRGP4 $82
+JUMPV
+LABELV $87
+line 98
+;97:	}
+;98:	return qtrue;
+CNSTI4 1
+RETI4
+LABELV $82
+endproc CheatsOk 4 8
+bss
+align 1
+LABELV $91
+skip 1024
+export ConcatArgs
+code
+proc ConcatArgs 1048 12
+line 107
+;99:}
+;100:
+;101:
+;102:/*
+;103:==================
+;104:ConcatArgs
+;105:==================
+;106:*/
+;107:char	*ConcatArgs( int start ) {
+line 113
+;108:	int		i, c, tlen;
+;109:	static char	line[MAX_STRING_CHARS];
+;110:	int		len;
+;111:	char	arg[MAX_STRING_CHARS];
+;112:
+;113:	len = 0;
+ADDRLP4 0
+CNSTI4 0
+ASGNI4
+line 114
+;114:	c = trap_Argc();
+ADDRLP4 1040
+ADDRGP4 trap_Argc
+CALLI4
+ASGNI4
+ADDRLP4 1036
+ADDRLP4 1040
+INDIRI4
+ASGNI4
+line 115
+;115:	for ( i = start ; i < c ; i++ ) {
+ADDRLP4 4
+ADDRFP4 0
+INDIRI4
+ASGNI4
+ADDRGP4 $95
+JUMPV
+LABELV $92
+line 116
+;116:		trap_Argv( i, arg, sizeof( arg ) );
+ADDRLP4 4
+INDIRI4
+ARGI4
+ADDRLP4 12
+ARGP4
+CNSTI4 1024
+ARGI4
+ADDRGP4 trap_Argv
+CALLV
+pop
+line 117
+;117:		tlen = strlen( arg );
+ADDRLP4 12
+ARGP4
+ADDRLP4 1044
+ADDRGP4 strlen
+CALLI4
+ASGNI4
+ADDRLP4 8
+ADDRLP4 1044
+INDIRI4
+ASGNI4
+line 118
+;118:		if ( len + tlen >= MAX_STRING_CHARS - 1 ) {
+ADDRLP4 0
+INDIRI4
+ADDRLP4 8
+INDIRI4
+ADDI4
+CNSTI4 1023
+LTI4 $96
+line 119
+;119:			break;
+ADDRGP4 $94
+JUMPV
+LABELV $96
+line 121
+;120:		}
+;121:		memcpy( line + len, arg, tlen );
+ADDRLP4 0
+INDIRI4
+ADDRGP4 $91
+ADDP4
+ARGP4
+ADDRLP4 12
+ARGP4
+ADDRLP4 8
+INDIRI4
+ARGI4
+ADDRGP4 memcpy
+CALLP4
+pop
+line 122
+;122:		len += tlen;
+ADDRLP4 0
+ADDRLP4 0
+INDIRI4
+ADDRLP4 8
+INDIRI4
+ADDI4
+ASGNI4
+line 123
+;123:		if ( i != c - 1 ) {
+ADDRLP4 4
+INDIRI4
+ADDRLP4 1036
+INDIRI4
+CNSTI4 1
+SUBI4
+EQI4 $98
+line 124
+;124:			line[len] = ' ';
+ADDRLP4 0
+INDIRI4
+ADDRGP4 $91
+ADDP4
+CNSTI1 32
+ASGNI1
+line 125
+;125:			len++;
+ADDRLP4 0
+ADDRLP4 0
+INDIRI4
+CNSTI4 1
+ADDI4
+ASGNI4
+line 126
+;126:		}
+LABELV $98
+line 127
+;127:	}
+LABELV $93
+line 115
+ADDRLP4 4
+ADDRLP4 4
+INDIRI4
+CNSTI4 1
+ADDI4
+ASGNI4
+LABELV $95
+ADDRLP4 4
+INDIRI4
+ADDRLP4 1036
+INDIRI4
+LTI4 $92
+LABELV $94
+line 129
+;128:
+;129:	line[len] = 0;
+ADDRLP4 0
+INDIRI4
+ADDRGP4 $91
+ADDP4
+CNSTI1 0
+ASGNI1
+line 131
+;130:
+;131:	return line;
+ADDRGP4 $91
+RETP4
+LABELV $90
+endproc ConcatArgs 1048 12
+export SanitizeString
+proc SanitizeString 16 4
+line 141
+;132:}
+;133:
+;134:/*
+;135:==================
+;136:SanitizeString
+;137:
+;138:Remove case and control characters
+;139:==================
+;140:*/
+;141:void SanitizeString( char *in, char *out ) {
+ADDRGP4 $102
+JUMPV
+LABELV $101
+line 142
+;142:	while ( *in ) {
+line 143
+;143:		if ( *in == 27 ) {
+ADDRFP4 0
+INDIRP4
+INDIRI1
+CVII4 1
+CNSTI4 27
+NEI4 $104
+line 144
+;144:			in += 2;		// skip color code
+ADDRFP4 0
+ADDRFP4 0
+INDIRP4
+CNSTI4 2
+ADDP4
+ASGNP4
+line 145
+;145:			continue;
+ADDRGP4 $102
+JUMPV
+LABELV $104
+line 147
+;146:		}
+;147:		if ( *in < 32 ) {
+ADDRFP4 0
+INDIRP4
+INDIRI1
+CVII4 1
+CNSTI4 32
+GEI4 $106
+line 148
+;148:			in++;
+ADDRFP4 0
+ADDRFP4 0
+INDIRP4
+CNSTI4 1
+ADDP4
+ASGNP4
+line 149
+;149:			continue;
+ADDRGP4 $102
+JUMPV
+LABELV $106
+line 151
+;150:		}
+;151:		*out++ = tolower( *in++ );
+ADDRLP4 0
+ADDRFP4 4
+INDIRP4
+ASGNP4
+ADDRLP4 8
+CNSTI4 1
+ASGNI4
+ADDRFP4 4
+ADDRLP4 0
+INDIRP4
+ADDRLP4 8
+INDIRI4
+ADDP4
+ASGNP4
+ADDRLP4 4
+ADDRFP4 0
+INDIRP4
+ASGNP4
+ADDRFP4 0
+ADDRLP4 4
+INDIRP4
+ADDRLP4 8
+INDIRI4
+ADDP4
+ASGNP4
+ADDRLP4 4
+INDIRP4
+INDIRI1
+CVII4 1
+ARGI4
+ADDRLP4 12
+ADDRGP4 tolower
+CALLI4
+ASGNI4
+ADDRLP4 0
+INDIRP4
+ADDRLP4 12
+INDIRI4
+CVII1 4
+ASGNI1
+line 152
+;152:	}
+LABELV $102
+line 142
+ADDRFP4 0
+INDIRP4
+INDIRI1
+CVII4 1
+CNSTI4 0
+NEI4 $101
+line 154
+;153:
+;154:	*out = 0;
+ADDRFP4 4
+INDIRP4
+CNSTI1 0
+ASGNI1
+line 155
+;155:}
+LABELV $100
+endproc SanitizeString 16 4
+export ClientNumberFromString
+proc ClientNumberFromString 2072 8
+line 165
+;156:
+;157:/*
+;158:==================
+;159:ClientNumberFromString
+;160:
+;161:Returns a player number for either a number or name string
+;162:Returns -1 if invalid
+;163:==================
+;164:*/
+;165:int ClientNumberFromString( gentity_t *to, char *s ) {
+line 172
+;166:	gclient_t	*cl;
+;167:	int			idnum;
+;168:	char		s2[MAX_STRING_CHARS];
+;169:	char		n2[MAX_STRING_CHARS];
+;170:
+;171:	// numeric values are just slot numbers
+;172:	if (s[0] >= '0' && s[0] <= '9') {
+ADDRLP4 2056
+ADDRFP4 4
+INDIRP4
+INDIRI1
+CVII4 1
+ASGNI4
+ADDRLP4 2056
+INDIRI4
+CNSTI4 48
+LTI4 $109
+ADDRLP4 2056
+INDIRI4
+CNSTI4 57
+GTI4 $109
+line 173
+;173:		idnum = atoi( s );
+ADDRFP4 4
+INDIRP4
+ARGP4
+ADDRLP4 2060
+ADDRGP4 atoi
+CALLI4
+ASGNI4
+ADDRLP4 4
+ADDRLP4 2060
+INDIRI4
+ASGNI4
+line 174
+;174:		if ( idnum < 0 || idnum >= level.maxclients ) {
+ADDRLP4 4
+INDIRI4
+CNSTI4 0
+LTI4 $114
+ADDRLP4 4
+INDIRI4
+ADDRGP4 level+24
+INDIRI4
+LTI4 $111
+LABELV $114
+line 175
+;175:			trap_SendServerCommand( to-g_entities, va("print \"Bad client slot: %i\n\"", idnum));
+ADDRGP4 $115
+ARGP4
+ADDRLP4 4
+INDIRI4
+ARGI4
+ADDRLP4 2068
+ADDRGP4 va
+CALLP4
+ASGNP4
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRLP4 2068
+INDIRP4
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 176
+;176:			return -1;
+CNSTI4 -1
+RETI4
+ADDRGP4 $108
+JUMPV
+LABELV $111
+line 179
+;177:		}
+;178:
+;179:		cl = &level.clients[idnum];
+ADDRLP4 0
+CNSTI4 784
+ADDRLP4 4
+INDIRI4
+MULI4
+ADDRGP4 level
+INDIRP4
+ADDP4
+ASGNP4
+line 180
+;180:		if ( cl->pers.connected != CON_CONNECTED ) {
+ADDRLP4 0
+INDIRP4
+CNSTI4 468
+ADDP4
+INDIRI4
+CNSTI4 2
+EQI4 $116
+line 181
+;181:			trap_SendServerCommand( to-g_entities, va("print \"Client %i is not active\n\"", idnum));
+ADDRGP4 $118
+ARGP4
+ADDRLP4 4
+INDIRI4
+ARGI4
+ADDRLP4 2068
+ADDRGP4 va
+CALLP4
+ASGNP4
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRLP4 2068
+INDIRP4
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 182
+;182:			return -1;
+CNSTI4 -1
+RETI4
+ADDRGP4 $108
+JUMPV
+LABELV $116
+line 184
+;183:		}
+;184:		return idnum;
+ADDRLP4 4
+INDIRI4
+RETI4
+ADDRGP4 $108
+JUMPV
+LABELV $109
+line 188
+;185:	}
+;186:
+;187:	// check for a name match
+;188:	SanitizeString( s, s2 );
+ADDRFP4 4
+INDIRP4
+ARGP4
+ADDRLP4 1032
+ARGP4
+ADDRGP4 SanitizeString
+CALLV
+pop
+line 189
+;189:	for ( idnum=0,cl=level.clients ; idnum < level.maxclients ; idnum++,cl++ ) {
+ADDRLP4 4
+CNSTI4 0
+ASGNI4
+ADDRLP4 0
+ADDRGP4 level
+INDIRP4
+ASGNP4
+ADDRGP4 $122
+JUMPV
+LABELV $119
+line 190
+;190:		if ( cl->pers.connected != CON_CONNECTED ) {
+ADDRLP4 0
+INDIRP4
+CNSTI4 468
+ADDP4
+INDIRI4
+CNSTI4 2
+EQI4 $124
+line 191
+;191:			continue;
+ADDRGP4 $120
+JUMPV
+LABELV $124
+line 193
+;192:		}
+;193:		SanitizeString( cl->pers.netname, n2 );
+ADDRLP4 0
+INDIRP4
+CNSTI4 512
+ADDP4
+ARGP4
+ADDRLP4 8
+ARGP4
+ADDRGP4 SanitizeString
+CALLV
+pop
+line 194
+;194:		if ( !strcmp( n2, s2 ) ) {
+ADDRLP4 8
+ARGP4
+ADDRLP4 1032
+ARGP4
+ADDRLP4 2060
+ADDRGP4 strcmp
+CALLI4
+ASGNI4
+ADDRLP4 2060
+INDIRI4
+CNSTI4 0
+NEI4 $126
+line 195
+;195:			return idnum;
+ADDRLP4 4
+INDIRI4
+RETI4
+ADDRGP4 $108
+JUMPV
+LABELV $126
+line 197
+;196:		}
+;197:	}
+LABELV $120
+line 189
+ADDRLP4 4
+ADDRLP4 4
+INDIRI4
+CNSTI4 1
+ADDI4
+ASGNI4
+ADDRLP4 0
+ADDRLP4 0
+INDIRP4
+CNSTI4 784
+ADDP4
+ASGNP4
+LABELV $122
+ADDRLP4 4
+INDIRI4
+ADDRGP4 level+24
+INDIRI4
+LTI4 $119
+line 199
+;198:
+;199:	trap_SendServerCommand( to-g_entities, va("print \"User %s is not on the server\n\"", s));
+ADDRGP4 $128
+ARGP4
+ADDRFP4 4
+INDIRP4
+ARGP4
+ADDRLP4 2060
+ADDRGP4 va
+CALLP4
+ASGNP4
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRLP4 2060
+INDIRP4
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 200
+;200:	return -1;
+CNSTI4 -1
+RETI4
+LABELV $108
+endproc ClientNumberFromString 2072 8
+export Cmd_Give_f
+proc Cmd_Give_f 132 12
+line 211
+;201:}
+;202:
+;203:/*
+;204:==================
+;205:Cmd_Give_f
+;206:
+;207:Give items to a client
+;208:==================
+;209:*/
+;210:void Cmd_Give_f (gentity_t *ent)
+;211:{
+line 219
+;212:	char		*name;
+;213:	gitem_t		*it;
+;214:	int			i;
+;215:	qboolean	give_all;
+;216:	gentity_t		*it_ent;
+;217:	trace_t		trace;
+;218:
+;219:	if ( !CheatsOk( ent ) ) {
+ADDRFP4 0
+INDIRP4
+ARGP4
+ADDRLP4 76
+ADDRGP4 CheatsOk
+CALLI4
+ASGNI4
+ADDRLP4 76
+INDIRI4
+CNSTI4 0
+NEI4 $130
+line 220
+;220:		return;
+ADDRGP4 $129
+JUMPV
+LABELV $130
+line 223
+;221:	}
+;222:
+;223:	name = ConcatArgs( 1 );
+CNSTI4 1
+ARGI4
+ADDRLP4 80
+ADDRGP4 ConcatArgs
+CALLP4
+ASGNP4
+ADDRLP4 4
+ADDRLP4 80
+INDIRP4
+ASGNP4
+line 225
+;224:
+;225:	if (Q_stricmp(name, "all") == 0)
+ADDRLP4 4
+INDIRP4
+ARGP4
+ADDRGP4 $134
+ARGP4
+ADDRLP4 84
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 84
+INDIRI4
+CNSTI4 0
+NEI4 $132
+line 226
+;226:		give_all = qtrue;
+ADDRLP4 8
+CNSTI4 1
+ASGNI4
+ADDRGP4 $133
+JUMPV
+LABELV $132
+line 228
+;227:	else
+;228:		give_all = qfalse;
+ADDRLP4 8
+CNSTI4 0
+ASGNI4
+LABELV $133
+line 230
+;229:
+;230:	if (give_all || Q_stricmp( name, "health") == 0)
+ADDRLP4 8
+INDIRI4
+CNSTI4 0
+NEI4 $138
+ADDRLP4 4
+INDIRP4
+ARGP4
+ADDRGP4 $137
+ARGP4
+ADDRLP4 88
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 88
+INDIRI4
+CNSTI4 0
+NEI4 $135
+LABELV $138
+line 231
+;231:	{
+line 232
+;232:		ent->health = ent->client->ps.stats[STAT_MAX_HEALTH];
+ADDRLP4 92
+ADDRFP4 0
+INDIRP4
+ASGNP4
+ADDRLP4 92
+INDIRP4
+CNSTI4 732
+ADDP4
+ADDRLP4 92
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 208
+ADDP4
+INDIRI4
+ASGNI4
+line 233
+;233:		if (!give_all)
+ADDRLP4 8
+INDIRI4
+CNSTI4 0
+NEI4 $139
+line 234
+;234:			return;
+ADDRGP4 $129
+JUMPV
+LABELV $139
+line 235
+;235:	}
+LABELV $135
+line 237
+;236:
+;237:	if (give_all || Q_stricmp(name, "weapons") == 0)
+ADDRLP4 8
+INDIRI4
+CNSTI4 0
+NEI4 $144
+ADDRLP4 4
+INDIRP4
+ARGP4
+ADDRGP4 $143
+ARGP4
+ADDRLP4 92
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 92
+INDIRI4
+CNSTI4 0
+NEI4 $141
+LABELV $144
+line 238
+;238:	{
+line 239
+;239:		ent->client->ps.stats[STAT_WEAPONS] = (1 << WP_NUM_WEAPONS) - 1 - 
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 192
+ADDP4
+CNSTI4 1022
+ASGNI4
+line 241
+;240:			( 1 << WP_GRAPPLING_HOOK ) - ( 1 << WP_NONE );
+;241:		if (!give_all)
+ADDRLP4 8
+INDIRI4
+CNSTI4 0
+NEI4 $145
+line 242
+;242:			return;
+ADDRGP4 $129
+JUMPV
+LABELV $145
+line 243
+;243:	}
+LABELV $141
+line 245
+;244:
+;245:	if (give_all || Q_stricmp(name, "ammo") == 0)
+ADDRLP4 8
+INDIRI4
+CNSTI4 0
+NEI4 $150
+ADDRLP4 4
+INDIRP4
+ARGP4
+ADDRGP4 $149
+ARGP4
+ADDRLP4 96
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 96
+INDIRI4
+CNSTI4 0
+NEI4 $147
+LABELV $150
+line 246
+;246:	{
+line 247
+;247:		for ( i = 0 ; i < MAX_WEAPONS ; i++ ) {
+ADDRLP4 0
+CNSTI4 0
+ASGNI4
+LABELV $151
+line 248
+;248:			ent->client->ps.ammo[i] = 999;
+ADDRLP4 0
+INDIRI4
+CNSTI4 2
+LSHI4
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 376
+ADDP4
+ADDP4
+CNSTI4 999
+ASGNI4
+line 249
+;249:		}
+LABELV $152
+line 247
+ADDRLP4 0
+ADDRLP4 0
+INDIRI4
+CNSTI4 1
+ADDI4
+ASGNI4
+ADDRLP4 0
+INDIRI4
+CNSTI4 16
+LTI4 $151
+line 250
+;250:		if (!give_all)
+ADDRLP4 8
+INDIRI4
+CNSTI4 0
+NEI4 $155
+line 251
+;251:			return;
+ADDRGP4 $129
+JUMPV
+LABELV $155
+line 252
+;252:	}
+LABELV $147
+line 254
+;253:
+;254:	if (give_all || Q_stricmp(name, "armor") == 0)
+ADDRLP4 8
+INDIRI4
+CNSTI4 0
+NEI4 $160
+ADDRLP4 4
+INDIRP4
+ARGP4
+ADDRGP4 $159
+ARGP4
+ADDRLP4 100
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 100
+INDIRI4
+CNSTI4 0
+NEI4 $157
+LABELV $160
+line 255
+;255:	{
+line 256
+;256:		ent->client->ps.stats[STAT_ARMOR] = 200;
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 196
+ADDP4
+CNSTI4 200
+ASGNI4
+line 258
+;257:
+;258:		if (!give_all)
+ADDRLP4 8
+INDIRI4
+CNSTI4 0
+NEI4 $161
+line 259
+;259:			return;
+ADDRGP4 $129
+JUMPV
+LABELV $161
+line 260
+;260:	}
+LABELV $157
+line 262
+;261:
+;262:	if (Q_stricmp(name, "excellent") == 0) {
+ADDRLP4 4
+INDIRP4
+ARGP4
+ADDRGP4 $165
+ARGP4
+ADDRLP4 104
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 104
+INDIRI4
+CNSTI4 0
+NEI4 $163
+line 263
+;263:		ent->client->ps.persistant[PERS_EXCELLENT_COUNT]++;
+ADDRLP4 108
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 288
+ADDP4
+ASGNP4
+ADDRLP4 108
+INDIRP4
+ADDRLP4 108
+INDIRP4
+INDIRI4
+CNSTI4 1
+ADDI4
+ASGNI4
+line 264
+;264:		return;
+ADDRGP4 $129
+JUMPV
+LABELV $163
+line 266
+;265:	}
+;266:	if (Q_stricmp(name, "impressive") == 0) {
+ADDRLP4 4
+INDIRP4
+ARGP4
+ADDRGP4 $168
+ARGP4
+ADDRLP4 108
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 108
+INDIRI4
+CNSTI4 0
+NEI4 $166
+line 267
+;267:		ent->client->ps.persistant[PERS_IMPRESSIVE_COUNT]++;
+ADDRLP4 112
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 284
+ADDP4
+ASGNP4
+ADDRLP4 112
+INDIRP4
+ADDRLP4 112
+INDIRP4
+INDIRI4
+CNSTI4 1
+ADDI4
+ASGNI4
+line 268
+;268:		return;
+ADDRGP4 $129
+JUMPV
+LABELV $166
+line 270
+;269:	}
+;270:	if (Q_stricmp(name, "gauntletaward") == 0) {
+ADDRLP4 4
+INDIRP4
+ARGP4
+ADDRGP4 $171
+ARGP4
+ADDRLP4 112
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 112
+INDIRI4
+CNSTI4 0
+NEI4 $169
+line 271
+;271:		ent->client->ps.persistant[PERS_GAUNTLET_FRAG_COUNT]++;
+ADDRLP4 116
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 300
+ADDP4
+ASGNP4
+ADDRLP4 116
+INDIRP4
+ADDRLP4 116
+INDIRP4
+INDIRI4
+CNSTI4 1
+ADDI4
+ASGNI4
+line 272
+;272:		return;
+ADDRGP4 $129
+JUMPV
+LABELV $169
+line 274
+;273:	}
+;274:	if (Q_stricmp(name, "defend") == 0) {
+ADDRLP4 4
+INDIRP4
+ARGP4
+ADDRGP4 $174
+ARGP4
+ADDRLP4 116
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 116
+INDIRI4
+CNSTI4 0
+NEI4 $172
+line 275
+;275:		ent->client->ps.persistant[PERS_DEFEND_COUNT]++;
+ADDRLP4 120
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 292
+ADDP4
+ASGNP4
+ADDRLP4 120
+INDIRP4
+ADDRLP4 120
+INDIRP4
+INDIRI4
+CNSTI4 1
+ADDI4
+ASGNI4
+line 276
+;276:		return;
+ADDRGP4 $129
+JUMPV
+LABELV $172
+line 278
+;277:	}
+;278:	if (Q_stricmp(name, "assist") == 0) {
+ADDRLP4 4
+INDIRP4
+ARGP4
+ADDRGP4 $177
+ARGP4
+ADDRLP4 120
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 120
+INDIRI4
+CNSTI4 0
+NEI4 $175
+line 279
+;279:		ent->client->ps.persistant[PERS_ASSIST_COUNT]++;
+ADDRLP4 124
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 296
+ADDP4
+ASGNP4
+ADDRLP4 124
+INDIRP4
+ADDRLP4 124
+INDIRP4
+INDIRI4
+CNSTI4 1
+ADDI4
+ASGNI4
+line 280
+;280:		return;
+ADDRGP4 $129
+JUMPV
+LABELV $175
+line 284
+;281:	}
+;282:
+;283:	// spawn a specific item right on the player
+;284:	if ( !give_all ) {
+ADDRLP4 8
+INDIRI4
+CNSTI4 0
+NEI4 $178
+line 285
+;285:		it = BG_FindItem (name);
+ADDRLP4 4
+INDIRP4
+ARGP4
+ADDRLP4 124
+ADDRGP4 BG_FindItem
+CALLP4
+ASGNP4
+ADDRLP4 16
+ADDRLP4 124
+INDIRP4
+ASGNP4
+line 286
+;286:		if (!it) {
+ADDRLP4 16
+INDIRP4
+CVPU4 4
+CNSTU4 0
+NEU4 $180
+line 287
+;287:			return;
+ADDRGP4 $129
+JUMPV
+LABELV $180
+line 290
+;288:		}
+;289:
+;290:		it_ent = G_Spawn();
+ADDRLP4 128
+ADDRGP4 G_Spawn
+CALLP4
+ASGNP4
+ADDRLP4 12
+ADDRLP4 128
+INDIRP4
+ASGNP4
+line 291
+;291:		VectorCopy( ent->r.currentOrigin, it_ent->s.origin );
+ADDRLP4 12
+INDIRP4
+CNSTI4 92
+ADDP4
+ADDRFP4 0
+INDIRP4
+CNSTI4 488
+ADDP4
+INDIRB
+ASGNB 12
+line 292
+;292:		it_ent->classname = it->classname;
+ADDRLP4 12
+INDIRP4
+CNSTI4 524
+ADDP4
+ADDRLP4 16
+INDIRP4
+INDIRP4
+ASGNP4
+line 293
+;293:		G_SpawnItem (it_ent, it);
+ADDRLP4 12
+INDIRP4
+ARGP4
+ADDRLP4 16
+INDIRP4
+ARGP4
+ADDRGP4 G_SpawnItem
+CALLV
+pop
+line 294
+;294:		FinishSpawningItem(it_ent );
+ADDRLP4 12
+INDIRP4
+ARGP4
+ADDRGP4 FinishSpawningItem
+CALLV
+pop
+line 295
+;295:		memset( &trace, 0, sizeof( trace ) );
+ADDRLP4 20
+ARGP4
+CNSTI4 0
+ARGI4
+CNSTI4 56
+ARGI4
+ADDRGP4 memset
+CALLP4
+pop
+line 296
+;296:		Touch_Item (it_ent, ent, &trace);
+ADDRLP4 12
+INDIRP4
+ARGP4
+ADDRFP4 0
+INDIRP4
+ARGP4
+ADDRLP4 20
+ARGP4
+ADDRGP4 Touch_Item
+CALLV
+pop
+line 297
+;297:		if (it_ent->inuse) {
+ADDRLP4 12
+INDIRP4
+CNSTI4 520
+ADDP4
+INDIRI4
+CNSTI4 0
+EQI4 $182
+line 298
+;298:			G_FreeEntity( it_ent );
+ADDRLP4 12
+INDIRP4
+ARGP4
+ADDRGP4 G_FreeEntity
+CALLV
+pop
+line 299
+;299:		}
+LABELV $182
+line 300
+;300:	}
+LABELV $178
+line 301
+;301:}
+LABELV $129
+endproc Cmd_Give_f 132 12
+export Cmd_God_f
+proc Cmd_God_f 16 8
+line 314
+;302:
+;303:
+;304:/*
+;305:==================
+;306:Cmd_God_f
+;307:
+;308:Sets client to godmode
+;309:
+;310:argv(0) god
+;311:==================
+;312:*/
+;313:void Cmd_God_f (gentity_t *ent)
+;314:{
+line 317
+;315:	char	*msg;
+;316:
+;317:	if ( !CheatsOk( ent ) ) {
+ADDRFP4 0
+INDIRP4
+ARGP4
+ADDRLP4 4
+ADDRGP4 CheatsOk
+CALLI4
+ASGNI4
+ADDRLP4 4
+INDIRI4
+CNSTI4 0
+NEI4 $185
+line 318
+;318:		return;
+ADDRGP4 $184
+JUMPV
+LABELV $185
+line 321
+;319:	}
+;320:
+;321:	ent->flags ^= FL_GODMODE;
+ADDRLP4 8
+ADDRFP4 0
+INDIRP4
+CNSTI4 536
+ADDP4
+ASGNP4
+ADDRLP4 8
+INDIRP4
+ADDRLP4 8
+INDIRP4
+INDIRI4
+CNSTI4 16
+BXORI4
+ASGNI4
+line 322
+;322:	if (!(ent->flags & FL_GODMODE) )
+ADDRFP4 0
+INDIRP4
+CNSTI4 536
+ADDP4
+INDIRI4
+CNSTI4 16
+BANDI4
+CNSTI4 0
+NEI4 $187
+line 323
+;323:		msg = "godmode OFF\n";
+ADDRLP4 0
+ADDRGP4 $189
+ASGNP4
+ADDRGP4 $188
+JUMPV
+LABELV $187
+line 325
+;324:	else
+;325:		msg = "godmode ON\n";
+ADDRLP4 0
+ADDRGP4 $190
+ASGNP4
+LABELV $188
+line 327
+;326:
+;327:	trap_SendServerCommand( ent-g_entities, va("print \"%s\"", msg));
+ADDRGP4 $191
+ARGP4
+ADDRLP4 0
+INDIRP4
+ARGP4
+ADDRLP4 12
+ADDRGP4 va
+CALLP4
+ASGNP4
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRLP4 12
+INDIRP4
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 328
+;328:}
+LABELV $184
+endproc Cmd_God_f 16 8
+export Cmd_Notarget_f
+proc Cmd_Notarget_f 16 8
+line 340
+;329:
+;330:
+;331:/*
+;332:==================
+;333:Cmd_Notarget_f
+;334:
+;335:Sets client to notarget
+;336:
+;337:argv(0) notarget
+;338:==================
+;339:*/
+;340:void Cmd_Notarget_f( gentity_t *ent ) {
+line 343
+;341:	char	*msg;
+;342:
+;343:	if ( !CheatsOk( ent ) ) {
+ADDRFP4 0
+INDIRP4
+ARGP4
+ADDRLP4 4
+ADDRGP4 CheatsOk
+CALLI4
+ASGNI4
+ADDRLP4 4
+INDIRI4
+CNSTI4 0
+NEI4 $193
+line 344
+;344:		return;
+ADDRGP4 $192
+JUMPV
+LABELV $193
+line 347
+;345:	}
+;346:
+;347:	ent->flags ^= FL_NOTARGET;
+ADDRLP4 8
+ADDRFP4 0
+INDIRP4
+CNSTI4 536
+ADDP4
+ASGNP4
+ADDRLP4 8
+INDIRP4
+ADDRLP4 8
+INDIRP4
+INDIRI4
+CNSTI4 32
+BXORI4
+ASGNI4
+line 348
+;348:	if (!(ent->flags & FL_NOTARGET) )
+ADDRFP4 0
+INDIRP4
+CNSTI4 536
+ADDP4
+INDIRI4
+CNSTI4 32
+BANDI4
+CNSTI4 0
+NEI4 $195
+line 349
+;349:		msg = "notarget OFF\n";
+ADDRLP4 0
+ADDRGP4 $197
+ASGNP4
+ADDRGP4 $196
+JUMPV
+LABELV $195
+line 351
+;350:	else
+;351:		msg = "notarget ON\n";
+ADDRLP4 0
+ADDRGP4 $198
+ASGNP4
+LABELV $196
+line 353
+;352:
+;353:	trap_SendServerCommand( ent-g_entities, va("print \"%s\"", msg));
+ADDRGP4 $191
+ARGP4
+ADDRLP4 0
+INDIRP4
+ARGP4
+ADDRLP4 12
+ADDRGP4 va
+CALLP4
+ASGNP4
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRLP4 12
+INDIRP4
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 354
+;354:}
+LABELV $192
+endproc Cmd_Notarget_f 16 8
+export Cmd_Noclip_f
+proc Cmd_Noclip_f 20 8
+line 364
+;355:
+;356:
+;357:/*
+;358:==================
+;359:Cmd_Noclip_f
+;360:
+;361:argv(0) noclip
+;362:==================
+;363:*/
+;364:void Cmd_Noclip_f( gentity_t *ent ) {
+line 367
+;365:	char	*msg;
+;366:
+;367:	if ( !CheatsOk( ent ) ) {
+ADDRFP4 0
+INDIRP4
+ARGP4
+ADDRLP4 4
+ADDRGP4 CheatsOk
+CALLI4
+ASGNI4
+ADDRLP4 4
+INDIRI4
+CNSTI4 0
+NEI4 $200
+line 368
+;368:		return;
+ADDRGP4 $199
+JUMPV
+LABELV $200
+line 371
+;369:	}
+;370:
+;371:	if ( ent->client->noclip ) {
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 648
+ADDP4
+INDIRI4
+CNSTI4 0
+EQI4 $202
+line 372
+;372:		msg = "noclip OFF\n";
+ADDRLP4 0
+ADDRGP4 $204
+ASGNP4
+line 373
+;373:	} else {
+ADDRGP4 $203
+JUMPV
+LABELV $202
+line 374
+;374:		msg = "noclip ON\n";
+ADDRLP4 0
+ADDRGP4 $205
+ASGNP4
+line 375
+;375:	}
+LABELV $203
+line 376
+;376:	ent->client->noclip = !ent->client->noclip;
+ADDRLP4 12
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 648
+ADDP4
+ASGNP4
+ADDRLP4 12
+INDIRP4
+INDIRI4
+CNSTI4 0
+NEI4 $207
+ADDRLP4 8
+CNSTI4 1
+ASGNI4
+ADDRGP4 $208
+JUMPV
+LABELV $207
+ADDRLP4 8
+CNSTI4 0
+ASGNI4
+LABELV $208
+ADDRLP4 12
+INDIRP4
+ADDRLP4 8
+INDIRI4
+ASGNI4
+line 378
+;377:
+;378:	trap_SendServerCommand( ent-g_entities, va("print \"%s\"", msg));
+ADDRGP4 $191
+ARGP4
+ADDRLP4 0
+INDIRP4
+ARGP4
+ADDRLP4 16
+ADDRGP4 va
+CALLP4
+ASGNP4
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRLP4 16
+INDIRP4
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 379
+;379:}
+LABELV $199
+endproc Cmd_Noclip_f 20 8
+export Cmd_LevelShot_f
+proc Cmd_LevelShot_f 4 8
+line 392
+;380:
+;381:
+;382:/*
+;383:==================
+;384:Cmd_LevelShot_f
+;385:
+;386:This is just to help generate the level pictures
+;387:for the menus.  It goes to the intermission immediately
+;388:and sends over a command to the client to resize the view,
+;389:hide the scoreboard, and take a special screenshot
+;390:==================
+;391:*/
+;392:void Cmd_LevelShot_f( gentity_t *ent ) {
+line 393
+;393:	if ( !CheatsOk( ent ) ) {
+ADDRFP4 0
+INDIRP4
+ARGP4
+ADDRLP4 0
+ADDRGP4 CheatsOk
+CALLI4
+ASGNI4
+ADDRLP4 0
+INDIRI4
+CNSTI4 0
+NEI4 $210
+line 394
+;394:		return;
+ADDRGP4 $209
+JUMPV
+LABELV $210
+line 398
+;395:	}
+;396:
+;397:	// doesn't work in single player
+;398:	if ( g_gametype.integer != 0 ) {
+ADDRGP4 g_gametype+12
+INDIRI4
+CNSTI4 0
+EQI4 $212
+line 399
+;399:		trap_SendServerCommand( ent-g_entities, 
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRGP4 $215
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 401
+;400:			"print \"Must be in g_gametype 0 for levelshot\n\"" );
+;401:		return;
+ADDRGP4 $209
+JUMPV
+LABELV $212
+line 404
+;402:	}
+;403:
+;404:	BeginIntermission();
+ADDRGP4 BeginIntermission
+CALLV
+pop
+line 405
+;405:	trap_SendServerCommand( ent-g_entities, "clientLevelShot" );
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRGP4 $216
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 406
+;406:}
+LABELV $209
+endproc Cmd_LevelShot_f 4 8
+export Cmd_TeamTask_f
+proc Cmd_TeamTask_f 2068 12
+line 419
+;407:
+;408:
+;409:/*
+;410:==================
+;411:Cmd_LevelShot_f
+;412:
+;413:This is just to help generate the level pictures
+;414:for the menus.  It goes to the intermission immediately
+;415:and sends over a command to the client to resize the view,
+;416:hide the scoreboard, and take a special screenshot
+;417:==================
+;418:*/
+;419:void Cmd_TeamTask_f( gentity_t *ent ) {
+line 423
+;420:	char userinfo[MAX_INFO_STRING];
+;421:	char		arg[MAX_TOKEN_CHARS];
+;422:	int task;
+;423:	int client = ent->client - level.clients;
+ADDRLP4 1024
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CVPU4 4
+ADDRGP4 level
+INDIRP4
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 784
+DIVI4
+ASGNI4
+line 425
+;424:
+;425:	if ( trap_Argc() != 2 ) {
+ADDRLP4 2056
+ADDRGP4 trap_Argc
+CALLI4
+ASGNI4
+ADDRLP4 2056
+INDIRI4
+CNSTI4 2
+EQI4 $218
+line 426
+;426:		return;
+ADDRGP4 $217
+JUMPV
+LABELV $218
+line 428
+;427:	}
+;428:	trap_Argv( 1, arg, sizeof( arg ) );
+CNSTI4 1
+ARGI4
+ADDRLP4 1028
+ARGP4
+CNSTI4 1024
+ARGI4
+ADDRGP4 trap_Argv
+CALLV
+pop
+line 429
+;429:	task = atoi( arg );
+ADDRLP4 1028
+ARGP4
+ADDRLP4 2060
+ADDRGP4 atoi
+CALLI4
+ASGNI4
+ADDRLP4 2052
+ADDRLP4 2060
+INDIRI4
+ASGNI4
+line 431
+;430:
+;431:	trap_GetUserinfo(client, userinfo, sizeof(userinfo));
+ADDRLP4 1024
+INDIRI4
+ARGI4
+ADDRLP4 0
+ARGP4
+CNSTI4 1024
+ARGI4
+ADDRGP4 trap_GetUserinfo
+CALLV
+pop
+line 432
+;432:	Info_SetValueForKey(userinfo, "teamtask", va("%d", task));
+ADDRGP4 $221
+ARGP4
+ADDRLP4 2052
+INDIRI4
+ARGI4
+ADDRLP4 2064
+ADDRGP4 va
+CALLP4
+ASGNP4
+ADDRLP4 0
+ARGP4
+ADDRGP4 $220
+ARGP4
+ADDRLP4 2064
+INDIRP4
+ARGP4
+ADDRGP4 Info_SetValueForKey
+CALLV
+pop
+line 433
+;433:	trap_SetUserinfo(client, userinfo);
+ADDRLP4 1024
+INDIRI4
+ARGI4
+ADDRLP4 0
+ARGP4
+ADDRGP4 trap_SetUserinfo
+CALLV
+pop
+line 434
+;434:	ClientUserinfoChanged(client);
+ADDRLP4 1024
+INDIRI4
+ARGI4
+ADDRGP4 ClientUserinfoChanged
+CALLV
+pop
+line 435
+;435:}
+LABELV $217
+endproc Cmd_TeamTask_f 2068 12
+export Cmd_Kill_f
+proc Cmd_Kill_f 16 20
+line 444
+;436:
+;437:
+;438:
+;439:/*
+;440:=================
+;441:Cmd_Kill_f
+;442:=================
+;443:*/
+;444:void Cmd_Kill_f( gentity_t *ent ) {
+line 445
+;445:	if ( ent->client->sess.sessionTeam == TEAM_SPECTATOR ) {
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 616
+ADDP4
+INDIRI4
+CNSTI4 3
+NEI4 $223
+line 446
+;446:		return;
+ADDRGP4 $222
+JUMPV
+LABELV $223
+line 448
+;447:	}
+;448:	if (ent->health <= 0) {
+ADDRFP4 0
+INDIRP4
+CNSTI4 732
+ADDP4
+INDIRI4
+CNSTI4 0
+GTI4 $225
+line 449
+;449:		return;
+ADDRGP4 $222
+JUMPV
+LABELV $225
+line 451
+;450:	}
+;451:	ent->flags &= ~FL_GODMODE;
+ADDRLP4 0
+ADDRFP4 0
+INDIRP4
+CNSTI4 536
+ADDP4
+ASGNP4
+ADDRLP4 0
+INDIRP4
+ADDRLP4 0
+INDIRP4
+INDIRI4
+CNSTI4 -17
+BANDI4
+ASGNI4
+line 452
+;452:	ent->client->ps.stats[STAT_HEALTH] = ent->health = -999;
+ADDRLP4 4
+ADDRFP4 0
+INDIRP4
+ASGNP4
+ADDRLP4 8
+CNSTI4 -999
+ASGNI4
+ADDRLP4 4
+INDIRP4
+CNSTI4 732
+ADDP4
+ADDRLP4 8
+INDIRI4
+ASGNI4
+ADDRLP4 4
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 184
+ADDP4
+ADDRLP4 8
+INDIRI4
+ASGNI4
+line 453
+;453:	player_die (ent, ent, ent, 100000, MOD_SUICIDE);
+ADDRLP4 12
+ADDRFP4 0
+INDIRP4
+ASGNP4
+ADDRLP4 12
+INDIRP4
+ARGP4
+ADDRLP4 12
+INDIRP4
+ARGP4
+ADDRLP4 12
+INDIRP4
+ARGP4
+CNSTI4 100000
+ARGI4
+CNSTI4 20
+ARGI4
+ADDRGP4 player_die
+CALLV
+pop
+line 454
+;454:}
+LABELV $222
+endproc Cmd_Kill_f 16 20
+export BroadcastTeamChange
+proc BroadcastTeamChange 8 8
+line 464
+;455:
+;456:/*
+;457:=================
+;458:BroadCastTeamChange
+;459:
+;460:Let everyone know about a team change
+;461:=================
+;462:*/
+;463:void BroadcastTeamChange( gclient_t *client, int oldTeam )
+;464:{
+line 465
+;465:	if ( client->sess.sessionTeam == TEAM_RED ) {
+ADDRFP4 0
+INDIRP4
+CNSTI4 616
+ADDP4
+INDIRI4
+CNSTI4 1
+NEI4 $228
+line 466
+;466:		trap_SendServerCommand( -1, va("cp \"%s" S_COLOR_WHITE " joined the red team.\n\"",
+ADDRGP4 $230
+ARGP4
+ADDRFP4 0
+INDIRP4
+CNSTI4 512
+ADDP4
+ARGP4
+ADDRLP4 0
+ADDRGP4 va
+CALLP4
+ASGNP4
+CNSTI4 -1
+ARGI4
+ADDRLP4 0
+INDIRP4
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 468
+;467:			client->pers.netname) );
+;468:	} else if ( client->sess.sessionTeam == TEAM_BLUE ) {
+ADDRGP4 $229
+JUMPV
+LABELV $228
+ADDRFP4 0
+INDIRP4
+CNSTI4 616
+ADDP4
+INDIRI4
+CNSTI4 2
+NEI4 $231
+line 469
+;469:		trap_SendServerCommand( -1, va("cp \"%s" S_COLOR_WHITE " joined the blue team.\n\"",
+ADDRGP4 $233
+ARGP4
+ADDRFP4 0
+INDIRP4
+CNSTI4 512
+ADDP4
+ARGP4
+ADDRLP4 0
+ADDRGP4 va
+CALLP4
+ASGNP4
+CNSTI4 -1
+ARGI4
+ADDRLP4 0
+INDIRP4
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 471
+;470:		client->pers.netname));
+;471:	} else if ( client->sess.sessionTeam == TEAM_SPECTATOR && oldTeam != TEAM_SPECTATOR ) {
+ADDRGP4 $232
+JUMPV
+LABELV $231
+ADDRLP4 0
+CNSTI4 3
+ASGNI4
+ADDRFP4 0
+INDIRP4
+CNSTI4 616
+ADDP4
+INDIRI4
+ADDRLP4 0
+INDIRI4
+NEI4 $234
+ADDRFP4 4
+INDIRI4
+ADDRLP4 0
+INDIRI4
+EQI4 $234
+line 472
+;472:		trap_SendServerCommand( -1, va("cp \"%s" S_COLOR_WHITE " joined the spectators.\n\"",
+ADDRGP4 $236
+ARGP4
+ADDRFP4 0
+INDIRP4
+CNSTI4 512
+ADDP4
+ARGP4
+ADDRLP4 4
+ADDRGP4 va
+CALLP4
+ASGNP4
+CNSTI4 -1
+ARGI4
+ADDRLP4 4
+INDIRP4
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 474
+;473:		client->pers.netname));
+;474:	} else if ( client->sess.sessionTeam == TEAM_FREE ) {
+ADDRGP4 $235
+JUMPV
+LABELV $234
+ADDRFP4 0
+INDIRP4
+CNSTI4 616
+ADDP4
+INDIRI4
+CNSTI4 0
+NEI4 $237
+line 475
+;475:		trap_SendServerCommand( -1, va("cp \"%s" S_COLOR_WHITE " joined the battle.\n\"",
+ADDRGP4 $239
+ARGP4
+ADDRFP4 0
+INDIRP4
+CNSTI4 512
+ADDP4
+ARGP4
+ADDRLP4 4
+ADDRGP4 va
+CALLP4
+ASGNP4
+CNSTI4 -1
+ARGI4
+ADDRLP4 4
+INDIRP4
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 477
+;476:		client->pers.netname));
+;477:	}
+LABELV $237
+LABELV $235
+LABELV $232
+LABELV $229
+line 478
+;478:}
+LABELV $227
+endproc BroadcastTeamChange 8 8
+export SetTeam
+proc SetTeam 96 20
+line 485
+;479:
+;480:/*
+;481:=================
+;482:SetTeam
+;483:=================
+;484:*/
+;485:void SetTeam( gentity_t *ent, char *s ) {
+line 496
+;486:	int					team, oldTeam;
+;487:	gclient_t			*client;
+;488:	int					clientNum;
+;489:	spectatorState_t	specState;
+;490:	int					specClient;
+;491:	int					teamLeader;
+;492:
+;493:	//
+;494:	// see what change is requested
+;495:	//
+;496:	client = ent->client;
+ADDRLP4 0
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+ASGNP4
+line 498
+;497:
+;498:	clientNum = client - level.clients;
+ADDRLP4 12
+ADDRLP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 level
+INDIRP4
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 784
+DIVI4
+ASGNI4
+line 499
+;499:	specClient = 0;
+ADDRLP4 20
+CNSTI4 0
+ASGNI4
+line 500
+;500:	specState = SPECTATOR_NOT;
+ADDRLP4 16
+CNSTI4 0
+ASGNI4
+line 501
+;501:	if ( !Q_stricmp( s, "scoreboard" ) || !Q_stricmp( s, "score" )  ) {
+ADDRFP4 4
+INDIRP4
+ARGP4
+ADDRGP4 $243
+ARGP4
+ADDRLP4 28
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 28
+INDIRI4
+CNSTI4 0
+EQI4 $245
+ADDRFP4 4
+INDIRP4
+ARGP4
+ADDRGP4 $244
+ARGP4
+ADDRLP4 32
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 32
+INDIRI4
+CNSTI4 0
+NEI4 $241
+LABELV $245
+line 502
+;502:		team = TEAM_SPECTATOR;
+ADDRLP4 4
+CNSTI4 3
+ASGNI4
+line 503
+;503:		specState = SPECTATOR_SCOREBOARD;
+ADDRLP4 16
+CNSTI4 3
+ASGNI4
+line 504
+;504:	} else if ( !Q_stricmp( s, "follow1" ) ) {
+ADDRGP4 $242
+JUMPV
+LABELV $241
+ADDRFP4 4
+INDIRP4
+ARGP4
+ADDRGP4 $248
+ARGP4
+ADDRLP4 36
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 36
+INDIRI4
+CNSTI4 0
+NEI4 $246
+line 505
+;505:		team = TEAM_SPECTATOR;
+ADDRLP4 4
+CNSTI4 3
+ASGNI4
+line 506
+;506:		specState = SPECTATOR_FOLLOW;
+ADDRLP4 16
+CNSTI4 2
+ASGNI4
+line 507
+;507:		specClient = -1;
+ADDRLP4 20
+CNSTI4 -1
+ASGNI4
+line 508
+;508:	} else if ( !Q_stricmp( s, "follow2" ) ) {
+ADDRGP4 $247
+JUMPV
+LABELV $246
+ADDRFP4 4
+INDIRP4
+ARGP4
+ADDRGP4 $251
+ARGP4
+ADDRLP4 40
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 40
+INDIRI4
+CNSTI4 0
+NEI4 $249
+line 509
+;509:		team = TEAM_SPECTATOR;
+ADDRLP4 4
+CNSTI4 3
+ASGNI4
+line 510
+;510:		specState = SPECTATOR_FOLLOW;
+ADDRLP4 16
+CNSTI4 2
+ASGNI4
+line 511
+;511:		specClient = -2;
+ADDRLP4 20
+CNSTI4 -2
+ASGNI4
+line 512
+;512:	} else if ( !Q_stricmp( s, "spectator" ) || !Q_stricmp( s, "s" ) ) {
+ADDRGP4 $250
+JUMPV
+LABELV $249
+ADDRFP4 4
+INDIRP4
+ARGP4
+ADDRGP4 $254
+ARGP4
+ADDRLP4 44
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 44
+INDIRI4
+CNSTI4 0
+EQI4 $256
+ADDRFP4 4
+INDIRP4
+ARGP4
+ADDRGP4 $255
+ARGP4
+ADDRLP4 48
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 48
+INDIRI4
+CNSTI4 0
+NEI4 $252
+LABELV $256
+line 513
+;513:		team = TEAM_SPECTATOR;
+ADDRLP4 4
+CNSTI4 3
+ASGNI4
+line 514
+;514:		specState = SPECTATOR_FREE;
+ADDRLP4 16
+CNSTI4 1
+ASGNI4
+line 515
+;515:	} else if ( g_gametype.integer >= GT_TEAM ) {
+ADDRGP4 $253
+JUMPV
+LABELV $252
+ADDRGP4 g_gametype+12
+INDIRI4
+CNSTI4 3
+LTI4 $257
+line 517
+;516:		// if running a team game, assign player to one of the teams
+;517:		specState = SPECTATOR_NOT;
+ADDRLP4 16
+CNSTI4 0
+ASGNI4
+line 518
+;518:		if ( !Q_stricmp( s, "red" ) || !Q_stricmp( s, "r" ) ) {
+ADDRFP4 4
+INDIRP4
+ARGP4
+ADDRGP4 $262
+ARGP4
+ADDRLP4 52
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 52
+INDIRI4
+CNSTI4 0
+EQI4 $264
+ADDRFP4 4
+INDIRP4
+ARGP4
+ADDRGP4 $263
+ARGP4
+ADDRLP4 56
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 56
+INDIRI4
+CNSTI4 0
+NEI4 $260
+LABELV $264
+line 519
+;519:			team = TEAM_RED;
+ADDRLP4 4
+CNSTI4 1
+ASGNI4
+line 520
+;520:		} else if ( !Q_stricmp( s, "blue" ) || !Q_stricmp( s, "b" ) ) {
+ADDRGP4 $261
+JUMPV
+LABELV $260
+ADDRFP4 4
+INDIRP4
+ARGP4
+ADDRGP4 $267
+ARGP4
+ADDRLP4 60
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 60
+INDIRI4
+CNSTI4 0
+EQI4 $269
+ADDRFP4 4
+INDIRP4
+ARGP4
+ADDRGP4 $268
+ARGP4
+ADDRLP4 64
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 64
+INDIRI4
+CNSTI4 0
+NEI4 $265
+LABELV $269
+line 521
+;521:			team = TEAM_BLUE;
+ADDRLP4 4
+CNSTI4 2
+ASGNI4
+line 522
+;522:		} else {
+ADDRGP4 $266
+JUMPV
+LABELV $265
+line 524
+;523:			// pick the team with the least number of players
+;524:			team = PickTeam( clientNum );
+ADDRLP4 12
+INDIRI4
+ARGI4
+ADDRLP4 68
+ADDRGP4 PickTeam
+CALLI4
+ASGNI4
+ADDRLP4 4
+ADDRLP4 68
+INDIRI4
+ASGNI4
+line 525
+;525:		}
+LABELV $266
+LABELV $261
+line 527
+;526:
+;527:		if ( g_teamForceBalance.integer  ) {
+ADDRGP4 g_teamForceBalance+12
+INDIRI4
+CNSTI4 0
+EQI4 $258
+line 530
+;528:			int		counts[TEAM_NUM_TEAMS];
+;529:
+;530:			counts[TEAM_BLUE] = TeamCount( ent->client->ps.clientNum, TEAM_BLUE );
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 140
+ADDP4
+INDIRI4
+ARGI4
+CNSTI4 2
+ARGI4
+ADDRLP4 84
+ADDRGP4 TeamCount
+CALLI4
+ASGNI4
+ADDRLP4 68+8
+ADDRLP4 84
+INDIRI4
+ASGNI4
+line 531
+;531:			counts[TEAM_RED] = TeamCount( ent->client->ps.clientNum, TEAM_RED );
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 140
+ADDP4
+INDIRI4
+ARGI4
+CNSTI4 1
+ARGI4
+ADDRLP4 88
+ADDRGP4 TeamCount
+CALLI4
+ASGNI4
+ADDRLP4 68+4
+ADDRLP4 88
+INDIRI4
+ASGNI4
+line 534
+;532:
+;533:			// We allow a spread of two
+;534:			if ( team == TEAM_RED && counts[TEAM_RED] - counts[TEAM_BLUE] > 1 ) {
+ADDRLP4 92
+CNSTI4 1
+ASGNI4
+ADDRLP4 4
+INDIRI4
+ADDRLP4 92
+INDIRI4
+NEI4 $275
+ADDRLP4 68+4
+INDIRI4
+ADDRLP4 68+8
+INDIRI4
+SUBI4
+ADDRLP4 92
+INDIRI4
+LEI4 $275
+line 535
+;535:				trap_SendServerCommand( ent->client->ps.clientNum, 
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 140
+ADDP4
+INDIRI4
+ARGI4
+ADDRGP4 $279
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 537
+;536:					"cp \"Red team has too many players.\n\"" );
+;537:				return; // ignore the request
+ADDRGP4 $240
+JUMPV
+LABELV $275
+line 539
+;538:			}
+;539:			if ( team == TEAM_BLUE && counts[TEAM_BLUE] - counts[TEAM_RED] > 1 ) {
+ADDRLP4 4
+INDIRI4
+CNSTI4 2
+NEI4 $258
+ADDRLP4 68+8
+INDIRI4
+ADDRLP4 68+4
+INDIRI4
+SUBI4
+CNSTI4 1
+LEI4 $258
+line 540
+;540:				trap_SendServerCommand( ent->client->ps.clientNum, 
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 140
+ADDP4
+INDIRI4
+ARGI4
+ADDRGP4 $284
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 542
+;541:					"cp \"Blue team has too many players.\n\"" );
+;542:				return; // ignore the request
+ADDRGP4 $240
+JUMPV
+line 546
+;543:			}
+;544:
+;545:			// It's ok, the team we are switching to has less or same number of players
+;546:		}
+line 548
+;547:
+;548:	} else {
+LABELV $257
+line 550
+;549:		// force them to spectators if there aren't any spots free
+;550:		team = TEAM_FREE;
+ADDRLP4 4
+CNSTI4 0
+ASGNI4
+line 551
+;551:	}
+LABELV $258
+LABELV $253
+LABELV $250
+LABELV $247
+LABELV $242
+line 554
+;552:
+;553:	// override decision if limiting the players
+;554:	if ( (g_gametype.integer == GT_TOURNAMENT)
+ADDRGP4 g_gametype+12
+INDIRI4
+CNSTI4 1
+NEI4 $285
+ADDRGP4 level+76
+INDIRI4
+CNSTI4 2
+LTI4 $285
+line 555
+;555:		&& level.numNonSpectatorClients >= 2 ) {
+line 556
+;556:		team = TEAM_SPECTATOR;
+ADDRLP4 4
+CNSTI4 3
+ASGNI4
+line 557
+;557:	} else if ( g_maxGameClients.integer > 0 && 
+ADDRGP4 $286
+JUMPV
+LABELV $285
+ADDRGP4 g_maxGameClients+12
+INDIRI4
+CNSTI4 0
+LEI4 $289
+ADDRGP4 level+76
+INDIRI4
+ADDRGP4 g_maxGameClients+12
+INDIRI4
+LTI4 $289
+line 558
+;558:		level.numNonSpectatorClients >= g_maxGameClients.integer ) {
+line 559
+;559:		team = TEAM_SPECTATOR;
+ADDRLP4 4
+CNSTI4 3
+ASGNI4
+line 560
+;560:	}
+LABELV $289
+LABELV $286
+line 565
+;561:
+;562:	//
+;563:	// decide if we will allow the change
+;564:	//
+;565:	oldTeam = client->sess.sessionTeam;
+ADDRLP4 8
+ADDRLP4 0
+INDIRP4
+CNSTI4 616
+ADDP4
+INDIRI4
+ASGNI4
+line 566
+;566:	if ( team == oldTeam && team != TEAM_SPECTATOR ) {
+ADDRLP4 4
+INDIRI4
+ADDRLP4 8
+INDIRI4
+NEI4 $294
+ADDRLP4 4
+INDIRI4
+CNSTI4 3
+EQI4 $294
+line 567
+;567:		return;
+ADDRGP4 $240
+JUMPV
+LABELV $294
+line 575
+;568:	}
+;569:
+;570:	//
+;571:	// execute the team change
+;572:	//
+;573:
+;574:	// if the player was dead leave the body
+;575:	if ( client->ps.stats[STAT_HEALTH] <= 0 ) {
+ADDRLP4 0
+INDIRP4
+CNSTI4 184
+ADDP4
+INDIRI4
+CNSTI4 0
+GTI4 $296
+line 576
+;576:		CopyToBodyQue(ent);
+ADDRFP4 0
+INDIRP4
+ARGP4
+ADDRGP4 CopyToBodyQue
+CALLV
+pop
+line 577
+;577:	}
+LABELV $296
+line 580
+;578:
+;579:	// he starts at 'base'
+;580:	client->pers.teamState.state = TEAM_BEGIN;
+ADDRLP4 0
+INDIRP4
+CNSTI4 556
+ADDP4
+CNSTI4 0
+ASGNI4
+line 581
+;581:	if ( oldTeam != TEAM_SPECTATOR ) {
+ADDRLP4 8
+INDIRI4
+CNSTI4 3
+EQI4 $298
+line 583
+;582:		// Kill him (makes sure he loses flags, etc)
+;583:		ent->flags &= ~FL_GODMODE;
+ADDRLP4 56
+ADDRFP4 0
+INDIRP4
+CNSTI4 536
+ADDP4
+ASGNP4
+ADDRLP4 56
+INDIRP4
+ADDRLP4 56
+INDIRP4
+INDIRI4
+CNSTI4 -17
+BANDI4
+ASGNI4
+line 584
+;584:		ent->client->ps.stats[STAT_HEALTH] = ent->health = 0;
+ADDRLP4 60
+ADDRFP4 0
+INDIRP4
+ASGNP4
+ADDRLP4 64
+CNSTI4 0
+ASGNI4
+ADDRLP4 60
+INDIRP4
+CNSTI4 732
+ADDP4
+ADDRLP4 64
+INDIRI4
+ASGNI4
+ADDRLP4 60
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 184
+ADDP4
+ADDRLP4 64
+INDIRI4
+ASGNI4
+line 585
+;585:		player_die (ent, ent, ent, 100000, MOD_SUICIDE);
+ADDRLP4 68
+ADDRFP4 0
+INDIRP4
+ASGNP4
+ADDRLP4 68
+INDIRP4
+ARGP4
+ADDRLP4 68
+INDIRP4
+ARGP4
+ADDRLP4 68
+INDIRP4
+ARGP4
+CNSTI4 100000
+ARGI4
+CNSTI4 20
+ARGI4
+ADDRGP4 player_die
+CALLV
+pop
+line 587
+;586:
+;587:	}
+LABELV $298
+line 589
+;588:	// they go to the end of the line for tournements
+;589:	if ( team == TEAM_SPECTATOR ) {
+ADDRLP4 4
+INDIRI4
+CNSTI4 3
+NEI4 $300
+line 590
+;590:		client->sess.spectatorTime = level.time;
+ADDRLP4 0
+INDIRP4
+CNSTI4 620
+ADDP4
+ADDRGP4 level+32
+INDIRI4
+ASGNI4
+line 591
+;591:	}
+LABELV $300
+line 593
+;592:
+;593:	client->sess.sessionTeam = team;
+ADDRLP4 0
+INDIRP4
+CNSTI4 616
+ADDP4
+ADDRLP4 4
+INDIRI4
+ASGNI4
+line 594
+;594:	client->sess.spectatorState = specState;
+ADDRLP4 0
+INDIRP4
+CNSTI4 624
+ADDP4
+ADDRLP4 16
+INDIRI4
+ASGNI4
+line 595
+;595:	client->sess.spectatorClient = specClient;
+ADDRLP4 0
+INDIRP4
+CNSTI4 628
+ADDP4
+ADDRLP4 20
+INDIRI4
+ASGNI4
+line 597
+;596:
+;597:	client->sess.teamLeader = qfalse;
+ADDRLP4 0
+INDIRP4
+CNSTI4 640
+ADDP4
+CNSTI4 0
+ASGNI4
+line 598
+;598:	if ( team == TEAM_RED || team == TEAM_BLUE ) {
+ADDRLP4 4
+INDIRI4
+CNSTI4 1
+EQI4 $305
+ADDRLP4 4
+INDIRI4
+CNSTI4 2
+NEI4 $303
+LABELV $305
+line 599
+;599:		teamLeader = TeamLeader( team );
+ADDRLP4 4
+INDIRI4
+ARGI4
+ADDRLP4 60
+ADDRGP4 TeamLeader
+CALLI4
+ASGNI4
+ADDRLP4 24
+ADDRLP4 60
+INDIRI4
+ASGNI4
+line 601
+;600:		// if there is no team leader or the team leader is a bot and this client is not a bot
+;601:		if ( teamLeader == -1 || ( !(g_entities[clientNum].r.svFlags & SVF_BOT) && (g_entities[teamLeader].r.svFlags & SVF_BOT) ) ) {
+ADDRLP4 64
+ADDRLP4 24
+INDIRI4
+ASGNI4
+ADDRLP4 64
+INDIRI4
+CNSTI4 -1
+EQI4 $312
+ADDRLP4 68
+CNSTI4 808
+ASGNI4
+ADDRLP4 72
+CNSTI4 8
+ASGNI4
+ADDRLP4 76
+CNSTI4 0
+ASGNI4
+ADDRLP4 68
+INDIRI4
+ADDRLP4 12
+INDIRI4
+MULI4
+ADDRGP4 g_entities+208+216
+ADDP4
+INDIRI4
+ADDRLP4 72
+INDIRI4
+BANDI4
+ADDRLP4 76
+INDIRI4
+NEI4 $306
+ADDRLP4 68
+INDIRI4
+ADDRLP4 64
+INDIRI4
+MULI4
+ADDRGP4 g_entities+208+216
+ADDP4
+INDIRI4
+ADDRLP4 72
+INDIRI4
+BANDI4
+ADDRLP4 76
+INDIRI4
+EQI4 $306
+LABELV $312
+line 602
+;602:			SetLeader( team, clientNum );
+ADDRLP4 4
+INDIRI4
+ARGI4
+ADDRLP4 12
+INDIRI4
+ARGI4
+ADDRGP4 SetLeader
+CALLV
+pop
+line 603
+;603:		}
+LABELV $306
+line 604
+;604:	}
+LABELV $303
+line 606
+;605:	// make sure there is a team leader on the team the player came from
+;606:	if ( oldTeam == TEAM_RED || oldTeam == TEAM_BLUE ) {
+ADDRLP4 8
+INDIRI4
+CNSTI4 1
+EQI4 $315
+ADDRLP4 8
+INDIRI4
+CNSTI4 2
+NEI4 $313
+LABELV $315
+line 607
+;607:		CheckTeamLeader( oldTeam );
+ADDRLP4 8
+INDIRI4
+ARGI4
+ADDRGP4 CheckTeamLeader
+CALLV
+pop
+line 608
+;608:	}
+LABELV $313
+line 610
+;609:
+;610:	BroadcastTeamChange( client, oldTeam );
+ADDRLP4 0
+INDIRP4
+ARGP4
+ADDRLP4 8
+INDIRI4
+ARGI4
+ADDRGP4 BroadcastTeamChange
+CALLV
+pop
+line 613
+;611:
+;612:	// get and distribute relevent paramters
+;613:	ClientUserinfoChanged( clientNum );
+ADDRLP4 12
+INDIRI4
+ARGI4
+ADDRGP4 ClientUserinfoChanged
+CALLV
+pop
+line 615
+;614:
+;615:	ClientBegin( clientNum );
+ADDRLP4 12
+INDIRI4
+ARGI4
+ADDRGP4 ClientBegin
+CALLV
+pop
+line 616
+;616:}
+LABELV $240
+endproc SetTeam 96 20
+export StopFollowing
+proc StopFollowing 12 0
+line 626
+;617:
+;618:/*
+;619:=================
+;620:StopFollowing
+;621:
+;622:If the client being followed leaves the game, or you just want to drop
+;623:to free floating spectator mode
+;624:=================
+;625:*/
+;626:void StopFollowing( gentity_t *ent ) {
+line 627
+;627:	ent->client->ps.persistant[ PERS_TEAM ] = TEAM_SPECTATOR;	
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 260
+ADDP4
+CNSTI4 3
+ASGNI4
+line 628
+;628:	ent->client->sess.sessionTeam = TEAM_SPECTATOR;	
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 616
+ADDP4
+CNSTI4 3
+ASGNI4
+line 629
+;629:	ent->client->sess.spectatorState = SPECTATOR_FREE;
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 624
+ADDP4
+CNSTI4 1
+ASGNI4
+line 630
+;630:	ent->client->ps.pm_flags &= ~PMF_FOLLOW;
+ADDRLP4 0
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 12
+ADDP4
+ASGNP4
+ADDRLP4 0
+INDIRP4
+ADDRLP4 0
+INDIRP4
+INDIRI4
+CNSTI4 -4097
+BANDI4
+ASGNI4
+line 631
+;631:	ent->r.svFlags &= ~SVF_BOT;
+ADDRLP4 4
+ADDRFP4 0
+INDIRP4
+CNSTI4 424
+ADDP4
+ASGNP4
+ADDRLP4 4
+INDIRP4
+ADDRLP4 4
+INDIRP4
+INDIRI4
+CNSTI4 -9
+BANDI4
+ASGNI4
+line 632
+;632:	ent->client->ps.clientNum = ent - g_entities;
+ADDRLP4 8
+ADDRFP4 0
+INDIRP4
+ASGNP4
+ADDRLP4 8
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 140
+ADDP4
+ADDRLP4 8
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ASGNI4
+line 633
+;633:}
+LABELV $316
+endproc StopFollowing 12 0
+export Cmd_Team_f
+proc Cmd_Team_f 1036 12
+line 640
+;634:
+;635:/*
+;636:=================
+;637:Cmd_Team_f
+;638:=================
+;639:*/
+;640:void Cmd_Team_f( gentity_t *ent ) {
+line 644
+;641:	int			oldTeam;
+;642:	char		s[MAX_TOKEN_CHARS];
+;643:
+;644:	if ( trap_Argc() != 2 ) {
+ADDRLP4 1028
+ADDRGP4 trap_Argc
+CALLI4
+ASGNI4
+ADDRLP4 1028
+INDIRI4
+CNSTI4 2
+EQI4 $318
+line 645
+;645:		oldTeam = ent->client->sess.sessionTeam;
+ADDRLP4 1024
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 616
+ADDP4
+INDIRI4
+ASGNI4
+line 646
+;646:		switch ( oldTeam ) {
+ADDRLP4 1032
+ADDRLP4 1024
+INDIRI4
+ASGNI4
+ADDRLP4 1032
+INDIRI4
+CNSTI4 0
+LTI4 $317
+ADDRLP4 1032
+INDIRI4
+CNSTI4 3
+GTI4 $317
+ADDRLP4 1032
+INDIRI4
+CNSTI4 2
+LSHI4
+ADDRGP4 $330
+ADDP4
+INDIRP4
+JUMPV
+lit
+align 4
+LABELV $330
+address $326
+address $324
+address $322
+address $328
+code
+LABELV $322
+line 648
+;647:		case TEAM_BLUE:
+;648:			trap_SendServerCommand( ent-g_entities, "print \"Blue team\n\"" );
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRGP4 $323
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 649
+;649:			break;
+ADDRGP4 $317
+JUMPV
+LABELV $324
+line 651
+;650:		case TEAM_RED:
+;651:			trap_SendServerCommand( ent-g_entities, "print \"Red team\n\"" );
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRGP4 $325
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 652
+;652:			break;
+ADDRGP4 $317
+JUMPV
+LABELV $326
+line 654
+;653:		case TEAM_FREE:
+;654:			trap_SendServerCommand( ent-g_entities, "print \"Free team\n\"" );
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRGP4 $327
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 655
+;655:			break;
+ADDRGP4 $317
+JUMPV
+LABELV $328
+line 657
+;656:		case TEAM_SPECTATOR:
+;657:			trap_SendServerCommand( ent-g_entities, "print \"Spectator team\n\"" );
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRGP4 $329
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 658
+;658:			break;
+line 660
+;659:		}
+;660:		return;
+ADDRGP4 $317
+JUMPV
+LABELV $318
+line 663
+;661:	}
+;662:
+;663:	if ( ent->client->switchTeamTime > level.time ) {
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 772
+ADDP4
+INDIRI4
+ADDRGP4 level+32
+INDIRI4
+LEI4 $331
+line 664
+;664:		trap_SendServerCommand( ent-g_entities, "print \"May not switch teams more than once per 5 seconds.\n\"" );
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRGP4 $334
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 665
+;665:		return;
+ADDRGP4 $317
+JUMPV
+LABELV $331
+line 669
+;666:	}
+;667:
+;668:	// if they are playing a tournement game, count as a loss
+;669:	if ( (g_gametype.integer == GT_TOURNAMENT )
+ADDRGP4 g_gametype+12
+INDIRI4
+CNSTI4 1
+NEI4 $335
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 616
+ADDP4
+INDIRI4
+CNSTI4 0
+NEI4 $335
+line 670
+;670:		&& ent->client->sess.sessionTeam == TEAM_FREE ) {
+line 671
+;671:		ent->client->sess.losses++;
+ADDRLP4 1032
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 636
+ADDP4
+ASGNP4
+ADDRLP4 1032
+INDIRP4
+ADDRLP4 1032
+INDIRP4
+INDIRI4
+CNSTI4 1
+ADDI4
+ASGNI4
+line 672
+;672:	}
+LABELV $335
+line 674
+;673:
+;674:	trap_Argv( 1, s, sizeof( s ) );
+CNSTI4 1
+ARGI4
+ADDRLP4 0
+ARGP4
+CNSTI4 1024
+ARGI4
+ADDRGP4 trap_Argv
+CALLV
+pop
+line 676
+;675:
+;676:	SetTeam( ent, s );
+ADDRFP4 0
+INDIRP4
+ARGP4
+ADDRLP4 0
+ARGP4
+ADDRGP4 SetTeam
+CALLV
+pop
+line 678
+;677:
+;678:	ent->client->switchTeamTime = level.time + 5000;
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 772
+ADDP4
+ADDRGP4 level+32
+INDIRI4
+CNSTI4 5000
+ADDI4
+ASGNI4
+line 679
+;679:}
+LABELV $317
+endproc Cmd_Team_f 1036 12
+export Cmd_Follow_f
+proc Cmd_Follow_f 1040 12
+line 687
+;680:
+;681:
+;682:/*
+;683:=================
+;684:Cmd_Follow_f
+;685:=================
+;686:*/
+;687:void Cmd_Follow_f( gentity_t *ent ) {
+line 691
+;688:	int		i;
+;689:	char	arg[MAX_TOKEN_CHARS];
+;690:
+;691:	if ( trap_Argc() != 2 ) {
+ADDRLP4 1028
+ADDRGP4 trap_Argc
+CALLI4
+ASGNI4
+ADDRLP4 1028
+INDIRI4
+CNSTI4 2
+EQI4 $340
+line 692
+;692:		if ( ent->client->sess.spectatorState == SPECTATOR_FOLLOW ) {
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 624
+ADDP4
+INDIRI4
+CNSTI4 2
+NEI4 $339
+line 693
+;693:			StopFollowing( ent );
+ADDRFP4 0
+INDIRP4
+ARGP4
+ADDRGP4 StopFollowing
+CALLV
+pop
+line 694
+;694:		}
+line 695
+;695:		return;
+ADDRGP4 $339
+JUMPV
+LABELV $340
+line 698
+;696:	}
+;697:
+;698:	trap_Argv( 1, arg, sizeof( arg ) );
+CNSTI4 1
+ARGI4
+ADDRLP4 4
+ARGP4
+CNSTI4 1024
+ARGI4
+ADDRGP4 trap_Argv
+CALLV
+pop
+line 699
+;699:	i = ClientNumberFromString( ent, arg );
+ADDRFP4 0
+INDIRP4
+ARGP4
+ADDRLP4 4
+ARGP4
+ADDRLP4 1032
+ADDRGP4 ClientNumberFromString
+CALLI4
+ASGNI4
+ADDRLP4 0
+ADDRLP4 1032
+INDIRI4
+ASGNI4
+line 700
+;700:	if ( i == -1 ) {
+ADDRLP4 0
+INDIRI4
+CNSTI4 -1
+NEI4 $344
+line 701
+;701:		return;
+ADDRGP4 $339
+JUMPV
+LABELV $344
+line 705
+;702:	}
+;703:
+;704:	// can't follow self
+;705:	if ( &level.clients[ i ] == ent->client ) {
+CNSTI4 784
+ADDRLP4 0
+INDIRI4
+MULI4
+ADDRGP4 level
+INDIRP4
+ADDP4
+CVPU4 4
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CVPU4 4
+NEU4 $346
+line 706
+;706:		return;
+ADDRGP4 $339
+JUMPV
+LABELV $346
+line 710
+;707:	}
+;708:
+;709:	// can't follow another spectator
+;710:	if ( level.clients[ i ].sess.sessionTeam == TEAM_SPECTATOR ) {
+CNSTI4 784
+ADDRLP4 0
+INDIRI4
+MULI4
+ADDRGP4 level
+INDIRP4
+ADDP4
+CNSTI4 616
+ADDP4
+INDIRI4
+CNSTI4 3
+NEI4 $348
+line 711
+;711:		return;
+ADDRGP4 $339
+JUMPV
+LABELV $348
+line 715
+;712:	}
+;713:
+;714:	// if they are playing a tournement game, count as a loss
+;715:	if ( (g_gametype.integer == GT_TOURNAMENT )
+ADDRGP4 g_gametype+12
+INDIRI4
+CNSTI4 1
+NEI4 $350
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 616
+ADDP4
+INDIRI4
+CNSTI4 0
+NEI4 $350
+line 716
+;716:		&& ent->client->sess.sessionTeam == TEAM_FREE ) {
+line 717
+;717:		ent->client->sess.losses++;
+ADDRLP4 1036
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 636
+ADDP4
+ASGNP4
+ADDRLP4 1036
+INDIRP4
+ADDRLP4 1036
+INDIRP4
+INDIRI4
+CNSTI4 1
+ADDI4
+ASGNI4
+line 718
+;718:	}
+LABELV $350
+line 721
+;719:
+;720:	// first set them to spectator
+;721:	if ( ent->client->sess.sessionTeam != TEAM_SPECTATOR ) {
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 616
+ADDP4
+INDIRI4
+CNSTI4 3
+EQI4 $353
+line 722
+;722:		SetTeam( ent, "spectator" );
+ADDRFP4 0
+INDIRP4
+ARGP4
+ADDRGP4 $254
+ARGP4
+ADDRGP4 SetTeam
+CALLV
+pop
+line 723
+;723:	}
+LABELV $353
+line 725
+;724:
+;725:	ent->client->sess.spectatorState = SPECTATOR_FOLLOW;
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 624
+ADDP4
+CNSTI4 2
+ASGNI4
+line 726
+;726:	ent->client->sess.spectatorClient = i;
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 628
+ADDP4
+ADDRLP4 0
+INDIRI4
+ASGNI4
+line 727
+;727:}
+LABELV $339
+endproc Cmd_Follow_f 1040 12
+export Cmd_FollowCycle_f
+proc Cmd_FollowCycle_f 12 8
+line 734
+;728:
+;729:/*
+;730:=================
+;731:Cmd_FollowCycle_f
+;732:=================
+;733:*/
+;734:void Cmd_FollowCycle_f( gentity_t *ent, int dir ) {
+line 739
+;735:	int		clientnum;
+;736:	int		original;
+;737:
+;738:	// if they are playing a tournement game, count as a loss
+;739:	if ( (g_gametype.integer == GT_TOURNAMENT )
+ADDRGP4 g_gametype+12
+INDIRI4
+CNSTI4 1
+NEI4 $356
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 616
+ADDP4
+INDIRI4
+CNSTI4 0
+NEI4 $356
+line 740
+;740:		&& ent->client->sess.sessionTeam == TEAM_FREE ) {
+line 741
+;741:		ent->client->sess.losses++;
+ADDRLP4 8
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 636
+ADDP4
+ASGNP4
+ADDRLP4 8
+INDIRP4
+ADDRLP4 8
+INDIRP4
+INDIRI4
+CNSTI4 1
+ADDI4
+ASGNI4
+line 742
+;742:	}
+LABELV $356
+line 744
+;743:	// first set them to spectator
+;744:	if ( ent->client->sess.spectatorState == SPECTATOR_NOT ) {
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 624
+ADDP4
+INDIRI4
+CNSTI4 0
+NEI4 $359
+line 745
+;745:		SetTeam( ent, "spectator" );
+ADDRFP4 0
+INDIRP4
+ARGP4
+ADDRGP4 $254
+ARGP4
+ADDRGP4 SetTeam
+CALLV
+pop
+line 746
+;746:	}
+LABELV $359
+line 748
+;747:
+;748:	if ( dir != 1 && dir != -1 ) {
+ADDRLP4 8
+ADDRFP4 4
+INDIRI4
+ASGNI4
+ADDRLP4 8
+INDIRI4
+CNSTI4 1
+EQI4 $361
+ADDRLP4 8
+INDIRI4
+CNSTI4 -1
+EQI4 $361
+line 749
+;749:		G_Error( "Cmd_FollowCycle_f: bad dir %i", dir );
+ADDRGP4 $363
+ARGP4
+ADDRFP4 4
+INDIRI4
+ARGI4
+ADDRGP4 G_Error
+CALLV
+pop
+line 750
+;750:	}
+LABELV $361
+line 752
+;751:
+;752:	clientnum = ent->client->sess.spectatorClient;
+ADDRLP4 0
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 628
+ADDP4
+INDIRI4
+ASGNI4
+line 753
+;753:	original = clientnum;
+ADDRLP4 4
+ADDRLP4 0
+INDIRI4
+ASGNI4
+LABELV $364
+line 754
+;754:	do {
+line 755
+;755:		clientnum += dir;
+ADDRLP4 0
+ADDRLP4 0
+INDIRI4
+ADDRFP4 4
+INDIRI4
+ADDI4
+ASGNI4
+line 756
+;756:		if ( clientnum >= level.maxclients ) {
+ADDRLP4 0
+INDIRI4
+ADDRGP4 level+24
+INDIRI4
+LTI4 $367
+line 757
+;757:			clientnum = 0;
+ADDRLP4 0
+CNSTI4 0
+ASGNI4
+line 758
+;758:		}
+LABELV $367
+line 759
+;759:		if ( clientnum < 0 ) {
+ADDRLP4 0
+INDIRI4
+CNSTI4 0
+GEI4 $370
+line 760
+;760:			clientnum = level.maxclients - 1;
+ADDRLP4 0
+ADDRGP4 level+24
+INDIRI4
+CNSTI4 1
+SUBI4
+ASGNI4
+line 761
+;761:		}
+LABELV $370
+line 764
+;762:
+;763:		// can only follow connected clients
+;764:		if ( level.clients[ clientnum ].pers.connected != CON_CONNECTED ) {
+CNSTI4 784
+ADDRLP4 0
+INDIRI4
+MULI4
+ADDRGP4 level
+INDIRP4
+ADDP4
+CNSTI4 468
+ADDP4
+INDIRI4
+CNSTI4 2
+EQI4 $373
+line 765
+;765:			continue;
+ADDRGP4 $365
+JUMPV
+LABELV $373
+line 769
+;766:		}
+;767:
+;768:		// can't follow another spectator
+;769:		if ( level.clients[ clientnum ].sess.sessionTeam == TEAM_SPECTATOR ) {
+CNSTI4 784
+ADDRLP4 0
+INDIRI4
+MULI4
+ADDRGP4 level
+INDIRP4
+ADDP4
+CNSTI4 616
+ADDP4
+INDIRI4
+CNSTI4 3
+NEI4 $375
+line 770
+;770:			continue;
+ADDRGP4 $365
+JUMPV
+LABELV $375
+line 774
+;771:		}
+;772:
+;773:		// this is good, we can use it
+;774:		ent->client->sess.spectatorClient = clientnum;
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 628
+ADDP4
+ADDRLP4 0
+INDIRI4
+ASGNI4
+line 775
+;775:		ent->client->sess.spectatorState = SPECTATOR_FOLLOW;
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 624
+ADDP4
+CNSTI4 2
+ASGNI4
+line 776
+;776:		return;
+ADDRGP4 $355
+JUMPV
+LABELV $365
+line 777
+;777:	} while ( clientnum != original );
+ADDRLP4 0
+INDIRI4
+ADDRLP4 4
+INDIRI4
+NEI4 $364
+line 780
+;778:
+;779:	// leave it where it was
+;780:}
+LABELV $355
+endproc Cmd_FollowCycle_f 12 8
+proc G_SayTo 24 24
+line 789
+;781:
+;782:
+;783:/*
+;784:==================
+;785:G_Say
+;786:==================
+;787:*/
+;788:
+;789:static void G_SayTo( gentity_t *ent, gentity_t *other, int mode, int color, const char *name, const char *message ) {
+line 790
+;790:	if (!other) {
+ADDRFP4 4
+INDIRP4
+CVPU4 4
+CNSTU4 0
+NEU4 $378
+line 791
+;791:		return;
+ADDRGP4 $377
+JUMPV
+LABELV $378
+line 793
+;792:	}
+;793:	if (!other->inuse) {
+ADDRFP4 4
+INDIRP4
+CNSTI4 520
+ADDP4
+INDIRI4
+CNSTI4 0
+NEI4 $380
+line 794
+;794:		return;
+ADDRGP4 $377
+JUMPV
+LABELV $380
+line 796
+;795:	}
+;796:	if (!other->client) {
+ADDRFP4 4
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CVPU4 4
+CNSTU4 0
+NEU4 $382
+line 797
+;797:		return;
+ADDRGP4 $377
+JUMPV
+LABELV $382
+line 799
+;798:	}
+;799:	if ( other->client->pers.connected != CON_CONNECTED ) {
+ADDRFP4 4
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 468
+ADDP4
+INDIRI4
+CNSTI4 2
+EQI4 $384
+line 800
+;800:		return;
+ADDRGP4 $377
+JUMPV
+LABELV $384
+line 802
+;801:	}
+;802:	if ( mode == SAY_TEAM  && !OnSameTeam(ent, other) ) {
+ADDRFP4 8
+INDIRI4
+CNSTI4 1
+NEI4 $386
+ADDRFP4 0
+INDIRP4
+ARGP4
+ADDRFP4 4
+INDIRP4
+ARGP4
+ADDRLP4 0
+ADDRGP4 OnSameTeam
+CALLI4
+ASGNI4
+ADDRLP4 0
+INDIRI4
+CNSTI4 0
+NEI4 $386
+line 803
+;803:		return;
+ADDRGP4 $377
+JUMPV
+LABELV $386
+line 806
+;804:	}
+;805:	// no chatting to players in tournements
+;806:	if ( (g_gametype.integer == GT_TOURNAMENT )
+ADDRGP4 g_gametype+12
+INDIRI4
+CNSTI4 1
+NEI4 $388
+ADDRLP4 4
+CNSTI4 516
+ASGNI4
+ADDRLP4 8
+CNSTI4 616
+ASGNI4
+ADDRLP4 12
+CNSTI4 0
+ASGNI4
+ADDRFP4 4
+INDIRP4
+ADDRLP4 4
+INDIRI4
+ADDP4
+INDIRP4
+ADDRLP4 8
+INDIRI4
+ADDP4
+INDIRI4
+ADDRLP4 12
+INDIRI4
+NEI4 $388
+ADDRFP4 0
+INDIRP4
+ADDRLP4 4
+INDIRI4
+ADDP4
+INDIRP4
+ADDRLP4 8
+INDIRI4
+ADDP4
+INDIRI4
+ADDRLP4 12
+INDIRI4
+EQI4 $388
+line 808
+;807:		&& other->client->sess.sessionTeam == TEAM_FREE
+;808:		&& ent->client->sess.sessionTeam != TEAM_FREE ) {
+line 809
+;809:		return;
+ADDRGP4 $377
+JUMPV
+LABELV $388
+line 812
+;810:	}
+;811:
+;812:	trap_SendServerCommand( other-g_entities, va("%s \"%s%c%c%s\"", 
+ADDRGP4 $391
+ARGP4
+ADDRFP4 8
+INDIRI4
+CNSTI4 1
+NEI4 $395
+ADDRLP4 16
+ADDRGP4 $392
+ASGNP4
+ADDRGP4 $396
+JUMPV
+LABELV $395
+ADDRLP4 16
+ADDRGP4 $393
+ASGNP4
+LABELV $396
+ADDRLP4 16
+INDIRP4
+ARGP4
+ADDRFP4 16
+INDIRP4
+ARGP4
+CNSTI4 94
+ARGI4
+ADDRFP4 12
+INDIRI4
+ARGI4
+ADDRFP4 20
+INDIRP4
+ARGP4
+ADDRLP4 20
+ADDRGP4 va
+CALLP4
+ASGNP4
+ADDRFP4 4
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRLP4 20
+INDIRP4
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 815
+;813:		mode == SAY_TEAM ? "tchat" : "chat",
+;814:		name, Q_COLOR_ESCAPE, color, message));
+;815:}
+LABELV $377
+endproc G_SayTo 24 24
+export G_Say
+proc G_Say 320 28
+line 819
+;816:
+;817:#define EC		"\x19"
+;818:
+;819:void G_Say( gentity_t *ent, gentity_t *target, int mode, const char *chatText ) {
+line 828
+;820:	int			j;
+;821:	gentity_t	*other;
+;822:	int			color;
+;823:	char		name[64];
+;824:	// don't let text be too long for malicious reasons
+;825:	char		text[MAX_SAY_TEXT];
+;826:	char		location[64];
+;827:
+;828:	if ( g_gametype.integer < GT_TEAM && mode == SAY_TEAM ) {
+ADDRGP4 g_gametype+12
+INDIRI4
+CNSTI4 3
+GEI4 $398
+ADDRFP4 8
+INDIRI4
+CNSTI4 1
+NEI4 $398
+line 829
+;829:		mode = SAY_ALL;
+ADDRFP4 8
+CNSTI4 0
+ASGNI4
+line 830
+;830:	}
+LABELV $398
+line 832
+;831:
+;832:	switch ( mode ) {
+ADDRLP4 292
+ADDRFP4 8
+INDIRI4
+ASGNI4
+ADDRLP4 292
+INDIRI4
+CNSTI4 0
+EQI4 $403
+ADDRLP4 292
+INDIRI4
+CNSTI4 1
+EQI4 $406
+ADDRLP4 292
+INDIRI4
+CNSTI4 2
+EQI4 $412
+ADDRGP4 $401
+JUMPV
+LABELV $401
+LABELV $403
+line 835
+;833:	default:
+;834:	case SAY_ALL:
+;835:		G_LogPrintf( "say: %s: %s\n", ent->client->pers.netname, chatText );
+ADDRGP4 $404
+ARGP4
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 512
+ADDP4
+ARGP4
+ADDRFP4 12
+INDIRP4
+ARGP4
+ADDRGP4 G_LogPrintf
+CALLV
+pop
+line 836
+;836:		Com_sprintf (name, sizeof(name), "%s%c%c"EC": ", ent->client->pers.netname, Q_COLOR_ESCAPE, COLOR_WHITE );
+ADDRLP4 158
+ARGP4
+CNSTI4 64
+ARGI4
+ADDRGP4 $405
+ARGP4
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 512
+ADDP4
+ARGP4
+CNSTI4 94
+ARGI4
+CNSTI4 55
+ARGI4
+ADDRGP4 Com_sprintf
+CALLV
+pop
+line 837
+;837:		color = COLOR_GREEN;
+ADDRLP4 224
+CNSTI4 50
+ASGNI4
+line 838
+;838:		break;
+ADDRGP4 $402
+JUMPV
+LABELV $406
+line 840
+;839:	case SAY_TEAM:
+;840:		G_LogPrintf( "sayteam: %s: %s\n", ent->client->pers.netname, chatText );
+ADDRGP4 $407
+ARGP4
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 512
+ADDP4
+ARGP4
+ADDRFP4 12
+INDIRP4
+ARGP4
+ADDRGP4 G_LogPrintf
+CALLV
+pop
+line 841
+;841:		if (Team_GetLocationMsg(ent, location, sizeof(location)))
+ADDRFP4 0
+INDIRP4
+ARGP4
+ADDRLP4 228
+ARGP4
+CNSTI4 64
+ARGI4
+ADDRLP4 296
+ADDRGP4 Team_GetLocationMsg
+CALLI4
+ASGNI4
+ADDRLP4 296
+INDIRI4
+CNSTI4 0
+EQI4 $408
+line 842
+;842:			Com_sprintf (name, sizeof(name), EC"(%s%c%c"EC") (%s)"EC": ", 
+ADDRLP4 158
+ARGP4
+CNSTI4 64
+ARGI4
+ADDRGP4 $410
+ARGP4
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 512
+ADDP4
+ARGP4
+CNSTI4 94
+ARGI4
+CNSTI4 55
+ARGI4
+ADDRLP4 228
+ARGP4
+ADDRGP4 Com_sprintf
+CALLV
+pop
+ADDRGP4 $409
+JUMPV
+LABELV $408
+line 845
+;843:				ent->client->pers.netname, Q_COLOR_ESCAPE, COLOR_WHITE, location);
+;844:		else
+;845:			Com_sprintf (name, sizeof(name), EC"(%s%c%c"EC")"EC": ", 
+ADDRLP4 158
+ARGP4
+CNSTI4 64
+ARGI4
+ADDRGP4 $411
+ARGP4
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 512
+ADDP4
+ARGP4
+CNSTI4 94
+ARGI4
+CNSTI4 55
+ARGI4
+ADDRGP4 Com_sprintf
+CALLV
+pop
+LABELV $409
+line 847
+;846:				ent->client->pers.netname, Q_COLOR_ESCAPE, COLOR_WHITE );
+;847:		color = COLOR_CYAN;
+ADDRLP4 224
+CNSTI4 53
+ASGNI4
+line 848
+;848:		break;
+ADDRGP4 $402
+JUMPV
+LABELV $412
+line 850
+;849:	case SAY_TELL:
+;850:		if (target && g_gametype.integer >= GT_TEAM &&
+ADDRLP4 300
+ADDRFP4 4
+INDIRP4
+ASGNP4
+ADDRLP4 300
+INDIRP4
+CVPU4 4
+CNSTU4 0
+EQU4 $413
+ADDRGP4 g_gametype+12
+INDIRI4
+CNSTI4 3
+LTI4 $413
+ADDRLP4 304
+CNSTI4 516
+ASGNI4
+ADDRLP4 308
+CNSTI4 616
+ASGNI4
+ADDRLP4 312
+ADDRFP4 0
+INDIRP4
+ASGNP4
+ADDRLP4 300
+INDIRP4
+ADDRLP4 304
+INDIRI4
+ADDP4
+INDIRP4
+ADDRLP4 308
+INDIRI4
+ADDP4
+INDIRI4
+ADDRLP4 312
+INDIRP4
+ADDRLP4 304
+INDIRI4
+ADDP4
+INDIRP4
+ADDRLP4 308
+INDIRI4
+ADDP4
+INDIRI4
+NEI4 $413
+ADDRLP4 312
+INDIRP4
+ARGP4
+ADDRLP4 228
+ARGP4
+CNSTI4 64
+ARGI4
+ADDRLP4 316
+ADDRGP4 Team_GetLocationMsg
+CALLI4
+ASGNI4
+ADDRLP4 316
+INDIRI4
+CNSTI4 0
+EQI4 $413
+line 853
+;851:			target->client->sess.sessionTeam == ent->client->sess.sessionTeam &&
+;852:			Team_GetLocationMsg(ent, location, sizeof(location)))
+;853:			Com_sprintf (name, sizeof(name), EC"[%s%c%c"EC"] (%s)"EC": ", ent->client->pers.netname, Q_COLOR_ESCAPE, COLOR_WHITE, location );
+ADDRLP4 158
+ARGP4
+CNSTI4 64
+ARGI4
+ADDRGP4 $416
+ARGP4
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 512
+ADDP4
+ARGP4
+CNSTI4 94
+ARGI4
+CNSTI4 55
+ARGI4
+ADDRLP4 228
+ARGP4
+ADDRGP4 Com_sprintf
+CALLV
+pop
+ADDRGP4 $414
+JUMPV
+LABELV $413
+line 855
+;854:		else
+;855:			Com_sprintf (name, sizeof(name), EC"[%s%c%c"EC"]"EC": ", ent->client->pers.netname, Q_COLOR_ESCAPE, COLOR_WHITE );
+ADDRLP4 158
+ARGP4
+CNSTI4 64
+ARGI4
+ADDRGP4 $417
+ARGP4
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 512
+ADDP4
+ARGP4
+CNSTI4 94
+ARGI4
+CNSTI4 55
+ARGI4
+ADDRGP4 Com_sprintf
+CALLV
+pop
+LABELV $414
+line 856
+;856:		color = COLOR_MAGENTA;
+ADDRLP4 224
+CNSTI4 54
+ASGNI4
+line 857
+;857:		break;
+LABELV $402
+line 860
+;858:	}
+;859:
+;860:	Q_strncpyz( text, chatText, sizeof(text) );
+ADDRLP4 8
+ARGP4
+ADDRFP4 12
+INDIRP4
+ARGP4
+CNSTI4 150
+ARGI4
+ADDRGP4 Q_strncpyz
+CALLV
+pop
+line 862
+;861:
+;862:	if ( target ) {
+ADDRFP4 4
+INDIRP4
+CVPU4 4
+CNSTU4 0
+EQU4 $418
+line 863
+;863:		G_SayTo( ent, target, mode, color, name, text );
+ADDRFP4 0
+INDIRP4
+ARGP4
+ADDRFP4 4
+INDIRP4
+ARGP4
+ADDRFP4 8
+INDIRI4
+ARGI4
+ADDRLP4 224
+INDIRI4
+ARGI4
+ADDRLP4 158
+ARGP4
+ADDRLP4 8
+ARGP4
+ADDRGP4 G_SayTo
+CALLV
+pop
+line 864
+;864:		return;
+ADDRGP4 $397
+JUMPV
+LABELV $418
+line 868
+;865:	}
+;866:
+;867:	// echo the text to the console
+;868:	if ( g_dedicated.integer ) {
+ADDRGP4 g_dedicated+12
+INDIRI4
+CNSTI4 0
+EQI4 $420
+line 869
+;869:		G_Printf( "%s%s\n", name, text);
+ADDRGP4 $423
+ARGP4
+ADDRLP4 158
+ARGP4
+ADDRLP4 8
+ARGP4
+ADDRGP4 G_Printf
+CALLV
+pop
+line 870
+;870:	}
+LABELV $420
+line 873
+;871:
+;872:	// send it to all the apropriate clients
+;873:	for (j = 0; j < level.maxclients; j++) {
+ADDRLP4 0
+CNSTI4 0
+ASGNI4
+ADDRGP4 $427
+JUMPV
+LABELV $424
+line 874
+;874:		other = &g_entities[j];
+ADDRLP4 4
+CNSTI4 808
+ADDRLP4 0
+INDIRI4
+MULI4
+ADDRGP4 g_entities
+ADDP4
+ASGNP4
+line 875
+;875:		G_SayTo( ent, other, mode, color, name, text );
+ADDRFP4 0
+INDIRP4
+ARGP4
+ADDRLP4 4
+INDIRP4
+ARGP4
+ADDRFP4 8
+INDIRI4
+ARGI4
+ADDRLP4 224
+INDIRI4
+ARGI4
+ADDRLP4 158
+ARGP4
+ADDRLP4 8
+ARGP4
+ADDRGP4 G_SayTo
+CALLV
+pop
+line 876
+;876:	}
+LABELV $425
+line 873
+ADDRLP4 0
+ADDRLP4 0
+INDIRI4
+CNSTI4 1
+ADDI4
+ASGNI4
+LABELV $427
+ADDRLP4 0
+INDIRI4
+ADDRGP4 level+24
+INDIRI4
+LTI4 $424
+line 877
+;877:}
+LABELV $397
+endproc G_Say 320 28
+proc Cmd_Say_f 12 16
+line 885
+;878:
+;879:
+;880:/*
+;881:==================
+;882:Cmd_Say_f
+;883:==================
+;884:*/
+;885:static void Cmd_Say_f( gentity_t *ent, int mode, qboolean arg0 ) {
+line 888
+;886:	char		*p;
+;887:
+;888:	if ( trap_Argc () < 2 && !arg0 ) {
+ADDRLP4 4
+ADDRGP4 trap_Argc
+CALLI4
+ASGNI4
+ADDRLP4 4
+INDIRI4
+CNSTI4 2
+GEI4 $430
+ADDRFP4 8
+INDIRI4
+CNSTI4 0
+NEI4 $430
+line 889
+;889:		return;
+ADDRGP4 $429
+JUMPV
+LABELV $430
+line 892
+;890:	}
+;891:
+;892:	if (arg0)
+ADDRFP4 8
+INDIRI4
+CNSTI4 0
+EQI4 $432
+line 893
+;893:	{
+line 894
+;894:		p = ConcatArgs( 0 );
+CNSTI4 0
+ARGI4
+ADDRLP4 8
+ADDRGP4 ConcatArgs
+CALLP4
+ASGNP4
+ADDRLP4 0
+ADDRLP4 8
+INDIRP4
+ASGNP4
+line 895
+;895:	}
+ADDRGP4 $433
+JUMPV
+LABELV $432
+line 897
+;896:	else
+;897:	{
+line 898
+;898:		p = ConcatArgs( 1 );
+CNSTI4 1
+ARGI4
+ADDRLP4 8
+ADDRGP4 ConcatArgs
+CALLP4
+ASGNP4
+ADDRLP4 0
+ADDRLP4 8
+INDIRP4
+ASGNP4
+line 899
+;899:	}
+LABELV $433
+line 901
+;900:
+;901:	G_Say( ent, NULL, mode, p );
+ADDRFP4 0
+INDIRP4
+ARGP4
+CNSTP4 0
+ARGP4
+ADDRFP4 4
+INDIRI4
+ARGI4
+ADDRLP4 0
+INDIRP4
+ARGP4
+ADDRGP4 G_Say
+CALLV
+pop
+line 902
+;902:}
+LABELV $429
+endproc Cmd_Say_f 12 16
+proc Cmd_Tell_f 1076 16
+line 909
+;903:
+;904:/*
+;905:==================
+;906:Cmd_Tell_f
+;907:==================
+;908:*/
+;909:static void Cmd_Tell_f( gentity_t *ent ) {
+line 915
+;910:	int			targetNum;
+;911:	gentity_t	*target;
+;912:	char		*p;
+;913:	char		arg[MAX_TOKEN_CHARS];
+;914:
+;915:	if ( trap_Argc () < 2 ) {
+ADDRLP4 1036
+ADDRGP4 trap_Argc
+CALLI4
+ASGNI4
+ADDRLP4 1036
+INDIRI4
+CNSTI4 2
+GEI4 $435
+line 916
+;916:		return;
+ADDRGP4 $434
+JUMPV
+LABELV $435
+line 919
+;917:	}
+;918:
+;919:	trap_Argv( 1, arg, sizeof( arg ) );
+CNSTI4 1
+ARGI4
+ADDRLP4 12
+ARGP4
+CNSTI4 1024
+ARGI4
+ADDRGP4 trap_Argv
+CALLV
+pop
+line 920
+;920:	targetNum = atoi( arg );
+ADDRLP4 12
+ARGP4
+ADDRLP4 1040
+ADDRGP4 atoi
+CALLI4
+ASGNI4
+ADDRLP4 4
+ADDRLP4 1040
+INDIRI4
+ASGNI4
+line 921
+;921:	if ( targetNum < 0 || targetNum >= level.maxclients ) {
+ADDRLP4 4
+INDIRI4
+CNSTI4 0
+LTI4 $440
+ADDRLP4 4
+INDIRI4
+ADDRGP4 level+24
+INDIRI4
+LTI4 $437
+LABELV $440
+line 922
+;922:		return;
+ADDRGP4 $434
+JUMPV
+LABELV $437
+line 925
+;923:	}
+;924:
+;925:	target = &g_entities[targetNum];
+ADDRLP4 0
+CNSTI4 808
+ADDRLP4 4
+INDIRI4
+MULI4
+ADDRGP4 g_entities
+ADDP4
+ASGNP4
+line 926
+;926:	if ( !target || !target->inuse || !target->client ) {
+ADDRLP4 1052
+CNSTU4 0
+ASGNU4
+ADDRLP4 0
+INDIRP4
+CVPU4 4
+ADDRLP4 1052
+INDIRU4
+EQU4 $444
+ADDRLP4 0
+INDIRP4
+CNSTI4 520
+ADDP4
+INDIRI4
+CNSTI4 0
+EQI4 $444
+ADDRLP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CVPU4 4
+ADDRLP4 1052
+INDIRU4
+NEU4 $441
+LABELV $444
+line 927
+;927:		return;
+ADDRGP4 $434
+JUMPV
+LABELV $441
+line 930
+;928:	}
+;929:
+;930:	p = ConcatArgs( 2 );
+CNSTI4 2
+ARGI4
+ADDRLP4 1056
+ADDRGP4 ConcatArgs
+CALLP4
+ASGNP4
+ADDRLP4 8
+ADDRLP4 1056
+INDIRP4
+ASGNP4
+line 932
+;931:
+;932:	G_LogPrintf( "tell: %s to %s: %s\n", ent->client->pers.netname, target->client->pers.netname, p );
+ADDRGP4 $445
+ARGP4
+ADDRLP4 1060
+CNSTI4 516
+ASGNI4
+ADDRLP4 1064
+CNSTI4 512
+ASGNI4
+ADDRFP4 0
+INDIRP4
+ADDRLP4 1060
+INDIRI4
+ADDP4
+INDIRP4
+ADDRLP4 1064
+INDIRI4
+ADDP4
+ARGP4
+ADDRLP4 0
+INDIRP4
+ADDRLP4 1060
+INDIRI4
+ADDP4
+INDIRP4
+ADDRLP4 1064
+INDIRI4
+ADDP4
+ARGP4
+ADDRLP4 8
+INDIRP4
+ARGP4
+ADDRGP4 G_LogPrintf
+CALLV
+pop
+line 933
+;933:	G_Say( ent, target, SAY_TELL, p );
+ADDRFP4 0
+INDIRP4
+ARGP4
+ADDRLP4 0
+INDIRP4
+ARGP4
+CNSTI4 2
+ARGI4
+ADDRLP4 8
+INDIRP4
+ARGP4
+ADDRGP4 G_Say
+CALLV
+pop
+line 936
+;934:	// don't tell to the player self if it was already directed to this player
+;935:	// also don't send the chat back to a bot
+;936:	if ( ent != target && !(ent->r.svFlags & SVF_BOT)) {
+ADDRLP4 1068
+ADDRFP4 0
+INDIRP4
+ASGNP4
+ADDRLP4 1068
+INDIRP4
+CVPU4 4
+ADDRLP4 0
+INDIRP4
+CVPU4 4
+EQU4 $446
+ADDRLP4 1068
+INDIRP4
+CNSTI4 424
+ADDP4
+INDIRI4
+CNSTI4 8
+BANDI4
+CNSTI4 0
+NEI4 $446
+line 937
+;937:		G_Say( ent, ent, SAY_TELL, p );
+ADDRLP4 1072
+ADDRFP4 0
+INDIRP4
+ASGNP4
+ADDRLP4 1072
+INDIRP4
+ARGP4
+ADDRLP4 1072
+INDIRP4
+ARGP4
+CNSTI4 2
+ARGI4
+ADDRLP4 8
+INDIRP4
+ARGP4
+ADDRGP4 G_Say
+CALLV
+pop
+line 938
+;938:	}
+LABELV $446
+line 939
+;939:}
+LABELV $434
+endproc Cmd_Tell_f 1076 16
+proc G_VoiceTo 16 24
+line 942
+;940:
+;941:
+;942:static void G_VoiceTo( gentity_t *ent, gentity_t *other, int mode, const char *id, qboolean voiceonly ) {
+line 946
+;943:	int color;
+;944:	char *cmd;
+;945:
+;946:	if (!other) {
+ADDRFP4 4
+INDIRP4
+CVPU4 4
+CNSTU4 0
+NEU4 $449
+line 947
+;947:		return;
+ADDRGP4 $448
+JUMPV
+LABELV $449
+line 949
+;948:	}
+;949:	if (!other->inuse) {
+ADDRFP4 4
+INDIRP4
+CNSTI4 520
+ADDP4
+INDIRI4
+CNSTI4 0
+NEI4 $451
+line 950
+;950:		return;
+ADDRGP4 $448
+JUMPV
+LABELV $451
+line 952
+;951:	}
+;952:	if (!other->client) {
+ADDRFP4 4
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CVPU4 4
+CNSTU4 0
+NEU4 $453
+line 953
+;953:		return;
+ADDRGP4 $448
+JUMPV
+LABELV $453
+line 955
+;954:	}
+;955:	if ( mode == SAY_TEAM && !OnSameTeam(ent, other) ) {
+ADDRFP4 8
+INDIRI4
+CNSTI4 1
+NEI4 $455
+ADDRFP4 0
+INDIRP4
+ARGP4
+ADDRFP4 4
+INDIRP4
+ARGP4
+ADDRLP4 8
+ADDRGP4 OnSameTeam
+CALLI4
+ASGNI4
+ADDRLP4 8
+INDIRI4
+CNSTI4 0
+NEI4 $455
+line 956
+;956:		return;
+ADDRGP4 $448
+JUMPV
+LABELV $455
+line 959
+;957:	}
+;958:	// no chatting to players in tournements
+;959:	if ( (g_gametype.integer == GT_TOURNAMENT )) {
+ADDRGP4 g_gametype+12
+INDIRI4
+CNSTI4 1
+NEI4 $457
+line 960
+;960:		return;
+ADDRGP4 $448
+JUMPV
+LABELV $457
+line 963
+;961:	}
+;962:
+;963:	if (mode == SAY_TEAM) {
+ADDRFP4 8
+INDIRI4
+CNSTI4 1
+NEI4 $460
+line 964
+;964:		color = COLOR_CYAN;
+ADDRLP4 0
+CNSTI4 53
+ASGNI4
+line 965
+;965:		cmd = "vtchat";
+ADDRLP4 4
+ADDRGP4 $462
+ASGNP4
+line 966
+;966:	}
+ADDRGP4 $461
+JUMPV
+LABELV $460
+line 967
+;967:	else if (mode == SAY_TELL) {
+ADDRFP4 8
+INDIRI4
+CNSTI4 2
+NEI4 $463
+line 968
+;968:		color = COLOR_MAGENTA;
+ADDRLP4 0
+CNSTI4 54
+ASGNI4
+line 969
+;969:		cmd = "vtell";
+ADDRLP4 4
+ADDRGP4 $465
+ASGNP4
+line 970
+;970:	}
+ADDRGP4 $464
+JUMPV
+LABELV $463
+line 971
+;971:	else {
+line 972
+;972:		color = COLOR_GREEN;
+ADDRLP4 0
+CNSTI4 50
+ASGNI4
+line 973
+;973:		cmd = "vchat";
+ADDRLP4 4
+ADDRGP4 $466
+ASGNP4
+line 974
+;974:	}
+LABELV $464
+LABELV $461
+line 976
+;975:
+;976:	trap_SendServerCommand( other-g_entities, va("%s %d %d %d %s", cmd, voiceonly, ent->s.number, color, id));
+ADDRGP4 $467
+ARGP4
+ADDRLP4 4
+INDIRP4
+ARGP4
+ADDRFP4 16
+INDIRI4
+ARGI4
+ADDRFP4 0
+INDIRP4
+INDIRI4
+ARGI4
+ADDRLP4 0
+INDIRI4
+ARGI4
+ADDRFP4 12
+INDIRP4
+ARGP4
+ADDRLP4 12
+ADDRGP4 va
+CALLP4
+ASGNP4
+ADDRFP4 4
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRLP4 12
+INDIRP4
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 977
+;977:}
+LABELV $448
+endproc G_VoiceTo 16 24
+export G_Voice
+proc G_Voice 8 20
+line 979
+;978:
+;979:void G_Voice( gentity_t *ent, gentity_t *target, int mode, const char *id, qboolean voiceonly ) {
+line 983
+;980:	int			j;
+;981:	gentity_t	*other;
+;982:
+;983:	if ( g_gametype.integer < GT_TEAM && mode == SAY_TEAM ) {
+ADDRGP4 g_gametype+12
+INDIRI4
+CNSTI4 3
+GEI4 $469
+ADDRFP4 8
+INDIRI4
+CNSTI4 1
+NEI4 $469
+line 984
+;984:		mode = SAY_ALL;
+ADDRFP4 8
+CNSTI4 0
+ASGNI4
+line 985
+;985:	}
+LABELV $469
+line 987
+;986:
+;987:	if ( target ) {
+ADDRFP4 4
+INDIRP4
+CVPU4 4
+CNSTU4 0
+EQU4 $472
+line 988
+;988:		G_VoiceTo( ent, target, mode, id, voiceonly );
+ADDRFP4 0
+INDIRP4
+ARGP4
+ADDRFP4 4
+INDIRP4
+ARGP4
+ADDRFP4 8
+INDIRI4
+ARGI4
+ADDRFP4 12
+INDIRP4
+ARGP4
+ADDRFP4 16
+INDIRI4
+ARGI4
+ADDRGP4 G_VoiceTo
+CALLV
+pop
+line 989
+;989:		return;
+ADDRGP4 $468
+JUMPV
+LABELV $472
+line 993
+;990:	}
+;991:
+;992:	// echo the text to the console
+;993:	if ( g_dedicated.integer ) {
+ADDRGP4 g_dedicated+12
+INDIRI4
+CNSTI4 0
+EQI4 $474
+line 994
+;994:		G_Printf( "voice: %s %s\n", ent->client->pers.netname, id);
+ADDRGP4 $477
+ARGP4
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 512
+ADDP4
+ARGP4
+ADDRFP4 12
+INDIRP4
+ARGP4
+ADDRGP4 G_Printf
+CALLV
+pop
+line 995
+;995:	}
+LABELV $474
+line 998
+;996:
+;997:	// send it to all the apropriate clients
+;998:	for (j = 0; j < level.maxclients; j++) {
+ADDRLP4 0
+CNSTI4 0
+ASGNI4
+ADDRGP4 $481
+JUMPV
+LABELV $478
+line 999
+;999:		other = &g_entities[j];
+ADDRLP4 4
+CNSTI4 808
+ADDRLP4 0
+INDIRI4
+MULI4
+ADDRGP4 g_entities
+ADDP4
+ASGNP4
+line 1000
+;1000:		G_VoiceTo( ent, other, mode, id, voiceonly );
+ADDRFP4 0
+INDIRP4
+ARGP4
+ADDRLP4 4
+INDIRP4
+ARGP4
+ADDRFP4 8
+INDIRI4
+ARGI4
+ADDRFP4 12
+INDIRP4
+ARGP4
+ADDRFP4 16
+INDIRI4
+ARGI4
+ADDRGP4 G_VoiceTo
+CALLV
+pop
+line 1001
+;1001:	}
+LABELV $479
+line 998
+ADDRLP4 0
+ADDRLP4 0
+INDIRI4
+CNSTI4 1
+ADDI4
+ASGNI4
+LABELV $481
+ADDRLP4 0
+INDIRI4
+ADDRGP4 level+24
+INDIRI4
+LTI4 $478
+line 1002
+;1002:}
+LABELV $468
+endproc G_Voice 8 20
+proc Cmd_Voice_f 12 20
+line 1009
+;1003:
+;1004:/*
+;1005:==================
+;1006:Cmd_Voice_f
+;1007:==================
+;1008:*/
+;1009:static void Cmd_Voice_f( gentity_t *ent, int mode, qboolean arg0, qboolean voiceonly ) {
+line 1012
+;1010:	char		*p;
+;1011:
+;1012:	if ( trap_Argc () < 2 && !arg0 ) {
+ADDRLP4 4
+ADDRGP4 trap_Argc
+CALLI4
+ASGNI4
+ADDRLP4 4
+INDIRI4
+CNSTI4 2
+GEI4 $484
+ADDRFP4 8
+INDIRI4
+CNSTI4 0
+NEI4 $484
+line 1013
+;1013:		return;
+ADDRGP4 $483
+JUMPV
+LABELV $484
+line 1016
+;1014:	}
+;1015:
+;1016:	if (arg0)
+ADDRFP4 8
+INDIRI4
+CNSTI4 0
+EQI4 $486
+line 1017
+;1017:	{
+line 1018
+;1018:		p = ConcatArgs( 0 );
+CNSTI4 0
+ARGI4
+ADDRLP4 8
+ADDRGP4 ConcatArgs
+CALLP4
+ASGNP4
+ADDRLP4 0
+ADDRLP4 8
+INDIRP4
+ASGNP4
+line 1019
+;1019:	}
+ADDRGP4 $487
+JUMPV
+LABELV $486
+line 1021
+;1020:	else
+;1021:	{
+line 1022
+;1022:		p = ConcatArgs( 1 );
+CNSTI4 1
+ARGI4
+ADDRLP4 8
+ADDRGP4 ConcatArgs
+CALLP4
+ASGNP4
+ADDRLP4 0
+ADDRLP4 8
+INDIRP4
+ASGNP4
+line 1023
+;1023:	}
+LABELV $487
+line 1025
+;1024:
+;1025:	G_Voice( ent, NULL, mode, p, voiceonly );
+ADDRFP4 0
+INDIRP4
+ARGP4
+CNSTP4 0
+ARGP4
+ADDRFP4 4
+INDIRI4
+ARGI4
+ADDRLP4 0
+INDIRP4
+ARGP4
+ADDRFP4 12
+INDIRI4
+ARGI4
+ADDRGP4 G_Voice
+CALLV
+pop
+line 1026
+;1026:}
+LABELV $483
+endproc Cmd_Voice_f 12 20
+proc Cmd_VoiceTell_f 1076 20
+line 1033
+;1027:
+;1028:/*
+;1029:==================
+;1030:Cmd_VoiceTell_f
+;1031:==================
+;1032:*/
+;1033:static void Cmd_VoiceTell_f( gentity_t *ent, qboolean voiceonly ) {
+line 1039
+;1034:	int			targetNum;
+;1035:	gentity_t	*target;
+;1036:	char		*id;
+;1037:	char		arg[MAX_TOKEN_CHARS];
+;1038:
+;1039:	if ( trap_Argc () < 2 ) {
+ADDRLP4 1036
+ADDRGP4 trap_Argc
+CALLI4
+ASGNI4
+ADDRLP4 1036
+INDIRI4
+CNSTI4 2
+GEI4 $489
+line 1040
+;1040:		return;
+ADDRGP4 $488
+JUMPV
+LABELV $489
+line 1043
+;1041:	}
+;1042:
+;1043:	trap_Argv( 1, arg, sizeof( arg ) );
+CNSTI4 1
+ARGI4
+ADDRLP4 12
+ARGP4
+CNSTI4 1024
+ARGI4
+ADDRGP4 trap_Argv
+CALLV
+pop
+line 1044
+;1044:	targetNum = atoi( arg );
+ADDRLP4 12
+ARGP4
+ADDRLP4 1040
+ADDRGP4 atoi
+CALLI4
+ASGNI4
+ADDRLP4 4
+ADDRLP4 1040
+INDIRI4
+ASGNI4
+line 1045
+;1045:	if ( targetNum < 0 || targetNum >= level.maxclients ) {
+ADDRLP4 4
+INDIRI4
+CNSTI4 0
+LTI4 $494
+ADDRLP4 4
+INDIRI4
+ADDRGP4 level+24
+INDIRI4
+LTI4 $491
+LABELV $494
+line 1046
+;1046:		return;
+ADDRGP4 $488
+JUMPV
+LABELV $491
+line 1049
+;1047:	}
+;1048:
+;1049:	target = &g_entities[targetNum];
+ADDRLP4 0
+CNSTI4 808
+ADDRLP4 4
+INDIRI4
+MULI4
+ADDRGP4 g_entities
+ADDP4
+ASGNP4
+line 1050
+;1050:	if ( !target || !target->inuse || !target->client ) {
+ADDRLP4 1052
+CNSTU4 0
+ASGNU4
+ADDRLP4 0
+INDIRP4
+CVPU4 4
+ADDRLP4 1052
+INDIRU4
+EQU4 $498
+ADDRLP4 0
+INDIRP4
+CNSTI4 520
+ADDP4
+INDIRI4
+CNSTI4 0
+EQI4 $498
+ADDRLP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CVPU4 4
+ADDRLP4 1052
+INDIRU4
+NEU4 $495
+LABELV $498
+line 1051
+;1051:		return;
+ADDRGP4 $488
+JUMPV
+LABELV $495
+line 1054
+;1052:	}
+;1053:
+;1054:	id = ConcatArgs( 2 );
+CNSTI4 2
+ARGI4
+ADDRLP4 1056
+ADDRGP4 ConcatArgs
+CALLP4
+ASGNP4
+ADDRLP4 8
+ADDRLP4 1056
+INDIRP4
+ASGNP4
+line 1056
+;1055:
+;1056:	G_LogPrintf( "vtell: %s to %s: %s\n", ent->client->pers.netname, target->client->pers.netname, id );
+ADDRGP4 $499
+ARGP4
+ADDRLP4 1060
+CNSTI4 516
+ASGNI4
+ADDRLP4 1064
+CNSTI4 512
+ASGNI4
+ADDRFP4 0
+INDIRP4
+ADDRLP4 1060
+INDIRI4
+ADDP4
+INDIRP4
+ADDRLP4 1064
+INDIRI4
+ADDP4
+ARGP4
+ADDRLP4 0
+INDIRP4
+ADDRLP4 1060
+INDIRI4
+ADDP4
+INDIRP4
+ADDRLP4 1064
+INDIRI4
+ADDP4
+ARGP4
+ADDRLP4 8
+INDIRP4
+ARGP4
+ADDRGP4 G_LogPrintf
+CALLV
+pop
+line 1057
+;1057:	G_Voice( ent, target, SAY_TELL, id, voiceonly );
+ADDRFP4 0
+INDIRP4
+ARGP4
+ADDRLP4 0
+INDIRP4
+ARGP4
+CNSTI4 2
+ARGI4
+ADDRLP4 8
+INDIRP4
+ARGP4
+ADDRFP4 4
+INDIRI4
+ARGI4
+ADDRGP4 G_Voice
+CALLV
+pop
+line 1060
+;1058:	// don't tell to the player self if it was already directed to this player
+;1059:	// also don't send the chat back to a bot
+;1060:	if ( ent != target && !(ent->r.svFlags & SVF_BOT)) {
+ADDRLP4 1068
+ADDRFP4 0
+INDIRP4
+ASGNP4
+ADDRLP4 1068
+INDIRP4
+CVPU4 4
+ADDRLP4 0
+INDIRP4
+CVPU4 4
+EQU4 $500
+ADDRLP4 1068
+INDIRP4
+CNSTI4 424
+ADDP4
+INDIRI4
+CNSTI4 8
+BANDI4
+CNSTI4 0
+NEI4 $500
+line 1061
+;1061:		G_Voice( ent, ent, SAY_TELL, id, voiceonly );
+ADDRLP4 1072
+ADDRFP4 0
+INDIRP4
+ASGNP4
+ADDRLP4 1072
+INDIRP4
+ARGP4
+ADDRLP4 1072
+INDIRP4
+ARGP4
+CNSTI4 2
+ARGI4
+ADDRLP4 8
+INDIRP4
+ARGP4
+ADDRFP4 4
+INDIRI4
+ARGI4
+ADDRGP4 G_Voice
+CALLV
+pop
+line 1062
+;1062:	}
+LABELV $500
+line 1063
+;1063:}
+LABELV $488
+endproc Cmd_VoiceTell_f 1076 20
+proc Cmd_VoiceTaunt_f 56 20
+line 1071
+;1064:
+;1065:
+;1066:/*
+;1067:==================
+;1068:Cmd_VoiceTaunt_f
+;1069:==================
+;1070:*/
+;1071:static void Cmd_VoiceTaunt_f( gentity_t *ent ) {
+line 1075
+;1072:	gentity_t *who;
+;1073:	int i;
+;1074:
+;1075:	if (!ent->client) {
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CVPU4 4
+CNSTU4 0
+NEU4 $503
+line 1076
+;1076:		return;
+ADDRGP4 $502
+JUMPV
+LABELV $503
+line 1080
+;1077:	}
+;1078:
+;1079:	// insult someone who just killed you
+;1080:	if (ent->enemy && ent->enemy->client && ent->enemy->client->lastkilled_client == ent->s.number) {
+ADDRLP4 8
+ADDRFP4 0
+INDIRP4
+ASGNP4
+ADDRLP4 12
+ADDRLP4 8
+INDIRP4
+CNSTI4 768
+ADDP4
+INDIRP4
+ASGNP4
+ADDRLP4 16
+CNSTU4 0
+ASGNU4
+ADDRLP4 12
+INDIRP4
+CVPU4 4
+ADDRLP4 16
+INDIRU4
+EQU4 $505
+ADDRLP4 20
+ADDRLP4 12
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+ASGNP4
+ADDRLP4 20
+INDIRP4
+CVPU4 4
+ADDRLP4 16
+INDIRU4
+EQU4 $505
+ADDRLP4 20
+INDIRP4
+CNSTI4 720
+ADDP4
+INDIRI4
+ADDRLP4 8
+INDIRP4
+INDIRI4
+NEI4 $505
+line 1082
+;1081:		// i am a dead corpse
+;1082:		if (!(ent->enemy->r.svFlags & SVF_BOT)) {
+ADDRFP4 0
+INDIRP4
+CNSTI4 768
+ADDP4
+INDIRP4
+CNSTI4 424
+ADDP4
+INDIRI4
+CNSTI4 8
+BANDI4
+CNSTI4 0
+NEI4 $507
+line 1083
+;1083:			G_Voice( ent, ent->enemy, SAY_TELL, VOICECHAT_DEATHINSULT, qfalse );
+ADDRLP4 24
+ADDRFP4 0
+INDIRP4
+ASGNP4
+ADDRLP4 24
+INDIRP4
+ARGP4
+ADDRLP4 24
+INDIRP4
+CNSTI4 768
+ADDP4
+INDIRP4
+ARGP4
+CNSTI4 2
+ARGI4
+ADDRGP4 $509
+ARGP4
+CNSTI4 0
+ARGI4
+ADDRGP4 G_Voice
+CALLV
+pop
+line 1084
+;1084:		}
+LABELV $507
+line 1085
+;1085:		if (!(ent->r.svFlags & SVF_BOT)) {
+ADDRFP4 0
+INDIRP4
+CNSTI4 424
+ADDP4
+INDIRI4
+CNSTI4 8
+BANDI4
+CNSTI4 0
+NEI4 $510
+line 1086
+;1086:			G_Voice( ent, ent,        SAY_TELL, VOICECHAT_DEATHINSULT, qfalse );
+ADDRLP4 24
+ADDRFP4 0
+INDIRP4
+ASGNP4
+ADDRLP4 24
+INDIRP4
+ARGP4
+ADDRLP4 24
+INDIRP4
+ARGP4
+CNSTI4 2
+ARGI4
+ADDRGP4 $509
+ARGP4
+CNSTI4 0
+ARGI4
+ADDRGP4 G_Voice
+CALLV
+pop
+line 1087
+;1087:		}
+LABELV $510
+line 1088
+;1088:		ent->enemy = NULL;
+ADDRFP4 0
+INDIRP4
+CNSTI4 768
+ADDP4
+CNSTP4 0
+ASGNP4
+line 1089
+;1089:		return;
+ADDRGP4 $502
+JUMPV
+LABELV $505
+line 1092
+;1090:	}
+;1091:	// insult someone you just killed
+;1092:	if (ent->client->lastkilled_client >= 0 && ent->client->lastkilled_client != ent->s.number) {
+ADDRLP4 24
+ADDRFP4 0
+INDIRP4
+ASGNP4
+ADDRLP4 28
+ADDRLP4 24
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 720
+ADDP4
+INDIRI4
+ASGNI4
+ADDRLP4 28
+INDIRI4
+CNSTI4 0
+LTI4 $512
+ADDRLP4 28
+INDIRI4
+ADDRLP4 24
+INDIRP4
+INDIRI4
+EQI4 $512
+line 1093
+;1093:		who = g_entities + ent->client->lastkilled_client;
+ADDRLP4 0
+CNSTI4 808
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 720
+ADDP4
+INDIRI4
+MULI4
+ADDRGP4 g_entities
+ADDP4
+ASGNP4
+line 1094
+;1094:		if (who->client) {
+ADDRLP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CVPU4 4
+CNSTU4 0
+EQU4 $514
+line 1096
+;1095:			// who is the person I just killed
+;1096:			if (who->client->lasthurt_mod == MOD_GAUNTLET) {
+ADDRLP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 728
+ADDP4
+INDIRI4
+CNSTI4 2
+NEI4 $516
+line 1097
+;1097:				if (!(who->r.svFlags & SVF_BOT)) {
+ADDRLP4 0
+INDIRP4
+CNSTI4 424
+ADDP4
+INDIRI4
+CNSTI4 8
+BANDI4
+CNSTI4 0
+NEI4 $518
+line 1098
+;1098:					G_Voice( ent, who, SAY_TELL, VOICECHAT_KILLGAUNTLET, qfalse );	// and I killed them with a gauntlet
+ADDRFP4 0
+INDIRP4
+ARGP4
+ADDRLP4 0
+INDIRP4
+ARGP4
+CNSTI4 2
+ARGI4
+ADDRGP4 $520
+ARGP4
+CNSTI4 0
+ARGI4
+ADDRGP4 G_Voice
+CALLV
+pop
+line 1099
+;1099:				}
+LABELV $518
+line 1100
+;1100:				if (!(ent->r.svFlags & SVF_BOT)) {
+ADDRFP4 0
+INDIRP4
+CNSTI4 424
+ADDP4
+INDIRI4
+CNSTI4 8
+BANDI4
+CNSTI4 0
+NEI4 $517
+line 1101
+;1101:					G_Voice( ent, ent, SAY_TELL, VOICECHAT_KILLGAUNTLET, qfalse );
+ADDRLP4 32
+ADDRFP4 0
+INDIRP4
+ASGNP4
+ADDRLP4 32
+INDIRP4
+ARGP4
+ADDRLP4 32
+INDIRP4
+ARGP4
+CNSTI4 2
+ARGI4
+ADDRGP4 $520
+ARGP4
+CNSTI4 0
+ARGI4
+ADDRGP4 G_Voice
+CALLV
+pop
+line 1102
+;1102:				}
+line 1103
+;1103:			} else {
+ADDRGP4 $517
+JUMPV
+LABELV $516
+line 1104
+;1104:				if (!(who->r.svFlags & SVF_BOT)) {
+ADDRLP4 0
+INDIRP4
+CNSTI4 424
+ADDP4
+INDIRI4
+CNSTI4 8
+BANDI4
+CNSTI4 0
+NEI4 $523
+line 1105
+;1105:					G_Voice( ent, who, SAY_TELL, VOICECHAT_KILLINSULT, qfalse );	// and I killed them with something else
+ADDRFP4 0
+INDIRP4
+ARGP4
+ADDRLP4 0
+INDIRP4
+ARGP4
+CNSTI4 2
+ARGI4
+ADDRGP4 $525
+ARGP4
+CNSTI4 0
+ARGI4
+ADDRGP4 G_Voice
+CALLV
+pop
+line 1106
+;1106:				}
+LABELV $523
+line 1107
+;1107:				if (!(ent->r.svFlags & SVF_BOT)) {
+ADDRFP4 0
+INDIRP4
+CNSTI4 424
+ADDP4
+INDIRI4
+CNSTI4 8
+BANDI4
+CNSTI4 0
+NEI4 $526
+line 1108
+;1108:					G_Voice( ent, ent, SAY_TELL, VOICECHAT_KILLINSULT, qfalse );
+ADDRLP4 32
+ADDRFP4 0
+INDIRP4
+ASGNP4
+ADDRLP4 32
+INDIRP4
+ARGP4
+ADDRLP4 32
+INDIRP4
+ARGP4
+CNSTI4 2
+ARGI4
+ADDRGP4 $525
+ARGP4
+CNSTI4 0
+ARGI4
+ADDRGP4 G_Voice
+CALLV
+pop
+line 1109
+;1109:				}
+LABELV $526
+line 1110
+;1110:			}
+LABELV $517
+line 1111
+;1111:			ent->client->lastkilled_client = -1;
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 720
+ADDP4
+CNSTI4 -1
+ASGNI4
+line 1112
+;1112:			return;
+ADDRGP4 $502
+JUMPV
+LABELV $514
+line 1114
+;1113:		}
+;1114:	}
+LABELV $512
+line 1116
+;1115:
+;1116:	if (g_gametype.integer >= GT_TEAM) {
+ADDRGP4 g_gametype+12
+INDIRI4
+CNSTI4 3
+LTI4 $528
+line 1118
+;1117:		// praise a team mate who just got a reward
+;1118:		for(i = 0; i < MAX_CLIENTS; i++) {
+ADDRLP4 4
+CNSTI4 0
+ASGNI4
+LABELV $531
+line 1119
+;1119:			who = g_entities + i;
+ADDRLP4 0
+CNSTI4 808
+ADDRLP4 4
+INDIRI4
+MULI4
+ADDRGP4 g_entities
+ADDP4
+ASGNP4
+line 1120
+;1120:			if (who->client && who != ent && who->client->sess.sessionTeam == ent->client->sess.sessionTeam) {
+ADDRLP4 36
+CNSTI4 516
+ASGNI4
+ADDRLP4 40
+ADDRLP4 0
+INDIRP4
+ADDRLP4 36
+INDIRI4
+ADDP4
+INDIRP4
+ASGNP4
+ADDRLP4 40
+INDIRP4
+CVPU4 4
+CNSTU4 0
+EQU4 $535
+ADDRLP4 44
+ADDRFP4 0
+INDIRP4
+ASGNP4
+ADDRLP4 0
+INDIRP4
+CVPU4 4
+ADDRLP4 44
+INDIRP4
+CVPU4 4
+EQU4 $535
+ADDRLP4 48
+CNSTI4 616
+ASGNI4
+ADDRLP4 40
+INDIRP4
+ADDRLP4 48
+INDIRI4
+ADDP4
+INDIRI4
+ADDRLP4 44
+INDIRP4
+ADDRLP4 36
+INDIRI4
+ADDP4
+INDIRP4
+ADDRLP4 48
+INDIRI4
+ADDP4
+INDIRI4
+NEI4 $535
+line 1121
+;1121:				if (who->client->rewardTime > level.time) {
+ADDRLP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 744
+ADDP4
+INDIRI4
+ADDRGP4 level+32
+INDIRI4
+LEI4 $537
+line 1122
+;1122:					if (!(who->r.svFlags & SVF_BOT)) {
+ADDRLP4 0
+INDIRP4
+CNSTI4 424
+ADDP4
+INDIRI4
+CNSTI4 8
+BANDI4
+CNSTI4 0
+NEI4 $540
+line 1123
+;1123:						G_Voice( ent, who, SAY_TELL, VOICECHAT_PRAISE, qfalse );
+ADDRFP4 0
+INDIRP4
+ARGP4
+ADDRLP4 0
+INDIRP4
+ARGP4
+CNSTI4 2
+ARGI4
+ADDRGP4 $542
+ARGP4
+CNSTI4 0
+ARGI4
+ADDRGP4 G_Voice
+CALLV
+pop
+line 1124
+;1124:					}
+LABELV $540
+line 1125
+;1125:					if (!(ent->r.svFlags & SVF_BOT)) {
+ADDRFP4 0
+INDIRP4
+CNSTI4 424
+ADDP4
+INDIRI4
+CNSTI4 8
+BANDI4
+CNSTI4 0
+NEI4 $502
+line 1126
+;1126:						G_Voice( ent, ent, SAY_TELL, VOICECHAT_PRAISE, qfalse );
+ADDRLP4 52
+ADDRFP4 0
+INDIRP4
+ASGNP4
+ADDRLP4 52
+INDIRP4
+ARGP4
+ADDRLP4 52
+INDIRP4
+ARGP4
+CNSTI4 2
+ARGI4
+ADDRGP4 $542
+ARGP4
+CNSTI4 0
+ARGI4
+ADDRGP4 G_Voice
+CALLV
+pop
+line 1127
+;1127:					}
+line 1128
+;1128:					return;
+ADDRGP4 $502
+JUMPV
+LABELV $537
+line 1130
+;1129:				}
+;1130:			}
+LABELV $535
+line 1131
+;1131:		}
+LABELV $532
+line 1118
+ADDRLP4 4
+ADDRLP4 4
+INDIRI4
+CNSTI4 1
+ADDI4
+ASGNI4
+ADDRLP4 4
+INDIRI4
+CNSTI4 64
+LTI4 $531
+line 1132
+;1132:	}
+LABELV $528
+line 1135
+;1133:
+;1134:	// just say something
+;1135:	G_Voice( ent, NULL, SAY_ALL, VOICECHAT_TAUNT, qfalse );
+ADDRFP4 0
+INDIRP4
+ARGP4
+CNSTP4 0
+ARGP4
+ADDRLP4 32
+CNSTI4 0
+ASGNI4
+ADDRLP4 32
+INDIRI4
+ARGI4
+ADDRGP4 $545
+ARGP4
+ADDRLP4 32
+INDIRI4
+ARGI4
+ADDRGP4 G_Voice
+CALLV
+pop
+line 1136
+;1136:}
+LABELV $502
+endproc Cmd_VoiceTaunt_f 56 20
+data
+align 4
+LABELV gc_orders
+address $546
+address $547
+address $548
+address $549
+address $550
+address $551
+address $552
+export Cmd_GameCommand_f
+code
+proc Cmd_GameCommand_f 1060 16
+line 1150
+;1137:
+;1138:
+;1139:
+;1140:static char	*gc_orders[] = {
+;1141:	"hold your position",
+;1142:	"hold this position",
+;1143:	"come here",
+;1144:	"cover me",
+;1145:	"guard location",
+;1146:	"search and destroy",
+;1147:	"report"
+;1148:};
+;1149:
+;1150:void Cmd_GameCommand_f( gentity_t *ent ) {
+line 1155
+;1151:	int		player;
+;1152:	int		order;
+;1153:	char	str[MAX_TOKEN_CHARS];
+;1154:
+;1155:	trap_Argv( 1, str, sizeof( str ) );
+CNSTI4 1
+ARGI4
+ADDRLP4 0
+ARGP4
+CNSTI4 1024
+ARGI4
+ADDRGP4 trap_Argv
+CALLV
+pop
+line 1156
+;1156:	player = atoi( str );
+ADDRLP4 0
+ARGP4
+ADDRLP4 1032
+ADDRGP4 atoi
+CALLI4
+ASGNI4
+ADDRLP4 1028
+ADDRLP4 1032
+INDIRI4
+ASGNI4
+line 1157
+;1157:	trap_Argv( 2, str, sizeof( str ) );
+CNSTI4 2
+ARGI4
+ADDRLP4 0
+ARGP4
+CNSTI4 1024
+ARGI4
+ADDRGP4 trap_Argv
+CALLV
+pop
+line 1158
+;1158:	order = atoi( str );
+ADDRLP4 0
+ARGP4
+ADDRLP4 1036
+ADDRGP4 atoi
+CALLI4
+ASGNI4
+ADDRLP4 1024
+ADDRLP4 1036
+INDIRI4
+ASGNI4
+line 1160
+;1159:
+;1160:	if ( player < 0 || player >= MAX_CLIENTS ) {
+ADDRLP4 1028
+INDIRI4
+CNSTI4 0
+LTI4 $556
+ADDRLP4 1028
+INDIRI4
+CNSTI4 64
+LTI4 $554
+LABELV $556
+line 1161
+;1161:		return;
+ADDRGP4 $553
+JUMPV
+LABELV $554
+line 1163
+;1162:	}
+;1163:	if ( order < 0 || order > sizeof(gc_orders)/sizeof(char *) ) {
+ADDRLP4 1024
+INDIRI4
+CNSTI4 0
+LTI4 $559
+ADDRLP4 1024
+INDIRI4
+CVIU4 4
+CNSTU4 7
+LEU4 $557
+LABELV $559
+line 1164
+;1164:		return;
+ADDRGP4 $553
+JUMPV
+LABELV $557
+line 1166
+;1165:	}
+;1166:	G_Say( ent, &g_entities[player], SAY_TELL, gc_orders[order] );
+ADDRFP4 0
+INDIRP4
+ARGP4
+CNSTI4 808
+ADDRLP4 1028
+INDIRI4
+MULI4
+ADDRGP4 g_entities
+ADDP4
+ARGP4
+ADDRLP4 1048
+CNSTI4 2
+ASGNI4
+ADDRLP4 1048
+INDIRI4
+ARGI4
+ADDRLP4 1024
+INDIRI4
+ADDRLP4 1048
+INDIRI4
+LSHI4
+ADDRGP4 gc_orders
+ADDP4
+INDIRP4
+ARGP4
+ADDRGP4 G_Say
+CALLV
+pop
+line 1167
+;1167:	G_Say( ent, ent, SAY_TELL, gc_orders[order] );
+ADDRLP4 1052
+ADDRFP4 0
+INDIRP4
+ASGNP4
+ADDRLP4 1052
+INDIRP4
+ARGP4
+ADDRLP4 1052
+INDIRP4
+ARGP4
+ADDRLP4 1056
+CNSTI4 2
+ASGNI4
+ADDRLP4 1056
+INDIRI4
+ARGI4
+ADDRLP4 1024
+INDIRI4
+ADDRLP4 1056
+INDIRI4
+LSHI4
+ADDRGP4 gc_orders
+ADDP4
+INDIRP4
+ARGP4
+ADDRGP4 G_Say
+CALLV
+pop
+line 1168
+;1168:}
+LABELV $553
+endproc Cmd_GameCommand_f 1060 16
+export Cmd_Where_f
+proc Cmd_Where_f 8 8
+line 1175
+;1169:
+;1170:/*
+;1171:==================
+;1172:Cmd_Where_f
+;1173:==================
+;1174:*/
+;1175:void Cmd_Where_f( gentity_t *ent ) {
+line 1176
+;1176:	trap_SendServerCommand( ent-g_entities, va("print \"%s\n\"", vtos( ent->s.origin ) ) );
+ADDRFP4 0
+INDIRP4
+CNSTI4 92
+ADDP4
+ARGP4
+ADDRLP4 0
+ADDRGP4 vtos
+CALLP4
+ASGNP4
+ADDRGP4 $561
+ARGP4
+ADDRLP4 0
+INDIRP4
+ARGP4
+ADDRLP4 4
+ADDRGP4 va
+CALLP4
+ASGNP4
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRLP4 4
+INDIRP4
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 1177
+;1177:}
+LABELV $560
+endproc Cmd_Where_f 8 8
+data
+align 4
+LABELV gameNames
+address $562
+address $563
+address $564
+address $565
+address $566
+address $567
+address $568
+address $569
+export Cmd_CallVote_f
+code
+proc Cmd_CallVote_f 3132 24
+line 1195
+;1178:
+;1179:static const char *gameNames[] = {
+;1180:	"Free For All",
+;1181:	"Tournament",
+;1182:	"Single Player",
+;1183:	"Team Deathmatch",
+;1184:	"Capture the Flag",
+;1185:	"One Flag CTF",
+;1186:	"Overload",
+;1187:	"Harvester"
+;1188:};
+;1189:
+;1190:/*
+;1191:==================
+;1192:Cmd_CallVote_f
+;1193:==================
+;1194:*/
+;1195:void Cmd_CallVote_f( gentity_t *ent ) {
+line 1200
+;1196:	int		i;
+;1197:	char	arg1[MAX_STRING_TOKENS];
+;1198:	char	arg2[MAX_STRING_TOKENS];
+;1199:
+;1200:	if ( !g_allowVote.integer ) {
+ADDRGP4 g_allowVote+12
+INDIRI4
+CNSTI4 0
+NEI4 $571
+line 1201
+;1201:		trap_SendServerCommand( ent-g_entities, "print \"Voting not allowed here.\n\"" );
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRGP4 $574
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 1202
+;1202:		return;
+ADDRGP4 $570
+JUMPV
+LABELV $571
+line 1205
+;1203:	}
+;1204:
+;1205:	if ( level.voteTime ) {
+ADDRGP4 level+2404
+INDIRI4
+CNSTI4 0
+EQI4 $575
+line 1206
+;1206:		trap_SendServerCommand( ent-g_entities, "print \"A vote is already in progress.\n\"" );
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRGP4 $578
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 1207
+;1207:		return;
+ADDRGP4 $570
+JUMPV
+LABELV $575
+line 1209
+;1208:	}
+;1209:	if ( ent->client->pers.voteCount >= MAX_VOTE_COUNT ) {
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 604
+ADDP4
+INDIRI4
+CNSTI4 3
+LTI4 $579
+line 1210
+;1210:		trap_SendServerCommand( ent-g_entities, "print \"You have called the maximum number of votes.\n\"" );
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRGP4 $581
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 1211
+;1211:		return;
+ADDRGP4 $570
+JUMPV
+LABELV $579
+line 1213
+;1212:	}
+;1213:	if ( ent->client->sess.sessionTeam == TEAM_SPECTATOR ) {
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 616
+ADDP4
+INDIRI4
+CNSTI4 3
+NEI4 $582
+line 1214
+;1214:		trap_SendServerCommand( ent-g_entities, "print \"Not allowed to call a vote as spectator.\n\"" );
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRGP4 $584
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 1215
+;1215:		return;
+ADDRGP4 $570
+JUMPV
+LABELV $582
+line 1219
+;1216:	}
+;1217:
+;1218:	// make sure it is a valid command to vote on
+;1219:	trap_Argv( 1, arg1, sizeof( arg1 ) );
+CNSTI4 1
+ARGI4
+ADDRLP4 4
+ARGP4
+CNSTI4 1024
+ARGI4
+ADDRGP4 trap_Argv
+CALLV
+pop
+line 1220
+;1220:	trap_Argv( 2, arg2, sizeof( arg2 ) );
+CNSTI4 2
+ARGI4
+ADDRLP4 1028
+ARGP4
+CNSTI4 1024
+ARGI4
+ADDRGP4 trap_Argv
+CALLV
+pop
+line 1222
+;1221:
+;1222:	if( strchr( arg1, ';' ) || strchr( arg2, ';' ) ) {
+ADDRLP4 4
+ARGP4
+CNSTI4 59
+ARGI4
+ADDRLP4 2052
+ADDRGP4 strchr
+CALLP4
+ASGNP4
+ADDRLP4 2052
+INDIRP4
+CVPU4 4
+CNSTU4 0
+NEU4 $587
+ADDRLP4 1028
+ARGP4
+CNSTI4 59
+ARGI4
+ADDRLP4 2056
+ADDRGP4 strchr
+CALLP4
+ASGNP4
+ADDRLP4 2056
+INDIRP4
+CVPU4 4
+CNSTU4 0
+EQU4 $585
+LABELV $587
+line 1223
+;1223:		trap_SendServerCommand( ent-g_entities, "print \"Invalid vote string.\n\"" );
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRGP4 $588
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 1224
+;1224:		return;
+ADDRGP4 $570
+JUMPV
+LABELV $585
+line 1227
+;1225:	}
+;1226:
+;1227:	if ( !Q_stricmp( arg1, "map_restart" ) ) {
+ADDRLP4 4
+ARGP4
+ADDRGP4 $591
+ARGP4
+ADDRLP4 2060
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 2060
+INDIRI4
+CNSTI4 0
+NEI4 $589
+line 1228
+;1228:	} else if ( !Q_stricmp( arg1, "nextmap" ) ) {
+ADDRGP4 $590
+JUMPV
+LABELV $589
+ADDRLP4 4
+ARGP4
+ADDRGP4 $594
+ARGP4
+ADDRLP4 2064
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 2064
+INDIRI4
+CNSTI4 0
+NEI4 $592
+line 1229
+;1229:	} else if ( !Q_stricmp( arg1, "map" ) ) {
+ADDRGP4 $593
+JUMPV
+LABELV $592
+ADDRLP4 4
+ARGP4
+ADDRGP4 $597
+ARGP4
+ADDRLP4 2068
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 2068
+INDIRI4
+CNSTI4 0
+NEI4 $595
+line 1230
+;1230:	} else if ( !Q_stricmp( arg1, "g_gametype" ) ) {
+ADDRGP4 $596
+JUMPV
+LABELV $595
+ADDRLP4 4
+ARGP4
+ADDRGP4 $600
+ARGP4
+ADDRLP4 2072
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 2072
+INDIRI4
+CNSTI4 0
+NEI4 $598
+line 1231
+;1231:	} else if ( !Q_stricmp( arg1, "kick" ) ) {
+ADDRGP4 $599
+JUMPV
+LABELV $598
+ADDRLP4 4
+ARGP4
+ADDRGP4 $603
+ARGP4
+ADDRLP4 2076
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 2076
+INDIRI4
+CNSTI4 0
+NEI4 $601
+line 1232
+;1232:	} else if ( !Q_stricmp( arg1, "clientkick" ) ) {
+ADDRGP4 $602
+JUMPV
+LABELV $601
+ADDRLP4 4
+ARGP4
+ADDRGP4 $606
+ARGP4
+ADDRLP4 2080
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 2080
+INDIRI4
+CNSTI4 0
+NEI4 $604
+line 1233
+;1233:	} else if ( !Q_stricmp( arg1, "g_doWarmup" ) ) {
+ADDRGP4 $605
+JUMPV
+LABELV $604
+ADDRLP4 4
+ARGP4
+ADDRGP4 $609
+ARGP4
+ADDRLP4 2084
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 2084
+INDIRI4
+CNSTI4 0
+NEI4 $607
+line 1234
+;1234:	} else if ( !Q_stricmp( arg1, "timelimit" ) ) {
+ADDRGP4 $608
+JUMPV
+LABELV $607
+ADDRLP4 4
+ARGP4
+ADDRGP4 $612
+ARGP4
+ADDRLP4 2088
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 2088
+INDIRI4
+CNSTI4 0
+NEI4 $610
+line 1235
+;1235:	} else if ( !Q_stricmp( arg1, "fraglimit" ) ) {
+ADDRGP4 $611
+JUMPV
+LABELV $610
+ADDRLP4 4
+ARGP4
+ADDRGP4 $615
+ARGP4
+ADDRLP4 2092
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 2092
+INDIRI4
+CNSTI4 0
+NEI4 $613
+line 1236
+;1236:	} else {
+ADDRGP4 $614
+JUMPV
+LABELV $613
+line 1237
+;1237:		trap_SendServerCommand( ent-g_entities, "print \"Invalid vote string.\n\"" );
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRGP4 $588
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 1238
+;1238:		trap_SendServerCommand( ent-g_entities, "print \"Vote commands are: map_restart, nextmap, map <mapname>, g_gametype <n>, kick <player>, clientkick <clientnum>, g_doWarmup, timelimit <time>, fraglimit <frags>.\n\"" );
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRGP4 $616
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 1239
+;1239:		return;
+ADDRGP4 $570
+JUMPV
+LABELV $614
+LABELV $611
+LABELV $608
+LABELV $605
+LABELV $602
+LABELV $599
+LABELV $596
+LABELV $593
+LABELV $590
+line 1243
+;1240:	}
+;1241:
+;1242:	// if there is still a vote to be executed
+;1243:	if ( level.voteExecuteTime ) {
+ADDRGP4 level+2408
+INDIRI4
+CNSTI4 0
+EQI4 $617
+line 1244
+;1244:		level.voteExecuteTime = 0;
+ADDRGP4 level+2408
+CNSTI4 0
+ASGNI4
+line 1245
+;1245:		trap_SendConsoleCommand( EXEC_APPEND, va("%s\n", level.voteString ) );
+ADDRGP4 $621
+ARGP4
+ADDRGP4 level+356
+ARGP4
+ADDRLP4 2096
+ADDRGP4 va
+CALLP4
+ASGNP4
+CNSTI4 2
+ARGI4
+ADDRLP4 2096
+INDIRP4
+ARGP4
+ADDRGP4 trap_SendConsoleCommand
+CALLV
+pop
+line 1246
+;1246:	}
+LABELV $617
+line 1249
+;1247:
+;1248:	// special case for g_gametype, check for bad values
+;1249:	if ( !Q_stricmp( arg1, "g_gametype" ) ) {
+ADDRLP4 4
+ARGP4
+ADDRGP4 $600
+ARGP4
+ADDRLP4 2096
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 2096
+INDIRI4
+CNSTI4 0
+NEI4 $623
+line 1250
+;1250:		i = atoi( arg2 );
+ADDRLP4 1028
+ARGP4
+ADDRLP4 2100
+ADDRGP4 atoi
+CALLI4
+ASGNI4
+ADDRLP4 0
+ADDRLP4 2100
+INDIRI4
+ASGNI4
+line 1251
+;1251:		if( i == GT_SINGLE_PLAYER || i < GT_FFA || i >= GT_MAX_GAME_TYPE) {
+ADDRLP4 0
+INDIRI4
+CNSTI4 2
+EQI4 $628
+ADDRLP4 0
+INDIRI4
+CNSTI4 0
+LTI4 $628
+ADDRLP4 0
+INDIRI4
+CNSTI4 8
+LTI4 $625
+LABELV $628
+line 1252
+;1252:			trap_SendServerCommand( ent-g_entities, "print \"Invalid gametype.\n\"" );
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRGP4 $629
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 1253
+;1253:			return;
+ADDRGP4 $570
+JUMPV
+LABELV $625
+line 1256
+;1254:		}
+;1255:
+;1256:		Com_sprintf( level.voteString, sizeof( level.voteString ), "%s %d", arg1, i );
+ADDRGP4 level+356
+ARGP4
+CNSTI4 1024
+ARGI4
+ADDRGP4 $632
+ARGP4
+ADDRLP4 4
+ARGP4
+ADDRLP4 0
+INDIRI4
+ARGI4
+ADDRGP4 Com_sprintf
+CALLV
+pop
+line 1257
+;1257:		Com_sprintf( level.voteDisplayString, sizeof( level.voteDisplayString ), "%s %s", arg1, gameNames[i] );
+ADDRGP4 level+1380
+ARGP4
+CNSTI4 1024
+ARGI4
+ADDRGP4 $635
+ARGP4
+ADDRLP4 4
+ARGP4
+ADDRLP4 0
+INDIRI4
+CNSTI4 2
+LSHI4
+ADDRGP4 gameNames
+ADDP4
+INDIRP4
+ARGP4
+ADDRGP4 Com_sprintf
+CALLV
+pop
+line 1258
+;1258:	} else if ( !Q_stricmp( arg1, "map" ) ) {
+ADDRGP4 $624
+JUMPV
+LABELV $623
+ADDRLP4 4
+ARGP4
+ADDRGP4 $597
+ARGP4
+ADDRLP4 2100
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 2100
+INDIRI4
+CNSTI4 0
+NEI4 $636
+line 1263
+;1259:		// special case for map changes, we want to reset the nextmap setting
+;1260:		// this allows a player to change maps, but not upset the map rotation
+;1261:		char	s[MAX_STRING_CHARS];
+;1262:
+;1263:		trap_Cvar_VariableStringBuffer( "nextmap", s, sizeof(s) );
+ADDRGP4 $594
+ARGP4
+ADDRLP4 2104
+ARGP4
+CNSTI4 1024
+ARGI4
+ADDRGP4 trap_Cvar_VariableStringBuffer
+CALLV
+pop
+line 1264
+;1264:		if (*s) {
+ADDRLP4 2104
+INDIRI1
+CVII4 1
+CNSTI4 0
+EQI4 $638
+line 1265
+;1265:			Com_sprintf( level.voteString, sizeof( level.voteString ), "%s %s; set nextmap \"%s\"", arg1, arg2, s );
+ADDRGP4 level+356
+ARGP4
+CNSTI4 1024
+ARGI4
+ADDRGP4 $642
+ARGP4
+ADDRLP4 4
+ARGP4
+ADDRLP4 1028
+ARGP4
+ADDRLP4 2104
+ARGP4
+ADDRGP4 Com_sprintf
+CALLV
+pop
+line 1266
+;1266:		} else {
+ADDRGP4 $639
+JUMPV
+LABELV $638
+line 1267
+;1267:			Com_sprintf( level.voteString, sizeof( level.voteString ), "%s %s", arg1, arg2 );
+ADDRGP4 level+356
+ARGP4
+CNSTI4 1024
+ARGI4
+ADDRGP4 $635
+ARGP4
+ADDRLP4 4
+ARGP4
+ADDRLP4 1028
+ARGP4
+ADDRGP4 Com_sprintf
+CALLV
+pop
+line 1268
+;1268:		}
+LABELV $639
+line 1269
+;1269:		Com_sprintf( level.voteDisplayString, sizeof( level.voteDisplayString ), "%s", level.voteString );
+ADDRGP4 level+1380
+ARGP4
+CNSTI4 1024
+ARGI4
+ADDRGP4 $647
+ARGP4
+ADDRGP4 level+356
+ARGP4
+ADDRGP4 Com_sprintf
+CALLV
+pop
+line 1270
+;1270:	} else if ( !Q_stricmp( arg1, "nextmap" ) ) {
+ADDRGP4 $637
+JUMPV
+LABELV $636
+ADDRLP4 4
+ARGP4
+ADDRGP4 $594
+ARGP4
+ADDRLP4 2104
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 2104
+INDIRI4
+CNSTI4 0
+NEI4 $649
+line 1273
+;1271:		char	s[MAX_STRING_CHARS];
+;1272:
+;1273:		trap_Cvar_VariableStringBuffer( "nextmap", s, sizeof(s) );
+ADDRGP4 $594
+ARGP4
+ADDRLP4 2108
+ARGP4
+CNSTI4 1024
+ARGI4
+ADDRGP4 trap_Cvar_VariableStringBuffer
+CALLV
+pop
+line 1274
+;1274:		if (!*s) {
+ADDRLP4 2108
+INDIRI1
+CVII4 1
+CNSTI4 0
+NEI4 $651
+line 1275
+;1275:			trap_SendServerCommand( ent-g_entities, "print \"nextmap not set.\n\"" );
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRGP4 $653
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 1276
+;1276:			return;
+ADDRGP4 $570
+JUMPV
+LABELV $651
+line 1278
+;1277:		}
+;1278:		Com_sprintf( level.voteString, sizeof( level.voteString ), "vstr nextmap");
+ADDRGP4 level+356
+ARGP4
+CNSTI4 1024
+ARGI4
+ADDRGP4 $656
+ARGP4
+ADDRGP4 Com_sprintf
+CALLV
+pop
+line 1279
+;1279:		Com_sprintf( level.voteDisplayString, sizeof( level.voteDisplayString ), "%s", level.voteString );
+ADDRGP4 level+1380
+ARGP4
+CNSTI4 1024
+ARGI4
+ADDRGP4 $647
+ARGP4
+ADDRGP4 level+356
+ARGP4
+ADDRGP4 Com_sprintf
+CALLV
+pop
+line 1280
+;1280:	} else {
+ADDRGP4 $650
+JUMPV
+LABELV $649
+line 1281
+;1281:		Com_sprintf( level.voteString, sizeof( level.voteString ), "%s \"%s\"", arg1, arg2 );
+ADDRGP4 level+356
+ARGP4
+CNSTI4 1024
+ARGI4
+ADDRGP4 $662
+ARGP4
+ADDRLP4 4
+ARGP4
+ADDRLP4 1028
+ARGP4
+ADDRGP4 Com_sprintf
+CALLV
+pop
+line 1282
+;1282:		Com_sprintf( level.voteDisplayString, sizeof( level.voteDisplayString ), "%s", level.voteString );
+ADDRGP4 level+1380
+ARGP4
+CNSTI4 1024
+ARGI4
+ADDRGP4 $647
+ARGP4
+ADDRGP4 level+356
+ARGP4
+ADDRGP4 Com_sprintf
+CALLV
+pop
+line 1283
+;1283:	}
+LABELV $650
+LABELV $637
+LABELV $624
+line 1285
+;1284:
+;1285:	trap_SendServerCommand( -1, va("print \"%s called a vote.\n\"", ent->client->pers.netname ) );
+ADDRGP4 $666
+ARGP4
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 512
+ADDP4
+ARGP4
+ADDRLP4 2108
+ADDRGP4 va
+CALLP4
+ASGNP4
+CNSTI4 -1
+ARGI4
+ADDRLP4 2108
+INDIRP4
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 1288
+;1286:
+;1287:	// start the voting, the caller autoamtically votes yes
+;1288:	level.voteTime = level.time;
+ADDRGP4 level+2404
+ADDRGP4 level+32
+INDIRI4
+ASGNI4
+line 1289
+;1289:	level.voteYes = 1;
+ADDRGP4 level+2412
+CNSTI4 1
+ASGNI4
+line 1290
+;1290:	level.voteNo = 0;
+ADDRGP4 level+2416
+CNSTI4 0
+ASGNI4
+line 1292
+;1291:
+;1292:	for ( i = 0 ; i < level.maxclients ; i++ ) {
+ADDRLP4 0
+CNSTI4 0
+ASGNI4
+ADDRGP4 $674
+JUMPV
+LABELV $671
+line 1293
+;1293:		level.clients[i].ps.eFlags &= ~EF_VOTED;
+ADDRLP4 2112
+CNSTI4 784
+ADDRLP4 0
+INDIRI4
+MULI4
+ADDRGP4 level
+INDIRP4
+ADDP4
+CNSTI4 104
+ADDP4
+ASGNP4
+ADDRLP4 2112
+INDIRP4
+ADDRLP4 2112
+INDIRP4
+INDIRI4
+CNSTI4 -16385
+BANDI4
+ASGNI4
+line 1294
+;1294:	}
+LABELV $672
+line 1292
+ADDRLP4 0
+ADDRLP4 0
+INDIRI4
+CNSTI4 1
+ADDI4
+ASGNI4
+LABELV $674
+ADDRLP4 0
+INDIRI4
+ADDRGP4 level+24
+INDIRI4
+LTI4 $671
+line 1295
+;1295:	ent->client->ps.eFlags |= EF_VOTED;
+ADDRLP4 2112
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 104
+ADDP4
+ASGNP4
+ADDRLP4 2112
+INDIRP4
+ADDRLP4 2112
+INDIRP4
+INDIRI4
+CNSTI4 16384
+BORI4
+ASGNI4
+line 1297
+;1296:
+;1297:	trap_SetConfigstring( CS_VOTE_TIME, va("%i", level.voteTime ) );
+ADDRGP4 $676
+ARGP4
+ADDRGP4 level+2404
+INDIRI4
+ARGI4
+ADDRLP4 2116
+ADDRGP4 va
+CALLP4
+ASGNP4
+CNSTI4 8
+ARGI4
+ADDRLP4 2116
+INDIRP4
+ARGP4
+ADDRGP4 trap_SetConfigstring
+CALLV
+pop
+line 1298
+;1298:	trap_SetConfigstring( CS_VOTE_STRING, level.voteDisplayString );	
+CNSTI4 9
+ARGI4
+ADDRGP4 level+1380
+ARGP4
+ADDRGP4 trap_SetConfigstring
+CALLV
+pop
+line 1299
+;1299:	trap_SetConfigstring( CS_VOTE_YES, va("%i", level.voteYes ) );
+ADDRGP4 $676
+ARGP4
+ADDRGP4 level+2412
+INDIRI4
+ARGI4
+ADDRLP4 2120
+ADDRGP4 va
+CALLP4
+ASGNP4
+CNSTI4 10
+ARGI4
+ADDRLP4 2120
+INDIRP4
+ARGP4
+ADDRGP4 trap_SetConfigstring
+CALLV
+pop
+line 1300
+;1300:	trap_SetConfigstring( CS_VOTE_NO, va("%i", level.voteNo ) );	
+ADDRGP4 $676
+ARGP4
+ADDRGP4 level+2416
+INDIRI4
+ARGI4
+ADDRLP4 2124
+ADDRGP4 va
+CALLP4
+ASGNP4
+CNSTI4 11
+ARGI4
+ADDRLP4 2124
+INDIRP4
+ARGP4
+ADDRGP4 trap_SetConfigstring
+CALLV
+pop
+line 1301
+;1301:}
+LABELV $570
+endproc Cmd_CallVote_f 3132 24
+export Cmd_Vote_f
+proc Cmd_Vote_f 76 12
+line 1308
+;1302:
+;1303:/*
+;1304:==================
+;1305:Cmd_Vote_f
+;1306:==================
+;1307:*/
+;1308:void Cmd_Vote_f( gentity_t *ent ) {
+line 1311
+;1309:	char		msg[64];
+;1310:
+;1311:	if ( !level.voteTime ) {
+ADDRGP4 level+2404
+INDIRI4
+CNSTI4 0
+NEI4 $682
+line 1312
+;1312:		trap_SendServerCommand( ent-g_entities, "print \"No vote in progress.\n\"" );
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRGP4 $685
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 1313
+;1313:		return;
+ADDRGP4 $681
+JUMPV
+LABELV $682
+line 1315
+;1314:	}
+;1315:	if ( ent->client->ps.eFlags & EF_VOTED ) {
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 104
+ADDP4
+INDIRI4
+CNSTI4 16384
+BANDI4
+CNSTI4 0
+EQI4 $686
+line 1316
+;1316:		trap_SendServerCommand( ent-g_entities, "print \"Vote already cast.\n\"" );
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRGP4 $688
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 1317
+;1317:		return;
+ADDRGP4 $681
+JUMPV
+LABELV $686
+line 1319
+;1318:	}
+;1319:	if ( ent->client->sess.sessionTeam == TEAM_SPECTATOR ) {
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 616
+ADDP4
+INDIRI4
+CNSTI4 3
+NEI4 $689
+line 1320
+;1320:		trap_SendServerCommand( ent-g_entities, "print \"Not allowed to vote as spectator.\n\"" );
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRGP4 $691
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 1321
+;1321:		return;
+ADDRGP4 $681
+JUMPV
+LABELV $689
+line 1324
+;1322:	}
+;1323:
+;1324:	trap_SendServerCommand( ent-g_entities, "print \"Vote cast.\n\"" );
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRGP4 $692
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 1326
+;1325:
+;1326:	ent->client->ps.eFlags |= EF_VOTED;
+ADDRLP4 64
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 104
+ADDP4
+ASGNP4
+ADDRLP4 64
+INDIRP4
+ADDRLP4 64
+INDIRP4
+INDIRI4
+CNSTI4 16384
+BORI4
+ASGNI4
+line 1328
+;1327:
+;1328:	trap_Argv( 1, msg, sizeof( msg ) );
+CNSTI4 1
+ARGI4
+ADDRLP4 0
+ARGP4
+CNSTI4 64
+ARGI4
+ADDRGP4 trap_Argv
+CALLV
+pop
+line 1330
+;1329:
+;1330:	if ( msg[0] == 'y' || msg[1] == 'Y' || msg[1] == '1' ) {
+ADDRLP4 0
+INDIRI1
+CVII4 1
+CNSTI4 121
+EQI4 $698
+ADDRLP4 0+1
+INDIRI1
+CVII4 1
+CNSTI4 89
+EQI4 $698
+ADDRLP4 0+1
+INDIRI1
+CVII4 1
+CNSTI4 49
+NEI4 $693
+LABELV $698
+line 1331
+;1331:		level.voteYes++;
+ADDRLP4 68
+ADDRGP4 level+2412
+ASGNP4
+ADDRLP4 68
+INDIRP4
+ADDRLP4 68
+INDIRP4
+INDIRI4
+CNSTI4 1
+ADDI4
+ASGNI4
+line 1332
+;1332:		trap_SetConfigstring( CS_VOTE_YES, va("%i", level.voteYes ) );
+ADDRGP4 $676
+ARGP4
+ADDRGP4 level+2412
+INDIRI4
+ARGI4
+ADDRLP4 72
+ADDRGP4 va
+CALLP4
+ASGNP4
+CNSTI4 10
+ARGI4
+ADDRLP4 72
+INDIRP4
+ARGP4
+ADDRGP4 trap_SetConfigstring
+CALLV
+pop
+line 1333
+;1333:	} else {
+ADDRGP4 $694
+JUMPV
+LABELV $693
+line 1334
+;1334:		level.voteNo++;
+ADDRLP4 68
+ADDRGP4 level+2416
+ASGNP4
+ADDRLP4 68
+INDIRP4
+ADDRLP4 68
+INDIRP4
+INDIRI4
+CNSTI4 1
+ADDI4
+ASGNI4
+line 1335
+;1335:		trap_SetConfigstring( CS_VOTE_NO, va("%i", level.voteNo ) );	
+ADDRGP4 $676
+ARGP4
+ADDRGP4 level+2416
+INDIRI4
+ARGI4
+ADDRLP4 72
+ADDRGP4 va
+CALLP4
+ASGNP4
+CNSTI4 11
+ARGI4
+ADDRLP4 72
+INDIRP4
+ARGP4
+ADDRGP4 trap_SetConfigstring
+CALLV
+pop
+line 1336
+;1336:	}
+LABELV $694
+line 1340
+;1337:
+;1338:	// a majority will be determined in CheckVote, which will also account
+;1339:	// for players entering or leaving
+;1340:}
+LABELV $681
+endproc Cmd_Vote_f 76 12
+export Cmd_CallTeamVote_f
+proc Cmd_CallTeamVote_f 2164 20
+line 1347
+;1341:
+;1342:/*
+;1343:==================
+;1344:Cmd_CallTeamVote_f
+;1345:==================
+;1346:*/
+;1347:void Cmd_CallTeamVote_f( gentity_t *ent ) {
+line 1352
+;1348:	int		i, team, cs_offset;
+;1349:	char	arg1[MAX_STRING_TOKENS];
+;1350:	char	arg2[MAX_STRING_TOKENS];
+;1351:
+;1352:	team = ent->client->sess.sessionTeam;
+ADDRLP4 1028
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 616
+ADDP4
+INDIRI4
+ASGNI4
+line 1353
+;1353:	if ( team == TEAM_RED )
+ADDRLP4 1028
+INDIRI4
+CNSTI4 1
+NEI4 $704
+line 1354
+;1354:		cs_offset = 0;
+ADDRLP4 1032
+CNSTI4 0
+ASGNI4
+ADDRGP4 $705
+JUMPV
+LABELV $704
+line 1355
+;1355:	else if ( team == TEAM_BLUE )
+ADDRLP4 1028
+INDIRI4
+CNSTI4 2
+NEI4 $703
+line 1356
+;1356:		cs_offset = 1;
+ADDRLP4 1032
+CNSTI4 1
+ASGNI4
+line 1358
+;1357:	else
+;1358:		return;
+LABELV $707
+LABELV $705
+line 1360
+;1359:
+;1360:	if ( !g_allowVote.integer ) {
+ADDRGP4 g_allowVote+12
+INDIRI4
+CNSTI4 0
+NEI4 $708
+line 1361
+;1361:		trap_SendServerCommand( ent-g_entities, "print \"Voting not allowed here.\n\"" );
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRGP4 $574
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 1362
+;1362:		return;
+ADDRGP4 $703
+JUMPV
+LABELV $708
+line 1365
+;1363:	}
+;1364:
+;1365:	if ( level.teamVoteTime[cs_offset] ) {
+ADDRLP4 1032
+INDIRI4
+CNSTI4 2
+LSHI4
+ADDRGP4 level+4472
+ADDP4
+INDIRI4
+CNSTI4 0
+EQI4 $711
+line 1366
+;1366:		trap_SendServerCommand( ent-g_entities, "print \"A team vote is already in progress.\n\"" );
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRGP4 $714
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 1367
+;1367:		return;
+ADDRGP4 $703
+JUMPV
+LABELV $711
+line 1369
+;1368:	}
+;1369:	if ( ent->client->pers.teamVoteCount >= MAX_VOTE_COUNT ) {
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 608
+ADDP4
+INDIRI4
+CNSTI4 3
+LTI4 $715
+line 1370
+;1370:		trap_SendServerCommand( ent-g_entities, "print \"You have called the maximum number of team votes.\n\"" );
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRGP4 $717
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 1371
+;1371:		return;
+ADDRGP4 $703
+JUMPV
+LABELV $715
+line 1373
+;1372:	}
+;1373:	if ( ent->client->sess.sessionTeam == TEAM_SPECTATOR ) {
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 616
+ADDP4
+INDIRI4
+CNSTI4 3
+NEI4 $718
+line 1374
+;1374:		trap_SendServerCommand( ent-g_entities, "print \"Not allowed to call a vote as spectator.\n\"" );
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRGP4 $584
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 1375
+;1375:		return;
+ADDRGP4 $703
+JUMPV
+LABELV $718
+line 1379
+;1376:	}
+;1377:
+;1378:	// make sure it is a valid command to vote on
+;1379:	trap_Argv( 1, arg1, sizeof( arg1 ) );
+CNSTI4 1
+ARGI4
+ADDRLP4 1036
+ARGP4
+CNSTI4 1024
+ARGI4
+ADDRGP4 trap_Argv
+CALLV
+pop
+line 1380
+;1380:	arg2[0] = '\0';
+ADDRLP4 4
+CNSTI1 0
+ASGNI1
+line 1381
+;1381:	for ( i = 2; i < trap_Argc(); i++ ) {
+ADDRLP4 0
+CNSTI4 2
+ASGNI4
+ADDRGP4 $723
+JUMPV
+LABELV $720
+line 1382
+;1382:		if (i > 2)
+ADDRLP4 0
+INDIRI4
+CNSTI4 2
+LEI4 $724
+line 1383
+;1383:			strcat(arg2, " ");
+ADDRLP4 4
+ARGP4
+ADDRGP4 $726
+ARGP4
+ADDRGP4 strcat
+CALLP4
+pop
+LABELV $724
+line 1384
+;1384:		trap_Argv( i, &arg2[strlen(arg2)], sizeof( arg2 ) - strlen(arg2) );
+ADDRLP4 4
+ARGP4
+ADDRLP4 2060
+ADDRGP4 strlen
+CALLI4
+ASGNI4
+ADDRLP4 4
+ARGP4
+ADDRLP4 2064
+ADDRGP4 strlen
+CALLI4
+ASGNI4
+ADDRLP4 0
+INDIRI4
+ARGI4
+ADDRLP4 2060
+INDIRI4
+ADDRLP4 4
+ADDP4
+ARGP4
+CNSTU4 1024
+ADDRLP4 2064
+INDIRI4
+CVIU4 4
+SUBU4
+CVUI4 4
+ARGI4
+ADDRGP4 trap_Argv
+CALLV
+pop
+line 1385
+;1385:	}
+LABELV $721
+line 1381
+ADDRLP4 0
+ADDRLP4 0
+INDIRI4
+CNSTI4 1
+ADDI4
+ASGNI4
+LABELV $723
+ADDRLP4 2060
+ADDRGP4 trap_Argc
+CALLI4
+ASGNI4
+ADDRLP4 0
+INDIRI4
+ADDRLP4 2060
+INDIRI4
+LTI4 $720
+line 1387
+;1386:
+;1387:	if( strchr( arg1, ';' ) || strchr( arg2, ';' ) ) {
+ADDRLP4 1036
+ARGP4
+CNSTI4 59
+ARGI4
+ADDRLP4 2064
+ADDRGP4 strchr
+CALLP4
+ASGNP4
+ADDRLP4 2064
+INDIRP4
+CVPU4 4
+CNSTU4 0
+NEU4 $729
+ADDRLP4 4
+ARGP4
+CNSTI4 59
+ARGI4
+ADDRLP4 2068
+ADDRGP4 strchr
+CALLP4
+ASGNP4
+ADDRLP4 2068
+INDIRP4
+CVPU4 4
+CNSTU4 0
+EQU4 $727
+LABELV $729
+line 1388
+;1388:		trap_SendServerCommand( ent-g_entities, "print \"Invalid vote string.\n\"" );
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRGP4 $588
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 1389
+;1389:		return;
+ADDRGP4 $703
+JUMPV
+LABELV $727
+line 1392
+;1390:	}
+;1391:
+;1392:	if ( !Q_stricmp( arg1, "leader" ) ) {
+ADDRLP4 1036
+ARGP4
+ADDRGP4 $732
+ARGP4
+ADDRLP4 2072
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 2072
+INDIRI4
+CNSTI4 0
+NEI4 $730
+line 1395
+;1393:		char netname[MAX_NETNAME], leader[MAX_NETNAME];
+;1394:
+;1395:		if ( !arg2[0] ) {
+ADDRLP4 4
+INDIRI1
+CVII4 1
+CNSTI4 0
+NEI4 $733
+line 1396
+;1396:			i = ent->client->ps.clientNum;
+ADDRLP4 0
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 140
+ADDP4
+INDIRI4
+ASGNI4
+line 1397
+;1397:		}
+ADDRGP4 $734
+JUMPV
+LABELV $733
+line 1398
+;1398:		else {
+line 1400
+;1399:			// numeric values are just slot numbers
+;1400:			for (i = 0; i < 3; i++) {
+ADDRLP4 0
+CNSTI4 0
+ASGNI4
+LABELV $735
+line 1401
+;1401:				if ( !arg2[i] || arg2[i] < '0' || arg2[i] > '9' )
+ADDRLP4 2148
+ADDRLP4 0
+INDIRI4
+ADDRLP4 4
+ADDP4
+INDIRI1
+CVII4 1
+ASGNI4
+ADDRLP4 2148
+INDIRI4
+CNSTI4 0
+EQI4 $742
+ADDRLP4 2148
+INDIRI4
+CNSTI4 48
+LTI4 $742
+ADDRLP4 2148
+INDIRI4
+CNSTI4 57
+LEI4 $739
+LABELV $742
+line 1402
+;1402:					break;
+ADDRGP4 $737
+JUMPV
+LABELV $739
+line 1403
+;1403:			}
+LABELV $736
+line 1400
+ADDRLP4 0
+ADDRLP4 0
+INDIRI4
+CNSTI4 1
+ADDI4
+ASGNI4
+ADDRLP4 0
+INDIRI4
+CNSTI4 3
+LTI4 $735
+LABELV $737
+line 1404
+;1404:			if ( i >= 3 || !arg2[i]) {
+ADDRLP4 0
+INDIRI4
+CNSTI4 3
+GEI4 $745
+ADDRLP4 0
+INDIRI4
+ADDRLP4 4
+ADDP4
+INDIRI1
+CVII4 1
+CNSTI4 0
+NEI4 $743
+LABELV $745
+line 1405
+;1405:				i = atoi( arg2 );
+ADDRLP4 4
+ARGP4
+ADDRLP4 2152
+ADDRGP4 atoi
+CALLI4
+ASGNI4
+ADDRLP4 0
+ADDRLP4 2152
+INDIRI4
+ASGNI4
+line 1406
+;1406:				if ( i < 0 || i >= level.maxclients ) {
+ADDRLP4 0
+INDIRI4
+CNSTI4 0
+LTI4 $749
+ADDRLP4 0
+INDIRI4
+ADDRGP4 level+24
+INDIRI4
+LTI4 $746
+LABELV $749
+line 1407
+;1407:					trap_SendServerCommand( ent-g_entities, va("print \"Bad client slot: %i\n\"", i) );
+ADDRGP4 $115
+ARGP4
+ADDRLP4 0
+INDIRI4
+ARGI4
+ADDRLP4 2160
+ADDRGP4 va
+CALLP4
+ASGNP4
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRLP4 2160
+INDIRP4
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 1408
+;1408:					return;
+ADDRGP4 $703
+JUMPV
+LABELV $746
+line 1411
+;1409:				}
+;1410:
+;1411:				if ( !g_entities[i].inuse ) {
+CNSTI4 808
+ADDRLP4 0
+INDIRI4
+MULI4
+ADDRGP4 g_entities+520
+ADDP4
+INDIRI4
+CNSTI4 0
+NEI4 $744
+line 1412
+;1412:					trap_SendServerCommand( ent-g_entities, va("print \"Client %i is not active\n\"", i) );
+ADDRGP4 $118
+ARGP4
+ADDRLP4 0
+INDIRI4
+ARGI4
+ADDRLP4 2160
+ADDRGP4 va
+CALLP4
+ASGNP4
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRLP4 2160
+INDIRP4
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 1413
+;1413:					return;
+ADDRGP4 $703
+JUMPV
+line 1415
+;1414:				}
+;1415:			}
+LABELV $743
+line 1416
+;1416:			else {
+line 1417
+;1417:				Q_strncpyz(leader, arg2, sizeof(leader));
+ADDRLP4 2112
+ARGP4
+ADDRLP4 4
+ARGP4
+CNSTI4 36
+ARGI4
+ADDRGP4 Q_strncpyz
+CALLV
+pop
+line 1418
+;1418:				Q_CleanStr(leader);
+ADDRLP4 2112
+ARGP4
+ADDRGP4 Q_CleanStr
+CALLP4
+pop
+line 1419
+;1419:				for ( i = 0 ; i < level.maxclients ; i++ ) {
+ADDRLP4 0
+CNSTI4 0
+ASGNI4
+ADDRGP4 $756
+JUMPV
+LABELV $753
+line 1420
+;1420:					if ( level.clients[i].pers.connected == CON_DISCONNECTED )
+CNSTI4 784
+ADDRLP4 0
+INDIRI4
+MULI4
+ADDRGP4 level
+INDIRP4
+ADDP4
+CNSTI4 468
+ADDP4
+INDIRI4
+CNSTI4 0
+NEI4 $758
+line 1421
+;1421:						continue;
+ADDRGP4 $754
+JUMPV
+LABELV $758
+line 1422
+;1422:					if (level.clients[i].sess.sessionTeam != team)
+CNSTI4 784
+ADDRLP4 0
+INDIRI4
+MULI4
+ADDRGP4 level
+INDIRP4
+ADDP4
+CNSTI4 616
+ADDP4
+INDIRI4
+ADDRLP4 1028
+INDIRI4
+EQI4 $760
+line 1423
+;1423:						continue;
+ADDRGP4 $754
+JUMPV
+LABELV $760
+line 1424
+;1424:					Q_strncpyz(netname, level.clients[i].pers.netname, sizeof(netname));
+ADDRLP4 2076
+ARGP4
+CNSTI4 784
+ADDRLP4 0
+INDIRI4
+MULI4
+ADDRGP4 level
+INDIRP4
+ADDP4
+CNSTI4 512
+ADDP4
+ARGP4
+CNSTI4 36
+ARGI4
+ADDRGP4 Q_strncpyz
+CALLV
+pop
+line 1425
+;1425:					Q_CleanStr(netname);
+ADDRLP4 2076
+ARGP4
+ADDRGP4 Q_CleanStr
+CALLP4
+pop
+line 1426
+;1426:					if ( !Q_stricmp(netname, leader) ) {
+ADDRLP4 2076
+ARGP4
+ADDRLP4 2112
+ARGP4
+ADDRLP4 2152
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 2152
+INDIRI4
+CNSTI4 0
+NEI4 $762
+line 1427
+;1427:						break;
+ADDRGP4 $755
+JUMPV
+LABELV $762
+line 1429
+;1428:					}
+;1429:				}
+LABELV $754
+line 1419
+ADDRLP4 0
+ADDRLP4 0
+INDIRI4
+CNSTI4 1
+ADDI4
+ASGNI4
+LABELV $756
+ADDRLP4 0
+INDIRI4
+ADDRGP4 level+24
+INDIRI4
+LTI4 $753
+LABELV $755
+line 1430
+;1430:				if ( i >= level.maxclients ) {
+ADDRLP4 0
+INDIRI4
+ADDRGP4 level+24
+INDIRI4
+LTI4 $764
+line 1431
+;1431:					trap_SendServerCommand( ent-g_entities, va("print \"%s is not a valid player on your team.\n\"", arg2) );
+ADDRGP4 $767
+ARGP4
+ADDRLP4 4
+ARGP4
+ADDRLP4 2152
+ADDRGP4 va
+CALLP4
+ASGNP4
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRLP4 2152
+INDIRP4
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 1432
+;1432:					return;
+ADDRGP4 $703
+JUMPV
+LABELV $764
+line 1434
+;1433:				}
+;1434:			}
+LABELV $744
+line 1435
+;1435:		}
+LABELV $734
+line 1436
+;1436:		Com_sprintf(arg2, sizeof(arg2), "%d", i);
+ADDRLP4 4
+ARGP4
+CNSTI4 1024
+ARGI4
+ADDRGP4 $221
+ARGP4
+ADDRLP4 0
+INDIRI4
+ARGI4
+ADDRGP4 Com_sprintf
+CALLV
+pop
+line 1437
+;1437:	} else {
+ADDRGP4 $731
+JUMPV
+LABELV $730
+line 1438
+;1438:		trap_SendServerCommand( ent-g_entities, "print \"Invalid vote string.\n\"" );
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRGP4 $588
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 1439
+;1439:		trap_SendServerCommand( ent-g_entities, "print \"Team vote commands are: leader <player>.\n\"" );
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRGP4 $768
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 1440
+;1440:		return;
+ADDRGP4 $703
+JUMPV
+LABELV $731
+line 1443
+;1441:	}
+;1442:
+;1443:	Com_sprintf( level.teamVoteString[cs_offset], sizeof( level.teamVoteString[cs_offset] ), "%s %s", arg1, arg2 );
+ADDRLP4 1032
+INDIRI4
+CNSTI4 10
+LSHI4
+ADDRGP4 level+2424
+ADDP4
+ARGP4
+CNSTI4 1024
+ARGI4
+ADDRGP4 $635
+ARGP4
+ADDRLP4 1036
+ARGP4
+ADDRLP4 4
+ARGP4
+ADDRGP4 Com_sprintf
+CALLV
+pop
+line 1445
+;1444:
+;1445:	for ( i = 0 ; i < level.maxclients ; i++ ) {
+ADDRLP4 0
+CNSTI4 0
+ASGNI4
+ADDRGP4 $774
+JUMPV
+LABELV $771
+line 1446
+;1446:		if ( level.clients[i].pers.connected == CON_DISCONNECTED )
+CNSTI4 784
+ADDRLP4 0
+INDIRI4
+MULI4
+ADDRGP4 level
+INDIRP4
+ADDP4
+CNSTI4 468
+ADDP4
+INDIRI4
+CNSTI4 0
+NEI4 $776
+line 1447
+;1447:			continue;
+ADDRGP4 $772
+JUMPV
+LABELV $776
+line 1448
+;1448:		if (level.clients[i].sess.sessionTeam == team)
+CNSTI4 784
+ADDRLP4 0
+INDIRI4
+MULI4
+ADDRGP4 level
+INDIRP4
+ADDP4
+CNSTI4 616
+ADDP4
+INDIRI4
+ADDRLP4 1028
+INDIRI4
+NEI4 $778
+line 1449
+;1449:			trap_SendServerCommand( i, va("print \"%s called a team vote.\n\"", ent->client->pers.netname ) );
+ADDRGP4 $780
+ARGP4
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 512
+ADDP4
+ARGP4
+ADDRLP4 2076
+ADDRGP4 va
+CALLP4
+ASGNP4
+ADDRLP4 0
+INDIRI4
+ARGI4
+ADDRLP4 2076
+INDIRP4
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+LABELV $778
+line 1450
+;1450:	}
+LABELV $772
+line 1445
+ADDRLP4 0
+ADDRLP4 0
+INDIRI4
+CNSTI4 1
+ADDI4
+ASGNI4
+LABELV $774
+ADDRLP4 0
+INDIRI4
+ADDRGP4 level+24
+INDIRI4
+LTI4 $771
+line 1453
+;1451:
+;1452:	// start the voting, the caller autoamtically votes yes
+;1453:	level.teamVoteTime[cs_offset] = level.time;
+ADDRLP4 1032
+INDIRI4
+CNSTI4 2
+LSHI4
+ADDRGP4 level+4472
+ADDP4
+ADDRGP4 level+32
+INDIRI4
+ASGNI4
+line 1454
+;1454:	level.teamVoteYes[cs_offset] = 1;
+ADDRLP4 1032
+INDIRI4
+CNSTI4 2
+LSHI4
+ADDRGP4 level+4480
+ADDP4
+CNSTI4 1
+ASGNI4
+line 1455
+;1455:	level.teamVoteNo[cs_offset] = 0;
+ADDRLP4 1032
+INDIRI4
+CNSTI4 2
+LSHI4
+ADDRGP4 level+4488
+ADDP4
+CNSTI4 0
+ASGNI4
+line 1457
+;1456:
+;1457:	for ( i = 0 ; i < level.maxclients ; i++ ) {
+ADDRLP4 0
+CNSTI4 0
+ASGNI4
+ADDRGP4 $788
+JUMPV
+LABELV $785
+line 1458
+;1458:		if (level.clients[i].sess.sessionTeam == team)
+CNSTI4 784
+ADDRLP4 0
+INDIRI4
+MULI4
+ADDRGP4 level
+INDIRP4
+ADDP4
+CNSTI4 616
+ADDP4
+INDIRI4
+ADDRLP4 1028
+INDIRI4
+NEI4 $790
+line 1459
+;1459:			level.clients[i].ps.eFlags &= ~EF_TEAMVOTED;
+ADDRLP4 2076
+CNSTI4 784
+ADDRLP4 0
+INDIRI4
+MULI4
+ADDRGP4 level
+INDIRP4
+ADDP4
+CNSTI4 104
+ADDP4
+ASGNP4
+ADDRLP4 2076
+INDIRP4
+ADDRLP4 2076
+INDIRP4
+INDIRI4
+CNSTI4 -524289
+BANDI4
+ASGNI4
+LABELV $790
+line 1460
+;1460:	}
+LABELV $786
+line 1457
+ADDRLP4 0
+ADDRLP4 0
+INDIRI4
+CNSTI4 1
+ADDI4
+ASGNI4
+LABELV $788
+ADDRLP4 0
+INDIRI4
+ADDRGP4 level+24
+INDIRI4
+LTI4 $785
+line 1461
+;1461:	ent->client->ps.eFlags |= EF_TEAMVOTED;
+ADDRLP4 2076
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 104
+ADDP4
+ASGNP4
+ADDRLP4 2076
+INDIRP4
+ADDRLP4 2076
+INDIRP4
+INDIRI4
+CNSTI4 524288
+BORI4
+ASGNI4
+line 1463
+;1462:
+;1463:	trap_SetConfigstring( CS_TEAMVOTE_TIME + cs_offset, va("%i", level.teamVoteTime[cs_offset] ) );
+ADDRGP4 $676
+ARGP4
+ADDRLP4 1032
+INDIRI4
+CNSTI4 2
+LSHI4
+ADDRGP4 level+4472
+ADDP4
+INDIRI4
+ARGI4
+ADDRLP4 2080
+ADDRGP4 va
+CALLP4
+ASGNP4
+ADDRLP4 1032
+INDIRI4
+CNSTI4 12
+ADDI4
+ARGI4
+ADDRLP4 2080
+INDIRP4
+ARGP4
+ADDRGP4 trap_SetConfigstring
+CALLV
+pop
+line 1464
+;1464:	trap_SetConfigstring( CS_TEAMVOTE_STRING + cs_offset, level.teamVoteString[cs_offset] );
+ADDRLP4 1032
+INDIRI4
+CNSTI4 14
+ADDI4
+ARGI4
+ADDRLP4 1032
+INDIRI4
+CNSTI4 10
+LSHI4
+ADDRGP4 level+2424
+ADDP4
+ARGP4
+ADDRGP4 trap_SetConfigstring
+CALLV
+pop
+line 1465
+;1465:	trap_SetConfigstring( CS_TEAMVOTE_YES + cs_offset, va("%i", level.teamVoteYes[cs_offset] ) );
+ADDRGP4 $676
+ARGP4
+ADDRLP4 1032
+INDIRI4
+CNSTI4 2
+LSHI4
+ADDRGP4 level+4480
+ADDP4
+INDIRI4
+ARGI4
+ADDRLP4 2088
+ADDRGP4 va
+CALLP4
+ASGNP4
+ADDRLP4 1032
+INDIRI4
+CNSTI4 16
+ADDI4
+ARGI4
+ADDRLP4 2088
+INDIRP4
+ARGP4
+ADDRGP4 trap_SetConfigstring
+CALLV
+pop
+line 1466
+;1466:	trap_SetConfigstring( CS_TEAMVOTE_NO + cs_offset, va("%i", level.teamVoteNo[cs_offset] ) );
+ADDRGP4 $676
+ARGP4
+ADDRLP4 1032
+INDIRI4
+CNSTI4 2
+LSHI4
+ADDRGP4 level+4488
+ADDP4
+INDIRI4
+ARGI4
+ADDRLP4 2092
+ADDRGP4 va
+CALLP4
+ASGNP4
+ADDRLP4 1032
+INDIRI4
+CNSTI4 18
+ADDI4
+ARGI4
+ADDRLP4 2092
+INDIRP4
+ARGP4
+ADDRGP4 trap_SetConfigstring
+CALLV
+pop
+line 1467
+;1467:}
+LABELV $703
+endproc Cmd_CallTeamVote_f 2164 20
+export Cmd_TeamVote_f
+proc Cmd_TeamVote_f 84 12
+line 1474
+;1468:
+;1469:/*
+;1470:==================
+;1471:Cmd_TeamVote_f
+;1472:==================
+;1473:*/
+;1474:void Cmd_TeamVote_f( gentity_t *ent ) {
+line 1478
+;1475:	int			team, cs_offset;
+;1476:	char		msg[64];
+;1477:
+;1478:	team = ent->client->sess.sessionTeam;
+ADDRLP4 68
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 616
+ADDP4
+INDIRI4
+ASGNI4
+line 1479
+;1479:	if ( team == TEAM_RED )
+ADDRLP4 68
+INDIRI4
+CNSTI4 1
+NEI4 $797
+line 1480
+;1480:		cs_offset = 0;
+ADDRLP4 64
+CNSTI4 0
+ASGNI4
+ADDRGP4 $798
+JUMPV
+LABELV $797
+line 1481
+;1481:	else if ( team == TEAM_BLUE )
+ADDRLP4 68
+INDIRI4
+CNSTI4 2
+NEI4 $796
+line 1482
+;1482:		cs_offset = 1;
+ADDRLP4 64
+CNSTI4 1
+ASGNI4
+line 1484
+;1483:	else
+;1484:		return;
+LABELV $800
+LABELV $798
+line 1486
+;1485:
+;1486:	if ( !level.teamVoteTime[cs_offset] ) {
+ADDRLP4 64
+INDIRI4
+CNSTI4 2
+LSHI4
+ADDRGP4 level+4472
+ADDP4
+INDIRI4
+CNSTI4 0
+NEI4 $801
+line 1487
+;1487:		trap_SendServerCommand( ent-g_entities, "print \"No team vote in progress.\n\"" );
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRGP4 $804
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 1488
+;1488:		return;
+ADDRGP4 $796
+JUMPV
+LABELV $801
+line 1490
+;1489:	}
+;1490:	if ( ent->client->ps.eFlags & EF_TEAMVOTED ) {
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 104
+ADDP4
+INDIRI4
+CNSTI4 524288
+BANDI4
+CNSTI4 0
+EQI4 $805
+line 1491
+;1491:		trap_SendServerCommand( ent-g_entities, "print \"Team vote already cast.\n\"" );
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRGP4 $807
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 1492
+;1492:		return;
+ADDRGP4 $796
+JUMPV
+LABELV $805
+line 1494
+;1493:	}
+;1494:	if ( ent->client->sess.sessionTeam == TEAM_SPECTATOR ) {
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 616
+ADDP4
+INDIRI4
+CNSTI4 3
+NEI4 $808
+line 1495
+;1495:		trap_SendServerCommand( ent-g_entities, "print \"Not allowed to vote as spectator.\n\"" );
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRGP4 $691
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 1496
+;1496:		return;
+ADDRGP4 $796
+JUMPV
+LABELV $808
+line 1499
+;1497:	}
+;1498:
+;1499:	trap_SendServerCommand( ent-g_entities, "print \"Team vote cast.\n\"" );
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRGP4 $810
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 1501
+;1500:
+;1501:	ent->client->ps.eFlags |= EF_TEAMVOTED;
+ADDRLP4 72
+ADDRFP4 0
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CNSTI4 104
+ADDP4
+ASGNP4
+ADDRLP4 72
+INDIRP4
+ADDRLP4 72
+INDIRP4
+INDIRI4
+CNSTI4 524288
+BORI4
+ASGNI4
+line 1503
+;1502:
+;1503:	trap_Argv( 1, msg, sizeof( msg ) );
+CNSTI4 1
+ARGI4
+ADDRLP4 0
+ARGP4
+CNSTI4 64
+ARGI4
+ADDRGP4 trap_Argv
+CALLV
+pop
+line 1505
+;1504:
+;1505:	if ( msg[0] == 'y' || msg[1] == 'Y' || msg[1] == '1' ) {
+ADDRLP4 0
+INDIRI1
+CVII4 1
+CNSTI4 121
+EQI4 $816
+ADDRLP4 0+1
+INDIRI1
+CVII4 1
+CNSTI4 89
+EQI4 $816
+ADDRLP4 0+1
+INDIRI1
+CVII4 1
+CNSTI4 49
+NEI4 $811
+LABELV $816
+line 1506
+;1506:		level.teamVoteYes[cs_offset]++;
+ADDRLP4 76
+ADDRLP4 64
+INDIRI4
+CNSTI4 2
+LSHI4
+ADDRGP4 level+4480
+ADDP4
+ASGNP4
+ADDRLP4 76
+INDIRP4
+ADDRLP4 76
+INDIRP4
+INDIRI4
+CNSTI4 1
+ADDI4
+ASGNI4
+line 1507
+;1507:		trap_SetConfigstring( CS_TEAMVOTE_YES + cs_offset, va("%i", level.teamVoteYes[cs_offset] ) );
+ADDRGP4 $676
+ARGP4
+ADDRLP4 64
+INDIRI4
+CNSTI4 2
+LSHI4
+ADDRGP4 level+4480
+ADDP4
+INDIRI4
+ARGI4
+ADDRLP4 80
+ADDRGP4 va
+CALLP4
+ASGNP4
+ADDRLP4 64
+INDIRI4
+CNSTI4 16
+ADDI4
+ARGI4
+ADDRLP4 80
+INDIRP4
+ARGP4
+ADDRGP4 trap_SetConfigstring
+CALLV
+pop
+line 1508
+;1508:	} else {
+ADDRGP4 $812
+JUMPV
+LABELV $811
+line 1509
+;1509:		level.teamVoteNo[cs_offset]++;
+ADDRLP4 76
+ADDRLP4 64
+INDIRI4
+CNSTI4 2
+LSHI4
+ADDRGP4 level+4488
+ADDP4
+ASGNP4
+ADDRLP4 76
+INDIRP4
+ADDRLP4 76
+INDIRP4
+INDIRI4
+CNSTI4 1
+ADDI4
+ASGNI4
+line 1510
+;1510:		trap_SetConfigstring( CS_TEAMVOTE_NO + cs_offset, va("%i", level.teamVoteNo[cs_offset] ) );	
+ADDRGP4 $676
+ARGP4
+ADDRLP4 64
+INDIRI4
+CNSTI4 2
+LSHI4
+ADDRGP4 level+4488
+ADDP4
+INDIRI4
+ARGI4
+ADDRLP4 80
+ADDRGP4 va
+CALLP4
+ASGNP4
+ADDRLP4 64
+INDIRI4
+CNSTI4 18
+ADDI4
+ARGI4
+ADDRLP4 80
+INDIRP4
+ARGP4
+ADDRGP4 trap_SetConfigstring
+CALLV
+pop
+line 1511
+;1511:	}
+LABELV $812
+line 1515
+;1512:
+;1513:	// a majority will be determined in TeamCheckVote, which will also account
+;1514:	// for players entering or leaving
+;1515:}
+LABELV $796
+endproc Cmd_TeamVote_f 84 12
+export Cmd_SetViewpos_f
+proc Cmd_SetViewpos_f 1064 12
+line 1523
+;1516:
+;1517:
+;1518:/*
+;1519:=================
+;1520:Cmd_SetViewpos_f
+;1521:=================
+;1522:*/
+;1523:void Cmd_SetViewpos_f( gentity_t *ent ) {
+line 1528
+;1524:	vec3_t		origin, angles;
+;1525:	char		buffer[MAX_TOKEN_CHARS];
+;1526:	int			i;
+;1527:
+;1528:	if ( !g_cheats.integer ) {
+ADDRGP4 g_cheats+12
+INDIRI4
+CNSTI4 0
+NEI4 $822
+line 1529
+;1529:		trap_SendServerCommand( ent-g_entities, va("print \"Cheats are not enabled on this server.\n\""));
+ADDRGP4 $86
+ARGP4
+ADDRLP4 1052
+ADDRGP4 va
+CALLP4
+ASGNP4
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRLP4 1052
+INDIRP4
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 1530
+;1530:		return;
+ADDRGP4 $821
+JUMPV
+LABELV $822
+line 1532
+;1531:	}
+;1532:	if ( trap_Argc() != 5 ) {
+ADDRLP4 1052
+ADDRGP4 trap_Argc
+CALLI4
+ASGNI4
+ADDRLP4 1052
+INDIRI4
+CNSTI4 5
+EQI4 $825
+line 1533
+;1533:		trap_SendServerCommand( ent-g_entities, va("print \"usage: setviewpos x y z yaw\n\""));
+ADDRGP4 $827
+ARGP4
+ADDRLP4 1056
+ADDRGP4 va
+CALLP4
+ASGNP4
+ADDRFP4 0
+INDIRP4
+CVPU4 4
+ADDRGP4 g_entities
+CVPU4 4
+SUBU4
+CVUI4 4
+CNSTI4 808
+DIVI4
+ARGI4
+ADDRLP4 1056
+INDIRP4
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+line 1534
+;1534:		return;
+ADDRGP4 $821
+JUMPV
+LABELV $825
+line 1537
+;1535:	}
+;1536:
+;1537:	VectorClear( angles );
+ADDRLP4 1056
+CNSTF4 0
+ASGNF4
+ADDRLP4 1040+8
+ADDRLP4 1056
+INDIRF4
+ASGNF4
+ADDRLP4 1040+4
+ADDRLP4 1056
+INDIRF4
+ASGNF4
+ADDRLP4 1040
+ADDRLP4 1056
+INDIRF4
+ASGNF4
+line 1538
+;1538:	for ( i = 0 ; i < 3 ; i++ ) {
+ADDRLP4 0
+CNSTI4 0
+ASGNI4
+LABELV $830
+line 1539
+;1539:		trap_Argv( i + 1, buffer, sizeof( buffer ) );
+ADDRLP4 0
+INDIRI4
+CNSTI4 1
+ADDI4
+ARGI4
+ADDRLP4 4
+ARGP4
+CNSTI4 1024
+ARGI4
+ADDRGP4 trap_Argv
+CALLV
+pop
+line 1540
+;1540:		origin[i] = atof( buffer );
+ADDRLP4 4
+ARGP4
+ADDRLP4 1060
+ADDRGP4 atof
+CALLF4
+ASGNF4
+ADDRLP4 0
+INDIRI4
+CNSTI4 2
+LSHI4
+ADDRLP4 1028
+ADDP4
+ADDRLP4 1060
+INDIRF4
+ASGNF4
+line 1541
+;1541:	}
+LABELV $831
+line 1538
+ADDRLP4 0
+ADDRLP4 0
+INDIRI4
+CNSTI4 1
+ADDI4
+ASGNI4
+ADDRLP4 0
+INDIRI4
+CNSTI4 3
+LTI4 $830
+line 1543
+;1542:
+;1543:	trap_Argv( 4, buffer, sizeof( buffer ) );
+CNSTI4 4
+ARGI4
+ADDRLP4 4
+ARGP4
+CNSTI4 1024
+ARGI4
+ADDRGP4 trap_Argv
+CALLV
+pop
+line 1544
+;1544:	angles[YAW] = atof( buffer );
+ADDRLP4 4
+ARGP4
+ADDRLP4 1060
+ADDRGP4 atof
+CALLF4
+ASGNF4
+ADDRLP4 1040+4
+ADDRLP4 1060
+INDIRF4
+ASGNF4
+line 1546
+;1545:
+;1546:	TeleportPlayer( ent, origin, angles );
+ADDRFP4 0
+INDIRP4
+ARGP4
+ADDRLP4 1028
+ARGP4
+ADDRLP4 1040
+ARGP4
+ADDRGP4 TeleportPlayer
+CALLV
+pop
+line 1547
+;1547:}
+LABELV $821
+endproc Cmd_SetViewpos_f 1064 12
+export Cmd_Stats_f
+proc Cmd_Stats_f 0 0
+line 1556
+;1548:
+;1549:
+;1550:
+;1551:/*
+;1552:=================
+;1553:Cmd_Stats_f
+;1554:=================
+;1555:*/
+;1556:void Cmd_Stats_f( gentity_t *ent ) {
+line 1571
+;1557:/*
+;1558:	int max, n, i;
+;1559:
+;1560:	max = trap_AAS_PointReachabilityAreaIndex( NULL );
+;1561:
+;1562:	n = 0;
+;1563:	for ( i = 0; i < max; i++ ) {
+;1564:		if ( ent->client->areabits[i >> 3] & (1 << (i & 7)) )
+;1565:			n++;
+;1566:	}
+;1567:
+;1568:	//trap_SendServerCommand( ent-g_entities, va("print \"visited %d of %d areas\n\"", n, max));
+;1569:	trap_SendServerCommand( ent-g_entities, va("print \"%d%% level coverage\n\"", n * 100 / max));
+;1570:*/
+;1571:}
+LABELV $835
+endproc Cmd_Stats_f 0 0
+export ClientCommand
+proc ClientCommand 1164 16
+line 1578
+;1572:
+;1573:/*
+;1574:=================
+;1575:ClientCommand
+;1576:=================
+;1577:*/
+;1578:void ClientCommand( int clientNum ) {
+line 1582
+;1579:	gentity_t *ent;
+;1580:	char	cmd[MAX_TOKEN_CHARS];
+;1581:
+;1582:	ent = g_entities + clientNum;
+ADDRLP4 1024
+CNSTI4 808
+ADDRFP4 0
+INDIRI4
+MULI4
+ADDRGP4 g_entities
+ADDP4
+ASGNP4
+line 1583
+;1583:	if ( !ent->client ) {
+ADDRLP4 1024
+INDIRP4
+CNSTI4 516
+ADDP4
+INDIRP4
+CVPU4 4
+CNSTU4 0
+NEU4 $837
+line 1584
+;1584:		return;		// not fully in game yet
+ADDRGP4 $836
+JUMPV
+LABELV $837
+line 1588
+;1585:	}
+;1586:
+;1587:
+;1588:	trap_Argv( 0, cmd, sizeof( cmd ) );
+CNSTI4 0
+ARGI4
+ADDRLP4 0
+ARGP4
+CNSTI4 1024
+ARGI4
+ADDRGP4 trap_Argv
+CALLV
+pop
+line 1590
+;1589:
+;1590:	if (Q_stricmp (cmd, "say") == 0) {
+ADDRLP4 0
+ARGP4
+ADDRGP4 $841
+ARGP4
+ADDRLP4 1028
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 1028
+INDIRI4
+CNSTI4 0
+NEI4 $839
+line 1591
+;1591:		Cmd_Say_f (ent, SAY_ALL, qfalse);
+ADDRLP4 1024
+INDIRP4
+ARGP4
+ADDRLP4 1032
+CNSTI4 0
+ASGNI4
+ADDRLP4 1032
+INDIRI4
+ARGI4
+ADDRLP4 1032
+INDIRI4
+ARGI4
+ADDRGP4 Cmd_Say_f
+CALLV
+pop
+line 1592
+;1592:		return;
+ADDRGP4 $836
+JUMPV
+LABELV $839
+line 1594
+;1593:	}
+;1594:	if (Q_stricmp (cmd, "say_team") == 0) {
+ADDRLP4 0
+ARGP4
+ADDRGP4 $844
+ARGP4
+ADDRLP4 1032
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 1032
+INDIRI4
+CNSTI4 0
+NEI4 $842
+line 1595
+;1595:		Cmd_Say_f (ent, SAY_TEAM, qfalse);
+ADDRLP4 1024
+INDIRP4
+ARGP4
+CNSTI4 1
+ARGI4
+CNSTI4 0
+ARGI4
+ADDRGP4 Cmd_Say_f
+CALLV
+pop
+line 1596
+;1596:		return;
+ADDRGP4 $836
+JUMPV
+LABELV $842
+line 1598
+;1597:	}
+;1598:	if (Q_stricmp (cmd, "tell") == 0) {
+ADDRLP4 0
+ARGP4
+ADDRGP4 $847
+ARGP4
+ADDRLP4 1036
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 1036
+INDIRI4
+CNSTI4 0
+NEI4 $845
+line 1599
+;1599:		Cmd_Tell_f ( ent );
+ADDRLP4 1024
+INDIRP4
+ARGP4
+ADDRGP4 Cmd_Tell_f
+CALLV
+pop
+line 1600
+;1600:		return;
+ADDRGP4 $836
+JUMPV
+LABELV $845
+line 1602
+;1601:	}
+;1602:	if (Q_stricmp (cmd, "vsay") == 0) {
+ADDRLP4 0
+ARGP4
+ADDRGP4 $850
+ARGP4
+ADDRLP4 1040
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 1040
+INDIRI4
+CNSTI4 0
+NEI4 $848
+line 1603
+;1603:		Cmd_Voice_f (ent, SAY_ALL, qfalse, qfalse);
+ADDRLP4 1024
+INDIRP4
+ARGP4
+ADDRLP4 1044
+CNSTI4 0
+ASGNI4
+ADDRLP4 1044
+INDIRI4
+ARGI4
+ADDRLP4 1044
+INDIRI4
+ARGI4
+ADDRLP4 1044
+INDIRI4
+ARGI4
+ADDRGP4 Cmd_Voice_f
+CALLV
+pop
+line 1604
+;1604:		return;
+ADDRGP4 $836
+JUMPV
+LABELV $848
+line 1606
+;1605:	}
+;1606:	if (Q_stricmp (cmd, "vsay_team") == 0) {
+ADDRLP4 0
+ARGP4
+ADDRGP4 $853
+ARGP4
+ADDRLP4 1044
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 1044
+INDIRI4
+CNSTI4 0
+NEI4 $851
+line 1607
+;1607:		Cmd_Voice_f (ent, SAY_TEAM, qfalse, qfalse);
+ADDRLP4 1024
+INDIRP4
+ARGP4
+CNSTI4 1
+ARGI4
+ADDRLP4 1048
+CNSTI4 0
+ASGNI4
+ADDRLP4 1048
+INDIRI4
+ARGI4
+ADDRLP4 1048
+INDIRI4
+ARGI4
+ADDRGP4 Cmd_Voice_f
+CALLV
+pop
+line 1608
+;1608:		return;
+ADDRGP4 $836
+JUMPV
+LABELV $851
+line 1610
+;1609:	}
+;1610:	if (Q_stricmp (cmd, "vtell") == 0) {
+ADDRLP4 0
+ARGP4
+ADDRGP4 $465
+ARGP4
+ADDRLP4 1048
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 1048
+INDIRI4
+CNSTI4 0
+NEI4 $854
+line 1611
+;1611:		Cmd_VoiceTell_f ( ent, qfalse );
+ADDRLP4 1024
+INDIRP4
+ARGP4
+CNSTI4 0
+ARGI4
+ADDRGP4 Cmd_VoiceTell_f
+CALLV
+pop
+line 1612
+;1612:		return;
+ADDRGP4 $836
+JUMPV
+LABELV $854
+line 1614
+;1613:	}
+;1614:	if (Q_stricmp (cmd, "vosay") == 0) {
+ADDRLP4 0
+ARGP4
+ADDRGP4 $858
+ARGP4
+ADDRLP4 1052
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 1052
+INDIRI4
+CNSTI4 0
+NEI4 $856
+line 1615
+;1615:		Cmd_Voice_f (ent, SAY_ALL, qfalse, qtrue);
+ADDRLP4 1024
+INDIRP4
+ARGP4
+ADDRLP4 1056
+CNSTI4 0
+ASGNI4
+ADDRLP4 1056
+INDIRI4
+ARGI4
+ADDRLP4 1056
+INDIRI4
+ARGI4
+CNSTI4 1
+ARGI4
+ADDRGP4 Cmd_Voice_f
+CALLV
+pop
+line 1616
+;1616:		return;
+ADDRGP4 $836
+JUMPV
+LABELV $856
+line 1618
+;1617:	}
+;1618:	if (Q_stricmp (cmd, "vosay_team") == 0) {
+ADDRLP4 0
+ARGP4
+ADDRGP4 $861
+ARGP4
+ADDRLP4 1056
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 1056
+INDIRI4
+CNSTI4 0
+NEI4 $859
+line 1619
+;1619:		Cmd_Voice_f (ent, SAY_TEAM, qfalse, qtrue);
+ADDRLP4 1024
+INDIRP4
+ARGP4
+ADDRLP4 1060
+CNSTI4 1
+ASGNI4
+ADDRLP4 1060
+INDIRI4
+ARGI4
+CNSTI4 0
+ARGI4
+ADDRLP4 1060
+INDIRI4
+ARGI4
+ADDRGP4 Cmd_Voice_f
+CALLV
+pop
+line 1620
+;1620:		return;
+ADDRGP4 $836
+JUMPV
+LABELV $859
+line 1622
+;1621:	}
+;1622:	if (Q_stricmp (cmd, "votell") == 0) {
+ADDRLP4 0
+ARGP4
+ADDRGP4 $864
+ARGP4
+ADDRLP4 1060
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 1060
+INDIRI4
+CNSTI4 0
+NEI4 $862
+line 1623
+;1623:		Cmd_VoiceTell_f ( ent, qtrue );
+ADDRLP4 1024
+INDIRP4
+ARGP4
+CNSTI4 1
+ARGI4
+ADDRGP4 Cmd_VoiceTell_f
+CALLV
+pop
+line 1624
+;1624:		return;
+ADDRGP4 $836
+JUMPV
+LABELV $862
+line 1626
+;1625:	}
+;1626:	if (Q_stricmp (cmd, "vtaunt") == 0) {
+ADDRLP4 0
+ARGP4
+ADDRGP4 $867
+ARGP4
+ADDRLP4 1064
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 1064
+INDIRI4
+CNSTI4 0
+NEI4 $865
+line 1627
+;1627:		Cmd_VoiceTaunt_f ( ent );
+ADDRLP4 1024
+INDIRP4
+ARGP4
+ADDRGP4 Cmd_VoiceTaunt_f
+CALLV
+pop
+line 1628
+;1628:		return;
+ADDRGP4 $836
+JUMPV
+LABELV $865
+line 1630
+;1629:	}
+;1630:	if (Q_stricmp (cmd, "score") == 0) {
+ADDRLP4 0
+ARGP4
+ADDRGP4 $244
+ARGP4
+ADDRLP4 1068
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 1068
+INDIRI4
+CNSTI4 0
+NEI4 $868
+line 1631
+;1631:		Cmd_Score_f (ent);
+ADDRLP4 1024
+INDIRP4
+ARGP4
+ADDRGP4 Cmd_Score_f
+CALLV
+pop
+line 1632
+;1632:		return;
+ADDRGP4 $836
+JUMPV
+LABELV $868
+line 1636
+;1633:	}
+;1634:
+;1635:	// ignore all other commands when at intermission
+;1636:	if (level.intermissiontime) {
+ADDRGP4 level+9128
+INDIRI4
+CNSTI4 0
+EQI4 $870
+line 1637
+;1637:		Cmd_Say_f (ent, qfalse, qtrue);
+ADDRLP4 1024
+INDIRP4
+ARGP4
+CNSTI4 0
+ARGI4
+CNSTI4 1
+ARGI4
+ADDRGP4 Cmd_Say_f
+CALLV
+pop
+line 1638
+;1638:		return;
+ADDRGP4 $836
+JUMPV
+LABELV $870
+line 1641
+;1639:	}
+;1640:
+;1641:	if (Q_stricmp (cmd, "give") == 0)
+ADDRLP4 0
+ARGP4
+ADDRGP4 $875
+ARGP4
+ADDRLP4 1072
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 1072
+INDIRI4
+CNSTI4 0
+NEI4 $873
+line 1642
+;1642:		Cmd_Give_f (ent);
+ADDRLP4 1024
+INDIRP4
+ARGP4
+ADDRGP4 Cmd_Give_f
+CALLV
+pop
+ADDRGP4 $874
+JUMPV
+LABELV $873
+line 1643
+;1643:	else if (Q_stricmp (cmd, "god") == 0)
+ADDRLP4 0
+ARGP4
+ADDRGP4 $878
+ARGP4
+ADDRLP4 1076
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 1076
+INDIRI4
+CNSTI4 0
+NEI4 $876
+line 1644
+;1644:		Cmd_God_f (ent);
+ADDRLP4 1024
+INDIRP4
+ARGP4
+ADDRGP4 Cmd_God_f
+CALLV
+pop
+ADDRGP4 $877
+JUMPV
+LABELV $876
+line 1645
+;1645:	else if (Q_stricmp (cmd, "notarget") == 0)
+ADDRLP4 0
+ARGP4
+ADDRGP4 $881
+ARGP4
+ADDRLP4 1080
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 1080
+INDIRI4
+CNSTI4 0
+NEI4 $879
+line 1646
+;1646:		Cmd_Notarget_f (ent);
+ADDRLP4 1024
+INDIRP4
+ARGP4
+ADDRGP4 Cmd_Notarget_f
+CALLV
+pop
+ADDRGP4 $880
+JUMPV
+LABELV $879
+line 1647
+;1647:	else if (Q_stricmp (cmd, "noclip") == 0)
+ADDRLP4 0
+ARGP4
+ADDRGP4 $884
+ARGP4
+ADDRLP4 1084
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 1084
+INDIRI4
+CNSTI4 0
+NEI4 $882
+line 1648
+;1648:		Cmd_Noclip_f (ent);
+ADDRLP4 1024
+INDIRP4
+ARGP4
+ADDRGP4 Cmd_Noclip_f
+CALLV
+pop
+ADDRGP4 $883
+JUMPV
+LABELV $882
+line 1649
+;1649:	else if (Q_stricmp (cmd, "kill") == 0)
+ADDRLP4 0
+ARGP4
+ADDRGP4 $887
+ARGP4
+ADDRLP4 1088
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 1088
+INDIRI4
+CNSTI4 0
+NEI4 $885
+line 1650
+;1650:		Cmd_Kill_f (ent);
+ADDRLP4 1024
+INDIRP4
+ARGP4
+ADDRGP4 Cmd_Kill_f
+CALLV
+pop
+ADDRGP4 $886
+JUMPV
+LABELV $885
+line 1651
+;1651:	else if (Q_stricmp (cmd, "teamtask") == 0)
+ADDRLP4 0
+ARGP4
+ADDRGP4 $220
+ARGP4
+ADDRLP4 1092
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 1092
+INDIRI4
+CNSTI4 0
+NEI4 $888
+line 1652
+;1652:		Cmd_TeamTask_f (ent);
+ADDRLP4 1024
+INDIRP4
+ARGP4
+ADDRGP4 Cmd_TeamTask_f
+CALLV
+pop
+ADDRGP4 $889
+JUMPV
+LABELV $888
+line 1653
+;1653:	else if (Q_stricmp (cmd, "levelshot") == 0)
+ADDRLP4 0
+ARGP4
+ADDRGP4 $892
+ARGP4
+ADDRLP4 1096
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 1096
+INDIRI4
+CNSTI4 0
+NEI4 $890
+line 1654
+;1654:		Cmd_LevelShot_f (ent);
+ADDRLP4 1024
+INDIRP4
+ARGP4
+ADDRGP4 Cmd_LevelShot_f
+CALLV
+pop
+ADDRGP4 $891
+JUMPV
+LABELV $890
+line 1655
+;1655:	else if (Q_stricmp (cmd, "follow") == 0)
+ADDRLP4 0
+ARGP4
+ADDRGP4 $895
+ARGP4
+ADDRLP4 1100
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 1100
+INDIRI4
+CNSTI4 0
+NEI4 $893
+line 1656
+;1656:		Cmd_Follow_f (ent);
+ADDRLP4 1024
+INDIRP4
+ARGP4
+ADDRGP4 Cmd_Follow_f
+CALLV
+pop
+ADDRGP4 $894
+JUMPV
+LABELV $893
+line 1657
+;1657:	else if (Q_stricmp (cmd, "follownext") == 0)
+ADDRLP4 0
+ARGP4
+ADDRGP4 $898
+ARGP4
+ADDRLP4 1104
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 1104
+INDIRI4
+CNSTI4 0
+NEI4 $896
+line 1658
+;1658:		Cmd_FollowCycle_f (ent, 1);
+ADDRLP4 1024
+INDIRP4
+ARGP4
+CNSTI4 1
+ARGI4
+ADDRGP4 Cmd_FollowCycle_f
+CALLV
+pop
+ADDRGP4 $897
+JUMPV
+LABELV $896
+line 1659
+;1659:	else if (Q_stricmp (cmd, "followprev") == 0)
+ADDRLP4 0
+ARGP4
+ADDRGP4 $901
+ARGP4
+ADDRLP4 1108
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 1108
+INDIRI4
+CNSTI4 0
+NEI4 $899
+line 1660
+;1660:		Cmd_FollowCycle_f (ent, -1);
+ADDRLP4 1024
+INDIRP4
+ARGP4
+CNSTI4 -1
+ARGI4
+ADDRGP4 Cmd_FollowCycle_f
+CALLV
+pop
+ADDRGP4 $900
+JUMPV
+LABELV $899
+line 1661
+;1661:	else if (Q_stricmp (cmd, "team") == 0)
+ADDRLP4 0
+ARGP4
+ADDRGP4 $904
+ARGP4
+ADDRLP4 1112
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 1112
+INDIRI4
+CNSTI4 0
+NEI4 $902
+line 1662
+;1662:		Cmd_Team_f (ent);
+ADDRLP4 1024
+INDIRP4
+ARGP4
+ADDRGP4 Cmd_Team_f
+CALLV
+pop
+ADDRGP4 $903
+JUMPV
+LABELV $902
+line 1663
+;1663:	else if (Q_stricmp (cmd, "where") == 0)
+ADDRLP4 0
+ARGP4
+ADDRGP4 $907
+ARGP4
+ADDRLP4 1116
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 1116
+INDIRI4
+CNSTI4 0
+NEI4 $905
+line 1664
+;1664:		Cmd_Where_f (ent);
+ADDRLP4 1024
+INDIRP4
+ARGP4
+ADDRGP4 Cmd_Where_f
+CALLV
+pop
+ADDRGP4 $906
+JUMPV
+LABELV $905
+line 1665
+;1665:	else if (Q_stricmp (cmd, "callvote") == 0)
+ADDRLP4 0
+ARGP4
+ADDRGP4 $910
+ARGP4
+ADDRLP4 1120
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 1120
+INDIRI4
+CNSTI4 0
+NEI4 $908
+line 1666
+;1666:		Cmd_CallVote_f (ent);
+ADDRLP4 1024
+INDIRP4
+ARGP4
+ADDRGP4 Cmd_CallVote_f
+CALLV
+pop
+ADDRGP4 $909
+JUMPV
+LABELV $908
+line 1667
+;1667:	else if (Q_stricmp (cmd, "vote") == 0)
+ADDRLP4 0
+ARGP4
+ADDRGP4 $913
+ARGP4
+ADDRLP4 1124
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 1124
+INDIRI4
+CNSTI4 0
+NEI4 $911
+line 1668
+;1668:		Cmd_Vote_f (ent);
+ADDRLP4 1024
+INDIRP4
+ARGP4
+ADDRGP4 Cmd_Vote_f
+CALLV
+pop
+ADDRGP4 $912
+JUMPV
+LABELV $911
+line 1669
+;1669:	else if (Q_stricmp (cmd, "callteamvote") == 0)
+ADDRLP4 0
+ARGP4
+ADDRGP4 $916
+ARGP4
+ADDRLP4 1128
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 1128
+INDIRI4
+CNSTI4 0
+NEI4 $914
+line 1670
+;1670:		Cmd_CallTeamVote_f (ent);
+ADDRLP4 1024
+INDIRP4
+ARGP4
+ADDRGP4 Cmd_CallTeamVote_f
+CALLV
+pop
+ADDRGP4 $915
+JUMPV
+LABELV $914
+line 1671
+;1671:	else if (Q_stricmp (cmd, "teamvote") == 0)
+ADDRLP4 0
+ARGP4
+ADDRGP4 $919
+ARGP4
+ADDRLP4 1132
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 1132
+INDIRI4
+CNSTI4 0
+NEI4 $917
+line 1672
+;1672:		Cmd_TeamVote_f (ent);
+ADDRLP4 1024
+INDIRP4
+ARGP4
+ADDRGP4 Cmd_TeamVote_f
+CALLV
+pop
+ADDRGP4 $918
+JUMPV
+LABELV $917
+line 1673
+;1673:	else if (Q_stricmp (cmd, "gc") == 0)
+ADDRLP4 0
+ARGP4
+ADDRGP4 $922
+ARGP4
+ADDRLP4 1136
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 1136
+INDIRI4
+CNSTI4 0
+NEI4 $920
+line 1674
+;1674:		Cmd_GameCommand_f( ent );
+ADDRLP4 1024
+INDIRP4
+ARGP4
+ADDRGP4 Cmd_GameCommand_f
+CALLV
+pop
+ADDRGP4 $921
+JUMPV
+LABELV $920
+line 1675
+;1675:	else if (Q_stricmp (cmd, "setviewpos") == 0)
+ADDRLP4 0
+ARGP4
+ADDRGP4 $925
+ARGP4
+ADDRLP4 1140
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 1140
+INDIRI4
+CNSTI4 0
+NEI4 $923
+line 1676
+;1676:		Cmd_SetViewpos_f( ent );
+ADDRLP4 1024
+INDIRP4
+ARGP4
+ADDRGP4 Cmd_SetViewpos_f
+CALLV
+pop
+ADDRGP4 $924
+JUMPV
+LABELV $923
+line 1677
+;1677:	else if (Q_stricmp (cmd, "info") == 0)
+ADDRLP4 0
+ARGP4
+ADDRGP4 $928
+ARGP4
+ADDRLP4 1144
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 1144
+INDIRI4
+CNSTI4 0
+NEI4 $926
+line 1678
+;1678:		Info_Gen( ent, 1 );//1=Info, 2=Flashlight
+ADDRLP4 1024
+INDIRP4
+ARGP4
+CNSTI4 1
+ARGI4
+ADDRGP4 Info_Gen
+CALLV
+pop
+ADDRGP4 $927
+JUMPV
+LABELV $926
+line 1679
+;1679:	else if (Q_stricmp (cmd, "flashlight") == 0)
+ADDRLP4 0
+ARGP4
+ADDRGP4 $931
+ARGP4
+ADDRLP4 1148
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 1148
+INDIRI4
+CNSTI4 0
+NEI4 $929
+line 1680
+;1680:		Info_Gen( ent, 2 );
+ADDRLP4 1024
+INDIRP4
+ARGP4
+CNSTI4 2
+ARGI4
+ADDRGP4 Info_Gen
+CALLV
+pop
+ADDRGP4 $930
+JUMPV
+LABELV $929
+line 1681
+;1681:	else if (Q_stricmp (cmd, "laser") == 0)
+ADDRLP4 0
+ARGP4
+ADDRGP4 $934
+ARGP4
+ADDRLP4 1152
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 1152
+INDIRI4
+CNSTI4 0
+NEI4 $932
+line 1682
+;1682:		Laser_Gen( ent, 1 );//1=Laser
+ADDRLP4 1024
+INDIRP4
+ARGP4
+CNSTI4 1
+ARGI4
+ADDRGP4 Laser_Gen
+CALLV
+pop
+ADDRGP4 $933
+JUMPV
+LABELV $932
+line 1683
+;1683:	else if (Q_stricmp (cmd, "stats") == 0)
+ADDRLP4 0
+ARGP4
+ADDRGP4 $937
+ARGP4
+ADDRLP4 1156
+ADDRGP4 Q_stricmp
+CALLI4
+ASGNI4
+ADDRLP4 1156
+INDIRI4
+CNSTI4 0
+NEI4 $935
+line 1684
+;1684:		Cmd_Stats_f( ent );
+ADDRLP4 1024
+INDIRP4
+ARGP4
+ADDRGP4 Cmd_Stats_f
+CALLV
+pop
+ADDRGP4 $936
+JUMPV
+LABELV $935
+line 1686
+;1685:	else
+;1686:		trap_SendServerCommand( clientNum, va("print \"unknown cmd %s\n\"", cmd ) );
+ADDRGP4 $938
+ARGP4
+ADDRLP4 0
+ARGP4
+ADDRLP4 1160
+ADDRGP4 va
+CALLP4
+ASGNP4
+ADDRFP4 0
+INDIRI4
+ARGI4
+ADDRLP4 1160
+INDIRP4
+ARGP4
+ADDRGP4 trap_SendServerCommand
+CALLV
+pop
+LABELV $936
+LABELV $933
+LABELV $930
+LABELV $927
+LABELV $924
+LABELV $921
+LABELV $918
+LABELV $915
+LABELV $912
+LABELV $909
+LABELV $906
+LABELV $903
+LABELV $900
+LABELV $897
+LABELV $894
+LABELV $891
+LABELV $889
+LABELV $886
+LABELV $883
+LABELV $880
+LABELV $877
+LABELV $874
+line 1687
+;1687:}
+LABELV $836
+endproc ClientCommand 1164 16
+import trap_SnapVector
+import trap_GeneticParentsAndChildSelection
+import trap_BotResetWeaponState
+import trap_BotFreeWeaponState
+import trap_BotAllocWeaponState
+import trap_BotLoadWeaponWeights
+import trap_BotGetWeaponInfo
+import trap_BotChooseBestFightWeapon
+import trap_BotAddAvoidSpot
+import trap_BotInitMoveState
+import trap_BotFreeMoveState
+import trap_BotAllocMoveState
+import trap_BotPredictVisiblePosition
+import trap_BotMovementViewTarget
+import trap_BotReachabilityArea
+import trap_BotResetLastAvoidReach
+import trap_BotResetAvoidReach
+import trap_BotMoveInDirection
+import trap_BotMoveToGoal
+import trap_BotResetMoveState
+import trap_BotFreeGoalState
+import trap_BotAllocGoalState
+import trap_BotMutateGoalFuzzyLogic
+import trap_BotSaveGoalFuzzyLogic
+import trap_BotInterbreedGoalFuzzyLogic
+import trap_BotFreeItemWeights
+import trap_BotLoadItemWeights
+import trap_BotUpdateEntityItems
+import trap_BotInitLevelItems
+import trap_BotSetAvoidGoalTime
+import trap_BotAvoidGoalTime
+import trap_BotGetLevelItemGoal
+import trap_BotGetMapLocationGoal
+import trap_BotGetNextCampSpotGoal
+import trap_BotItemGoalInVisButNotVisible
+import trap_BotTouchingGoal
+import trap_BotChooseNBGItem
+import trap_BotChooseLTGItem
+import trap_BotGetSecondGoal
+import trap_BotGetTopGoal
+import trap_BotGoalName
+import trap_BotDumpGoalStack
+import trap_BotDumpAvoidGoals
+import trap_BotEmptyGoalStack
+import trap_BotPopGoal
+import trap_BotPushGoal
+import trap_BotResetAvoidGoals
+import trap_BotRemoveFromAvoidGoals
+import trap_BotResetGoalState
+import trap_BotSetChatName
+import trap_BotSetChatGender
+import trap_BotLoadChatFile
+import trap_BotReplaceSynonyms
+import trap_UnifyWhiteSpaces
+import trap_BotMatchVariable
+import trap_BotFindMatch
+import trap_StringContains
+import trap_BotGetChatMessage
+import trap_BotEnterChat
+import trap_BotChatLength
+import trap_BotReplyChat
+import trap_BotNumInitialChats
+import trap_BotInitialChat
+import trap_BotNumConsoleMessages
+import trap_BotNextConsoleMessage
+import trap_BotRemoveConsoleMessage
+import trap_BotQueueConsoleMessage
+import trap_BotFreeChatState
+import trap_BotAllocChatState
+import trap_Characteristic_String
+import trap_Characteristic_BInteger
+import trap_Characteristic_Integer
+import trap_Characteristic_BFloat
+import trap_Characteristic_Float
+import trap_BotFreeCharacter
+import trap_BotLoadCharacter
+import trap_EA_ResetInput
+import trap_EA_GetInput
+import trap_EA_EndRegular
+import trap_EA_View
+import trap_EA_Move
+import trap_EA_DelayedJump
+import trap_EA_Jump
+import trap_EA_SelectWeapon
+import trap_EA_MoveRight
+import trap_EA_MoveLeft
+import trap_EA_MoveBack
+import trap_EA_MoveForward
+import trap_EA_MoveDown
+import trap_EA_MoveUp
+import trap_EA_Crouch
+import trap_EA_Respawn
+import trap_EA_Use
+import trap_EA_Attack
+import trap_EA_Talk
+import trap_EA_Gesture
+import trap_EA_Action
+import trap_EA_Command
+import trap_EA_SayTeam
+import trap_EA_Say
+import trap_AAS_PredictClientMovement
+import trap_AAS_Swimming
+import trap_AAS_AlternativeRouteGoals
+import trap_AAS_PredictRoute
+import trap_AAS_EnableRoutingArea
+import trap_AAS_AreaTravelTimeToGoalArea
+import trap_AAS_AreaReachability
+import trap_AAS_IntForBSPEpairKey
+import trap_AAS_FloatForBSPEpairKey
+import trap_AAS_VectorForBSPEpairKey
+import trap_AAS_ValueForBSPEpairKey
+import trap_AAS_NextBSPEntity
+import trap_AAS_PointContents
+import trap_AAS_TraceAreas
+import trap_AAS_PointReachabilityAreaIndex
+import trap_AAS_PointAreaNum
+import trap_AAS_Time
+import trap_AAS_PresenceTypeBoundingBox
+import trap_AAS_Initialized
+import trap_AAS_EntityInfo
+import trap_AAS_AreaInfo
+import trap_AAS_BBoxAreas
+import trap_BotUserCommand
+import trap_BotGetServerCommand
+import trap_BotGetSnapshotEntity
+import trap_BotLibTest
+import trap_BotLibUpdateEntity
+import trap_BotLibLoadMap
+import trap_BotLibStartFrame
+import trap_BotLibDefine
+import trap_BotLibVarGet
+import trap_BotLibVarSet
+import trap_BotLibShutdown
+import trap_BotLibSetup
+import trap_DebugPolygonDelete
+import trap_DebugPolygonCreate
+import trap_GetEntityToken
+import trap_GetUsercmd
+import trap_BotFreeClient
+import trap_BotAllocateClient
+import trap_EntityContact
+import trap_EntitiesInBox
+import trap_UnlinkEntity
+import trap_LinkEntity
+import trap_AreasConnected
+import trap_AdjustAreaPortalState
+import trap_InPVSIgnorePortals
+import trap_InPVS
+import trap_PointContents
+import trap_Trace
+import trap_SetBrushModel
+import trap_GetServerinfo
+import trap_SetUserinfo
+import trap_GetUserinfo
+import trap_GetConfigstring
+import trap_SetConfigstring
+import trap_SendServerCommand
+import trap_DropClient
+import trap_LocateGameData
+import trap_Cvar_VariableStringBuffer
+import trap_Cvar_VariableValue
+import trap_Cvar_VariableIntegerValue
+import trap_Cvar_Set
+import trap_Cvar_Update
+import trap_Cvar_Register
+import trap_SendConsoleCommand
+import trap_FS_Seek
+import trap_FS_GetFileList
+import trap_FS_FCloseFile
+import trap_FS_Write
+import trap_FS_Read
+import trap_FS_FOpenFile
+import trap_Args
+import trap_Argv
+import trap_Argc
+import trap_Milliseconds
+import trap_Error
+import trap_Printf
+import g_proxMineTimeout
+import g_singlePlayer
+import g_enableBreath
+import g_enableDust
+import g_rankings
+import pmove_msec
+import pmove_fixed
+import g_smoothClients
+import g_blueteam
+import g_redteam
+import g_cubeTimeout
+import g_obeliskRespawnDelay
+import g_obeliskRegenAmount
+import g_obeliskRegenPeriod
+import g_obeliskHealth
+import g_filterBan
+import g_banIPs
+import g_teamForceBalance
+import g_teamAutoJoin
+import g_allowVote
+import g_blood
+import g_doWarmup
+import g_warmup
+import g_motd
+import g_synchronousClients
+import g_weaponTeamRespawn
+import g_weaponRespawn
+import g_debugDamage
+import g_debugAlloc
+import g_debugMove
+import g_inactivity
+import g_forcerespawn
+import g_quadfactor
+import g_knockback
+import g_speed
+import g_gravity
+import g_needpass
+import g_password
+import g_friendlyFire
+import g_capturelimit
+import g_timelimit
+import g_fraglimit
+import g_dmflags
+import g_restarted
+import g_maxGameClients
+import g_maxclients
+import g_cheats
+import g_dedicated
+import g_gametype
+import g_entities
+import level
+import Pickup_Team
+import CheckTeamStatus
+import TeamplayInfoMessage
+import Team_GetLocationMsg
+import Team_GetLocation
+import SelectCTFSpawnPoint
+import Team_FreeEntity
+import Team_ReturnFlag
+import Team_InitGame
+import Team_CheckHurtCarrier
+import Team_FragBonuses
+import Team_DroppedFlagThink
+import AddTeamScore
+import TeamColorString
+import OtherTeamName
+import TeamName
+import OtherTeam
+import BotTestAAS
+import BotAIStartFrame
+import BotAIShutdownClient
+import BotAISetupClient
+import BotAILoadMap
+import BotAIShutdown
+import BotAISetup
+import BotInterbreedEndMatch
+import Svcmd_BotList_f
+import Svcmd_AddBot_f
+import G_BotConnect
+import G_RemoveQueuedBotBegin
+import G_CheckBotSpawn
+import G_GetBotInfoByName
+import G_GetBotInfoByNumber
+import G_InitBots
+import Svcmd_AbortPodium_f
+import SpawnModelsOnVictoryPads
+import UpdateTournamentInfo
+import G_WriteSessionData
+import G_InitWorldSession
+import G_InitSessionData
+import G_ReadSessionData
+import Svcmd_GameMem_f
+import G_InitMemory
+import G_Alloc
+import CheckObeliskAttack
+import Team_CheckDroppedItem
+import OnSameTeam
+import G_RunClient
+import ClientEndFrame
+import ClientThink
+import ClientBegin
+import ClientDisconnect
+import ClientUserinfoChanged
+import ClientConnect
+import G_Error
+import G_Printf
+import SendScoreboardMessageToAllClients
+import G_LogPrintf
+import G_RunThink
+import CheckTeamLeader
+import SetLeader
+import FindIntermissionPoint
+import G_SetStats
+import MoveClientToIntermission
+import FireWeapon
+import G_FilterPacket
+import G_ProcessIPBans
+import ConsoleCommand
+import SpotWouldTelefrag
+import CalculateRanks
+import AddScore
+import player_die
+import ClientSpawn
+import InitBodyQue
+import InitClientResp
+import InitClientPersistant
+import BeginIntermission
+import respawn
+import CopyToBodyQue
+import SelectSpawnPoint
+import SetClientViewAngle
+import PickTeam
+import TeamLeader
+import TeamCount
+import Laser_Think
+import Laser_Gen
+import Info_Think
+import Info_Gen
+import Weapon_HookThink
+import Weapon_HookFree
+import CheckGauntletAttack
+import SnapVectorTowards
+import CalcMuzzlePoint
+import LogAccuracyHit
+import TeleportPlayer
+import trigger_teleporter_touch
+import Touch_DoorTrigger
+import G_RunMover
+import fire_grapple
+import fire_bfg
+import fire_rocket
+import fire_grenade
+import fire_plasma
+import fire_blaster
+import G_RunMissile
+import TossClientCubes
+import TossClientItems
+import body_die
+import G_InvulnerabilityEffect
+import G_RadiusDamage
+import G_Damage
+import CanDamage
+import BuildShaderStateConfig
+import AddRemap
+import G_SetOrigin
+import G_AddEvent
+import G_AddPredictableEvent
+import vectoyaw
+import vtos
+import tv
+import G_TouchSolids
+import G_TouchTriggers
+import G_EntitiesFree
+import G_FreeEntity
+import G_Sound
+import G_TempEntity
+import G_Spawn
+import G_InitGentity
+import G_SetMovedir
+import G_UseTargets
+import G_PickTarget
+import G_Find
+import G_KillBox
+import G_TeamCommand
+import G_SoundIndex
+import G_ModelIndex
+import SaveRegisteredItems
+import RegisterItem
+import ClearRegisteredItems
+import Touch_Item
+import Add_Ammo
+import ArmorIndex
+import Think_Weapon
+import FinishSpawningItem
+import G_SpawnItem
+import SetRespawn
+import LaunchItem
+import Drop_Item
+import PrecacheItem
+import UseHoldableItem
+import RespawnItem
+import G_RunItem
+import G_CheckTeamItems
+import G_NewString
+import G_SpawnEntitiesFromString
+import G_SpawnVector
+import G_SpawnInt
+import G_SpawnFloat
+import G_SpawnString
+import BG_PlayerTouchesItem
+import BG_PlayerStateToEntityStateExtraPolate
+import BG_PlayerStateToEntityState
+import BG_TouchJumpPad
+import BG_AddPredictableEventToPlayerstate
+import BG_EvaluateTrajectoryDelta
+import BG_EvaluateTrajectory
+import BG_CanItemBeGrabbed
+import BG_FindItemForHoldable
+import BG_FindItemForPowerup
+import BG_FindItemForWeapon
+import BG_FindItem
+import bg_numItems
+import bg_itemlist
+import Pmove
+import PM_UpdateViewAngles
+import Com_Printf
+import Com_Error
+import Info_NextPair
+import Info_Validate
+import Info_SetValueForKey_Big
+import Info_SetValueForKey
+import Info_RemoveKey_big
+import Info_RemoveKey
+import Info_ValueForKey
+import va
+import Q_CleanStr
+import Q_PrintStrlen
+import Q_strcat
+import Q_strncpyz
+import Q_strrchr
+import Q_strupr
+import Q_strlwr
+import Q_stricmpn
+import Q_strncmp
+import Q_stricmp
+import Q_isalpha
+import Q_isupper
+import Q_islower
+import Q_isprint
+import Com_sprintf
+import Parse3DMatrix
+import Parse2DMatrix
+import Parse1DMatrix
+import SkipRestOfLine
+import SkipBracedSection
+import COM_MatchToken
+import COM_ParseWarning
+import COM_ParseError
+import COM_Compress
+import COM_ParseExt
+import COM_Parse
+import COM_GetCurrentParseLine
+import COM_BeginParseSession
+import COM_DefaultExtension
+import COM_StripExtension
+import COM_SkipPath
+import Com_Clamp
+import PerpendicularVector
+import AngleVectors
+import MatrixMultiply
+import MakeNormalVectors
+import RotateAroundDirection
+import RotatePointAroundVector
+import ProjectPointOnPlane
+import PlaneFromPoints
+import AngleDelta
+import AngleNormalize180
+import AngleNormalize360
+import AnglesSubtract
+import AngleSubtract
+import LerpAngle
+import AngleMod
+import BoxOnPlaneSide
+import SetPlaneSignbits
+import AxisCopy
+import AxisClear
+import AnglesToAxis
+import vectoangles
+import Q_crandom
+import Q_random
+import Q_rand
+import Q_acos
+import Q_log2
+import VectorRotate
+import Vector4Scale
+import VectorNormalize2
+import VectorNormalize
+import CrossProduct
+import VectorInverse
+import VectorNormalizeFast
+import DistanceSquared
+import Distance
+import VectorLengthSquared
+import VectorLength
+import VectorCompare
+import AddPointToBounds
+import ClearBounds
+import RadiusFromBounds
+import NormalizeColor
+import ColorBytes4
+import ColorBytes3
+import _VectorMA
+import _VectorScale
+import _VectorCopy
+import _VectorAdd
+import _VectorSubtract
+import _DotProduct
+import ByteToDir
+import DirToByte
+import ClampShort
+import ClampChar
+import Q_rsqrt
+import Q_fabs
+import axisDefault
+import vec3_origin
+import g_color_table
+import colorDkGrey
+import colorMdGrey
+import colorLtGrey
+import colorWhite
+import colorCyan
+import colorMagenta
+import colorYellow
+import colorBlue
+import colorGreen
+import colorRed
+import colorBlack
+import bytedirs
+import Com_Memcpy
+import Com_Memset
+import Hunk_Alloc
+import FloatSwap
+import LongSwap
+import ShortSwap
+import acos
+import fabs
+import abs
+import tan
+import atan2
+import cos
+import sin
+import sqrt
+import floor
+import ceil
+import memcpy
+import memset
+import memmove
+import sscanf
+import vsprintf
+import _atoi
+import atoi
+import _atof
+import atof
+import toupper
+import tolower
+import strncpy
+import strstr
+import strchr
+import strcmp
+import strcpy
+import strcat
+import strlen
+import rand
+import srand
+import qsort
+lit
+align 1
+LABELV $938
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 117
+byte 1 110
+byte 1 107
+byte 1 110
+byte 1 111
+byte 1 119
+byte 1 110
+byte 1 32
+byte 1 99
+byte 1 109
+byte 1 100
+byte 1 32
+byte 1 37
+byte 1 115
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $937
+byte 1 115
+byte 1 116
+byte 1 97
+byte 1 116
+byte 1 115
+byte 1 0
+align 1
+LABELV $934
+byte 1 108
+byte 1 97
+byte 1 115
+byte 1 101
+byte 1 114
+byte 1 0
+align 1
+LABELV $931
+byte 1 102
+byte 1 108
+byte 1 97
+byte 1 115
+byte 1 104
+byte 1 108
+byte 1 105
+byte 1 103
+byte 1 104
+byte 1 116
+byte 1 0
+align 1
+LABELV $928
+byte 1 105
+byte 1 110
+byte 1 102
+byte 1 111
+byte 1 0
+align 1
+LABELV $925
+byte 1 115
+byte 1 101
+byte 1 116
+byte 1 118
+byte 1 105
+byte 1 101
+byte 1 119
+byte 1 112
+byte 1 111
+byte 1 115
+byte 1 0
+align 1
+LABELV $922
+byte 1 103
+byte 1 99
+byte 1 0
+align 1
+LABELV $919
+byte 1 116
+byte 1 101
+byte 1 97
+byte 1 109
+byte 1 118
+byte 1 111
+byte 1 116
+byte 1 101
+byte 1 0
+align 1
+LABELV $916
+byte 1 99
+byte 1 97
+byte 1 108
+byte 1 108
+byte 1 116
+byte 1 101
+byte 1 97
+byte 1 109
+byte 1 118
+byte 1 111
+byte 1 116
+byte 1 101
+byte 1 0
+align 1
+LABELV $913
+byte 1 118
+byte 1 111
+byte 1 116
+byte 1 101
+byte 1 0
+align 1
+LABELV $910
+byte 1 99
+byte 1 97
+byte 1 108
+byte 1 108
+byte 1 118
+byte 1 111
+byte 1 116
+byte 1 101
+byte 1 0
+align 1
+LABELV $907
+byte 1 119
+byte 1 104
+byte 1 101
+byte 1 114
+byte 1 101
+byte 1 0
+align 1
+LABELV $904
+byte 1 116
+byte 1 101
+byte 1 97
+byte 1 109
+byte 1 0
+align 1
+LABELV $901
+byte 1 102
+byte 1 111
+byte 1 108
+byte 1 108
+byte 1 111
+byte 1 119
+byte 1 112
+byte 1 114
+byte 1 101
+byte 1 118
+byte 1 0
+align 1
+LABELV $898
+byte 1 102
+byte 1 111
+byte 1 108
+byte 1 108
+byte 1 111
+byte 1 119
+byte 1 110
+byte 1 101
+byte 1 120
+byte 1 116
+byte 1 0
+align 1
+LABELV $895
+byte 1 102
+byte 1 111
+byte 1 108
+byte 1 108
+byte 1 111
+byte 1 119
+byte 1 0
+align 1
+LABELV $892
+byte 1 108
+byte 1 101
+byte 1 118
+byte 1 101
+byte 1 108
+byte 1 115
+byte 1 104
+byte 1 111
+byte 1 116
+byte 1 0
+align 1
+LABELV $887
+byte 1 107
+byte 1 105
+byte 1 108
+byte 1 108
+byte 1 0
+align 1
+LABELV $884
+byte 1 110
+byte 1 111
+byte 1 99
+byte 1 108
+byte 1 105
+byte 1 112
+byte 1 0
+align 1
+LABELV $881
+byte 1 110
+byte 1 111
+byte 1 116
+byte 1 97
+byte 1 114
+byte 1 103
+byte 1 101
+byte 1 116
+byte 1 0
+align 1
+LABELV $878
+byte 1 103
+byte 1 111
+byte 1 100
+byte 1 0
+align 1
+LABELV $875
+byte 1 103
+byte 1 105
+byte 1 118
+byte 1 101
+byte 1 0
+align 1
+LABELV $867
+byte 1 118
+byte 1 116
+byte 1 97
+byte 1 117
+byte 1 110
+byte 1 116
+byte 1 0
+align 1
+LABELV $864
+byte 1 118
+byte 1 111
+byte 1 116
+byte 1 101
+byte 1 108
+byte 1 108
+byte 1 0
+align 1
+LABELV $861
+byte 1 118
+byte 1 111
+byte 1 115
+byte 1 97
+byte 1 121
+byte 1 95
+byte 1 116
+byte 1 101
+byte 1 97
+byte 1 109
+byte 1 0
+align 1
+LABELV $858
+byte 1 118
+byte 1 111
+byte 1 115
+byte 1 97
+byte 1 121
+byte 1 0
+align 1
+LABELV $853
+byte 1 118
+byte 1 115
+byte 1 97
+byte 1 121
+byte 1 95
+byte 1 116
+byte 1 101
+byte 1 97
+byte 1 109
+byte 1 0
+align 1
+LABELV $850
+byte 1 118
+byte 1 115
+byte 1 97
+byte 1 121
+byte 1 0
+align 1
+LABELV $847
+byte 1 116
+byte 1 101
+byte 1 108
+byte 1 108
+byte 1 0
+align 1
+LABELV $844
+byte 1 115
+byte 1 97
+byte 1 121
+byte 1 95
+byte 1 116
+byte 1 101
+byte 1 97
+byte 1 109
+byte 1 0
+align 1
+LABELV $841
+byte 1 115
+byte 1 97
+byte 1 121
+byte 1 0
+align 1
+LABELV $827
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 117
+byte 1 115
+byte 1 97
+byte 1 103
+byte 1 101
+byte 1 58
+byte 1 32
+byte 1 115
+byte 1 101
+byte 1 116
+byte 1 118
+byte 1 105
+byte 1 101
+byte 1 119
+byte 1 112
+byte 1 111
+byte 1 115
+byte 1 32
+byte 1 120
+byte 1 32
+byte 1 121
+byte 1 32
+byte 1 122
+byte 1 32
+byte 1 121
+byte 1 97
+byte 1 119
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $810
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 84
+byte 1 101
+byte 1 97
+byte 1 109
+byte 1 32
+byte 1 118
+byte 1 111
+byte 1 116
+byte 1 101
+byte 1 32
+byte 1 99
+byte 1 97
+byte 1 115
+byte 1 116
+byte 1 46
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $807
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 84
+byte 1 101
+byte 1 97
+byte 1 109
+byte 1 32
+byte 1 118
+byte 1 111
+byte 1 116
+byte 1 101
+byte 1 32
+byte 1 97
+byte 1 108
+byte 1 114
+byte 1 101
+byte 1 97
+byte 1 100
+byte 1 121
+byte 1 32
+byte 1 99
+byte 1 97
+byte 1 115
+byte 1 116
+byte 1 46
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $804
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 78
+byte 1 111
+byte 1 32
+byte 1 116
+byte 1 101
+byte 1 97
+byte 1 109
+byte 1 32
+byte 1 118
+byte 1 111
+byte 1 116
+byte 1 101
+byte 1 32
+byte 1 105
+byte 1 110
+byte 1 32
+byte 1 112
+byte 1 114
+byte 1 111
+byte 1 103
+byte 1 114
+byte 1 101
+byte 1 115
+byte 1 115
+byte 1 46
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $780
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 37
+byte 1 115
+byte 1 32
+byte 1 99
+byte 1 97
+byte 1 108
+byte 1 108
+byte 1 101
+byte 1 100
+byte 1 32
+byte 1 97
+byte 1 32
+byte 1 116
+byte 1 101
+byte 1 97
+byte 1 109
+byte 1 32
+byte 1 118
+byte 1 111
+byte 1 116
+byte 1 101
+byte 1 46
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $768
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 84
+byte 1 101
+byte 1 97
+byte 1 109
+byte 1 32
+byte 1 118
+byte 1 111
+byte 1 116
+byte 1 101
+byte 1 32
+byte 1 99
+byte 1 111
+byte 1 109
+byte 1 109
+byte 1 97
+byte 1 110
+byte 1 100
+byte 1 115
+byte 1 32
+byte 1 97
+byte 1 114
+byte 1 101
+byte 1 58
+byte 1 32
+byte 1 108
+byte 1 101
+byte 1 97
+byte 1 100
+byte 1 101
+byte 1 114
+byte 1 32
+byte 1 60
+byte 1 112
+byte 1 108
+byte 1 97
+byte 1 121
+byte 1 101
+byte 1 114
+byte 1 62
+byte 1 46
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $767
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 37
+byte 1 115
+byte 1 32
+byte 1 105
+byte 1 115
+byte 1 32
+byte 1 110
+byte 1 111
+byte 1 116
+byte 1 32
+byte 1 97
+byte 1 32
+byte 1 118
+byte 1 97
+byte 1 108
+byte 1 105
+byte 1 100
+byte 1 32
+byte 1 112
+byte 1 108
+byte 1 97
+byte 1 121
+byte 1 101
+byte 1 114
+byte 1 32
+byte 1 111
+byte 1 110
+byte 1 32
+byte 1 121
+byte 1 111
+byte 1 117
+byte 1 114
+byte 1 32
+byte 1 116
+byte 1 101
+byte 1 97
+byte 1 109
+byte 1 46
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $732
+byte 1 108
+byte 1 101
+byte 1 97
+byte 1 100
+byte 1 101
+byte 1 114
+byte 1 0
+align 1
+LABELV $726
+byte 1 32
+byte 1 0
+align 1
+LABELV $717
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 89
+byte 1 111
+byte 1 117
+byte 1 32
+byte 1 104
+byte 1 97
+byte 1 118
+byte 1 101
+byte 1 32
+byte 1 99
+byte 1 97
+byte 1 108
+byte 1 108
+byte 1 101
+byte 1 100
+byte 1 32
+byte 1 116
+byte 1 104
+byte 1 101
+byte 1 32
+byte 1 109
+byte 1 97
+byte 1 120
+byte 1 105
+byte 1 109
+byte 1 117
+byte 1 109
+byte 1 32
+byte 1 110
+byte 1 117
+byte 1 109
+byte 1 98
+byte 1 101
+byte 1 114
+byte 1 32
+byte 1 111
+byte 1 102
+byte 1 32
+byte 1 116
+byte 1 101
+byte 1 97
+byte 1 109
+byte 1 32
+byte 1 118
+byte 1 111
+byte 1 116
+byte 1 101
+byte 1 115
+byte 1 46
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $714
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 65
+byte 1 32
+byte 1 116
+byte 1 101
+byte 1 97
+byte 1 109
+byte 1 32
+byte 1 118
+byte 1 111
+byte 1 116
+byte 1 101
+byte 1 32
+byte 1 105
+byte 1 115
+byte 1 32
+byte 1 97
+byte 1 108
+byte 1 114
+byte 1 101
+byte 1 97
+byte 1 100
+byte 1 121
+byte 1 32
+byte 1 105
+byte 1 110
+byte 1 32
+byte 1 112
+byte 1 114
+byte 1 111
+byte 1 103
+byte 1 114
+byte 1 101
+byte 1 115
+byte 1 115
+byte 1 46
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $692
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 86
+byte 1 111
+byte 1 116
+byte 1 101
+byte 1 32
+byte 1 99
+byte 1 97
+byte 1 115
+byte 1 116
+byte 1 46
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $691
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 78
+byte 1 111
+byte 1 116
+byte 1 32
+byte 1 97
+byte 1 108
+byte 1 108
+byte 1 111
+byte 1 119
+byte 1 101
+byte 1 100
+byte 1 32
+byte 1 116
+byte 1 111
+byte 1 32
+byte 1 118
+byte 1 111
+byte 1 116
+byte 1 101
+byte 1 32
+byte 1 97
+byte 1 115
+byte 1 32
+byte 1 115
+byte 1 112
+byte 1 101
+byte 1 99
+byte 1 116
+byte 1 97
+byte 1 116
+byte 1 111
+byte 1 114
+byte 1 46
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $688
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 86
+byte 1 111
+byte 1 116
+byte 1 101
+byte 1 32
+byte 1 97
+byte 1 108
+byte 1 114
+byte 1 101
+byte 1 97
+byte 1 100
+byte 1 121
+byte 1 32
+byte 1 99
+byte 1 97
+byte 1 115
+byte 1 116
+byte 1 46
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $685
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 78
+byte 1 111
+byte 1 32
+byte 1 118
+byte 1 111
+byte 1 116
+byte 1 101
+byte 1 32
+byte 1 105
+byte 1 110
+byte 1 32
+byte 1 112
+byte 1 114
+byte 1 111
+byte 1 103
+byte 1 114
+byte 1 101
+byte 1 115
+byte 1 115
+byte 1 46
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $676
+byte 1 37
+byte 1 105
+byte 1 0
+align 1
+LABELV $666
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 37
+byte 1 115
+byte 1 32
+byte 1 99
+byte 1 97
+byte 1 108
+byte 1 108
+byte 1 101
+byte 1 100
+byte 1 32
+byte 1 97
+byte 1 32
+byte 1 118
+byte 1 111
+byte 1 116
+byte 1 101
+byte 1 46
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $662
+byte 1 37
+byte 1 115
+byte 1 32
+byte 1 34
+byte 1 37
+byte 1 115
+byte 1 34
+byte 1 0
+align 1
+LABELV $656
+byte 1 118
+byte 1 115
+byte 1 116
+byte 1 114
+byte 1 32
+byte 1 110
+byte 1 101
+byte 1 120
+byte 1 116
+byte 1 109
+byte 1 97
+byte 1 112
+byte 1 0
+align 1
+LABELV $653
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 110
+byte 1 101
+byte 1 120
+byte 1 116
+byte 1 109
+byte 1 97
+byte 1 112
+byte 1 32
+byte 1 110
+byte 1 111
+byte 1 116
+byte 1 32
+byte 1 115
+byte 1 101
+byte 1 116
+byte 1 46
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $647
+byte 1 37
+byte 1 115
+byte 1 0
+align 1
+LABELV $642
+byte 1 37
+byte 1 115
+byte 1 32
+byte 1 37
+byte 1 115
+byte 1 59
+byte 1 32
+byte 1 115
+byte 1 101
+byte 1 116
+byte 1 32
+byte 1 110
+byte 1 101
+byte 1 120
+byte 1 116
+byte 1 109
+byte 1 97
+byte 1 112
+byte 1 32
+byte 1 34
+byte 1 37
+byte 1 115
+byte 1 34
+byte 1 0
+align 1
+LABELV $635
+byte 1 37
+byte 1 115
+byte 1 32
+byte 1 37
+byte 1 115
+byte 1 0
+align 1
+LABELV $632
+byte 1 37
+byte 1 115
+byte 1 32
+byte 1 37
+byte 1 100
+byte 1 0
+align 1
+LABELV $629
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 73
+byte 1 110
+byte 1 118
+byte 1 97
+byte 1 108
+byte 1 105
+byte 1 100
+byte 1 32
+byte 1 103
+byte 1 97
+byte 1 109
+byte 1 101
+byte 1 116
+byte 1 121
+byte 1 112
+byte 1 101
+byte 1 46
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $621
+byte 1 37
+byte 1 115
+byte 1 10
+byte 1 0
+align 1
+LABELV $616
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 86
+byte 1 111
+byte 1 116
+byte 1 101
+byte 1 32
+byte 1 99
+byte 1 111
+byte 1 109
+byte 1 109
+byte 1 97
+byte 1 110
+byte 1 100
+byte 1 115
+byte 1 32
+byte 1 97
+byte 1 114
+byte 1 101
+byte 1 58
+byte 1 32
+byte 1 109
+byte 1 97
+byte 1 112
+byte 1 95
+byte 1 114
+byte 1 101
+byte 1 115
+byte 1 116
+byte 1 97
+byte 1 114
+byte 1 116
+byte 1 44
+byte 1 32
+byte 1 110
+byte 1 101
+byte 1 120
+byte 1 116
+byte 1 109
+byte 1 97
+byte 1 112
+byte 1 44
+byte 1 32
+byte 1 109
+byte 1 97
+byte 1 112
+byte 1 32
+byte 1 60
+byte 1 109
+byte 1 97
+byte 1 112
+byte 1 110
+byte 1 97
+byte 1 109
+byte 1 101
+byte 1 62
+byte 1 44
+byte 1 32
+byte 1 103
+byte 1 95
+byte 1 103
+byte 1 97
+byte 1 109
+byte 1 101
+byte 1 116
+byte 1 121
+byte 1 112
+byte 1 101
+byte 1 32
+byte 1 60
+byte 1 110
+byte 1 62
+byte 1 44
+byte 1 32
+byte 1 107
+byte 1 105
+byte 1 99
+byte 1 107
+byte 1 32
+byte 1 60
+byte 1 112
+byte 1 108
+byte 1 97
+byte 1 121
+byte 1 101
+byte 1 114
+byte 1 62
+byte 1 44
+byte 1 32
+byte 1 99
+byte 1 108
+byte 1 105
+byte 1 101
+byte 1 110
+byte 1 116
+byte 1 107
+byte 1 105
+byte 1 99
+byte 1 107
+byte 1 32
+byte 1 60
+byte 1 99
+byte 1 108
+byte 1 105
+byte 1 101
+byte 1 110
+byte 1 116
+byte 1 110
+byte 1 117
+byte 1 109
+byte 1 62
+byte 1 44
+byte 1 32
+byte 1 103
+byte 1 95
+byte 1 100
+byte 1 111
+byte 1 87
+byte 1 97
+byte 1 114
+byte 1 109
+byte 1 117
+byte 1 112
+byte 1 44
+byte 1 32
+byte 1 116
+byte 1 105
+byte 1 109
+byte 1 101
+byte 1 108
+byte 1 105
+byte 1 109
+byte 1 105
+byte 1 116
+byte 1 32
+byte 1 60
+byte 1 116
+byte 1 105
+byte 1 109
+byte 1 101
+byte 1 62
+byte 1 44
+byte 1 32
+byte 1 102
+byte 1 114
+byte 1 97
+byte 1 103
+byte 1 108
+byte 1 105
+byte 1 109
+byte 1 105
+byte 1 116
+byte 1 32
+byte 1 60
+byte 1 102
+byte 1 114
+byte 1 97
+byte 1 103
+byte 1 115
+byte 1 62
+byte 1 46
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $615
+byte 1 102
+byte 1 114
+byte 1 97
+byte 1 103
+byte 1 108
+byte 1 105
+byte 1 109
+byte 1 105
+byte 1 116
+byte 1 0
+align 1
+LABELV $612
+byte 1 116
+byte 1 105
+byte 1 109
+byte 1 101
+byte 1 108
+byte 1 105
+byte 1 109
+byte 1 105
+byte 1 116
+byte 1 0
+align 1
+LABELV $609
+byte 1 103
+byte 1 95
+byte 1 100
+byte 1 111
+byte 1 87
+byte 1 97
+byte 1 114
+byte 1 109
+byte 1 117
+byte 1 112
+byte 1 0
+align 1
+LABELV $606
+byte 1 99
+byte 1 108
+byte 1 105
+byte 1 101
+byte 1 110
+byte 1 116
+byte 1 107
+byte 1 105
+byte 1 99
+byte 1 107
+byte 1 0
+align 1
+LABELV $603
+byte 1 107
+byte 1 105
+byte 1 99
+byte 1 107
+byte 1 0
+align 1
+LABELV $600
+byte 1 103
+byte 1 95
+byte 1 103
+byte 1 97
+byte 1 109
+byte 1 101
+byte 1 116
+byte 1 121
+byte 1 112
+byte 1 101
+byte 1 0
+align 1
+LABELV $597
+byte 1 109
+byte 1 97
+byte 1 112
+byte 1 0
+align 1
+LABELV $594
+byte 1 110
+byte 1 101
+byte 1 120
+byte 1 116
+byte 1 109
+byte 1 97
+byte 1 112
+byte 1 0
+align 1
+LABELV $591
+byte 1 109
+byte 1 97
+byte 1 112
+byte 1 95
+byte 1 114
+byte 1 101
+byte 1 115
+byte 1 116
+byte 1 97
+byte 1 114
+byte 1 116
+byte 1 0
+align 1
+LABELV $588
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 73
+byte 1 110
+byte 1 118
+byte 1 97
+byte 1 108
+byte 1 105
+byte 1 100
+byte 1 32
+byte 1 118
+byte 1 111
+byte 1 116
+byte 1 101
+byte 1 32
+byte 1 115
+byte 1 116
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 103
+byte 1 46
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $584
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 78
+byte 1 111
+byte 1 116
+byte 1 32
+byte 1 97
+byte 1 108
+byte 1 108
+byte 1 111
+byte 1 119
+byte 1 101
+byte 1 100
+byte 1 32
+byte 1 116
+byte 1 111
+byte 1 32
+byte 1 99
+byte 1 97
+byte 1 108
+byte 1 108
+byte 1 32
+byte 1 97
+byte 1 32
+byte 1 118
+byte 1 111
+byte 1 116
+byte 1 101
+byte 1 32
+byte 1 97
+byte 1 115
+byte 1 32
+byte 1 115
+byte 1 112
+byte 1 101
+byte 1 99
+byte 1 116
+byte 1 97
+byte 1 116
+byte 1 111
+byte 1 114
+byte 1 46
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $581
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 89
+byte 1 111
+byte 1 117
+byte 1 32
+byte 1 104
+byte 1 97
+byte 1 118
+byte 1 101
+byte 1 32
+byte 1 99
+byte 1 97
+byte 1 108
+byte 1 108
+byte 1 101
+byte 1 100
+byte 1 32
+byte 1 116
+byte 1 104
+byte 1 101
+byte 1 32
+byte 1 109
+byte 1 97
+byte 1 120
+byte 1 105
+byte 1 109
+byte 1 117
+byte 1 109
+byte 1 32
+byte 1 110
+byte 1 117
+byte 1 109
+byte 1 98
+byte 1 101
+byte 1 114
+byte 1 32
+byte 1 111
+byte 1 102
+byte 1 32
+byte 1 118
+byte 1 111
+byte 1 116
+byte 1 101
+byte 1 115
+byte 1 46
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $578
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 65
+byte 1 32
+byte 1 118
+byte 1 111
+byte 1 116
+byte 1 101
+byte 1 32
+byte 1 105
+byte 1 115
+byte 1 32
+byte 1 97
+byte 1 108
+byte 1 114
+byte 1 101
+byte 1 97
+byte 1 100
+byte 1 121
+byte 1 32
+byte 1 105
+byte 1 110
+byte 1 32
+byte 1 112
+byte 1 114
+byte 1 111
+byte 1 103
+byte 1 114
+byte 1 101
+byte 1 115
+byte 1 115
+byte 1 46
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $574
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 86
+byte 1 111
+byte 1 116
+byte 1 105
+byte 1 110
+byte 1 103
+byte 1 32
+byte 1 110
+byte 1 111
+byte 1 116
+byte 1 32
+byte 1 97
+byte 1 108
+byte 1 108
+byte 1 111
+byte 1 119
+byte 1 101
+byte 1 100
+byte 1 32
+byte 1 104
+byte 1 101
+byte 1 114
+byte 1 101
+byte 1 46
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $569
+byte 1 72
+byte 1 97
+byte 1 114
+byte 1 118
+byte 1 101
+byte 1 115
+byte 1 116
+byte 1 101
+byte 1 114
+byte 1 0
+align 1
+LABELV $568
+byte 1 79
+byte 1 118
+byte 1 101
+byte 1 114
+byte 1 108
+byte 1 111
+byte 1 97
+byte 1 100
+byte 1 0
+align 1
+LABELV $567
+byte 1 79
+byte 1 110
+byte 1 101
+byte 1 32
+byte 1 70
+byte 1 108
+byte 1 97
+byte 1 103
+byte 1 32
+byte 1 67
+byte 1 84
+byte 1 70
+byte 1 0
+align 1
+LABELV $566
+byte 1 67
+byte 1 97
+byte 1 112
+byte 1 116
+byte 1 117
+byte 1 114
+byte 1 101
+byte 1 32
+byte 1 116
+byte 1 104
+byte 1 101
+byte 1 32
+byte 1 70
+byte 1 108
+byte 1 97
+byte 1 103
+byte 1 0
+align 1
+LABELV $565
+byte 1 84
+byte 1 101
+byte 1 97
+byte 1 109
+byte 1 32
+byte 1 68
+byte 1 101
+byte 1 97
+byte 1 116
+byte 1 104
+byte 1 109
+byte 1 97
+byte 1 116
+byte 1 99
+byte 1 104
+byte 1 0
+align 1
+LABELV $564
+byte 1 83
+byte 1 105
+byte 1 110
+byte 1 103
+byte 1 108
+byte 1 101
+byte 1 32
+byte 1 80
+byte 1 108
+byte 1 97
+byte 1 121
+byte 1 101
+byte 1 114
+byte 1 0
+align 1
+LABELV $563
+byte 1 84
+byte 1 111
+byte 1 117
+byte 1 114
+byte 1 110
+byte 1 97
+byte 1 109
+byte 1 101
+byte 1 110
+byte 1 116
+byte 1 0
+align 1
+LABELV $562
+byte 1 70
+byte 1 114
+byte 1 101
+byte 1 101
+byte 1 32
+byte 1 70
+byte 1 111
+byte 1 114
+byte 1 32
+byte 1 65
+byte 1 108
+byte 1 108
+byte 1 0
+align 1
+LABELV $561
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 37
+byte 1 115
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $552
+byte 1 114
+byte 1 101
+byte 1 112
+byte 1 111
+byte 1 114
+byte 1 116
+byte 1 0
+align 1
+LABELV $551
+byte 1 115
+byte 1 101
+byte 1 97
+byte 1 114
+byte 1 99
+byte 1 104
+byte 1 32
+byte 1 97
+byte 1 110
+byte 1 100
+byte 1 32
+byte 1 100
+byte 1 101
+byte 1 115
+byte 1 116
+byte 1 114
+byte 1 111
+byte 1 121
+byte 1 0
+align 1
+LABELV $550
+byte 1 103
+byte 1 117
+byte 1 97
+byte 1 114
+byte 1 100
+byte 1 32
+byte 1 108
+byte 1 111
+byte 1 99
+byte 1 97
+byte 1 116
+byte 1 105
+byte 1 111
+byte 1 110
+byte 1 0
+align 1
+LABELV $549
+byte 1 99
+byte 1 111
+byte 1 118
+byte 1 101
+byte 1 114
+byte 1 32
+byte 1 109
+byte 1 101
+byte 1 0
+align 1
+LABELV $548
+byte 1 99
+byte 1 111
+byte 1 109
+byte 1 101
+byte 1 32
+byte 1 104
+byte 1 101
+byte 1 114
+byte 1 101
+byte 1 0
+align 1
+LABELV $547
+byte 1 104
+byte 1 111
+byte 1 108
+byte 1 100
+byte 1 32
+byte 1 116
+byte 1 104
+byte 1 105
+byte 1 115
+byte 1 32
+byte 1 112
+byte 1 111
+byte 1 115
+byte 1 105
+byte 1 116
+byte 1 105
+byte 1 111
+byte 1 110
+byte 1 0
+align 1
+LABELV $546
+byte 1 104
+byte 1 111
+byte 1 108
+byte 1 100
+byte 1 32
+byte 1 121
+byte 1 111
+byte 1 117
+byte 1 114
+byte 1 32
+byte 1 112
+byte 1 111
+byte 1 115
+byte 1 105
+byte 1 116
+byte 1 105
+byte 1 111
+byte 1 110
+byte 1 0
+align 1
+LABELV $545
+byte 1 116
+byte 1 97
+byte 1 117
+byte 1 110
+byte 1 116
+byte 1 0
+align 1
+LABELV $542
+byte 1 112
+byte 1 114
+byte 1 97
+byte 1 105
+byte 1 115
+byte 1 101
+byte 1 0
+align 1
+LABELV $525
+byte 1 107
+byte 1 105
+byte 1 108
+byte 1 108
+byte 1 95
+byte 1 105
+byte 1 110
+byte 1 115
+byte 1 117
+byte 1 108
+byte 1 116
+byte 1 0
+align 1
+LABELV $520
+byte 1 107
+byte 1 105
+byte 1 108
+byte 1 108
+byte 1 95
+byte 1 103
+byte 1 97
+byte 1 117
+byte 1 110
+byte 1 116
+byte 1 108
+byte 1 101
+byte 1 116
+byte 1 0
+align 1
+LABELV $509
+byte 1 100
+byte 1 101
+byte 1 97
+byte 1 116
+byte 1 104
+byte 1 95
+byte 1 105
+byte 1 110
+byte 1 115
+byte 1 117
+byte 1 108
+byte 1 116
+byte 1 0
+align 1
+LABELV $499
+byte 1 118
+byte 1 116
+byte 1 101
+byte 1 108
+byte 1 108
+byte 1 58
+byte 1 32
+byte 1 37
+byte 1 115
+byte 1 32
+byte 1 116
+byte 1 111
+byte 1 32
+byte 1 37
+byte 1 115
+byte 1 58
+byte 1 32
+byte 1 37
+byte 1 115
+byte 1 10
+byte 1 0
+align 1
+LABELV $477
+byte 1 118
+byte 1 111
+byte 1 105
+byte 1 99
+byte 1 101
+byte 1 58
+byte 1 32
+byte 1 37
+byte 1 115
+byte 1 32
+byte 1 37
+byte 1 115
+byte 1 10
+byte 1 0
+align 1
+LABELV $467
+byte 1 37
+byte 1 115
+byte 1 32
+byte 1 37
+byte 1 100
+byte 1 32
+byte 1 37
+byte 1 100
+byte 1 32
+byte 1 37
+byte 1 100
+byte 1 32
+byte 1 37
+byte 1 115
+byte 1 0
+align 1
+LABELV $466
+byte 1 118
+byte 1 99
+byte 1 104
+byte 1 97
+byte 1 116
+byte 1 0
+align 1
+LABELV $465
+byte 1 118
+byte 1 116
+byte 1 101
+byte 1 108
+byte 1 108
+byte 1 0
+align 1
+LABELV $462
+byte 1 118
+byte 1 116
+byte 1 99
+byte 1 104
+byte 1 97
+byte 1 116
+byte 1 0
+align 1
+LABELV $445
+byte 1 116
+byte 1 101
+byte 1 108
+byte 1 108
+byte 1 58
+byte 1 32
+byte 1 37
+byte 1 115
+byte 1 32
+byte 1 116
+byte 1 111
+byte 1 32
+byte 1 37
+byte 1 115
+byte 1 58
+byte 1 32
+byte 1 37
+byte 1 115
+byte 1 10
+byte 1 0
+align 1
+LABELV $423
+byte 1 37
+byte 1 115
+byte 1 37
+byte 1 115
+byte 1 10
+byte 1 0
+align 1
+LABELV $417
+byte 1 25
+byte 1 91
+byte 1 37
+byte 1 115
+byte 1 37
+byte 1 99
+byte 1 37
+byte 1 99
+byte 1 25
+byte 1 93
+byte 1 25
+byte 1 58
+byte 1 32
+byte 1 0
+align 1
+LABELV $416
+byte 1 25
+byte 1 91
+byte 1 37
+byte 1 115
+byte 1 37
+byte 1 99
+byte 1 37
+byte 1 99
+byte 1 25
+byte 1 93
+byte 1 32
+byte 1 40
+byte 1 37
+byte 1 115
+byte 1 41
+byte 1 25
+byte 1 58
+byte 1 32
+byte 1 0
+align 1
+LABELV $411
+byte 1 25
+byte 1 40
+byte 1 37
+byte 1 115
+byte 1 37
+byte 1 99
+byte 1 37
+byte 1 99
+byte 1 25
+byte 1 41
+byte 1 25
+byte 1 58
+byte 1 32
+byte 1 0
+align 1
+LABELV $410
+byte 1 25
+byte 1 40
+byte 1 37
+byte 1 115
+byte 1 37
+byte 1 99
+byte 1 37
+byte 1 99
+byte 1 25
+byte 1 41
+byte 1 32
+byte 1 40
+byte 1 37
+byte 1 115
+byte 1 41
+byte 1 25
+byte 1 58
+byte 1 32
+byte 1 0
+align 1
+LABELV $407
+byte 1 115
+byte 1 97
+byte 1 121
+byte 1 116
+byte 1 101
+byte 1 97
+byte 1 109
+byte 1 58
+byte 1 32
+byte 1 37
+byte 1 115
+byte 1 58
+byte 1 32
+byte 1 37
+byte 1 115
+byte 1 10
+byte 1 0
+align 1
+LABELV $405
+byte 1 37
+byte 1 115
+byte 1 37
+byte 1 99
+byte 1 37
+byte 1 99
+byte 1 25
+byte 1 58
+byte 1 32
+byte 1 0
+align 1
+LABELV $404
+byte 1 115
+byte 1 97
+byte 1 121
+byte 1 58
+byte 1 32
+byte 1 37
+byte 1 115
+byte 1 58
+byte 1 32
+byte 1 37
+byte 1 115
+byte 1 10
+byte 1 0
+align 1
+LABELV $393
+byte 1 99
+byte 1 104
+byte 1 97
+byte 1 116
+byte 1 0
+align 1
+LABELV $392
+byte 1 116
+byte 1 99
+byte 1 104
+byte 1 97
+byte 1 116
+byte 1 0
+align 1
+LABELV $391
+byte 1 37
+byte 1 115
+byte 1 32
+byte 1 34
+byte 1 37
+byte 1 115
+byte 1 37
+byte 1 99
+byte 1 37
+byte 1 99
+byte 1 37
+byte 1 115
+byte 1 34
+byte 1 0
+align 1
+LABELV $363
+byte 1 67
+byte 1 109
+byte 1 100
+byte 1 95
+byte 1 70
+byte 1 111
+byte 1 108
+byte 1 108
+byte 1 111
+byte 1 119
+byte 1 67
+byte 1 121
+byte 1 99
+byte 1 108
+byte 1 101
+byte 1 95
+byte 1 102
+byte 1 58
+byte 1 32
+byte 1 98
+byte 1 97
+byte 1 100
+byte 1 32
+byte 1 100
+byte 1 105
+byte 1 114
+byte 1 32
+byte 1 37
+byte 1 105
+byte 1 0
+align 1
+LABELV $334
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 77
+byte 1 97
+byte 1 121
+byte 1 32
+byte 1 110
+byte 1 111
+byte 1 116
+byte 1 32
+byte 1 115
+byte 1 119
+byte 1 105
+byte 1 116
+byte 1 99
+byte 1 104
+byte 1 32
+byte 1 116
+byte 1 101
+byte 1 97
+byte 1 109
+byte 1 115
+byte 1 32
+byte 1 109
+byte 1 111
+byte 1 114
+byte 1 101
+byte 1 32
+byte 1 116
+byte 1 104
+byte 1 97
+byte 1 110
+byte 1 32
+byte 1 111
+byte 1 110
+byte 1 99
+byte 1 101
+byte 1 32
+byte 1 112
+byte 1 101
+byte 1 114
+byte 1 32
+byte 1 53
+byte 1 32
+byte 1 115
+byte 1 101
+byte 1 99
+byte 1 111
+byte 1 110
+byte 1 100
+byte 1 115
+byte 1 46
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $329
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 83
+byte 1 112
+byte 1 101
+byte 1 99
+byte 1 116
+byte 1 97
+byte 1 116
+byte 1 111
+byte 1 114
+byte 1 32
+byte 1 116
+byte 1 101
+byte 1 97
+byte 1 109
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $327
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 70
+byte 1 114
+byte 1 101
+byte 1 101
+byte 1 32
+byte 1 116
+byte 1 101
+byte 1 97
+byte 1 109
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $325
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 82
+byte 1 101
+byte 1 100
+byte 1 32
+byte 1 116
+byte 1 101
+byte 1 97
+byte 1 109
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $323
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 66
+byte 1 108
+byte 1 117
+byte 1 101
+byte 1 32
+byte 1 116
+byte 1 101
+byte 1 97
+byte 1 109
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $284
+byte 1 99
+byte 1 112
+byte 1 32
+byte 1 34
+byte 1 66
+byte 1 108
+byte 1 117
+byte 1 101
+byte 1 32
+byte 1 116
+byte 1 101
+byte 1 97
+byte 1 109
+byte 1 32
+byte 1 104
+byte 1 97
+byte 1 115
+byte 1 32
+byte 1 116
+byte 1 111
+byte 1 111
+byte 1 32
+byte 1 109
+byte 1 97
+byte 1 110
+byte 1 121
+byte 1 32
+byte 1 112
+byte 1 108
+byte 1 97
+byte 1 121
+byte 1 101
+byte 1 114
+byte 1 115
+byte 1 46
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $279
+byte 1 99
+byte 1 112
+byte 1 32
+byte 1 34
+byte 1 82
+byte 1 101
+byte 1 100
+byte 1 32
+byte 1 116
+byte 1 101
+byte 1 97
+byte 1 109
+byte 1 32
+byte 1 104
+byte 1 97
+byte 1 115
+byte 1 32
+byte 1 116
+byte 1 111
+byte 1 111
+byte 1 32
+byte 1 109
+byte 1 97
+byte 1 110
+byte 1 121
+byte 1 32
+byte 1 112
+byte 1 108
+byte 1 97
+byte 1 121
+byte 1 101
+byte 1 114
+byte 1 115
+byte 1 46
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $268
+byte 1 98
+byte 1 0
+align 1
+LABELV $267
+byte 1 98
+byte 1 108
+byte 1 117
+byte 1 101
+byte 1 0
+align 1
+LABELV $263
+byte 1 114
+byte 1 0
+align 1
+LABELV $262
+byte 1 114
+byte 1 101
+byte 1 100
+byte 1 0
+align 1
+LABELV $255
+byte 1 115
+byte 1 0
+align 1
+LABELV $254
+byte 1 115
+byte 1 112
+byte 1 101
+byte 1 99
+byte 1 116
+byte 1 97
+byte 1 116
+byte 1 111
+byte 1 114
+byte 1 0
+align 1
+LABELV $251
+byte 1 102
+byte 1 111
+byte 1 108
+byte 1 108
+byte 1 111
+byte 1 119
+byte 1 50
+byte 1 0
+align 1
+LABELV $248
+byte 1 102
+byte 1 111
+byte 1 108
+byte 1 108
+byte 1 111
+byte 1 119
+byte 1 49
+byte 1 0
+align 1
+LABELV $244
+byte 1 115
+byte 1 99
+byte 1 111
+byte 1 114
+byte 1 101
+byte 1 0
+align 1
+LABELV $243
+byte 1 115
+byte 1 99
+byte 1 111
+byte 1 114
+byte 1 101
+byte 1 98
+byte 1 111
+byte 1 97
+byte 1 114
+byte 1 100
+byte 1 0
+align 1
+LABELV $239
+byte 1 99
+byte 1 112
+byte 1 32
+byte 1 34
+byte 1 37
+byte 1 115
+byte 1 94
+byte 1 55
+byte 1 32
+byte 1 106
+byte 1 111
+byte 1 105
+byte 1 110
+byte 1 101
+byte 1 100
+byte 1 32
+byte 1 116
+byte 1 104
+byte 1 101
+byte 1 32
+byte 1 98
+byte 1 97
+byte 1 116
+byte 1 116
+byte 1 108
+byte 1 101
+byte 1 46
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $236
+byte 1 99
+byte 1 112
+byte 1 32
+byte 1 34
+byte 1 37
+byte 1 115
+byte 1 94
+byte 1 55
+byte 1 32
+byte 1 106
+byte 1 111
+byte 1 105
+byte 1 110
+byte 1 101
+byte 1 100
+byte 1 32
+byte 1 116
+byte 1 104
+byte 1 101
+byte 1 32
+byte 1 115
+byte 1 112
+byte 1 101
+byte 1 99
+byte 1 116
+byte 1 97
+byte 1 116
+byte 1 111
+byte 1 114
+byte 1 115
+byte 1 46
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $233
+byte 1 99
+byte 1 112
+byte 1 32
+byte 1 34
+byte 1 37
+byte 1 115
+byte 1 94
+byte 1 55
+byte 1 32
+byte 1 106
+byte 1 111
+byte 1 105
+byte 1 110
+byte 1 101
+byte 1 100
+byte 1 32
+byte 1 116
+byte 1 104
+byte 1 101
+byte 1 32
+byte 1 98
+byte 1 108
+byte 1 117
+byte 1 101
+byte 1 32
+byte 1 116
+byte 1 101
+byte 1 97
+byte 1 109
+byte 1 46
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $230
+byte 1 99
+byte 1 112
+byte 1 32
+byte 1 34
+byte 1 37
+byte 1 115
+byte 1 94
+byte 1 55
+byte 1 32
+byte 1 106
+byte 1 111
+byte 1 105
+byte 1 110
+byte 1 101
+byte 1 100
+byte 1 32
+byte 1 116
+byte 1 104
+byte 1 101
+byte 1 32
+byte 1 114
+byte 1 101
+byte 1 100
+byte 1 32
+byte 1 116
+byte 1 101
+byte 1 97
+byte 1 109
+byte 1 46
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $221
+byte 1 37
+byte 1 100
+byte 1 0
+align 1
+LABELV $220
+byte 1 116
+byte 1 101
+byte 1 97
+byte 1 109
+byte 1 116
+byte 1 97
+byte 1 115
+byte 1 107
+byte 1 0
+align 1
+LABELV $216
+byte 1 99
+byte 1 108
+byte 1 105
+byte 1 101
+byte 1 110
+byte 1 116
+byte 1 76
+byte 1 101
+byte 1 118
+byte 1 101
+byte 1 108
+byte 1 83
+byte 1 104
+byte 1 111
+byte 1 116
+byte 1 0
+align 1
+LABELV $215
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 77
+byte 1 117
+byte 1 115
+byte 1 116
+byte 1 32
+byte 1 98
+byte 1 101
+byte 1 32
+byte 1 105
+byte 1 110
+byte 1 32
+byte 1 103
+byte 1 95
+byte 1 103
+byte 1 97
+byte 1 109
+byte 1 101
+byte 1 116
+byte 1 121
+byte 1 112
+byte 1 101
+byte 1 32
+byte 1 48
+byte 1 32
+byte 1 102
+byte 1 111
+byte 1 114
+byte 1 32
+byte 1 108
+byte 1 101
+byte 1 118
+byte 1 101
+byte 1 108
+byte 1 115
+byte 1 104
+byte 1 111
+byte 1 116
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $205
+byte 1 110
+byte 1 111
+byte 1 99
+byte 1 108
+byte 1 105
+byte 1 112
+byte 1 32
+byte 1 79
+byte 1 78
+byte 1 10
+byte 1 0
+align 1
+LABELV $204
+byte 1 110
+byte 1 111
+byte 1 99
+byte 1 108
+byte 1 105
+byte 1 112
+byte 1 32
+byte 1 79
+byte 1 70
+byte 1 70
+byte 1 10
+byte 1 0
+align 1
+LABELV $198
+byte 1 110
+byte 1 111
+byte 1 116
+byte 1 97
+byte 1 114
+byte 1 103
+byte 1 101
+byte 1 116
+byte 1 32
+byte 1 79
+byte 1 78
+byte 1 10
+byte 1 0
+align 1
+LABELV $197
+byte 1 110
+byte 1 111
+byte 1 116
+byte 1 97
+byte 1 114
+byte 1 103
+byte 1 101
+byte 1 116
+byte 1 32
+byte 1 79
+byte 1 70
+byte 1 70
+byte 1 10
+byte 1 0
+align 1
+LABELV $191
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 37
+byte 1 115
+byte 1 34
+byte 1 0
+align 1
+LABELV $190
+byte 1 103
+byte 1 111
+byte 1 100
+byte 1 109
+byte 1 111
+byte 1 100
+byte 1 101
+byte 1 32
+byte 1 79
+byte 1 78
+byte 1 10
+byte 1 0
+align 1
+LABELV $189
+byte 1 103
+byte 1 111
+byte 1 100
+byte 1 109
+byte 1 111
+byte 1 100
+byte 1 101
+byte 1 32
+byte 1 79
+byte 1 70
+byte 1 70
+byte 1 10
+byte 1 0
+align 1
+LABELV $177
+byte 1 97
+byte 1 115
+byte 1 115
+byte 1 105
+byte 1 115
+byte 1 116
+byte 1 0
+align 1
+LABELV $174
+byte 1 100
+byte 1 101
+byte 1 102
+byte 1 101
+byte 1 110
+byte 1 100
+byte 1 0
+align 1
+LABELV $171
+byte 1 103
+byte 1 97
+byte 1 117
+byte 1 110
+byte 1 116
+byte 1 108
+byte 1 101
+byte 1 116
+byte 1 97
+byte 1 119
+byte 1 97
+byte 1 114
+byte 1 100
+byte 1 0
+align 1
+LABELV $168
+byte 1 105
+byte 1 109
+byte 1 112
+byte 1 114
+byte 1 101
+byte 1 115
+byte 1 115
+byte 1 105
+byte 1 118
+byte 1 101
+byte 1 0
+align 1
+LABELV $165
+byte 1 101
+byte 1 120
+byte 1 99
+byte 1 101
+byte 1 108
+byte 1 108
+byte 1 101
+byte 1 110
+byte 1 116
+byte 1 0
+align 1
+LABELV $159
+byte 1 97
+byte 1 114
+byte 1 109
+byte 1 111
+byte 1 114
+byte 1 0
+align 1
+LABELV $149
+byte 1 97
+byte 1 109
+byte 1 109
+byte 1 111
+byte 1 0
+align 1
+LABELV $143
+byte 1 119
+byte 1 101
+byte 1 97
+byte 1 112
+byte 1 111
+byte 1 110
+byte 1 115
+byte 1 0
+align 1
+LABELV $137
+byte 1 104
+byte 1 101
+byte 1 97
+byte 1 108
+byte 1 116
+byte 1 104
+byte 1 0
+align 1
+LABELV $134
+byte 1 97
+byte 1 108
+byte 1 108
+byte 1 0
+align 1
+LABELV $128
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 85
+byte 1 115
+byte 1 101
+byte 1 114
+byte 1 32
+byte 1 37
+byte 1 115
+byte 1 32
+byte 1 105
+byte 1 115
+byte 1 32
+byte 1 110
+byte 1 111
+byte 1 116
+byte 1 32
+byte 1 111
+byte 1 110
+byte 1 32
+byte 1 116
+byte 1 104
+byte 1 101
+byte 1 32
+byte 1 115
+byte 1 101
+byte 1 114
+byte 1 118
+byte 1 101
+byte 1 114
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $118
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 67
+byte 1 108
+byte 1 105
+byte 1 101
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 37
+byte 1 105
+byte 1 32
+byte 1 105
+byte 1 115
+byte 1 32
+byte 1 110
+byte 1 111
+byte 1 116
+byte 1 32
+byte 1 97
+byte 1 99
+byte 1 116
+byte 1 105
+byte 1 118
+byte 1 101
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $115
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 66
+byte 1 97
+byte 1 100
+byte 1 32
+byte 1 99
+byte 1 108
+byte 1 105
+byte 1 101
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 115
+byte 1 108
+byte 1 111
+byte 1 116
+byte 1 58
+byte 1 32
+byte 1 37
+byte 1 105
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $89
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 89
+byte 1 111
+byte 1 117
+byte 1 32
+byte 1 109
+byte 1 117
+byte 1 115
+byte 1 116
+byte 1 32
+byte 1 98
+byte 1 101
+byte 1 32
+byte 1 97
+byte 1 108
+byte 1 105
+byte 1 118
+byte 1 101
+byte 1 32
+byte 1 116
+byte 1 111
+byte 1 32
+byte 1 117
+byte 1 115
+byte 1 101
+byte 1 32
+byte 1 116
+byte 1 104
+byte 1 105
+byte 1 115
+byte 1 32
+byte 1 99
+byte 1 111
+byte 1 109
+byte 1 109
+byte 1 97
+byte 1 110
+byte 1 100
+byte 1 46
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $86
+byte 1 112
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 116
+byte 1 32
+byte 1 34
+byte 1 67
+byte 1 104
+byte 1 101
+byte 1 97
+byte 1 116
+byte 1 115
+byte 1 32
+byte 1 97
+byte 1 114
+byte 1 101
+byte 1 32
+byte 1 110
+byte 1 111
+byte 1 116
+byte 1 32
+byte 1 101
+byte 1 110
+byte 1 97
+byte 1 98
+byte 1 108
+byte 1 101
+byte 1 100
+byte 1 32
+byte 1 111
+byte 1 110
+byte 1 32
+byte 1 116
+byte 1 104
+byte 1 105
+byte 1 115
+byte 1 32
+byte 1 115
+byte 1 101
+byte 1 114
+byte 1 118
+byte 1 101
+byte 1 114
+byte 1 46
+byte 1 10
+byte 1 34
+byte 1 0
+align 1
+LABELV $76
+byte 1 115
+byte 1 99
+byte 1 111
+byte 1 114
+byte 1 101
+byte 1 115
+byte 1 32
+byte 1 37
+byte 1 105
+byte 1 32
+byte 1 37
+byte 1 105
+byte 1 32
+byte 1 37
+byte 1 105
+byte 1 37
+byte 1 115
+byte 1 0
+align 1
+LABELV $69
+byte 1 32
+byte 1 37
+byte 1 105
+byte 1 32
+byte 1 37
+byte 1 105
+byte 1 32
+byte 1 37
+byte 1 105
+byte 1 32
+byte 1 37
+byte 1 105
+byte 1 32
+byte 1 37
+byte 1 105
+byte 1 32
+byte 1 37
+byte 1 105
+byte 1 32
+byte 1 37
+byte 1 105
+byte 1 32
+byte 1 37
+byte 1 105
+byte 1 32
+byte 1 37
+byte 1 105
+byte 1 32
+byte 1 37
+byte 1 105
+byte 1 32
+byte 1 37
+byte 1 105
+byte 1 32
+byte 1 37
+byte 1 105
+byte 1 32
+byte 1 37
+byte 1 105
+byte 1 32
+byte 1 37
+byte 1 105
+byte 1 0
