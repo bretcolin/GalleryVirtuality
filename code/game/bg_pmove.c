@@ -628,7 +628,7 @@ static void PM_AirMove( void ) {
 	//ZOID:  If we are on the grapple, try stair-stepping
 	//this allows a player to use the grapple to pull himself
 	//over a ledge
-	if (pm->ps->pm_flags & PMF_GRAPPLE_PULL)
+	if (pm->ps->pm_flags & PMF_HAND_PULL)
 		PM_StepSlideMove ( qtrue );
 	else
 		PM_SlideMove ( qtrue );
@@ -639,16 +639,16 @@ static void PM_AirMove( void ) {
 
 /*
 ===================
-PM_GrappleMove
+PM_HandMove
 
 ===================
 */
-static void PM_GrappleMove( void ) {
+static void PM_HandMove( void ) {
 	vec3_t vel, v;
 	float vlen;
 
 	VectorScale(pml.forward, -16, v);
-	VectorAdd(pm->ps->grapplePoint, v, v);
+	VectorAdd(pm->ps->handPoint, v, v);
 	VectorSubtract(v, pm->ps->origin, vel);
 	vlen = VectorLength(vel);
 	VectorNormalize( vel );
@@ -1447,7 +1447,7 @@ PM_BeginWeaponChange
 ===============
 */
 static void PM_BeginWeaponChange( int weapon ) {
-	if ( weapon <= WP_NONE || weapon >= WP_NUM_WEAPONS ) {
+	if ( weapon <= WP_HAND || weapon >= WP_NUM_WEAPONS ) {
 		return;
 	}
 
@@ -1475,18 +1475,18 @@ static void PM_FinishWeaponChange( void ) {
 	int		weapon;
 
 	weapon = pm->cmd.weapon;
-	if ( weapon < WP_NONE || weapon >= WP_NUM_WEAPONS ) {
-		weapon = WP_NONE;
+	if ( weapon < WP_HAND || weapon >= WP_NUM_WEAPONS ) {
+		weapon = WP_HAND;
 	}
 
 	if ( !( pm->ps->stats[STAT_WEAPONS] & ( 1 << weapon ) ) ) {
-		weapon = WP_NONE;
+		weapon = WP_HAND;
 	}
 
 	pm->ps->weapon = weapon;
 	pm->ps->weaponstate = WEAPON_RAISING;
 	pm->ps->weaponTime += 250;
-	PM_StartTorsoAnim( TORSO_RAISE );
+	PM_StartTorsoAnim( TORSO_STAND );
 }
 
 
@@ -1498,7 +1498,7 @@ PM_TorsoAnimation
 */
 static void PM_TorsoAnimation( void ) {
 	if ( pm->ps->weaponstate == WEAPON_READY ) {
-		if ( pm->ps->weapon == WP_GAUNTLET ) {
+		if ( pm->ps->weapon == WP_HAND ) {
 			PM_ContinueTorsoAnim( TORSO_STAND2 );
 		} else {
 			PM_ContinueTorsoAnim( TORSO_STAND );
@@ -1530,7 +1530,7 @@ static void PM_Weapon( void ) {
 
 	// check for dead player
 	if ( pm->ps->stats[STAT_HEALTH] <= 0 ) {
-		pm->ps->weapon = WP_NONE;
+		pm->ps->weapon = WP_HAND;
 		return;
 	}
 
@@ -1578,7 +1578,7 @@ static void PM_Weapon( void ) {
 
 	if ( pm->ps->weaponstate == WEAPON_RAISING ) {
 		pm->ps->weaponstate = WEAPON_READY;
-		if ( pm->ps->weapon == WP_GAUNTLET ) {
+		if ( pm->ps->weapon == WP_HAND ) {
 			PM_StartTorsoAnim( TORSO_STAND2 );
 		} else {
 			PM_StartTorsoAnim( TORSO_STAND );
@@ -1594,7 +1594,7 @@ static void PM_Weapon( void ) {
 	}
 
 	// start the animation even if out of ammo
-	if ( pm->ps->weapon == WP_GAUNTLET ) {
+	if ( pm->ps->weapon == WP_HAND) {
 		// the guantlet only "fires" when it actually hits something
 		if ( !pm->gauntletHit ) {
 			pm->ps->weaponTime = 0;
@@ -1625,47 +1625,9 @@ static void PM_Weapon( void ) {
 
 	switch( pm->ps->weapon ) {
 	default:
-	case WP_GAUNTLET:
+	case WP_HAND:
 		addTime = 400;
 		break;
-	case WP_LIGHTNING:
-		addTime = 50;
-		break;
-	case WP_SHOTGUN:
-		addTime = 1000;
-		break;
-	case WP_MACHINEGUN:
-		addTime = 100;
-		break;
-	case WP_GRENADE_LAUNCHER:
-		addTime = 800;
-		break;
-	case WP_ROCKET_LAUNCHER:
-		addTime = 800;
-		break;
-	case WP_PLASMAGUN:
-		addTime = 100;
-		break;
-	case WP_RAILGUN:
-		addTime = 1500;
-		break;
-	case WP_BFG:
-		addTime = 200;
-		break;
-	case WP_GRAPPLING_HOOK:
-		addTime = 400;
-		break;
-#ifdef MISSIONPACK
-	case WP_NAILGUN:
-		addTime = 1000;
-		break;
-	case WP_PROX_LAUNCHER:
-		addTime = 800;
-		break;
-	case WP_CHAINGUN:
-		addTime = 30;
-		break;
-#endif
 	}
 
 #ifdef MISSIONPACK
@@ -1956,8 +1918,8 @@ void PmoveSingle (pmove_t *pmove) {
 	if ( pm->ps->powerups[PW_FLIGHT] ) {
 		// flight powerup doesn't allow jump and has different friction
 		PM_FlyMove();
-	} else if (pm->ps->pm_flags & PMF_GRAPPLE_PULL) {
-		PM_GrappleMove();
+	} else if (pm->ps->pm_flags & PMF_HAND_PULL) {
+		PM_HandMove();
 		// We can wiggle a bit
 		PM_AirMove();
 	} else if (pm->ps->pm_flags & PMF_TIME_WATERJUMP) {

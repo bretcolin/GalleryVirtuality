@@ -99,7 +99,7 @@
 //tendency to jump using a weapon
 #define CHARACTERISTIC_WEAPONJUMPING				38	//float [0, 1]
 //tendency to use the grapple hook when available
-#define CHARACTERISTIC_GRAPPLE_USER					39	//float [0, 1]	//use this!!
+#define CHARACTERISTIC_HAND_USER					39	//float [0, 1]	//use this!!
 //========================================================
 //goal
 //========================================================

@@ -6,7 +6,7 @@
 // q_shared.h -- included first by ALL program modules.
 // A user mod should never modify this file
 
-#define	Q3_VERSION		"Gallery v0.1.0"
+#define	G1_VERSION		"Gallery v0.1.0"
 // 1.32 released 7-10-2002
 
 #define MAX_TEAMNAME 32
@@ -1149,7 +1149,7 @@ typedef struct playerState_s {
 								// when at rest, the value will remain unchanged
 								// used to twist the legs during strafing
 
-	vec3_t		grapplePoint;	// location of grapple to pull towards if PMF_GRAPPLE_PULL
+	vec3_t		handPoint;	// location of grapple to pull towards if PMF_GRAPPLE_PULL
 
 	int			eFlags;			// copied to entityState_t->eFlags
 

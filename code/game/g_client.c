@@ -966,6 +966,7 @@ char *ClientConnect( int clientNum, qboolean firstTime, qboolean isBot ) {
 	return NULL;
 }
 
+
 /*
 ===========
 ClientBegin
@@ -1167,21 +1168,6 @@ void ClientSpawn(gentity_t *ent) {
 	VectorCopy (playerMaxs, ent->r.maxs);
 
 	client->ps.clientNum = index;
-#ifndef SINGLEPLAYER // give player no weapons to start with
-
-	client->ps.stats[STAT_WEAPONS] = ( 1 << WP_MACHINEGUN );
-	if ( g_gametype.integer == GT_TEAM ) {
-		client->ps.ammo[WP_MACHINEGUN] = 50;
-	} else {
-		client->ps.ammo[WP_MACHINEGUN] = 100;
-	}
-
-	client->ps.stats[STAT_WEAPONS] |= ( 1 << WP_GAUNTLET );
-	client->ps.ammo[WP_GAUNTLET] = -1;
-#else
-	client->ps.stats[STAT_WEAPONS] = 0;
-#endif
-	client->ps.ammo[WP_GRAPPLING_HOOK] = -1;
 
 	// health will count down towards max_health
 #ifndef SINGLEPLAYER // no health countdown
@@ -1207,10 +1193,10 @@ void ClientSpawn(gentity_t *ent) {
 
 		// force the base weapon up
 #ifndef SINGLEPLAYER // no ready weapon at start
-		client->ps.weapon = WP_MACHINEGUN;
+		client->ps.weapon = WP_NONE;
 		client->ps.weaponstate = WEAPON_READY;
 #else
-		client->ps.weapon = WP_NONE;
+		client->ps.weapon = WP_HAND;
 		client->ps.weaponstate = WEAPON_READY;
 #endif
 

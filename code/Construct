@@ -74,28 +74,28 @@ if ($DO_WIN32 eq 1)
 
 	$config = $ARGV[0];
 
-	# TODO: option to override $Q3BASE from command line
-	$Q3BASE = $ENV{Q3BASE}; # FIXME: this doesn't play nice with cygwin path syntax
-	print("\$Q3BASE: $Q3BASE\n");	
+	# TODO: option to override $G1BASE from command line
+	$G1BASE = $ENV{G1BASE}; # FIXME: this doesn't play nice with cygwin path syntax
+	print("\$G1BASE: $G1BASE\n");	
 
 	if($config eq 'debug')
 	{
 	  $DIR = 'Debug';
-		system("cp -v $DIR/quake3.exe \$Q3BASE");
-		system("cp -v $DIR/cgamex86.dll $DIR/qagamex86.dll $DIR/uix86.dll \$Q3BASE/baseq3");
+		system("cp -v $DIR/gallery.exe \$G1BASE");
+		system("cp -v $DIR/cgamex86.dll $DIR/qagamex86.dll $DIR/uix86.dll \$G1BASE/baseg1");
 	}
 	elsif ($config eq 'debug-TA')
 	{
 		$DIR = 'Debug_TA';
-		system("cp -v $DIR/quake3.exe \$Q3BASE");
-		system("cp -v $DIR/cgamex86.dll $DIR/qagamex86.dll $DIR/uix86.dll \$Q3BASE/missionpack");
+		system("cp -v $DIR/gallery.exe \$G1BASE");
+		system("cp -v $DIR/cgamex86.dll $DIR/qagamex86.dll $DIR/uix86.dll \$G1BASE/missionpack");
 	}
 	elsif($config eq 'release-TA')
 	{
 		$DIR = 'Release_TA';
 		# spank!
 		system("./spank.sh");
-		system("cp -v $DIR/quake3.exe \$Q3BASE");
+		system("cp -v $DIR/gallery.exe \$G1BASE");
 	}
 	else
 	{
@@ -105,8 +105,8 @@ if ($DO_WIN32 eq 1)
 
 	# copy selected stuff to shared media
 	$DESTDIR='/cygdrive/e/incoming/Id/q3-1.32';
-	system("cp -v $DIR/quake3.exe $DESTDIR");
-	system("cp -v /cygdrive/e/Q3SetupMedia/quake3/CHANGES-1.32.txt $DESTDIR");
+	system("cp -v $DIR/gallery.exe $DESTDIR");
+	system("cp -v /cygdrive/e/G1SetupMedia/gallery1/CHANGES-1.32.txt $DESTDIR");
 
 	exit;	
 }
@@ -212,14 +212,14 @@ if (($do_setup eq 1) && ($config ne 'release'))
 # sdk
 if ($do_sdk eq 1)
 {
-  # extract the Q3 version from q_shared.h
-  $line = `cat game/q_shared.h | grep Q3_VERSION`;
+  # extract the G1 version from q_shared.h
+  $line = `cat game/q_shared.h | grep G1_VERSION`;
   chomp $line;
   $line =~ s/.*Q3\ (.*)\"/$1/;
   $Q3_VER = $line;
-  $SDK_NAME = "linuxq3a-sdk-$Q3_VER.x86.run";
+  $SDK_NAME = "linuxq3a-sdk-$G1_VER.x86.run";
   Default "unix/$SDK_NAME";
-  Export qw( SDK_NAME Q3_VER );
+  Export qw( SDK_NAME G1_VER );
   Build 'unix/Conscript-sdk';
   return;
 }
@@ -316,10 +316,10 @@ if ($do_bspc eq 1)
 	Build $BUILD_DIR . '/bspc/Conscript';
 }
 
-# build vanilla Q3
-$TARGET_DIR='Q3';
+# build vanilla G1
+$TARGET_DIR='G1';
 
-$INSTALL_DIR = $INSTALL_BASEDIR . '/baseq3';
+$INSTALL_DIR = $INSTALL_BASEDIR . '/baseg1';
 
 $BUILD_DIR = $CONFIG_DIR . '/' . $TARGET_DIR . '/cgame';
 Link $BUILD_DIR => '.';

@@ -7173,7 +7173,7 @@ ASGNI4
 LABELV $429
 line 1883
 ;1883:		if ( g_entities[i].inuse ) {
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 0
 INDIRI4
 MULI4
@@ -7185,7 +7185,7 @@ EQI4 $433
 line 1885
 ;1884:			// if this player is not a bot
 ;1885:			if ( !(g_entities[i].r.svFlags & SVF_BOT) ) {
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 0
 INDIRI4
 MULI4
@@ -8676,7 +8676,7 @@ import TeleportPlayer
 import trigger_teleporter_touch
 import Touch_DoorTrigger
 import G_RunMover
-import fire_grapple
+import fire_hand
 import fire_bfg
 import fire_rocket
 import fire_grenade

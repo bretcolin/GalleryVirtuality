@@ -1,6 +1,6 @@
  GalleryVirtuality
 
- Timestamp is 54b9fe5e (Sat Jan 17 00:17:02 2015)
+ Timestamp is 54ce9812 (Sun Feb 01 15:18:10 2015)
 
  Preferred load address is 00400000
 
@@ -2196,8 +2196,8 @@
  0001:000aa245       _atol                      004ab245 f   LIBC:atox.obj
  0001:000aa29d       _atoi                      004ab29d f   LIBC:atox.obj
  0001:000aa2a2       __atoi64                   004ab2a2 f   LIBC:atox.obj
- 0001:000aa320       __alloca_probe             004ab320     LIBC:chkstk.obj
  0001:000aa320       __chkstk                   004ab320 f   LIBC:chkstk.obj
+ 0001:000aa320       __alloca_probe             004ab320     LIBC:chkstk.obj
  0001:000aa360       _ceil                      004ab360 f   LIBC:ceil_pentium4.obj
  0001:000aa3a0       __ceil_pentium4            004ab3a0 f   LIBC:ceil_pentium4.obj
  0001:000aa480       _floor                     004ab480 f   LIBC:floor_pentium4.obj
@@ -2514,8 +2514,8 @@
  0001:000b7337       ___STRINGTOLD              004b8337 f   LIBC:strgtold.obj
  0001:000b7383       __lseeki64                 004b8383 f   LIBC:lseeki64.obj
  0001:000b7422       __sopen                    004b8422 f   LIBC:open.obj
- 0001:000b76f2       __open                     004b86f2 f   LIBC:open.obj
  0001:000b76f2       _open                      004b86f2 f   LIBC:open.obj
+ 0001:000b76f2       __open                     004b86f2 f   LIBC:open.obj
  0001:000b7709       _realloc                   004b8709 f   LIBC:realloc.obj
  0001:000b786b       __msize                    004b886b f   LIBC:msize.obj
  0001:000b78a3       ___security_init_cookie    004b88a3 f   LIBC:seccinit.obj
@@ -3684,7 +3684,7 @@
  0002:00003dbc       ??_C@_0BM@JMOBJEDO@Error?5during?5initialization?$AA@ 004bfdbc     common.obj
  0002:00003dd8       ??_C@_09GPBPOFIE@?$CFs?5?$CFs?5?$CFs?6?$AA@ 004bfdd8     common.obj
  0002:00003de4       ??_C@_07CECGJJJI@win?9x86?$AA@ 004bfde4     common.obj
- 0002:00003dec       ??_C@_0M@NKGAKMG@Jan?517?52015?$AA@ 004bfdec     common.obj
+ 0002:00003dec       ??_C@_0M@HBIINAME@Feb?5?51?52015?$AA@ 004bfdec     common.obj
  0002:00003df8       ??_C@_0CB@HFEJCBKA@Com_EventLoop?3?5bad?5event?5type?5?$CFi@ 004bfdf8     common.obj
  0002:00003e1c       ??_C@_0CA@ENDIPNNF@Com_EventLoop?3?5oversize?5packet?6?$AA@ 004bfe1c     common.obj
  0002:00003e3c       ??_C@_0CC@HBLLGKBA@?$CF4i?5traces?5?5?$CI?$CFib?5?$CFip?$CJ?5?$CF4i?5points@ 004bfe3c     common.obj
@@ -3832,9 +3832,9 @@
  0002:000049bc       ??_C@_0BF@BLDAMEAN@Invalid?5game?5folder?6?$AA@ 004c09bc     files.obj
  0002:000049d4       ??_C@_0O@KIDPHDKB@fs_gamedirvar?$AA@ 004c09d4     files.obj
  0002:000049e4       ??_C@_0M@LANFJBCD@jumppad_ent?$AA@ 004c09e4     msg.obj
- 0002:000049f0       ??_C@_0BA@PEKHLKLH@grapplePoint?$FL2?$FN?$AA@ 004c09f0     msg.obj
- 0002:00004a00       ??_C@_0BA@PGOBAEOO@grapplePoint?$FL1?$FN?$AA@ 004c0a00     msg.obj
- 0002:00004a10       ??_C@_0BA@PHCDGONJ@grapplePoint?$FL0?$FN?$AA@ 004c0a10     msg.obj
+ 0002:000049f0       ??_C@_0N@KCMPMBCL@handPoint?$FL2?$FN?$AA@ 004c09f0     msg.obj
+ 0002:00004a00       ??_C@_0N@KAIJHPHC@handPoint?$FL1?$FN?$AA@ 004c0a00     msg.obj
+ 0002:00004a10       ??_C@_0N@KBELBFEF@handPoint?$FL0?$FN?$AA@ 004c0a10     msg.obj
  0002:00004a20       ??_C@_0O@DMGGNGOM@viewangles?$FL2?$FN?$AA@ 004c0a20     msg.obj
  0002:00004a30       ??_C@_0O@FIJGMFDG@eventParms?$FL1?$FN?$AA@ 004c0a30     msg.obj
  0002:00004a40       ??_C@_0O@FJFEKPAB@eventParms?$FL0?$FN?$AA@ 004c0a40     msg.obj
@@ -4596,7 +4596,7 @@
  0002:0000899c       ??_C@_0BC@PEIHHIKI@bin?2x86?2glibc?92?41?$AA@ 004c499c     win_main.obj
  0002:000089b0       ??_C@_01KDCPPGHE@r?$AA@    004c49b0     win_main.obj
  0002:000089b4       ??_C@_0M@MHIGGACL@gallery?4exe?$AA@ 004c49b4     win_main.obj
- 0002:000089c0       ??_C@_07OLLGOCLI@gallery?$AA@ 004c49c0     win_main.obj
+ 0002:000089c0       ??_C@_06IEFNOGIL@baseg1?$AA@ 004c49c0     win_main.obj
  0002:000089c8       ??_C@_03HBAHNJNM@?6?$AN?$AI?$AA@ 004c49c8     win_main.obj
  0002:000089cc       ??_C@_0CB@NFLEJIB@Sys_UnloadDll?5FreeLibrary?5failed@ 004c49cc     win_main.obj
  0002:000089f0       ??_C@_06MGMAGDAM@vmMain?$AA@ 004c49f0     win_main.obj

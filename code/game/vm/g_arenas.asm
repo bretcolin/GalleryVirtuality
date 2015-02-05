@@ -52,7 +52,7 @@ LABELV $53
 line 36
 ;36:		player = &g_entities[i];
 ADDRLP4 40
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 0
 INDIRI4
 MULI4
@@ -629,7 +629,7 @@ ADDRGP4 g_entities
 CVPU4 4
 SUBU4
 CVUI4 4
-CNSTI4 808
+CNSTI4 816
 DIVI4
 ASGNI4
 line 138
@@ -698,27 +698,27 @@ ADDP4
 CNSTI4 11
 ASGNI4
 line 146
-;146:	if( body->s.weapon == WP_NONE ) {
+;146:	if( body->s.weapon == WP_HAND ) {
 ADDRLP4 0
 INDIRP4
 CNSTI4 192
 ADDP4
 INDIRI4
-CNSTI4 0
+CNSTI4 1
 NEI4 $91
 line 147
-;147:		body->s.weapon = WP_MACHINEGUN;
+;147:		body->s.weapon = WP_HAND;
 ADDRLP4 0
 INDIRP4
 CNSTI4 192
 ADDP4
-CNSTI4 2
+CNSTI4 1
 ASGNI4
 line 148
 ;148:	}
 LABELV $91
 line 149
-;149:	if( body->s.weapon == WP_GAUNTLET) {
+;149:	if( body->s.weapon == WP_HAND) {
 ADDRLP4 0
 INDIRP4
 CNSTI4 192
@@ -1138,7 +1138,7 @@ line 183
 line 186
 ;184:	int		anim;
 ;185:
-;186:	if( player->s.weapon == WP_GAUNTLET) {
+;186:	if( player->s.weapon == WP_HAND) {
 ADDRFP4 0
 INDIRP4
 CNSTI4 192
@@ -1257,7 +1257,7 @@ line 207
 ADDRFP4 0
 INDIRP4
 ARGP4
-CNSTI4 76
+CNSTI4 69
 ARGI4
 CNSTI4 0
 ARGI4
@@ -2121,7 +2121,7 @@ ADDRGP4 g_entities
 CVPU4 4
 SUBU4
 CVUI4 4
-CNSTI4 808
+CNSTI4 816
 DIVI4
 ASGNI4
 line 284
@@ -2385,7 +2385,7 @@ INDIRP4
 ARGP4
 ADDRGP4 offsetFirst
 ARGP4
-CNSTI4 808
+CNSTI4 816
 ADDRGP4 level+84
 INDIRI4
 MULI4
@@ -2457,7 +2457,7 @@ INDIRP4
 ARGP4
 ADDRGP4 offsetSecond
 ARGP4
-CNSTI4 808
+CNSTI4 816
 ADDRGP4 level+84+4
 INDIRI4
 MULI4
@@ -2516,7 +2516,7 @@ INDIRP4
 ARGP4
 ADDRGP4 offsetThird
 ARGP4
-CNSTI4 808
+CNSTI4 816
 ADDRGP4 level+84+8
 INDIRI4
 MULI4
@@ -2961,7 +2961,7 @@ import TeleportPlayer
 import trigger_teleporter_touch
 import Touch_DoorTrigger
 import G_RunMover
-import fire_grapple
+import fire_hand
 import fire_bfg
 import fire_rocket
 import fire_grenade

@@ -400,7 +400,7 @@ ADDRGP4 g_entities
 CVPU4 4
 SUBU4
 CVUI4 4
-CNSTI4 808
+CNSTI4 816
 DIVI4
 ASGNI4
 LABELV $104
@@ -969,7 +969,7 @@ line 218
 ;218:	if( dropped->item->giTag == PW_REDFLAG ) {
 ADDRFP4 0
 INDIRP4
-CNSTI4 804
+CNSTI4 812
 ADDP4
 INDIRP4
 CNSTI4 40
@@ -995,7 +995,7 @@ line 221
 ;221:	else if( dropped->item->giTag == PW_BLUEFLAG ) {
 ADDRFP4 0
 INDIRP4
-CNSTI4 804
+CNSTI4 812
 ADDP4
 INDIRP4
 CNSTI4 40
@@ -1021,7 +1021,7 @@ line 224
 ;224:	else if( dropped->item->giTag == PW_NEUTRALFLAG ) {
 ADDRFP4 0
 INDIRP4
-CNSTI4 804
+CNSTI4 812
 ADDP4
 INDIRP4
 CNSTI4 40
@@ -1069,7 +1069,7 @@ LABELV $187
 line 239
 ;239:		ent = &g_entities[i];
 ADDRLP4 0
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 4
 INDIRI4
 MULI4
@@ -1463,7 +1463,7 @@ LABELV $214
 line 311
 ;311:			ent = g_entities + i;
 ADDRLP4 12
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 0
 INDIRI4
 MULI4
@@ -1627,7 +1627,7 @@ LABELV $225
 line 329
 ;329:			ent = g_entities + i;
 ADDRLP4 12
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 0
 INDIRI4
 MULI4
@@ -2126,7 +2126,7 @@ LABELV $247
 line 410
 ;410:		carrier = g_entities + i;
 ADDRLP4 4
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 0
 INDIRI4
 MULI4
@@ -3833,7 +3833,7 @@ line 637
 ;637:	if( ent->item->giTag == PW_REDFLAG ) {
 ADDRFP4 0
 INDIRP4
-CNSTI4 804
+CNSTI4 812
 ADDP4
 INDIRP4
 CNSTI4 40
@@ -3857,7 +3857,7 @@ line 640
 ;640:	else if( ent->item->giTag == PW_BLUEFLAG ) {
 ADDRFP4 0
 INDIRP4
-CNSTI4 804
+CNSTI4 812
 ADDP4
 INDIRP4
 CNSTI4 40
@@ -3881,7 +3881,7 @@ line 643
 ;643:	else if( ent->item->giTag == PW_NEUTRALFLAG ) {
 ADDRFP4 0
 INDIRP4
-CNSTI4 804
+CNSTI4 812
 ADDP4
 INDIRP4
 CNSTI4 40
@@ -3929,7 +3929,7 @@ line 660
 ;660:	if( ent->item->giTag == PW_REDFLAG ) {
 ADDRFP4 0
 INDIRP4
-CNSTI4 804
+CNSTI4 812
 ADDP4
 INDIRP4
 CNSTI4 40
@@ -3951,7 +3951,7 @@ line 663
 ;663:	else if( ent->item->giTag == PW_BLUEFLAG ) {
 ADDRFP4 0
 INDIRP4
-CNSTI4 804
+CNSTI4 812
 ADDP4
 INDIRP4
 CNSTI4 40
@@ -3973,7 +3973,7 @@ line 666
 ;666:	else if( ent->item->giTag == PW_NEUTRALFLAG ) {
 ADDRFP4 0
 INDIRP4
-CNSTI4 804
+CNSTI4 812
 ADDP4
 INDIRP4
 CNSTI4 40
@@ -4450,7 +4450,7 @@ LABELV $381
 line 751
 ;751:		player = &g_entities[i];
 ADDRLP4 0
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 4
 INDIRI4
 MULI4
@@ -5956,7 +5956,7 @@ LABELV $471
 line 1062
 ;1062:		player = g_entities + level.sortedClients[i];
 ADDRLP4 0
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 4
 INDIRI4
 CNSTI4 2
@@ -6109,7 +6109,7 @@ LABELV $481
 line 1077
 ;1077:		player = g_entities + i;
 ADDRLP4 0
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 4
 INDIRI4
 MULI4
@@ -6351,7 +6351,7 @@ ADDRGP4 g_entities
 CVPU4 4
 SUBU4
 CVUI4 4
-CNSTI4 808
+CNSTI4 816
 DIVI4
 ARGI4
 ADDRLP4 9380
@@ -6400,7 +6400,7 @@ LABELV $504
 line 1112
 ;1112:			ent = g_entities + i;
 ADDRLP4 0
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 4
 INDIRI4
 MULI4
@@ -6537,7 +6537,7 @@ LABELV $516
 line 1128
 ;1128:			ent = g_entities + i;
 ADDRLP4 0
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 4
 INDIRI4
 MULI4
@@ -6998,7 +6998,7 @@ import TeleportPlayer
 import trigger_teleporter_touch
 import Touch_DoorTrigger
 import G_RunMover
-import fire_grapple
+import fire_hand
 import fire_bfg
 import fire_rocket
 import fire_grenade

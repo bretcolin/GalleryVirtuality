@@ -1328,7 +1328,7 @@ line 167
 ;167:		{
 line 168
 ;168:			trap_S_StartLocalSound( cgs.media.countPrepareSound, CHAN_ANNOUNCER );
-ADDRGP4 cgs+152340+980
+ADDRGP4 cgs+152340+1024
 INDIRI4
 ARGI4
 CNSTI4 7
@@ -3040,7 +3040,7 @@ CNSTI4 0
 NEI4 $348
 line 445
 ;445:		trap_S_StartLocalSound( cgs.media.countFightSound, CHAN_ANNOUNCER );
-ADDRGP4 cgs+152340+976
+ADDRGP4 cgs+152340+1020
 INDIRI4
 ARGI4
 CNSTI4 7
@@ -5597,7 +5597,7 @@ CNSTI4 0
 NEI4 $527
 line 996
 ;996:			trap_S_StartLocalSound( cgs.media.talkSound, CHAN_LOCAL_SOUND );
-ADDRGP4 cgs+152340+736
+ADDRGP4 cgs+152340+780
 INDIRI4
 ARGI4
 CNSTI4 6
@@ -5665,7 +5665,7 @@ CNSTI4 0
 NEI4 $548
 line 1005
 ;1005:		trap_S_StartLocalSound( cgs.media.talkSound, CHAN_LOCAL_SOUND );
-ADDRGP4 cgs+152340+736
+ADDRGP4 cgs+152340+780
 INDIRI4
 ARGI4
 CNSTI4 6

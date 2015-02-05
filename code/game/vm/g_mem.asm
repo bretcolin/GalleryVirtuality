@@ -488,7 +488,7 @@ import TeleportPlayer
 import trigger_teleporter_touch
 import Touch_DoorTrigger
 import G_RunMover
-import fire_grapple
+import fire_hand
 import fire_bfg
 import fire_rocket
 import fire_grenade

@@ -3130,7 +3130,7 @@ ADDRGP4 UI_DynamicMenu
 CALLV
 pop
 line 874
-;874:}info, MAX_INFO_STRING );
+;874:}
 LABELV $424
 endproc UI_DynamicCommandMenu_f 0 0
 bss

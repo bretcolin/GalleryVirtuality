@@ -1143,9 +1143,9 @@ netField_t	playerStateFields[] =
 { PSF(clientNum), 8 },
 { PSF(weapon), 5 },
 { PSF(viewangles[2]), 0 },
-{ PSF(grapplePoint[0]), 0 },
-{ PSF(grapplePoint[1]), 0 },
-{ PSF(grapplePoint[2]), 0 },
+{ PSF(handPoint[0]), 0 },
+{ PSF(handPoint[1]), 0 },
+{ PSF(handPoint[2]), 0 },
 { PSF(jumppad_ent), 10 },
 { PSF(loopSound), 16 }
 };

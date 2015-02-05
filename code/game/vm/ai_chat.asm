@@ -1391,7 +1391,7 @@ CNSTI4 1
 LTI4 $172
 ADDRLP4 0
 INDIRI4
-CNSTI4 23
+CNSTI4 28
 GTI4 $172
 ADDRLP4 0
 INDIRI4
@@ -1417,6 +1417,11 @@ address $186
 address $188
 address $190
 address $190
+address $172
+address $172
+address $172
+address $172
+address $172
 address $172
 address $172
 address $172
@@ -1504,7 +1509,7 @@ line 283
 ;280:		case MOD_KAMIKAZE: return "Kamikaze";
 ;281:		case MOD_JUICED: return "Prox mine";
 ;282:#endif
-;283:		case MOD_GRAPPLE: return "Grapple";
+;283:		case MOD_HAND: return "Hand";
 ADDRGP4 $193
 RETP4
 ADDRGP4 $171
@@ -4872,7 +4877,7 @@ LABELV $470
 line 760
 ;760:	lasthurt_client = g_entities[bs->client].client->lasthurt_client;
 ADDRLP4 0
-CNSTI4 808
+CNSTI4 816
 ADDRFP4 0
 INDIRP4
 CNSTI4 8
@@ -5034,7 +5039,7 @@ LABELV $489
 line 777
 ;776:	//
 ;777:	ClientName(g_entities[bs->client].client->lasthurt_client, name, sizeof(name));
-CNSTI4 808
+CNSTI4 816
 ADDRFP4 0
 INDIRP4
 CNSTI4 8
@@ -5057,7 +5062,7 @@ CALLP4
 pop
 line 778
 ;778:	weap = BotWeaponNameForMeansOfDeath(g_entities[bs->client].client->lasthurt_client);
-CNSTI4 808
+CNSTI4 816
 ADDRFP4 0
 INDIRP4
 CNSTI4 8
@@ -5139,7 +5144,7 @@ line 797
 ;796:
 ;797:	lasthurt_client = g_entities[bs->client].client->lasthurt_client;
 ADDRLP4 0
-CNSTI4 808
+CNSTI4 816
 ADDRFP4 0
 INDIRP4
 CNSTI4 8
@@ -5406,7 +5411,7 @@ CALLP4
 pop
 line 823
 ;823:	weap = BotWeaponNameForMeansOfDeath(g_entities[bs->client].client->lasthurt_mod);
-CNSTI4 808
+CNSTI4 816
 ADDRFP4 0
 INDIRP4
 CNSTI4 8
@@ -5696,7 +5701,7 @@ CALLP4
 pop
 line 861
 ;861:	weap = BotWeaponNameForMeansOfDeath(g_entities[bs->enemy].client->lasthurt_mod);
-CNSTI4 808
+CNSTI4 816
 ADDRFP4 0
 INDIRP4
 CNSTI4 6540
@@ -8514,7 +8519,7 @@ INDIRI4
 LTI4 $679
 line 1151
 ;1151:	ClientName(g_entities[bs->client].client->lasthurt_client, name, sizeof(name));
-CNSTI4 808
+CNSTI4 816
 ADDRFP4 0
 INDIRP4
 CNSTI4 8
@@ -8537,7 +8542,7 @@ CALLP4
 pop
 line 1152
 ;1152:	weap = BotWeaponNameForMeansOfDeath(g_entities[bs->client].client->lasthurt_client);
-CNSTI4 808
+CNSTI4 816
 ADDRFP4 0
 INDIRP4
 CNSTI4 8
@@ -9659,7 +9664,7 @@ import TeleportPlayer
 import trigger_teleporter_touch
 import Touch_DoorTrigger
 import G_RunMover
-import fire_grapple
+import fire_hand
 import fire_bfg
 import fire_rocket
 import fire_grenade
@@ -10394,13 +10399,10 @@ byte 1 93
 byte 1 0
 align 1
 LABELV $193
-byte 1 71
-byte 1 114
+byte 1 72
 byte 1 97
-byte 1 112
-byte 1 112
-byte 1 108
-byte 1 101
+byte 1 110
+byte 1 100
 byte 1 0
 align 1
 LABELV $191

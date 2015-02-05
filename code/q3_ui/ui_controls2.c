@@ -445,20 +445,8 @@ static void Controls_UpdateModel( int anim ) {
 		s_controls.playerViewangles[PITCH] = 45;
 		break;
 
-	case ANIM_WEAPON1:
-		s_controls.playerWeapon = WP_GAUNTLET;
-		break;
-
-	case ANIM_WEAPON2:
-		s_controls.playerWeapon = WP_MACHINEGUN;
-		break;
-
-	case ANIM_WEAPON3:
-		s_controls.playerWeapon = WP_SHOTGUN;
-		break;
-
 	case ANIM_WEAPON10:
-		s_controls.playerWeapon = WP_GRAPPLING_HOOK;
+		s_controls.playerWeapon = WP_HAND;
 		break;
 
 	case ANIM_ATTACK:
@@ -472,7 +460,7 @@ static void Controls_UpdateModel( int anim ) {
 	case ANIM_DIE:
 		s_controls.playerLegs = BOTH_DEATH1;
 		s_controls.playerTorso = BOTH_DEATH1;
-		s_controls.playerWeapon = WP_NONE;
+		s_controls.playerWeapon = WP_HAND;
 		break;
 
 	case ANIM_CHAT:

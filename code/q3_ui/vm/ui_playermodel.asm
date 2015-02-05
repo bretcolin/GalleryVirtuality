@@ -538,7 +538,7 @@ ADDRGP4 UI_PlayerInfo_SetModel
 CALLV
 pop
 line 165
-;165:	UI_PlayerInfo_SetInfo( &s_playermodel.playerinfo, LEGS_IDLE, TORSO_STAND, viewangles, moveangles, WP_MACHINEGUN, qfalse );
+;165:	UI_PlayerInfo_SetInfo( &s_playermodel.playerinfo, LEGS_IDLE, TORSO_STAND, viewangles, moveangles, WP_HAND, qfalse );
 ADDRGP4 s_playermodel+3920
 ARGP4
 CNSTI4 22
@@ -549,7 +549,7 @@ ADDRLP4 0
 ARGP4
 ADDRLP4 12
 ARGP4
-CNSTI4 2
+CNSTI4 1
 ARGI4
 CNSTI4 0
 ARGI4

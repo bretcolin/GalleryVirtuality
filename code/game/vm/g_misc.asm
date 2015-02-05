@@ -1128,7 +1128,7 @@ line 218
 LABELV $83
 endproc SP_misc_portal_camera 20 12
 export Use_Shooter
-proc Use_Shooter 76 12
+proc Use_Shooter 60 12
 line 228
 ;219:
 ;220:/*
@@ -1282,7 +1282,7 @@ SUBF4
 MULF4
 ADDRFP4 0
 INDIRP4
-CNSTI4 800
+CNSTI4 808
 ADDP4
 INDIRF4
 MULF4
@@ -1340,7 +1340,7 @@ SUBF4
 MULF4
 ADDRFP4 0
 INDIRP4
-CNSTI4 800
+CNSTI4 808
 ADDP4
 INDIRF4
 MULF4
@@ -1395,99 +1395,13 @@ CNSTI4 192
 ADDP4
 INDIRI4
 ASGNI4
-ADDRLP4 56
-INDIRI4
-CNSTI4 4
-EQI4 $106
-ADDRLP4 56
-INDIRI4
-CNSTI4 5
-EQI4 $107
-ADDRLP4 56
-INDIRI4
-CNSTI4 8
-EQI4 $108
 ADDRGP4 $103
 JUMPV
-LABELV $106
-line 255
-;254:	case WP_GRENADE_LAUNCHER:
-;255:		fire_grenade( ent, ent->s.origin, dir );
-ADDRLP4 64
-ADDRFP4 0
-INDIRP4
-ASGNP4
-ADDRLP4 64
-INDIRP4
-ARGP4
-ADDRLP4 64
-INDIRP4
-CNSTI4 92
-ADDP4
-ARGP4
-ADDRLP4 0
-ARGP4
-ADDRGP4 fire_grenade
-CALLP4
-pop
-line 256
-;256:		break;
-ADDRGP4 $104
-JUMPV
-LABELV $107
-line 258
-;257:	case WP_ROCKET_LAUNCHER:
-;258:		fire_rocket( ent, ent->s.origin, dir );
-ADDRLP4 68
-ADDRFP4 0
-INDIRP4
-ASGNP4
-ADDRLP4 68
-INDIRP4
-ARGP4
-ADDRLP4 68
-INDIRP4
-CNSTI4 92
-ADDP4
-ARGP4
-ADDRLP4 0
-ARGP4
-ADDRGP4 fire_rocket
-CALLP4
-pop
-line 259
-;259:		break;
-ADDRGP4 $104
-JUMPV
-LABELV $108
-line 261
-;260:	case WP_PLASMAGUN:
-;261:		fire_plasma( ent, ent->s.origin, dir );
-ADDRLP4 72
-ADDRFP4 0
-INDIRP4
-ASGNP4
-ADDRLP4 72
-INDIRP4
-ARGP4
-ADDRLP4 72
-INDIRP4
-CNSTI4 92
-ADDP4
-ARGP4
-ADDRLP4 0
-ARGP4
-ADDRGP4 fire_plasma
-CALLP4
-pop
-line 262
-;262:		break;
 LABELV $103
-LABELV $104
-line 265
-;263:	}
-;264:
-;265:	G_AddEvent( ent, EV_FIRE_WEAPON, 0 );
+line 256
+;254:	}
+;255:
+;256:	G_AddEvent( ent, EV_FIRE_WEAPON, 0 );
 ADDRFP4 0
 INDIRP4
 ARGP4
@@ -1498,17 +1412,17 @@ ARGI4
 ADDRGP4 G_AddEvent
 CALLV
 pop
-line 266
-;266:}
+line 257
+;257:}
 LABELV $86
-endproc Use_Shooter 76 12
+endproc Use_Shooter 60 12
 proc InitShooter_Finish 8 4
-line 269
-;267:
-;268:
-;269:static void InitShooter_Finish( gentity_t *ent ) {
-line 270
-;270:	ent->enemy = G_PickTarget( ent->target );
+line 260
+;258:
+;259:
+;260:static void InitShooter_Finish( gentity_t *ent ) {
+line 261
+;261:	ent->enemy = G_PickTarget( ent->target );
 ADDRLP4 0
 ADDRFP4 0
 INDIRP4
@@ -1530,41 +1444,41 @@ ADDP4
 ADDRLP4 4
 INDIRP4
 ASGNP4
-line 271
-;271:	ent->think = 0;
+line 262
+;262:	ent->think = 0;
 ADDRFP4 0
 INDIRP4
 CNSTI4 692
 ADDP4
 CNSTP4 0
 ASGNP4
-line 272
-;272:	ent->nextthink = 0;
+line 263
+;263:	ent->nextthink = 0;
 ADDRFP4 0
 INDIRP4
 CNSTI4 688
 ADDP4
 CNSTI4 0
 ASGNI4
-line 273
-;273:}
-LABELV $109
+line 264
+;264:}
+LABELV $106
 endproc InitShooter_Finish 8 4
 export InitShooter
 proc InitShooter 16 8
-line 275
-;274:
-;275:void InitShooter( gentity_t *ent, int weapon ) {
-line 276
-;276:	ent->use = Use_Shooter;
+line 266
+;265:
+;266:void InitShooter( gentity_t *ent, int weapon ) {
+line 267
+;267:	ent->use = Use_Shooter;
 ADDRFP4 0
 INDIRP4
 CNSTI4 708
 ADDP4
 ADDRGP4 Use_Shooter
 ASGNP4
-line 277
-;277:	ent->s.weapon = weapon;
+line 268
+;268:	ent->s.weapon = weapon;
 ADDRFP4 0
 INDIRP4
 CNSTI4 192
@@ -1572,9 +1486,9 @@ ADDP4
 ADDRFP4 4
 INDIRI4
 ASGNI4
-line 279
-;278:
-;279:	RegisterItem( BG_FindItemForWeapon( weapon ) );
+line 270
+;269:
+;270:	RegisterItem( BG_FindItemForWeapon( weapon ) );
 ADDRFP4 4
 INDIRI4
 ARGI4
@@ -1588,9 +1502,9 @@ ARGP4
 ADDRGP4 RegisterItem
 CALLV
 pop
-line 281
-;280:
-;281:	G_SetMovedir( ent->s.angles, ent->movedir );
+line 272
+;271:
+;272:	G_SetMovedir( ent->s.angles, ent->movedir );
 ADDRLP4 4
 ADDRFP4 0
 INDIRP4
@@ -1608,33 +1522,33 @@ ARGP4
 ADDRGP4 G_SetMovedir
 CALLV
 pop
-line 283
-;282:
-;283:	if ( !ent->random ) {
+line 274
+;273:
+;274:	if ( !ent->random ) {
 ADDRFP4 0
 INDIRP4
-CNSTI4 800
+CNSTI4 808
 ADDP4
 INDIRF4
 CNSTF4 0
-NEF4 $111
-line 284
-;284:		ent->random = 1.0;
+NEF4 $108
+line 275
+;275:		ent->random = 1.0;
 ADDRFP4 0
 INDIRP4
-CNSTI4 800
+CNSTI4 808
 ADDP4
 CNSTF4 1065353216
 ASGNF4
-line 285
-;285:	}
-LABELV $111
-line 286
-;286:	ent->random = sin( M_PI * ent->random / 180 );
+line 276
+;276:	}
+LABELV $108
+line 277
+;277:	ent->random = sin( M_PI * ent->random / 180 );
 ADDRLP4 8
 ADDRFP4 0
 INDIRP4
-CNSTI4 800
+CNSTI4 808
 ADDP4
 ASGNP4
 CNSTF4 1078530011
@@ -1654,9 +1568,9 @@ INDIRP4
 ADDRLP4 12
 INDIRF4
 ASGNF4
-line 288
-;287:	// target might be a moving object, so we can't set movedir for it
-;288:	if ( ent->target ) {
+line 279
+;278:	// target might be a moving object, so we can't set movedir for it
+;279:	if ( ent->target ) {
 ADDRFP4 0
 INDIRP4
 CNSTI4 648
@@ -1664,17 +1578,17 @@ ADDP4
 INDIRP4
 CVPU4 4
 CNSTU4 0
-EQU4 $113
-line 289
-;289:		ent->think = InitShooter_Finish;
+EQU4 $110
+line 280
+;280:		ent->think = InitShooter_Finish;
 ADDRFP4 0
 INDIRP4
 CNSTI4 692
 ADDP4
 ADDRGP4 InitShooter_Finish
 ASGNP4
-line 290
-;290:		ent->nextthink = level.time + 500;
+line 281
+;281:		ent->nextthink = level.time + 500;
 ADDRFP4 0
 INDIRP4
 CNSTI4 688
@@ -1684,90 +1598,60 @@ INDIRI4
 CNSTI4 500
 ADDI4
 ASGNI4
-line 291
-;291:	}
-LABELV $113
-line 292
-;292:	trap_LinkEntity( ent );
+line 282
+;282:	}
+LABELV $110
+line 283
+;283:	trap_LinkEntity( ent );
 ADDRFP4 0
 INDIRP4
 ARGP4
 ADDRGP4 trap_LinkEntity
 CALLV
 pop
-line 293
-;293:}
-LABELV $110
+line 284
+;284:}
+LABELV $107
 endproc InitShooter 16 8
 export SP_shooter_rocket
-proc SP_shooter_rocket 0 8
-line 299
-;294:
-;295:/*QUAKED shooter_rocket (1 0 0) (-16 -16 -16) (16 16 16)
-;296:Fires at either the target or the current direction.
-;297:"random" the number of degrees of deviance from the taget. (1.0 default)
-;298:*/
-;299:void SP_shooter_rocket( gentity_t *ent ) {
-line 300
-;300:	InitShooter( ent, WP_ROCKET_LAUNCHER );
-ADDRFP4 0
-INDIRP4
-ARGP4
-CNSTI4 5
-ARGI4
-ADDRGP4 InitShooter
-CALLV
-pop
-line 301
-;301:}
-LABELV $116
-endproc SP_shooter_rocket 0 8
+proc SP_shooter_rocket 0 0
+line 290
+;285:
+;286:/*QUAKED shooter_rocket (1 0 0) (-16 -16 -16) (16 16 16)
+;287:Fires at either the target or the current direction.
+;288:"random" the number of degrees of deviance from the taget. (1.0 default)
+;289:*/
+;290:void SP_shooter_rocket( gentity_t *ent ) {
+line 291
+;291:}
+LABELV $113
+endproc SP_shooter_rocket 0 0
 export SP_shooter_plasma
-proc SP_shooter_plasma 0 8
-line 307
-;302:
-;303:/*QUAKED shooter_plasma (1 0 0) (-16 -16 -16) (16 16 16)
-;304:Fires at either the target or the current direction.
-;305:"random" is the number of degrees of deviance from the taget. (1.0 default)
-;306:*/
-;307:void SP_shooter_plasma( gentity_t *ent ) {
-line 308
-;308:	InitShooter( ent, WP_PLASMAGUN);
-ADDRFP4 0
-INDIRP4
-ARGP4
-CNSTI4 8
-ARGI4
-ADDRGP4 InitShooter
-CALLV
-pop
-line 309
-;309:}
-LABELV $117
-endproc SP_shooter_plasma 0 8
+proc SP_shooter_plasma 0 0
+line 297
+;292:
+;293:/*QUAKED shooter_plasma (1 0 0) (-16 -16 -16) (16 16 16)
+;294:Fires at either the target or the current direction.
+;295:"random" is the number of degrees of deviance from the taget. (1.0 default)
+;296:*/
+;297:void SP_shooter_plasma( gentity_t *ent ) {
+line 298
+;298:}
+LABELV $114
+endproc SP_shooter_plasma 0 0
 export SP_shooter_grenade
-proc SP_shooter_grenade 0 8
-line 315
-;310:
-;311:/*QUAKED shooter_grenade (1 0 0) (-16 -16 -16) (16 16 16)
-;312:Fires at either the target or the current direction.
-;313:"random" is the number of degrees of deviance from the taget. (1.0 default)
-;314:*/
-;315:void SP_shooter_grenade( gentity_t *ent ) {
-line 316
-;316:	InitShooter( ent, WP_GRENADE_LAUNCHER);
-ADDRFP4 0
-INDIRP4
-ARGP4
-CNSTI4 4
-ARGI4
-ADDRGP4 InitShooter
-CALLV
-pop
-line 317
-;317:}
-LABELV $118
-endproc SP_shooter_grenade 0 8
+proc SP_shooter_grenade 0 0
+line 304
+;299:
+;300:/*QUAKED shooter_grenade (1 0 0) (-16 -16 -16) (16 16 16)
+;301:Fires at either the target or the current direction.
+;302:"random" is the number of degrees of deviance from the taget. (1.0 default)
+;303:*/
+;304:void SP_shooter_grenade( gentity_t *ent ) {
+line 305
+;305:}
+LABELV $115
+endproc SP_shooter_grenade 0 0
 import trap_SnapVector
 import trap_GeneticParentsAndChildSelection
 import trap_BotResetWeaponState
@@ -2095,7 +1979,7 @@ import LogAccuracyHit
 import trigger_teleporter_touch
 import Touch_DoorTrigger
 import G_RunMover
-import fire_grapple
+import fire_hand
 import fire_bfg
 import fire_rocket
 import fire_grenade

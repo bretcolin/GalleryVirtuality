@@ -650,7 +650,7 @@ line 146
 ADDRFP4 0
 ADDRFP4 0
 INDIRP4
-CNSTI4 808
+CNSTI4 816
 ADDP4
 ASGNP4
 line 148
@@ -728,14 +728,14 @@ line 148
 ADDRFP4 0
 ADDRFP4 0
 INDIRP4
-CNSTI4 808
+CNSTI4 816
 ADDP4
 ASGNP4
 LABELV $111
 ADDRFP4 0
 INDIRP4
 CVPU4 4
-CNSTI4 808
+CNSTI4 816
 ADDRGP4 level+12
 INDIRI4
 MULI4
@@ -1680,7 +1680,7 @@ ADDRGP4 g_entities
 CVPU4 4
 SUBU4
 CVUI4 4
-CNSTI4 808
+CNSTI4 816
 DIVI4
 ASGNI4
 line 351
@@ -1739,7 +1739,7 @@ line 378
 ;377:		// override the normal minimum times before use
 ;378:		e = &g_entities[MAX_CLIENTS];
 ADDRLP4 0
-ADDRGP4 g_entities+51712
+ADDRGP4 g_entities+52224
 ASGNP4
 line 379
 ;379:		for ( i = MAX_CLIENTS ; i<level.num_entities ; i++, e++) {
@@ -1828,7 +1828,7 @@ ASGNI4
 ADDRLP4 0
 ADDRLP4 0
 INDIRP4
-CNSTI4 808
+CNSTI4 816
 ADDP4
 ASGNP4
 LABELV $188
@@ -1884,7 +1884,7 @@ ARGP4
 ADDRLP4 4
 INDIRI4
 ARGI4
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 4
 INDIRI4
 MULI4
@@ -1944,7 +1944,7 @@ ARGP4
 ADDRGP4 level+12
 INDIRI4
 ARGI4
-CNSTI4 808
+CNSTI4 816
 ARGI4
 ADDRGP4 level
 INDIRP4
@@ -1988,7 +1988,7 @@ line 425
 ;424:
 ;425:	e = &g_entities[MAX_CLIENTS];
 ADDRLP4 4
-ADDRGP4 g_entities+51712
+ADDRGP4 g_entities+52224
 ASGNP4
 line 426
 ;426:	for ( i = MAX_CLIENTS; i < level.num_entities; i++, e++) {
@@ -2031,7 +2031,7 @@ ASGNI4
 ADDRLP4 4
 ADDRLP4 4
 INDIRP4
-CNSTI4 808
+CNSTI4 816
 ADDP4
 ASGNP4
 LABELV $215
@@ -2093,7 +2093,7 @@ INDIRP4
 ARGP4
 CNSTI4 0
 ARGI4
-CNSTI4 808
+CNSTI4 816
 ARGI4
 ADDRGP4 memset
 CALLP4
@@ -2426,7 +2426,7 @@ LABELV $236
 line 516
 ;516:		hit = &g_entities[touch[i]];
 ADDRLP4 4
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 0
 INDIRI4
 CNSTI4 2
@@ -3538,7 +3538,7 @@ import TeleportPlayer
 import trigger_teleporter_touch
 import Touch_DoorTrigger
 import G_RunMover
-import fire_grapple
+import fire_hand
 import fire_bfg
 import fire_rocket
 import fire_grenade

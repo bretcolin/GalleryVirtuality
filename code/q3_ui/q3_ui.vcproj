@@ -489,6 +489,9 @@
 				</FileConfiguration>
 			</File>
 			<File
+				RelativePath=".\ui_cdkey.c">
+			</File>
+			<File
 				RelativePath="ui_cinematics.c">
 				<FileConfiguration
 					Name="Debug TA|Win32"

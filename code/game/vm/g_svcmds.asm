@@ -1383,7 +1383,7 @@ line 303
 ;302:
 ;303:	check = g_entities+1;
 ADDRLP4 0
-ADDRGP4 g_entities+808
+ADDRGP4 g_entities+816
 ASGNP4
 line 304
 ;304:	for (e = 1; e < level.num_entities ; e++, check++) {
@@ -1604,8 +1604,8 @@ ADDRGP4 $190
 JUMPV
 LABELV $214
 line 344
-;343:		case ET_GRAPPLE:
-;344:			G_Printf("ET_GRAPPLE          ");
+;343:		case ET_HAND:
+;344:			G_Printf("ET_HAND          ");
 ADDRGP4 $215
 ARGP4
 ADDRGP4 G_Printf
@@ -1681,7 +1681,7 @@ ASGNI4
 ADDRLP4 0
 ADDRLP4 0
 INDIRP4
-CNSTI4 808
+CNSTI4 816
 ADDP4
 ASGNP4
 LABELV $184
@@ -1980,7 +1980,7 @@ CALLV
 pop
 line 415
 ;415:	SetTeam( &g_entities[cl - level.clients], str );
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 1024
 INDIRP4
 CVPU4 4
@@ -2714,7 +2714,7 @@ import TeleportPlayer
 import trigger_teleporter_touch
 import Touch_DoorTrigger
 import G_RunMover
-import fire_grapple
+import fire_hand
 import fire_bfg
 import fire_rocket
 import fire_grenade
@@ -3209,13 +3209,10 @@ LABELV $215
 byte 1 69
 byte 1 84
 byte 1 95
-byte 1 71
-byte 1 82
+byte 1 72
 byte 1 65
-byte 1 80
-byte 1 80
-byte 1 76
-byte 1 69
+byte 1 78
+byte 1 68
 byte 1 32
 byte 1 32
 byte 1 32

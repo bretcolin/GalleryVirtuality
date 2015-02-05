@@ -1,4 +1,4 @@
-Quake III Arena GPL source release
+GALLERY VIRTUALITY GPL source release
 ==================================
 
 This file contains the following sections:

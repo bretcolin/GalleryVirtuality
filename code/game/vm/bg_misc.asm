@@ -120,351 +120,130 @@ byte 4 1
 address $40
 address $40
 address $85
-address $81
 address $86
-byte 4 0
-byte 4 0
-byte 4 0
 address $87
+byte 4 0
+byte 4 0
+byte 4 0
 address $88
-byte 4 10
-byte 4 1
-byte 4 3
-address $40
-address $40
 address $89
-address $81
+byte 4 60
+byte 4 6
+byte 4 1
+address $40
+skip 4
 address $90
-byte 4 0
-byte 4 0
-byte 4 0
+address $86
 address $91
 address $92
-byte 4 40
-byte 4 1
+byte 4 0
+byte 4 0
+address $93
+address $94
+byte 4 60
+byte 4 6
 byte 4 2
 address $40
-address $40
-address $93
-address $81
-address $94
-byte 4 0
-byte 4 0
-byte 4 0
 address $95
 address $96
-byte 4 10
-byte 4 1
-byte 4 4
-address $40
 address $97
 address $98
-address $81
 address $99
-byte 4 0
 byte 4 0
 byte 4 0
 address $100
 address $101
-byte 4 10
-byte 4 1
+byte 4 30
 byte 4 5
-address $40
+byte 4 1
 address $40
 address $102
-address $81
 address $103
-byte 4 0
-byte 4 0
-byte 4 0
 address $104
 address $105
-byte 4 100
-byte 4 1
-byte 4 6
-address $40
-address $40
 address $106
-address $81
+byte 4 0
+byte 4 0
 address $107
-byte 4 0
-byte 4 0
-byte 4 0
 address $108
+byte 4 30
+byte 4 5
+byte 4 2
+address $40
 address $109
-byte 4 10
-byte 4 1
-byte 4 7
-address $40
-address $40
 address $110
-address $81
 address $111
-byte 4 0
-byte 4 0
-byte 4 0
 address $112
 address $113
-byte 4 50
-byte 4 1
-byte 4 8
-address $40
-address $40
+byte 4 0
+byte 4 0
 address $114
-address $81
 address $115
-byte 4 0
-byte 4 0
-byte 4 0
+byte 4 30
+byte 4 5
+byte 4 3
+address $40
+address $40
 address $116
 address $117
-byte 4 20
-byte 4 1
-byte 4 9
-address $40
-address $40
 address $118
-address $81
 address $119
-byte 4 0
 byte 4 0
 byte 4 0
 address $120
 address $121
-byte 4 0
-byte 4 1
-byte 4 10
+byte 4 30
+byte 4 5
+byte 4 4
 address $40
 address $40
 address $122
 address $123
 address $124
-byte 4 0
-byte 4 0
-byte 4 0
 address $125
+byte 4 0
+byte 4 0
 address $126
-byte 4 10
-byte 4 2
-byte 4 3
-address $40
-address $40
 address $127
-address $123
+byte 4 30
+byte 4 5
+byte 4 5
+address $40
 address $128
-byte 4 0
-byte 4 0
-byte 4 0
 address $129
 address $130
-byte 4 50
-byte 4 2
-byte 4 2
-address $40
-address $40
 address $131
-address $123
 address $132
-byte 4 0
 byte 4 0
 byte 4 0
 address $133
 address $134
+byte 4 60
 byte 4 5
-byte 4 2
-byte 4 4
+byte 4 6
 address $40
-address $40
+address $130
 address $135
-address $123
+byte 4 0
 address $136
 byte 4 0
 byte 4 0
 byte 4 0
 address $137
 address $138
-byte 4 30
-byte 4 2
+byte 4 0
 byte 4 8
+byte 4 7
 address $40
 address $40
 address $139
-address $123
+byte 4 0
 address $140
 byte 4 0
 byte 4 0
 byte 4 0
 address $141
 address $142
-byte 4 60
-byte 4 2
-byte 4 6
-address $40
-address $40
-address $143
-address $123
-address $144
-byte 4 0
-byte 4 0
-byte 4 0
-address $145
-address $146
-byte 4 5
-byte 4 2
-byte 4 5
-address $40
-address $40
-address $147
-address $123
-address $148
-byte 4 0
-byte 4 0
-byte 4 0
-address $149
-address $150
-byte 4 10
-byte 4 2
-byte 4 7
-address $40
-address $40
-address $151
-address $123
-address $152
-byte 4 0
-byte 4 0
-byte 4 0
-address $153
-address $154
-byte 4 15
-byte 4 2
-byte 4 9
-address $40
-address $40
-address $155
-address $156
-address $157
-byte 4 0
-byte 4 0
-byte 4 0
-address $158
-address $159
-byte 4 60
-byte 4 6
-byte 4 1
-address $40
-address $40
-address $160
-address $156
-address $161
-address $162
-byte 4 0
-byte 4 0
-address $163
-address $164
-byte 4 60
-byte 4 6
-byte 4 2
-address $40
-address $165
-address $166
-address $167
-address $168
-address $169
-byte 4 0
-byte 4 0
-address $170
-address $171
-byte 4 30
-byte 4 5
-byte 4 1
-address $40
-address $172
-address $173
-address $174
-address $175
-address $176
-byte 4 0
-byte 4 0
-address $177
-address $178
-byte 4 30
-byte 4 5
-byte 4 2
-address $40
-address $179
-address $180
-address $181
-address $182
-address $183
-byte 4 0
-byte 4 0
-address $184
-address $185
-byte 4 30
-byte 4 5
-byte 4 3
-address $40
-address $40
-address $186
-address $187
-address $188
-address $189
-byte 4 0
-byte 4 0
-address $190
-address $191
-byte 4 30
-byte 4 5
-byte 4 4
-address $40
-address $40
-address $192
-address $193
-address $194
-address $195
-byte 4 0
-byte 4 0
-address $196
-address $197
-byte 4 30
-byte 4 5
-byte 4 5
-address $40
-address $198
-address $199
-address $200
-address $201
-address $202
-byte 4 0
-byte 4 0
-address $203
-address $204
-byte 4 60
-byte 4 5
-byte 4 6
-address $40
-address $200
-address $205
-byte 4 0
-address $206
-byte 4 0
-byte 4 0
-byte 4 0
-address $207
-address $208
-byte 4 0
-byte 4 8
-byte 4 7
-address $40
-address $40
-address $209
-byte 4 0
-address $210
-byte 4 0
-byte 4 0
-byte 4 0
-address $211
-address $212
 byte 4 0
 byte 4 8
 byte 4 8
@@ -475,12 +254,12 @@ skip 48
 export bg_numItems
 align 4
 LABELV bg_numItems
-byte 4 36
+byte 4 19
 export BG_FindItemForPowerup
 code
 proc BG_FindItemForPowerup 8 0
 file "../bg_misc.c"
-line 911
+line 637
 ;1:// Copyright (C) 1999-2000 Id Software, Inc.
 ;2://
 ;3:// bg_misc.c -- both games misc functions, all completely stateless
@@ -650,760 +429,486 @@ line 911
 ;167:	// WEAPONS 
 ;168:	//
 ;169:
-;170:/*QUAKED weapon_gauntlet (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
+;170:/*QUAKED weapon_hand (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
 ;171:*/
 ;172:	{
-;173:		"weapon_gauntlet", 
+;173:		"weapon_hand",
 ;174:		"sound/misc/w_pkup.wav",
-;175:        { "models/weapons2/gauntlet/gauntlet.md3",
+;175:        { "models/weapons2/hand/hand.md3", 
 ;176:		0, 0, 0},
-;177:/* icon */		"icons/iconw_gauntlet",
-;178:/* pickup */	"Gauntlet",
+;177:/* icon */		"icons/iconw_hand",
+;178:/* pickup */	"Hand",
 ;179:		0,
 ;180:		IT_WEAPON,
-;181:		WP_GAUNTLET,
+;181:		WP_HAND,
 ;182:/* precache */ "",
 ;183:/* sounds */ ""
 ;184:	},
 ;185:
-;186:/*QUAKED weapon_shotgun (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
-;187:*/
-;188:	{
-;189:		"weapon_shotgun", 
-;190:		"sound/misc/w_pkup.wav",
-;191:        { "models/weapons2/shotgun/shotgun.md3", 
-;192:		0, 0, 0},
-;193:/* icon */		"icons/iconw_shotgun",
-;194:/* pickup */	"Shotgun",
-;195:		10,
-;196:		IT_WEAPON,
-;197:		WP_SHOTGUN,
-;198:/* precache */ "",
-;199:/* sounds */ ""
-;200:	},
-;201:
-;202:/*QUAKED weapon_machinegun (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
-;203:*/
-;204:	{
-;205:		"weapon_machinegun", 
-;206:		"sound/misc/w_pkup.wav",
-;207:        { "models/weapons2/machinegun/machinegun.md3", 
-;208:		0, 0, 0},
-;209:/* icon */		"icons/iconw_machinegun",
-;210:/* pickup */	"Machinegun",
-;211:		40,
-;212:		IT_WEAPON,
-;213:		WP_MACHINEGUN,
-;214:/* precache */ "",
-;215:/* sounds */ ""
-;216:	},
-;217:
-;218:/*QUAKED weapon_grenadelauncher (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
-;219:*/
-;220:	{
-;221:		"weapon_grenadelauncher",
-;222:		"sound/misc/w_pkup.wav",
-;223:        { "models/weapons2/grenadel/grenadel.md3", 
-;224:		0, 0, 0},
-;225:/* icon */		"icons/iconw_grenade",
-;226:/* pickup */	"Grenade Launcher",
-;227:		10,
-;228:		IT_WEAPON,
-;229:		WP_GRENADE_LAUNCHER,
-;230:/* precache */ "",
-;231:/* sounds */ "sound/weapons/grenade/hgrenb1a.wav sound/weapons/grenade/hgrenb2a.wav"
-;232:	},
-;233:
-;234:/*QUAKED weapon_rocketlauncher (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
-;235:*/
-;236:	{
-;237:		"weapon_rocketlauncher",
-;238:		"sound/misc/w_pkup.wav",
-;239:        { "models/weapons2/rocketl/rocketl.md3", 
-;240:		0, 0, 0},
-;241:/* icon */		"icons/iconw_rocket",
-;242:/* pickup */	"Rocket Launcher",
-;243:		10,
-;244:		IT_WEAPON,
-;245:		WP_ROCKET_LAUNCHER,
-;246:/* precache */ "",
-;247:/* sounds */ ""
-;248:	},
-;249:
-;250:/*QUAKED weapon_lightning (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
-;251:*/
-;252:	{
-;253:		"weapon_lightning", 
-;254:		"sound/misc/w_pkup.wav",
-;255:        { "models/weapons2/lightning/lightning.md3", 
-;256:		0, 0, 0},
-;257:/* icon */		"icons/iconw_lightning",
-;258:/* pickup */	"Lightning Gun",
-;259:		100,
-;260:		IT_WEAPON,
-;261:		WP_LIGHTNING,
-;262:/* precache */ "",
-;263:/* sounds */ ""
-;264:	},
-;265:
-;266:/*QUAKED weapon_railgun (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
-;267:*/
-;268:	{
-;269:		"weapon_railgun", 
-;270:		"sound/misc/w_pkup.wav",
-;271:        { "models/weapons2/railgun/railgun.md3", 
-;272:		0, 0, 0},
-;273:/* icon */		"icons/iconw_railgun",
-;274:/* pickup */	"Railgun",
-;275:		10,
-;276:		IT_WEAPON,
-;277:		WP_RAILGUN,
-;278:/* precache */ "",
-;279:/* sounds */ ""
-;280:	},
-;281:
-;282:/*QUAKED weapon_plasmagun (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
-;283:*/
-;284:	{
-;285:		"weapon_plasmagun", 
-;286:		"sound/misc/w_pkup.wav",
-;287:        { "models/weapons2/plasma/plasma.md3", 
-;288:		0, 0, 0},
-;289:/* icon */		"icons/iconw_plasma",
-;290:/* pickup */	"Plasma Gun",
-;291:		50,
-;292:		IT_WEAPON,
-;293:		WP_PLASMAGUN,
-;294:/* precache */ "",
-;295:/* sounds */ ""
-;296:	},
-;297:
-;298:/*QUAKED weapon_bfg (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
-;299:*/
-;300:	{
-;301:		"weapon_bfg",
-;302:		"sound/misc/w_pkup.wav",
-;303:        { "models/weapons2/bfg/bfg.md3", 
-;304:		0, 0, 0},
-;305:/* icon */		"icons/iconw_bfg",
-;306:/* pickup */	"BFG10K",
-;307:		20,
-;308:		IT_WEAPON,
-;309:		WP_BFG,
-;310:/* precache */ "",
-;311:/* sounds */ ""
-;312:	},
-;313:
-;314:/*QUAKED weapon_grapplinghook (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
-;315:*/
-;316:	{
-;317:		"weapon_grapplinghook",
-;318:		"sound/misc/w_pkup.wav",
-;319:        { "models/weapons2/grapple/grapple.md3", 
-;320:		0, 0, 0},
-;321:/* icon */		"icons/iconw_grapple",
-;322:/* pickup */	"Grappling Hook",
-;323:		0,
-;324:		IT_WEAPON,
-;325:		WP_GRAPPLING_HOOK,
-;326:/* precache */ "",
-;327:/* sounds */ ""
-;328:	},
-;329:
-;330:	//
-;331:	// AMMO ITEMS
-;332:	//
-;333:
-;334:/*QUAKED ammo_shells (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
-;335:*/
-;336:	{
-;337:		"ammo_shells",
-;338:		"sound/misc/am_pkup.wav",
-;339:        { "models/powerups/ammo/shotgunam.md3", 
-;340:		0, 0, 0},
-;341:/* icon */		"icons/icona_shotgun",
-;342:/* pickup */	"Shells",
-;343:		10,
-;344:		IT_AMMO,
-;345:		WP_SHOTGUN,
-;346:/* precache */ "",
-;347:/* sounds */ ""
-;348:	},
-;349:
-;350:/*QUAKED ammo_bullets (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
-;351:*/
-;352:	{
-;353:		"ammo_bullets",
-;354:		"sound/misc/am_pkup.wav",
-;355:        { "models/powerups/ammo/machinegunam.md3", 
-;356:		0, 0, 0},
-;357:/* icon */		"icons/icona_machinegun",
-;358:/* pickup */	"Bullets",
-;359:		50,
-;360:		IT_AMMO,
-;361:		WP_MACHINEGUN,
-;362:/* precache */ "",
-;363:/* sounds */ ""
-;364:	},
-;365:
-;366:/*QUAKED ammo_grenades (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
-;367:*/
-;368:	{
-;369:		"ammo_grenades",
-;370:		"sound/misc/am_pkup.wav",
-;371:        { "models/powerups/ammo/grenadeam.md3", 
-;372:		0, 0, 0},
-;373:/* icon */		"icons/icona_grenade",
-;374:/* pickup */	"Grenades",
-;375:		5,
-;376:		IT_AMMO,
-;377:		WP_GRENADE_LAUNCHER,
-;378:/* precache */ "",
-;379:/* sounds */ ""
-;380:	},
-;381:
-;382:/*QUAKED ammo_cells (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
-;383:*/
-;384:	{
-;385:		"ammo_cells",
-;386:		"sound/misc/am_pkup.wav",
-;387:        { "models/powerups/ammo/plasmaam.md3", 
-;388:		0, 0, 0},
-;389:/* icon */		"icons/icona_plasma",
-;390:/* pickup */	"Cells",
-;391:		30,
-;392:		IT_AMMO,
-;393:		WP_PLASMAGUN,
-;394:/* precache */ "",
-;395:/* sounds */ ""
-;396:	},
-;397:
-;398:/*QUAKED ammo_lightning (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
-;399:*/
-;400:	{
-;401:		"ammo_lightning",
-;402:		"sound/misc/am_pkup.wav",
-;403:        { "models/powerups/ammo/lightningam.md3", 
-;404:		0, 0, 0},
-;405:/* icon */		"icons/icona_lightning",
-;406:/* pickup */	"Lightning",
-;407:		60,
-;408:		IT_AMMO,
-;409:		WP_LIGHTNING,
-;410:/* precache */ "",
-;411:/* sounds */ ""
-;412:	},
-;413:
-;414:/*QUAKED ammo_rockets (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
-;415:*/
-;416:	{
-;417:		"ammo_rockets",
-;418:		"sound/misc/am_pkup.wav",
-;419:        { "models/powerups/ammo/rocketam.md3", 
-;420:		0, 0, 0},
-;421:/* icon */		"icons/icona_rocket",
-;422:/* pickup */	"Rockets",
-;423:		5,
-;424:		IT_AMMO,
-;425:		WP_ROCKET_LAUNCHER,
-;426:/* precache */ "",
-;427:/* sounds */ ""
-;428:	},
-;429:
-;430:/*QUAKED ammo_slugs (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
-;431:*/
-;432:	{
-;433:		"ammo_slugs",
-;434:		"sound/misc/am_pkup.wav",
-;435:        { "models/powerups/ammo/railgunam.md3", 
-;436:		0, 0, 0},
-;437:/* icon */		"icons/icona_railgun",
-;438:/* pickup */	"Slugs",
-;439:		10,
-;440:		IT_AMMO,
-;441:		WP_RAILGUN,
-;442:/* precache */ "",
-;443:/* sounds */ ""
-;444:	},
-;445:
-;446:/*QUAKED ammo_bfg (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
-;447:*/
-;448:	{
-;449:		"ammo_bfg",
-;450:		"sound/misc/am_pkup.wav",
-;451:        { "models/powerups/ammo/bfgam.md3", 
-;452:		0, 0, 0},
-;453:/* icon */		"icons/icona_bfg",
-;454:/* pickup */	"Bfg Ammo",
-;455:		15,
-;456:		IT_AMMO,
-;457:		WP_BFG,
-;458:/* precache */ "",
-;459:/* sounds */ ""
-;460:	},
-;461:
+;186:	//
+;187:	// AMMO ITEMS
+;188:	//
+;189:	//
+;190:	// HOLDABLE ITEMS
+;191:	//
+;192:/*QUAKED holdable_teleporter (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
+;193:*/
+;194:	{
+;195:		"holdable_teleporter", 
+;196:		"sound/items/holdable.wav",
+;197:        { "models/powerups/holdable/teleporter.md3", 
+;198:		0, 0, 0},
+;199:/* icon */		"icons/teleporter",
+;200:/* pickup */	"Personal Teleporter",
+;201:		60,
+;202:		IT_HOLDABLE,
+;203:		HI_TELEPORTER,
+;204:/* sounds */ ""
+;205:	},
+;206:/*QUAKED holdable_medkit (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
+;207:*/
+;208:	{
+;209:		"holdable_medkit", 
+;210:		"sound/items/holdable.wav",
+;211:        { 
+;212:		"models/powerups/holdable/medkit.md3", 
+;213:		"models/powerups/holdable/medkit_sphere.md3",
+;214:		0, 0},
+;215:/* icon */		"icons/medkit",
+;216:/* pickup */	"Medkit",
+;217:		60,
+;218:		IT_HOLDABLE,
+;219:		HI_MEDKIT,
+;220:/* precache */ "",
+;221:/* sounds */ "sound/items/use_medkit.wav"
+;222:	},
+;223:
+;224:	//
+;225:	// POWERUP ITEMS
+;226:	//
+;227:/*QUAKED item_quad (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
+;228:*/
+;229:	{
+;230:		"item_quad", 
+;231:		"sound/items/quaddamage.wav",
+;232:        { "models/powerups/instant/quad.md3", 
+;233:        "models/powerups/instant/quad_ring.md3",
+;234:		0, 0 },
+;235:/* icon */		"icons/quad",
+;236:/* pickup */	"Quad Damage",
+;237:		30,
+;238:		IT_POWERUP,
+;239:		PW_QUAD,
+;240:/* precache */ "",
+;241:/* sounds */ "sound/items/damage2.wav sound/items/damage3.wav"
+;242:	},
+;243:
+;244:/*QUAKED item_enviro (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
+;245:*/
+;246:	{
+;247:		"item_enviro",
+;248:		"sound/items/protect.wav",
+;249:        { "models/powerups/instant/enviro.md3", 
+;250:		"models/powerups/instant/enviro_ring.md3", 
+;251:		0, 0 },
+;252:/* icon */		"icons/envirosuit",
+;253:/* pickup */	"Battle Suit",
+;254:		30,
+;255:		IT_POWERUP,
+;256:		PW_BATTLESUIT,
+;257:/* precache */ "",
+;258:/* sounds */ "sound/items/airout.wav sound/items/protect3.wav"
+;259:	},
+;260:
+;261:/*QUAKED item_haste (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
+;262:*/
+;263:	{
+;264:		"item_haste",
+;265:		"sound/items/haste.wav",
+;266:        { "models/powerups/instant/haste.md3", 
+;267:		"models/powerups/instant/haste_ring.md3", 
+;268:		0, 0 },
+;269:/* icon */		"icons/haste",
+;270:/* pickup */	"Speed",
+;271:		30,
+;272:		IT_POWERUP,
+;273:		PW_HASTE,
+;274:/* precache */ "",
+;275:/* sounds */ ""
+;276:	},
+;277:
+;278:/*QUAKED item_invis (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
+;279:*/
+;280:	{
+;281:		"item_invis",
+;282:		"sound/items/invisibility.wav",
+;283:        { "models/powerups/instant/invis.md3", 
+;284:		"models/powerups/instant/invis_ring.md3", 
+;285:		0, 0 },
+;286:/* icon */		"icons/invis",
+;287:/* pickup */	"Invisibility",
+;288:		30,
+;289:		IT_POWERUP,
+;290:		PW_INVIS,
+;291:/* precache */ "",
+;292:/* sounds */ ""
+;293:	},
+;294:
+;295:/*QUAKED item_regen (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
+;296:*/
+;297:	{
+;298:		"item_regen",
+;299:		"sound/items/regeneration.wav",
+;300:        { "models/powerups/instant/regen.md3", 
+;301:		"models/powerups/instant/regen_ring.md3", 
+;302:		0, 0 },
+;303:/* icon */		"icons/regen",
+;304:/* pickup */	"Regeneration",
+;305:		30,
+;306:		IT_POWERUP,
+;307:		PW_REGEN,
+;308:/* precache */ "",
+;309:/* sounds */ "sound/items/regen.wav"
+;310:	},
+;311:
+;312:/*QUAKED item_flight (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
+;313:*/
+;314:	{
+;315:		"item_flight",
+;316:		"sound/items/flight.wav",
+;317:        { "models/powerups/instant/flight.md3", 
+;318:		"models/powerups/instant/flight_ring.md3", 
+;319:		0, 0 },
+;320:/* icon */		"icons/flight",
+;321:/* pickup */	"Flight",
+;322:		60,
+;323:		IT_POWERUP,
+;324:		PW_FLIGHT,
+;325:/* precache */ "",
+;326:/* sounds */ "sound/items/flight.wav"
+;327:	},
+;328:
+;329:/*QUAKED team_CTF_redflag (1 0 0) (-16 -16 -16) (16 16 16)
+;330:Only in CTF games
+;331:*/
+;332:	{
+;333:		"team_CTF_redflag",
+;334:		NULL,
+;335:        { "models/flags/r_flag.md3",
+;336:		0, 0, 0 },
+;337:/* icon */		"icons/iconf_red1",
+;338:/* pickup */	"Red Flag",
+;339:		0,
+;340:		IT_TEAM,
+;341:		PW_REDFLAG,
+;342:/* precache */ "",
+;343:/* sounds */ ""
+;344:	},
+;345:
+;346:/*QUAKED team_CTF_blueflag (0 0 1) (-16 -16 -16) (16 16 16)
+;347:Only in CTF games
+;348:*/
+;349:	{
+;350:		"team_CTF_blueflag",
+;351:		NULL,
+;352:        { "models/flags/b_flag.md3",
+;353:		0, 0, 0 },
+;354:/* icon */		"icons/iconf_blu1",
+;355:/* pickup */	"Blue Flag",
+;356:		0,
+;357:		IT_TEAM,
+;358:		PW_BLUEFLAG,
+;359:/* precache */ "",
+;360:/* sounds */ ""
+;361:	},
+;362:
+;363:#ifdef MISSIONPACK
+;364:/*QUAKED holdable_kamikaze (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
+;365:*/
+;366:	{
+;367:		"holdable_kamikaze", 
+;368:		"sound/items/holdable.wav",
+;369:        { "models/powerups/kamikazi.md3", 
+;370:		0, 0, 0},
+;371:/* icon */		"icons/kamikaze",
+;372:/* pickup */	"Kamikaze",
+;373:		60,
+;374:		IT_HOLDABLE,
+;375:		HI_KAMIKAZE,
+;376:/* precache */ "",
+;377:/* sounds */ "sound/items/kamikazerespawn.wav"
+;378:	},
+;379:
+;380:/*QUAKED holdable_portal (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
+;381:*/
+;382:	{
+;383:		"holdable_portal", 
+;384:		"sound/items/holdable.wav",
+;385:        { "models/powerups/holdable/porter.md3",
+;386:		0, 0, 0},
+;387:/* icon */		"icons/portal",
+;388:/* pickup */	"Portal",
+;389:		60,
+;390:		IT_HOLDABLE,
+;391:		HI_PORTAL,
+;392:/* precache */ "",
+;393:/* sounds */ ""
+;394:	},
+;395:
+;396:/*QUAKED holdable_invulnerability (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
+;397:*/
+;398:	{
+;399:		"holdable_invulnerability", 
+;400:		"sound/items/holdable.wav",
+;401:        { "models/powerups/holdable/invulnerability.md3", 
+;402:		0, 0, 0},
+;403:/* icon */		"icons/invulnerability",
+;404:/* pickup */	"Invulnerability",
+;405:		60,
+;406:		IT_HOLDABLE,
+;407:		HI_INVULNERABILITY,
+;408:/* precache */ "",
+;409:/* sounds */ ""
+;410:	},
+;411:
+;412:/*QUAKED ammo_nails (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
+;413:*/
+;414:	{
+;415:		"ammo_nails",
+;416:		"sound/misc/am_pkup.wav",
+;417:        { "models/powerups/ammo/nailgunam.md3", 
+;418:		0, 0, 0},
+;419:/* icon */		"icons/icona_nailgun",
+;420:/* pickup */	"Nails",
+;421:		20,
+;422:		IT_AMMO,
+;423:		WP_NAILGUN,
+;424:/* precache */ "",
+;425:/* sounds */ ""
+;426:	},
+;427:
+;428:/*QUAKED ammo_mines (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
+;429:*/
+;430:	{
+;431:		"ammo_mines",
+;432:		"sound/misc/am_pkup.wav",
+;433:        { "models/powerups/ammo/proxmineam.md3", 
+;434:		0, 0, 0},
+;435:/* icon */		"icons/icona_proxlauncher",
+;436:/* pickup */	"Proximity Mines",
+;437:		10,
+;438:		IT_AMMO,
+;439:		WP_PROX_LAUNCHER,
+;440:/* precache */ "",
+;441:/* sounds */ ""
+;442:	},
+;443:
+;444:/*QUAKED ammo_belt (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
+;445:*/
+;446:	{
+;447:		"ammo_belt",
+;448:		"sound/misc/am_pkup.wav",
+;449:        { "models/powerups/ammo/chaingunam.md3", 
+;450:		0, 0, 0},
+;451:/* icon */		"icons/icona_chaingun",
+;452:/* pickup */	"Chaingun Belt",
+;453:		100,
+;454:		IT_AMMO,
+;455:		WP_CHAINGUN,
+;456:/* precache */ "",
+;457:/* sounds */ ""
+;458:	},
+;459:
+;460:	//
+;461:	// PERSISTANT POWERUP ITEMS
 ;462:	//
-;463:	// HOLDABLE ITEMS
-;464:	//
-;465:/*QUAKED holdable_teleporter (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
-;466:*/
-;467:	{
-;468:		"holdable_teleporter", 
-;469:		"sound/items/holdable.wav",
-;470:        { "models/powerups/holdable/teleporter.md3", 
-;471:		0, 0, 0},
-;472:/* icon */		"icons/teleporter",
-;473:/* pickup */	"Personal Teleporter",
-;474:		60,
-;475:		IT_HOLDABLE,
-;476:		HI_TELEPORTER,
-;477:/* precache */ "",
-;478:/* sounds */ ""
-;479:	},
-;480:/*QUAKED holdable_medkit (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
-;481:*/
-;482:	{
-;483:		"holdable_medkit", 
-;484:		"sound/items/holdable.wav",
-;485:        { 
-;486:		"models/powerups/holdable/medkit.md3", 
-;487:		"models/powerups/holdable/medkit_sphere.md3",
-;488:		0, 0},
-;489:/* icon */		"icons/medkit",
-;490:/* pickup */	"Medkit",
-;491:		60,
-;492:		IT_HOLDABLE,
-;493:		HI_MEDKIT,
-;494:/* precache */ "",
-;495:/* sounds */ "sound/items/use_medkit.wav"
-;496:	},
-;497:
-;498:	//
-;499:	// POWERUP ITEMS
-;500:	//
-;501:/*QUAKED item_quad (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
-;502:*/
-;503:	{
-;504:		"item_quad", 
-;505:		"sound/items/quaddamage.wav",
-;506:        { "models/powerups/instant/quad.md3", 
-;507:        "models/powerups/instant/quad_ring.md3",
-;508:		0, 0 },
-;509:/* icon */		"icons/quad",
-;510:/* pickup */	"Quad Damage",
-;511:		30,
-;512:		IT_POWERUP,
-;513:		PW_QUAD,
-;514:/* precache */ "",
-;515:/* sounds */ "sound/items/damage2.wav sound/items/damage3.wav"
-;516:	},
-;517:
-;518:/*QUAKED item_enviro (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
-;519:*/
-;520:	{
-;521:		"item_enviro",
-;522:		"sound/items/protect.wav",
-;523:        { "models/powerups/instant/enviro.md3", 
-;524:		"models/powerups/instant/enviro_ring.md3", 
-;525:		0, 0 },
-;526:/* icon */		"icons/envirosuit",
-;527:/* pickup */	"Battle Suit",
-;528:		30,
-;529:		IT_POWERUP,
-;530:		PW_BATTLESUIT,
-;531:/* precache */ "",
-;532:/* sounds */ "sound/items/airout.wav sound/items/protect3.wav"
-;533:	},
-;534:
-;535:/*QUAKED item_haste (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
-;536:*/
-;537:	{
-;538:		"item_haste",
-;539:		"sound/items/haste.wav",
-;540:        { "models/powerups/instant/haste.md3", 
-;541:		"models/powerups/instant/haste_ring.md3", 
-;542:		0, 0 },
-;543:/* icon */		"icons/haste",
-;544:/* pickup */	"Speed",
-;545:		30,
-;546:		IT_POWERUP,
-;547:		PW_HASTE,
-;548:/* precache */ "",
-;549:/* sounds */ ""
-;550:	},
-;551:
-;552:/*QUAKED item_invis (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
-;553:*/
-;554:	{
-;555:		"item_invis",
-;556:		"sound/items/invisibility.wav",
-;557:        { "models/powerups/instant/invis.md3", 
-;558:		"models/powerups/instant/invis_ring.md3", 
-;559:		0, 0 },
-;560:/* icon */		"icons/invis",
-;561:/* pickup */	"Invisibility",
-;562:		30,
-;563:		IT_POWERUP,
-;564:		PW_INVIS,
-;565:/* precache */ "",
-;566:/* sounds */ ""
-;567:	},
-;568:
-;569:/*QUAKED item_regen (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
-;570:*/
-;571:	{
-;572:		"item_regen",
-;573:		"sound/items/regeneration.wav",
-;574:        { "models/powerups/instant/regen.md3", 
-;575:		"models/powerups/instant/regen_ring.md3", 
-;576:		0, 0 },
-;577:/* icon */		"icons/regen",
-;578:/* pickup */	"Regeneration",
-;579:		30,
-;580:		IT_POWERUP,
-;581:		PW_REGEN,
-;582:/* precache */ "",
-;583:/* sounds */ "sound/items/regen.wav"
-;584:	},
-;585:
-;586:/*QUAKED item_flight (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
-;587:*/
-;588:	{
-;589:		"item_flight",
-;590:		"sound/items/flight.wav",
-;591:        { "models/powerups/instant/flight.md3", 
-;592:		"models/powerups/instant/flight_ring.md3", 
-;593:		0, 0 },
-;594:/* icon */		"icons/flight",
-;595:/* pickup */	"Flight",
-;596:		60,
-;597:		IT_POWERUP,
-;598:		PW_FLIGHT,
+;463:/*QUAKED item_scout (.3 .3 1) (-16 -16 -16) (16 16 16) suspended redTeam blueTeam
+;464:*/
+;465:	{
+;466:		"item_scout",
+;467:		"sound/items/scout.wav",
+;468:        { "models/powerups/scout.md3", 
+;469:		0, 0, 0 },
+;470:/* icon */		"icons/scout",
+;471:/* pickup */	"Scout",
+;472:		30,
+;473:		IT_PERSISTANT_POWERUP,
+;474:		PW_SCOUT,
+;475:/* precache */ "",
+;476:/* sounds */ ""
+;477:	},
+;478:
+;479:/*QUAKED item_guard (.3 .3 1) (-16 -16 -16) (16 16 16) suspended redTeam blueTeam
+;480:*/
+;481:	{
+;482:		"item_guard",
+;483:		"sound/items/guard.wav",
+;484:        { "models/powerups/guard.md3", 
+;485:		0, 0, 0 },
+;486:/* icon */		"icons/guard",
+;487:/* pickup */	"Guard",
+;488:		30,
+;489:		IT_PERSISTANT_POWERUP,
+;490:		PW_GUARD,
+;491:/* precache */ "",
+;492:/* sounds */ ""
+;493:	},
+;494:
+;495:/*QUAKED item_doubler (.3 .3 1) (-16 -16 -16) (16 16 16) suspended redTeam blueTeam
+;496:*/
+;497:	{
+;498:		"item_doubler",
+;499:		"sound/items/doubler.wav",
+;500:        { "models/powerups/doubler.md3", 
+;501:		0, 0, 0 },
+;502:/* icon */		"icons/doubler",
+;503:/* pickup */	"Doubler",
+;504:		30,
+;505:		IT_PERSISTANT_POWERUP,
+;506:		PW_DOUBLER,
+;507:/* precache */ "",
+;508:/* sounds */ ""
+;509:	},
+;510:
+;511:/*QUAKED item_doubler (.3 .3 1) (-16 -16 -16) (16 16 16) suspended redTeam blueTeam
+;512:*/
+;513:	{
+;514:		"item_ammoregen",
+;515:		"sound/items/ammoregen.wav",
+;516:        { "models/powerups/ammo.md3",
+;517:		0, 0, 0 },
+;518:/* icon */		"icons/ammo_regen",
+;519:/* pickup */	"Ammo Regen",
+;520:		30,
+;521:		IT_PERSISTANT_POWERUP,
+;522:		PW_AMMOREGEN,
+;523:/* precache */ "",
+;524:/* sounds */ ""
+;525:	},
+;526:
+;527:	/*QUAKED team_CTF_neutralflag (0 0 1) (-16 -16 -16) (16 16 16)
+;528:Only in One Flag CTF games
+;529:*/
+;530:	{
+;531:		"team_CTF_neutralflag",
+;532:		NULL,
+;533:        { "models/flags/n_flag.md3",
+;534:		0, 0, 0 },
+;535:/* icon */		"icons/iconf_neutral1",
+;536:/* pickup */	"Neutral Flag",
+;537:		0,
+;538:		IT_TEAM,
+;539:		PW_NEUTRALFLAG,
+;540:/* precache */ "",
+;541:/* sounds */ ""
+;542:	},
+;543:
+;544:	{
+;545:		"item_redcube",
+;546:		"sound/misc/am_pkup.wav",
+;547:        { "models/powerups/orb/r_orb.md3",
+;548:		0, 0, 0 },
+;549:/* icon */		"icons/iconh_rorb",
+;550:/* pickup */	"Red Cube",
+;551:		0,
+;552:		IT_TEAM,
+;553:		0,
+;554:/* precache */ "",
+;555:/* sounds */ ""
+;556:	},
+;557:
+;558:	{
+;559:		"item_bluecube",
+;560:		"sound/misc/am_pkup.wav",
+;561:        { "models/powerups/orb/b_orb.md3",
+;562:		0, 0, 0 },
+;563:/* icon */		"icons/iconh_borb",
+;564:/* pickup */	"Blue Cube",
+;565:		0,
+;566:		IT_TEAM,
+;567:		0,
+;568:/* precache */ "",
+;569:/* sounds */ ""
+;570:	},
+;571:/*QUAKED weapon_nailgun (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
+;572:*/
+;573:	{
+;574:		"weapon_nailgun", 
+;575:		"sound/misc/w_pkup.wav",
+;576:        { "models/weapons/nailgun/nailgun.md3", 
+;577:		0, 0, 0},
+;578:/* icon */		"icons/iconw_nailgun",
+;579:/* pickup */	"Nailgun",
+;580:		10,
+;581:		IT_WEAPON,
+;582:		WP_NAILGUN,
+;583:/* precache */ "",
+;584:/* sounds */ ""
+;585:	},
+;586:
+;587:/*QUAKED weapon_prox_launcher (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
+;588:*/
+;589:	{
+;590:		"weapon_prox_launcher", 
+;591:		"sound/misc/w_pkup.wav",
+;592:        { "models/weapons/proxmine/proxmine.md3", 
+;593:		0, 0, 0},
+;594:/* icon */		"icons/iconw_proxlauncher",
+;595:/* pickup */	"Prox Launcher",
+;596:		5,
+;597:		IT_WEAPON,
+;598:		WP_PROX_LAUNCHER,
 ;599:/* precache */ "",
-;600:/* sounds */ "sound/items/flight.wav"
-;601:	},
-;602:
-;603:/*QUAKED team_CTF_redflag (1 0 0) (-16 -16 -16) (16 16 16)
-;604:Only in CTF games
-;605:*/
-;606:	{
-;607:		"team_CTF_redflag",
-;608:		NULL,
-;609:        { "models/flags/r_flag.md3",
-;610:		0, 0, 0 },
-;611:/* icon */		"icons/iconf_red1",
-;612:/* pickup */	"Red Flag",
-;613:		0,
-;614:		IT_TEAM,
-;615:		PW_REDFLAG,
-;616:/* precache */ "",
-;617:/* sounds */ ""
-;618:	},
-;619:
-;620:/*QUAKED team_CTF_blueflag (0 0 1) (-16 -16 -16) (16 16 16)
-;621:Only in CTF games
-;622:*/
-;623:	{
-;624:		"team_CTF_blueflag",
-;625:		NULL,
-;626:        { "models/flags/b_flag.md3",
-;627:		0, 0, 0 },
-;628:/* icon */		"icons/iconf_blu1",
-;629:/* pickup */	"Blue Flag",
-;630:		0,
-;631:		IT_TEAM,
-;632:		PW_BLUEFLAG,
-;633:/* precache */ "",
-;634:/* sounds */ ""
-;635:	},
-;636:
-;637:#ifdef MISSIONPACK
-;638:/*QUAKED holdable_kamikaze (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
-;639:*/
-;640:	{
-;641:		"holdable_kamikaze", 
-;642:		"sound/items/holdable.wav",
-;643:        { "models/powerups/kamikazi.md3", 
-;644:		0, 0, 0},
-;645:/* icon */		"icons/kamikaze",
-;646:/* pickup */	"Kamikaze",
-;647:		60,
-;648:		IT_HOLDABLE,
-;649:		HI_KAMIKAZE,
-;650:/* precache */ "",
-;651:/* sounds */ "sound/items/kamikazerespawn.wav"
-;652:	},
-;653:
-;654:/*QUAKED holdable_portal (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
-;655:*/
-;656:	{
-;657:		"holdable_portal", 
-;658:		"sound/items/holdable.wav",
-;659:        { "models/powerups/holdable/porter.md3",
-;660:		0, 0, 0},
-;661:/* icon */		"icons/portal",
-;662:/* pickup */	"Portal",
-;663:		60,
-;664:		IT_HOLDABLE,
-;665:		HI_PORTAL,
-;666:/* precache */ "",
-;667:/* sounds */ ""
-;668:	},
-;669:
-;670:/*QUAKED holdable_invulnerability (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
-;671:*/
-;672:	{
-;673:		"holdable_invulnerability", 
-;674:		"sound/items/holdable.wav",
-;675:        { "models/powerups/holdable/invulnerability.md3", 
-;676:		0, 0, 0},
-;677:/* icon */		"icons/invulnerability",
-;678:/* pickup */	"Invulnerability",
-;679:		60,
-;680:		IT_HOLDABLE,
-;681:		HI_INVULNERABILITY,
-;682:/* precache */ "",
-;683:/* sounds */ ""
-;684:	},
-;685:
-;686:/*QUAKED ammo_nails (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
-;687:*/
-;688:	{
-;689:		"ammo_nails",
-;690:		"sound/misc/am_pkup.wav",
-;691:        { "models/powerups/ammo/nailgunam.md3", 
-;692:		0, 0, 0},
-;693:/* icon */		"icons/icona_nailgun",
-;694:/* pickup */	"Nails",
-;695:		20,
-;696:		IT_AMMO,
-;697:		WP_NAILGUN,
-;698:/* precache */ "",
-;699:/* sounds */ ""
-;700:	},
-;701:
-;702:/*QUAKED ammo_mines (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
-;703:*/
-;704:	{
-;705:		"ammo_mines",
-;706:		"sound/misc/am_pkup.wav",
-;707:        { "models/powerups/ammo/proxmineam.md3", 
-;708:		0, 0, 0},
-;709:/* icon */		"icons/icona_proxlauncher",
-;710:/* pickup */	"Proximity Mines",
-;711:		10,
-;712:		IT_AMMO,
-;713:		WP_PROX_LAUNCHER,
-;714:/* precache */ "",
-;715:/* sounds */ ""
-;716:	},
-;717:
-;718:/*QUAKED ammo_belt (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
-;719:*/
-;720:	{
-;721:		"ammo_belt",
-;722:		"sound/misc/am_pkup.wav",
-;723:        { "models/powerups/ammo/chaingunam.md3", 
-;724:		0, 0, 0},
-;725:/* icon */		"icons/icona_chaingun",
-;726:/* pickup */	"Chaingun Belt",
-;727:		100,
-;728:		IT_AMMO,
-;729:		WP_CHAINGUN,
-;730:/* precache */ "",
-;731:/* sounds */ ""
-;732:	},
-;733:
-;734:	//
-;735:	// PERSISTANT POWERUP ITEMS
-;736:	//
-;737:/*QUAKED item_scout (.3 .3 1) (-16 -16 -16) (16 16 16) suspended redTeam blueTeam
-;738:*/
-;739:	{
-;740:		"item_scout",
-;741:		"sound/items/scout.wav",
-;742:        { "models/powerups/scout.md3", 
-;743:		0, 0, 0 },
-;744:/* icon */		"icons/scout",
-;745:/* pickup */	"Scout",
-;746:		30,
-;747:		IT_PERSISTANT_POWERUP,
-;748:		PW_SCOUT,
-;749:/* precache */ "",
-;750:/* sounds */ ""
-;751:	},
-;752:
-;753:/*QUAKED item_guard (.3 .3 1) (-16 -16 -16) (16 16 16) suspended redTeam blueTeam
-;754:*/
-;755:	{
-;756:		"item_guard",
-;757:		"sound/items/guard.wav",
-;758:        { "models/powerups/guard.md3", 
-;759:		0, 0, 0 },
-;760:/* icon */		"icons/guard",
-;761:/* pickup */	"Guard",
-;762:		30,
-;763:		IT_PERSISTANT_POWERUP,
-;764:		PW_GUARD,
-;765:/* precache */ "",
-;766:/* sounds */ ""
-;767:	},
-;768:
-;769:/*QUAKED item_doubler (.3 .3 1) (-16 -16 -16) (16 16 16) suspended redTeam blueTeam
-;770:*/
-;771:	{
-;772:		"item_doubler",
-;773:		"sound/items/doubler.wav",
-;774:        { "models/powerups/doubler.md3", 
-;775:		0, 0, 0 },
-;776:/* icon */		"icons/doubler",
-;777:/* pickup */	"Doubler",
-;778:		30,
-;779:		IT_PERSISTANT_POWERUP,
-;780:		PW_DOUBLER,
-;781:/* precache */ "",
-;782:/* sounds */ ""
-;783:	},
-;784:
-;785:/*QUAKED item_doubler (.3 .3 1) (-16 -16 -16) (16 16 16) suspended redTeam blueTeam
-;786:*/
-;787:	{
-;788:		"item_ammoregen",
-;789:		"sound/items/ammoregen.wav",
-;790:        { "models/powerups/ammo.md3",
-;791:		0, 0, 0 },
-;792:/* icon */		"icons/ammo_regen",
-;793:/* pickup */	"Ammo Regen",
-;794:		30,
-;795:		IT_PERSISTANT_POWERUP,
-;796:		PW_AMMOREGEN,
-;797:/* precache */ "",
-;798:/* sounds */ ""
-;799:	},
-;800:
-;801:	/*QUAKED team_CTF_neutralflag (0 0 1) (-16 -16 -16) (16 16 16)
-;802:Only in One Flag CTF games
-;803:*/
-;804:	{
-;805:		"team_CTF_neutralflag",
-;806:		NULL,
-;807:        { "models/flags/n_flag.md3",
-;808:		0, 0, 0 },
-;809:/* icon */		"icons/iconf_neutral1",
-;810:/* pickup */	"Neutral Flag",
-;811:		0,
-;812:		IT_TEAM,
-;813:		PW_NEUTRALFLAG,
-;814:/* precache */ "",
-;815:/* sounds */ ""
-;816:	},
-;817:
-;818:	{
-;819:		"item_redcube",
-;820:		"sound/misc/am_pkup.wav",
-;821:        { "models/powerups/orb/r_orb.md3",
-;822:		0, 0, 0 },
-;823:/* icon */		"icons/iconh_rorb",
-;824:/* pickup */	"Red Cube",
-;825:		0,
-;826:		IT_TEAM,
-;827:		0,
-;828:/* precache */ "",
-;829:/* sounds */ ""
-;830:	},
-;831:
-;832:	{
-;833:		"item_bluecube",
-;834:		"sound/misc/am_pkup.wav",
-;835:        { "models/powerups/orb/b_orb.md3",
-;836:		0, 0, 0 },
-;837:/* icon */		"icons/iconh_borb",
-;838:/* pickup */	"Blue Cube",
-;839:		0,
-;840:		IT_TEAM,
-;841:		0,
-;842:/* precache */ "",
-;843:/* sounds */ ""
-;844:	},
-;845:/*QUAKED weapon_nailgun (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
-;846:*/
-;847:	{
-;848:		"weapon_nailgun", 
-;849:		"sound/misc/w_pkup.wav",
-;850:        { "models/weapons/nailgun/nailgun.md3", 
-;851:		0, 0, 0},
-;852:/* icon */		"icons/iconw_nailgun",
-;853:/* pickup */	"Nailgun",
-;854:		10,
-;855:		IT_WEAPON,
-;856:		WP_NAILGUN,
-;857:/* precache */ "",
-;858:/* sounds */ ""
-;859:	},
-;860:
-;861:/*QUAKED weapon_prox_launcher (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
-;862:*/
-;863:	{
-;864:		"weapon_prox_launcher", 
-;865:		"sound/misc/w_pkup.wav",
-;866:        { "models/weapons/proxmine/proxmine.md3", 
-;867:		0, 0, 0},
-;868:/* icon */		"icons/iconw_proxlauncher",
-;869:/* pickup */	"Prox Launcher",
-;870:		5,
-;871:		IT_WEAPON,
-;872:		WP_PROX_LAUNCHER,
-;873:/* precache */ "",
-;874:/* sounds */ "sound/weapons/proxmine/wstbtick.wav "
-;875:			"sound/weapons/proxmine/wstbactv.wav "
-;876:			"sound/weapons/proxmine/wstbimpl.wav "
-;877:			"sound/weapons/proxmine/wstbimpm.wav "
-;878:			"sound/weapons/proxmine/wstbimpd.wav "
-;879:			"sound/weapons/proxmine/wstbactv.wav"
-;880:	},
-;881:
-;882:/*QUAKED weapon_chaingun (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
-;883:*/
-;884:	{
-;885:		"weapon_chaingun", 
-;886:		"sound/misc/w_pkup.wav",
-;887:        { "models/weapons/vulcan/vulcan.md3", 
-;888:		0, 0, 0},
-;889:/* icon */		"icons/iconw_chaingun",
-;890:/* pickup */	"Chaingun",
-;891:		80,
-;892:		IT_WEAPON,
-;893:		WP_CHAINGUN,
-;894:/* precache */ "",
-;895:/* sounds */ "sound/weapons/vulcan/wvulwind.wav"
-;896:	},
-;897:#endif
-;898:
-;899:	// end of list marker
-;900:	{NULL}
-;901:};
-;902:
-;903:int		bg_numItems = sizeof(bg_itemlist) / sizeof(bg_itemlist[0]) - 1;
-;904:
-;905:
-;906:/*
-;907:==============
-;908:BG_FindItemForPowerup
-;909:==============
-;910:*/
-;911:gitem_t	*BG_FindItemForPowerup( powerup_t pw ) {
-line 914
-;912:	int		i;
-;913:
-;914:	for ( i = 0 ; i < bg_numItems ; i++ ) {
+;600:/* sounds */ "sound/weapons/proxmine/wstbtick.wav "
+;601:			"sound/weapons/proxmine/wstbactv.wav "
+;602:			"sound/weapons/proxmine/wstbimpl.wav "
+;603:			"sound/weapons/proxmine/wstbimpm.wav "
+;604:			"sound/weapons/proxmine/wstbimpd.wav "
+;605:			"sound/weapons/proxmine/wstbactv.wav"
+;606:	},
+;607:
+;608:/*QUAKED weapon_chaingun (.3 .3 1) (-16 -16 -16) (16 16 16) suspended
+;609:*/
+;610:	{
+;611:		"weapon_chaingun", 
+;612:		"sound/misc/w_pkup.wav",
+;613:        { "models/weapons/vulcan/vulcan.md3", 
+;614:		0, 0, 0},
+;615:/* icon */		"icons/iconw_chaingun",
+;616:/* pickup */	"Chaingun",
+;617:		80,
+;618:		IT_WEAPON,
+;619:		WP_CHAINGUN,
+;620:/* precache */ "",
+;621:/* sounds */ "sound/weapons/vulcan/wvulwind.wav"
+;622:	},
+;623:#endif
+;624:
+;625:	// end of list marker
+;626:	{NULL}
+;627:};
+;628:
+;629:int		bg_numItems = sizeof(bg_itemlist) / sizeof(bg_itemlist[0]) - 1;
+;630:
+;631:
+;632:/*
+;633:==============
+;634:BG_FindItemForPowerup
+;635:==============
+;636:*/
+;637:gitem_t	*BG_FindItemForPowerup( powerup_t pw ) {
+line 640
+;638:	int		i;
+;639:
+;640:	for ( i = 0 ; i < bg_numItems ; i++ ) {
 ADDRLP4 0
 CNSTI4 0
 ASGNI4
-ADDRGP4 $217
+ADDRGP4 $147
 JUMPV
-LABELV $214
-line 915
-;915:		if ( (bg_itemlist[i].giType == IT_POWERUP || 
+LABELV $144
+line 641
+;641:		if ( (bg_itemlist[i].giType == IT_POWERUP || 
 ADDRLP4 4
 CNSTI4 52
 ADDRLP4 0
@@ -1416,22 +921,22 @@ ADDRGP4 bg_itemlist+36
 ADDP4
 INDIRI4
 CNSTI4 5
-EQI4 $225
+EQI4 $155
 ADDRLP4 4
 INDIRI4
 ADDRGP4 bg_itemlist+36
 ADDP4
 INDIRI4
 CNSTI4 8
-EQI4 $225
+EQI4 $155
 ADDRLP4 4
 INDIRI4
 ADDRGP4 bg_itemlist+36
 ADDP4
 INDIRI4
 CNSTI4 7
-NEI4 $218
-LABELV $225
+NEI4 $148
+LABELV $155
 CNSTI4 52
 ADDRLP4 0
 INDIRI4
@@ -1441,13 +946,13 @@ ADDP4
 INDIRI4
 ADDRFP4 0
 INDIRI4
-NEI4 $218
-line 918
-;916:					bg_itemlist[i].giType == IT_TEAM ||
-;917:					bg_itemlist[i].giType == IT_PERSISTANT_POWERUP) && 
-;918:			bg_itemlist[i].giTag == pw ) {
-line 919
-;919:			return &bg_itemlist[i];
+NEI4 $148
+line 644
+;642:					bg_itemlist[i].giType == IT_TEAM ||
+;643:					bg_itemlist[i].giType == IT_PERSISTANT_POWERUP) && 
+;644:			bg_itemlist[i].giTag == pw ) {
+line 645
+;645:			return &bg_itemlist[i];
 CNSTI4 52
 ADDRLP4 0
 INDIRI4
@@ -1455,57 +960,57 @@ MULI4
 ADDRGP4 bg_itemlist
 ADDP4
 RETP4
-ADDRGP4 $213
+ADDRGP4 $143
 JUMPV
-LABELV $218
-line 921
-;920:		}
-;921:	}
-LABELV $215
-line 914
+LABELV $148
+line 647
+;646:		}
+;647:	}
+LABELV $145
+line 640
 ADDRLP4 0
 ADDRLP4 0
 INDIRI4
 CNSTI4 1
 ADDI4
 ASGNI4
-LABELV $217
+LABELV $147
 ADDRLP4 0
 INDIRI4
 ADDRGP4 bg_numItems
 INDIRI4
-LTI4 $214
-line 923
-;922:
-;923:	return NULL;
+LTI4 $144
+line 649
+;648:
+;649:	return NULL;
 CNSTP4 0
 RETP4
-LABELV $213
+LABELV $143
 endproc BG_FindItemForPowerup 8 0
 export BG_FindItemForHoldable
 proc BG_FindItemForHoldable 8 8
-line 932
-;924:}
-;925:
-;926:
-;927:/*
-;928:==============
-;929:BG_FindItemForHoldable
-;930:==============
-;931:*/
-;932:gitem_t	*BG_FindItemForHoldable( holdable_t pw ) {
-line 935
-;933:	int		i;
-;934:
-;935:	for ( i = 0 ; i < bg_numItems ; i++ ) {
+line 658
+;650:}
+;651:
+;652:
+;653:/*
+;654:==============
+;655:BG_FindItemForHoldable
+;656:==============
+;657:*/
+;658:gitem_t	*BG_FindItemForHoldable( holdable_t pw ) {
+line 661
+;659:	int		i;
+;660:
+;661:	for ( i = 0 ; i < bg_numItems ; i++ ) {
 ADDRLP4 0
 CNSTI4 0
 ASGNI4
-ADDRGP4 $230
+ADDRGP4 $160
 JUMPV
-LABELV $227
-line 936
-;936:		if ( bg_itemlist[i].giType == IT_HOLDABLE && bg_itemlist[i].giTag == pw ) {
+LABELV $157
+line 662
+;662:		if ( bg_itemlist[i].giType == IT_HOLDABLE && bg_itemlist[i].giTag == pw ) {
 ADDRLP4 4
 CNSTI4 52
 ADDRLP4 0
@@ -1518,7 +1023,7 @@ ADDRGP4 bg_itemlist+36
 ADDP4
 INDIRI4
 CNSTI4 6
-NEI4 $231
+NEI4 $161
 ADDRLP4 4
 INDIRI4
 ADDRGP4 bg_itemlist+40
@@ -1526,9 +1031,9 @@ ADDP4
 INDIRI4
 ADDRFP4 0
 INDIRI4
-NEI4 $231
-line 937
-;937:			return &bg_itemlist[i];
+NEI4 $161
+line 663
+;663:			return &bg_itemlist[i];
 CNSTI4 52
 ADDRLP4 0
 INDIRI4
@@ -1536,75 +1041,75 @@ MULI4
 ADDRGP4 bg_itemlist
 ADDP4
 RETP4
-ADDRGP4 $226
+ADDRGP4 $156
 JUMPV
-LABELV $231
-line 939
-;938:		}
-;939:	}
-LABELV $228
-line 935
+LABELV $161
+line 665
+;664:		}
+;665:	}
+LABELV $158
+line 661
 ADDRLP4 0
 ADDRLP4 0
 INDIRI4
 CNSTI4 1
 ADDI4
 ASGNI4
-LABELV $230
+LABELV $160
 ADDRLP4 0
 INDIRI4
 ADDRGP4 bg_numItems
 INDIRI4
-LTI4 $227
-line 941
-;940:
-;941:	Com_Error( ERR_DROP, "HoldableItem not found" );
+LTI4 $157
+line 667
+;666:
+;667:	Com_Error( ERR_DROP, "HoldableItem not found" );
 CNSTI4 1
 ARGI4
-ADDRGP4 $235
+ADDRGP4 $165
 ARGP4
 ADDRGP4 Com_Error
 CALLV
 pop
-line 943
-;942:
-;943:	return NULL;
+line 669
+;668:
+;669:	return NULL;
 CNSTP4 0
 RETP4
-LABELV $226
+LABELV $156
 endproc BG_FindItemForHoldable 8 8
 export BG_FindItemForWeapon
 proc BG_FindItemForWeapon 8 12
-line 953
-;944:}
-;945:
-;946:
-;947:/*
-;948:===============
-;949:BG_FindItemForWeapon
-;950:
-;951:===============
-;952:*/
-;953:gitem_t	*BG_FindItemForWeapon( weapon_t weapon ) {
-line 956
-;954:	gitem_t	*it;
-;955:	
-;956:	for ( it = bg_itemlist + 1 ; it->classname ; it++) {
+line 679
+;670:}
+;671:
+;672:
+;673:/*
+;674:===============
+;675:BG_FindItemForWeapon
+;676:
+;677:===============
+;678:*/
+;679:gitem_t	*BG_FindItemForWeapon( weapon_t weapon ) {
+line 682
+;680:	gitem_t	*it;
+;681:	
+;682:	for ( it = bg_itemlist + 1 ; it->classname ; it++) {
 ADDRLP4 0
 ADDRGP4 bg_itemlist+52
 ASGNP4
-ADDRGP4 $240
+ADDRGP4 $170
 JUMPV
-LABELV $237
-line 957
-;957:		if ( it->giType == IT_WEAPON && it->giTag == weapon ) {
+LABELV $167
+line 683
+;683:		if ( it->giType == IT_WEAPON && it->giTag == weapon ) {
 ADDRLP4 0
 INDIRP4
 CNSTI4 36
 ADDP4
 INDIRI4
 CNSTI4 1
-NEI4 $242
+NEI4 $172
 ADDRLP4 0
 INDIRP4
 CNSTI4 40
@@ -1612,39 +1117,39 @@ ADDP4
 INDIRI4
 ADDRFP4 0
 INDIRI4
-NEI4 $242
-line 958
-;958:			return it;
+NEI4 $172
+line 684
+;684:			return it;
 ADDRLP4 0
 INDIRP4
 RETP4
-ADDRGP4 $236
+ADDRGP4 $166
 JUMPV
-LABELV $242
-line 960
-;959:		}
-;960:	}
-LABELV $238
-line 956
+LABELV $172
+line 686
+;685:		}
+;686:	}
+LABELV $168
+line 682
 ADDRLP4 0
 ADDRLP4 0
 INDIRP4
 CNSTI4 52
 ADDP4
 ASGNP4
-LABELV $240
+LABELV $170
 ADDRLP4 0
 INDIRP4
 INDIRP4
 CVPU4 4
 CNSTU4 0
-NEU4 $237
-line 962
-;961:
-;962:	Com_Error( ERR_DROP, "Couldn't find item for weapon %i", weapon);
+NEU4 $167
+line 688
+;687:
+;688:	Com_Error( ERR_DROP, "Couldn't find item for weapon %i", weapon);
 CNSTI4 1
 ARGI4
-ADDRGP4 $244
+ADDRGP4 $174
 ARGP4
 ADDRFP4 0
 INDIRI4
@@ -1652,36 +1157,36 @@ ARGI4
 ADDRGP4 Com_Error
 CALLV
 pop
-line 963
-;963:	return NULL;
+line 689
+;689:	return NULL;
 CNSTP4 0
 RETP4
-LABELV $236
+LABELV $166
 endproc BG_FindItemForWeapon 8 12
 export BG_FindItem
 proc BG_FindItem 8 8
-line 972
-;964:}
-;965:
-;966:/*
-;967:===============
-;968:BG_FindItem
-;969:
-;970:===============
-;971:*/
-;972:gitem_t	*BG_FindItem( const char *pickupName ) {
-line 975
-;973:	gitem_t	*it;
-;974:	
-;975:	for ( it = bg_itemlist + 1 ; it->classname ; it++ ) {
+line 698
+;690:}
+;691:
+;692:/*
+;693:===============
+;694:BG_FindItem
+;695:
+;696:===============
+;697:*/
+;698:gitem_t	*BG_FindItem( const char *pickupName ) {
+line 701
+;699:	gitem_t	*it;
+;700:	
+;701:	for ( it = bg_itemlist + 1 ; it->classname ; it++ ) {
 ADDRLP4 0
 ADDRGP4 bg_itemlist+52
 ASGNP4
-ADDRGP4 $249
+ADDRGP4 $179
 JUMPV
-LABELV $246
-line 976
-;976:		if ( !Q_stricmp( it->pickup_name, pickupName ) )
+LABELV $176
+line 702
+;702:		if ( !Q_stricmp( it->pickup_name, pickupName ) )
 ADDRLP4 0
 INDIRP4
 CNSTI4 28
@@ -1698,57 +1203,57 @@ ASGNI4
 ADDRLP4 4
 INDIRI4
 CNSTI4 0
-NEI4 $251
-line 977
-;977:			return it;
+NEI4 $181
+line 703
+;703:			return it;
 ADDRLP4 0
 INDIRP4
 RETP4
-ADDRGP4 $245
+ADDRGP4 $175
 JUMPV
-LABELV $251
-line 978
-;978:	}
-LABELV $247
-line 975
+LABELV $181
+line 704
+;704:	}
+LABELV $177
+line 701
 ADDRLP4 0
 ADDRLP4 0
 INDIRP4
 CNSTI4 52
 ADDP4
 ASGNP4
-LABELV $249
+LABELV $179
 ADDRLP4 0
 INDIRP4
 INDIRP4
 CVPU4 4
 CNSTU4 0
-NEU4 $246
-line 980
-;979:
-;980:	return NULL;
+NEU4 $176
+line 706
+;705:
+;706:	return NULL;
 CNSTP4 0
 RETP4
-LABELV $245
+LABELV $175
 endproc BG_FindItem 8 8
 export BG_PlayerTouchesItem
 proc BG_PlayerTouchesItem 36 12
-line 991
-;981:}
-;982:
-;983:/*
-;984:============
-;985:BG_PlayerTouchesItem
-;986:
-;987:Items can be picked up without actually touching their physical bounds to make
-;988:grabbing them easier
-;989:============
-;990:*/
-;991:qboolean	BG_PlayerTouchesItem( playerState_t *ps, entityState_t *item, int atTime ) {
-line 994
-;992:	vec3_t		origin;
-;993:
-;994:	BG_EvaluateTrajectory( &item->pos, atTime, origin );
+line 717
+;707:}
+;708:
+;709:/*
+;710:============
+;711:BG_PlayerTouchesItem
+;712:
+;713:Items can be picked up without actually touching their physical bounds to make
+;714:grabbing them easier
+;715:============
+;716:*/
+;717:qboolean	BG_PlayerTouchesItem( playerState_t *ps, entityState_t *item, int atTime ) {
+line 720
+;718:	vec3_t		origin;
+;719:
+;720:	BG_EvaluateTrajectory( &item->pos, atTime, origin );
 ADDRFP4 4
 INDIRP4
 CNSTI4 12
@@ -1762,10 +1267,10 @@ ARGP4
 ADDRGP4 BG_EvaluateTrajectory
 CALLV
 pop
-line 997
-;995:
-;996:	// we are ignoring ducked differences here
-;997:	if ( ps->origin[0] - origin[0] > 44
+line 723
+;721:
+;722:	// we are ignoring ducked differences here
+;723:	if ( ps->origin[0] - origin[0] > 44
 ADDRLP4 12
 ADDRFP4 0
 INDIRP4
@@ -1783,11 +1288,11 @@ ASGNF4
 ADDRLP4 16
 INDIRF4
 CNSTF4 1110441984
-GTF4 $264
+GTF4 $194
 ADDRLP4 16
 INDIRF4
 CNSTF4 3259498496
-LTF4 $264
+LTF4 $194
 ADDRLP4 20
 ADDRLP4 12
 INDIRP4
@@ -1805,7 +1310,7 @@ INDIRF4
 SUBF4
 ADDRLP4 24
 INDIRF4
-GTF4 $264
+GTF4 $194
 ADDRLP4 28
 CNSTF4 3255828480
 ASGNF4
@@ -1816,7 +1321,7 @@ INDIRF4
 SUBF4
 ADDRLP4 28
 INDIRF4
-LTF4 $264
+LTF4 $194
 ADDRLP4 32
 ADDRLP4 12
 INDIRP4
@@ -1831,7 +1336,7 @@ INDIRF4
 SUBF4
 ADDRLP4 24
 INDIRF4
-GTF4 $264
+GTF4 $194
 ADDRLP4 32
 INDIRF4
 ADDRLP4 0+8
@@ -1839,52 +1344,52 @@ INDIRF4
 SUBF4
 ADDRLP4 28
 INDIRF4
-GEF4 $254
-LABELV $264
-line 1002
-;998:		|| ps->origin[0] - origin[0] < -50
-;999:		|| ps->origin[1] - origin[1] > 36
-;1000:		|| ps->origin[1] - origin[1] < -36
-;1001:		|| ps->origin[2] - origin[2] > 36
-;1002:		|| ps->origin[2] - origin[2] < -36 ) {
-line 1003
-;1003:		return qfalse;
+GEF4 $184
+LABELV $194
+line 728
+;724:		|| ps->origin[0] - origin[0] < -50
+;725:		|| ps->origin[1] - origin[1] > 36
+;726:		|| ps->origin[1] - origin[1] < -36
+;727:		|| ps->origin[2] - origin[2] > 36
+;728:		|| ps->origin[2] - origin[2] < -36 ) {
+line 729
+;729:		return qfalse;
 CNSTI4 0
 RETI4
-ADDRGP4 $253
+ADDRGP4 $183
 JUMPV
-LABELV $254
-line 1006
-;1004:	}
-;1005:
-;1006:	return qtrue;
+LABELV $184
+line 732
+;730:	}
+;731:
+;732:	return qtrue;
 CNSTI4 1
 RETI4
-LABELV $253
+LABELV $183
 endproc BG_PlayerTouchesItem 36 12
 export BG_CanItemBeGrabbed
 proc BG_CanItemBeGrabbed 32 8
-line 1019
-;1007:}
-;1008:
-;1009:
-;1010:
-;1011:/*
-;1012:================
-;1013:BG_CanItemBeGrabbed
-;1014:
-;1015:Returns false if the item should not be picked up.
-;1016:This needs to be the same for client side prediction and server use.
-;1017:================
-;1018:*/
-;1019:qboolean BG_CanItemBeGrabbed( int gametype, const entityState_t *ent, const playerState_t *ps ) {
-line 1025
-;1020:	gitem_t	*item;
-;1021:#ifdef MISSIONPACK
-;1022:	int		upperBound;
-;1023:#endif
-;1024:
-;1025:	if ( ent->modelindex < 1 || ent->modelindex >= bg_numItems ) {
+line 745
+;733:}
+;734:
+;735:
+;736:
+;737:/*
+;738:================
+;739:BG_CanItemBeGrabbed
+;740:
+;741:Returns false if the item should not be picked up.
+;742:This needs to be the same for client side prediction and server use.
+;743:================
+;744:*/
+;745:qboolean BG_CanItemBeGrabbed( int gametype, const entityState_t *ent, const playerState_t *ps ) {
+line 751
+;746:	gitem_t	*item;
+;747:#ifdef MISSIONPACK
+;748:	int		upperBound;
+;749:#endif
+;750:
+;751:	if ( ent->modelindex < 1 || ent->modelindex >= bg_numItems ) {
 ADDRLP4 4
 ADDRFP4 4
 INDIRP4
@@ -1895,28 +1400,28 @@ ASGNI4
 ADDRLP4 4
 INDIRI4
 CNSTI4 1
-LTI4 $268
+LTI4 $198
 ADDRLP4 4
 INDIRI4
 ADDRGP4 bg_numItems
 INDIRI4
-LTI4 $266
-LABELV $268
-line 1026
-;1026:		Com_Error( ERR_DROP, "BG_CanItemBeGrabbed: index out of range" );
+LTI4 $196
+LABELV $198
+line 752
+;752:		Com_Error( ERR_DROP, "BG_CanItemBeGrabbed: index out of range" );
 CNSTI4 1
 ARGI4
-ADDRGP4 $269
+ADDRGP4 $199
 ARGP4
 ADDRGP4 Com_Error
 CALLV
 pop
-line 1027
-;1027:	}
-LABELV $266
-line 1029
-;1028:
-;1029:	item = &bg_itemlist[ent->modelindex];
+line 753
+;753:	}
+LABELV $196
+line 755
+;754:
+;755:	item = &bg_itemlist[ent->modelindex];
 ADDRLP4 0
 CNSTI4 52
 ADDRFP4 4
@@ -1928,9 +1433,9 @@ MULI4
 ADDRGP4 bg_itemlist
 ADDP4
 ASGNP4
-line 1031
-;1030:
-;1031:	switch( item->giType ) {
+line 757
+;756:
+;757:	switch( item->giType ) {
 ADDRLP4 8
 ADDRLP4 0
 INDIRP4
@@ -1941,45 +1446,45 @@ ASGNI4
 ADDRLP4 8
 INDIRI4
 CNSTI4 0
-LTI4 $271
+LTI4 $201
 ADDRLP4 8
 INDIRI4
 CNSTI4 8
-GTI4 $271
+GTI4 $201
 ADDRLP4 8
 INDIRI4
 CNSTI4 2
 LSHI4
-ADDRGP4 $311
+ADDRGP4 $241
 ADDP4
 INDIRP4
 JUMPV
 lit
 align 4
-LABELV $311
-address $309
-address $273
-address $274
-address $277
-address $280
-address $288
-address $306
-address $271
-address $289
+LABELV $241
+address $239
+address $203
+address $204
+address $207
+address $210
+address $218
+address $236
+address $201
+address $219
 code
-LABELV $273
-line 1033
-;1032:	case IT_WEAPON:
-;1033:		return qtrue;	// weapons are always picked up
+LABELV $203
+line 759
+;758:	case IT_WEAPON:
+;759:		return qtrue;	// weapons are always picked up
 CNSTI4 1
 RETI4
-ADDRGP4 $265
+ADDRGP4 $195
 JUMPV
-LABELV $274
-line 1036
-;1034:
-;1035:	case IT_AMMO:
-;1036:		if ( ps->ammo[ item->giTag ] >= 200 ) {
+LABELV $204
+line 762
+;760:
+;761:	case IT_AMMO:
+;762:		if ( ps->ammo[ item->giTag ] >= 200 ) {
 ADDRLP4 0
 INDIRP4
 CNSTI4 40
@@ -1994,43 +1499,43 @@ ADDP4
 ADDP4
 INDIRI4
 CNSTI4 200
-LTI4 $275
-line 1037
-;1037:			return qfalse;		// can't hold any more
+LTI4 $205
+line 763
+;763:			return qfalse;		// can't hold any more
 CNSTI4 0
 RETI4
-ADDRGP4 $265
+ADDRGP4 $195
 JUMPV
-LABELV $275
-line 1039
-;1038:		}
-;1039:		return qtrue;
+LABELV $205
+line 765
+;764:		}
+;765:		return qtrue;
 CNSTI4 1
 RETI4
-ADDRGP4 $265
+ADDRGP4 $195
 JUMPV
-LABELV $277
-line 1059
-;1040:
-;1041:	case IT_ARMOR:
-;1042:#ifdef MISSIONPACK
-;1043:		if( bg_itemlist[ps->stats[STAT_PERSISTANT_POWERUP]].giTag == PW_SCOUT ) {
-;1044:			return qfalse;
-;1045:		}
-;1046:
-;1047:		// we also clamp armor to the maxhealth for handicapping
-;1048:		if( bg_itemlist[ps->stats[STAT_PERSISTANT_POWERUP]].giTag == PW_GUARD ) {
-;1049:			upperBound = ps->stats[STAT_MAX_HEALTH];
-;1050:		}
-;1051:		else {
-;1052:			upperBound = ps->stats[STAT_MAX_HEALTH] * 2;
-;1053:		}
-;1054:
-;1055:		if ( ps->stats[STAT_ARMOR] >= upperBound ) {
-;1056:			return qfalse;
-;1057:		}
-;1058:#else
-;1059:		if ( ps->stats[STAT_ARMOR] >= ps->stats[STAT_MAX_HEALTH] * 2 ) {
+LABELV $207
+line 785
+;766:
+;767:	case IT_ARMOR:
+;768:#ifdef MISSIONPACK
+;769:		if( bg_itemlist[ps->stats[STAT_PERSISTANT_POWERUP]].giTag == PW_SCOUT ) {
+;770:			return qfalse;
+;771:		}
+;772:
+;773:		// we also clamp armor to the maxhealth for handicapping
+;774:		if( bg_itemlist[ps->stats[STAT_PERSISTANT_POWERUP]].giTag == PW_GUARD ) {
+;775:			upperBound = ps->stats[STAT_MAX_HEALTH];
+;776:		}
+;777:		else {
+;778:			upperBound = ps->stats[STAT_MAX_HEALTH] * 2;
+;779:		}
+;780:
+;781:		if ( ps->stats[STAT_ARMOR] >= upperBound ) {
+;782:			return qfalse;
+;783:		}
+;784:#else
+;785:		if ( ps->stats[STAT_ARMOR] >= ps->stats[STAT_MAX_HEALTH] * 2 ) {
 ADDRLP4 16
 ADDRFP4 8
 INDIRP4
@@ -2047,35 +1552,35 @@ ADDP4
 INDIRI4
 CNSTI4 1
 LSHI4
-LTI4 $278
-line 1060
-;1060:			return qfalse;
+LTI4 $208
+line 786
+;786:			return qfalse;
 CNSTI4 0
 RETI4
-ADDRGP4 $265
+ADDRGP4 $195
 JUMPV
-LABELV $278
-line 1063
-;1061:		}
-;1062:#endif
-;1063:		return qtrue;
+LABELV $208
+line 789
+;787:		}
+;788:#endif
+;789:		return qtrue;
 CNSTI4 1
 RETI4
-ADDRGP4 $265
+ADDRGP4 $195
 JUMPV
-LABELV $280
-line 1074
-;1064:
-;1065:	case IT_HEALTH:
-;1066:		// small and mega healths will go over the max, otherwise
-;1067:		// don't pick up if already at max
-;1068:#ifdef MISSIONPACK
-;1069:		if( bg_itemlist[ps->stats[STAT_PERSISTANT_POWERUP]].giTag == PW_GUARD ) {
-;1070:			upperBound = ps->stats[STAT_MAX_HEALTH];
-;1071:		}
-;1072:		else
-;1073:#endif
-;1074:		if ( item->quantity == 5 || item->quantity == 100 ) {
+LABELV $210
+line 800
+;790:
+;791:	case IT_HEALTH:
+;792:		// small and mega healths will go over the max, otherwise
+;793:		// don't pick up if already at max
+;794:#ifdef MISSIONPACK
+;795:		if( bg_itemlist[ps->stats[STAT_PERSISTANT_POWERUP]].giTag == PW_GUARD ) {
+;796:			upperBound = ps->stats[STAT_MAX_HEALTH];
+;797:		}
+;798:		else
+;799:#endif
+;800:		if ( item->quantity == 5 || item->quantity == 100 ) {
 ADDRLP4 20
 ADDRLP4 0
 INDIRP4
@@ -2086,14 +1591,14 @@ ASGNI4
 ADDRLP4 20
 INDIRI4
 CNSTI4 5
-EQI4 $283
+EQI4 $213
 ADDRLP4 20
 INDIRI4
 CNSTI4 100
-NEI4 $281
-LABELV $283
-line 1075
-;1075:			if ( ps->stats[STAT_HEALTH] >= ps->stats[STAT_MAX_HEALTH] * 2 ) {
+NEI4 $211
+LABELV $213
+line 801
+;801:			if ( ps->stats[STAT_HEALTH] >= ps->stats[STAT_MAX_HEALTH] * 2 ) {
 ADDRLP4 24
 ADDRFP4 8
 INDIRP4
@@ -2110,26 +1615,26 @@ ADDP4
 INDIRI4
 CNSTI4 1
 LSHI4
-LTI4 $284
-line 1076
-;1076:				return qfalse;
+LTI4 $214
+line 802
+;802:				return qfalse;
 CNSTI4 0
 RETI4
-ADDRGP4 $265
+ADDRGP4 $195
 JUMPV
-LABELV $284
-line 1078
-;1077:			}
-;1078:			return qtrue;
+LABELV $214
+line 804
+;803:			}
+;804:			return qtrue;
 CNSTI4 1
 RETI4
-ADDRGP4 $265
+ADDRGP4 $195
 JUMPV
-LABELV $281
-line 1081
-;1079:		}
-;1080:
-;1081:		if ( ps->stats[STAT_HEALTH] >= ps->stats[STAT_MAX_HEALTH] ) {
+LABELV $211
+line 807
+;805:		}
+;806:
+;807:		if ( ps->stats[STAT_HEALTH] >= ps->stats[STAT_MAX_HEALTH] ) {
 ADDRLP4 24
 ADDRFP4 8
 INDIRP4
@@ -2144,88 +1649,88 @@ INDIRP4
 CNSTI4 208
 ADDP4
 INDIRI4
-LTI4 $286
-line 1082
-;1082:			return qfalse;
+LTI4 $216
+line 808
+;808:			return qfalse;
 CNSTI4 0
 RETI4
-ADDRGP4 $265
+ADDRGP4 $195
 JUMPV
-LABELV $286
-line 1084
-;1083:		}
-;1084:		return qtrue;
+LABELV $216
+line 810
+;809:		}
+;810:		return qtrue;
 CNSTI4 1
 RETI4
-ADDRGP4 $265
+ADDRGP4 $195
 JUMPV
-LABELV $288
-line 1087
-;1085:
-;1086:	case IT_POWERUP:
-;1087:		return qtrue;	// powerups are always picked up
+LABELV $218
+line 813
+;811:
+;812:	case IT_POWERUP:
+;813:		return qtrue;	// powerups are always picked up
 CNSTI4 1
 RETI4
-ADDRGP4 $265
+ADDRGP4 $195
 JUMPV
-LABELV $289
-line 1125
-;1088:
-;1089:#ifdef MISSIONPACK
-;1090:	case IT_PERSISTANT_POWERUP:
-;1091:		// can only hold one item at a time
-;1092:		if ( ps->stats[STAT_PERSISTANT_POWERUP] ) {
-;1093:			return qfalse;
-;1094:		}
-;1095:
-;1096:		// check team only
-;1097:		if( ( ent->generic1 & 2 ) && ( ps->persistant[PERS_TEAM] != TEAM_RED ) ) {
-;1098:			return qfalse;
-;1099:		}
-;1100:		if( ( ent->generic1 & 4 ) && ( ps->persistant[PERS_TEAM] != TEAM_BLUE ) ) {
-;1101:			return qfalse;
-;1102:		}
-;1103:
-;1104:		return qtrue;
-;1105:#endif
-;1106:
-;1107:	case IT_TEAM: // team items, such as flags
-;1108:#ifdef MISSIONPACK		
-;1109:		if( gametype == GT_1FCTF ) {
-;1110:			// neutral flag can always be picked up
-;1111:			if( item->giTag == PW_NEUTRALFLAG ) {
-;1112:				return qtrue;
-;1113:			}
-;1114:			if (ps->persistant[PERS_TEAM] == TEAM_RED) {
-;1115:				if (item->giTag == PW_BLUEFLAG  && ps->powerups[PW_NEUTRALFLAG] ) {
-;1116:					return qtrue;
-;1117:				}
-;1118:			} else if (ps->persistant[PERS_TEAM] == TEAM_BLUE) {
-;1119:				if (item->giTag == PW_REDFLAG  && ps->powerups[PW_NEUTRALFLAG] ) {
-;1120:					return qtrue;
-;1121:				}
-;1122:			}
-;1123:		}
-;1124:#endif
-;1125:		if( gametype == GT_CTF ) {
+LABELV $219
+line 851
+;814:
+;815:#ifdef MISSIONPACK
+;816:	case IT_PERSISTANT_POWERUP:
+;817:		// can only hold one item at a time
+;818:		if ( ps->stats[STAT_PERSISTANT_POWERUP] ) {
+;819:			return qfalse;
+;820:		}
+;821:
+;822:		// check team only
+;823:		if( ( ent->generic1 & 2 ) && ( ps->persistant[PERS_TEAM] != TEAM_RED ) ) {
+;824:			return qfalse;
+;825:		}
+;826:		if( ( ent->generic1 & 4 ) && ( ps->persistant[PERS_TEAM] != TEAM_BLUE ) ) {
+;827:			return qfalse;
+;828:		}
+;829:
+;830:		return qtrue;
+;831:#endif
+;832:
+;833:	case IT_TEAM: // team items, such as flags
+;834:#ifdef MISSIONPACK		
+;835:		if( gametype == GT_1FCTF ) {
+;836:			// neutral flag can always be picked up
+;837:			if( item->giTag == PW_NEUTRALFLAG ) {
+;838:				return qtrue;
+;839:			}
+;840:			if (ps->persistant[PERS_TEAM] == TEAM_RED) {
+;841:				if (item->giTag == PW_BLUEFLAG  && ps->powerups[PW_NEUTRALFLAG] ) {
+;842:					return qtrue;
+;843:				}
+;844:			} else if (ps->persistant[PERS_TEAM] == TEAM_BLUE) {
+;845:				if (item->giTag == PW_REDFLAG  && ps->powerups[PW_NEUTRALFLAG] ) {
+;846:					return qtrue;
+;847:				}
+;848:			}
+;849:		}
+;850:#endif
+;851:		if( gametype == GT_CTF ) {
 ADDRFP4 0
 INDIRI4
 CNSTI4 4
-NEI4 $290
-line 1129
-;1126:			// ent->modelindex2 is non-zero on items if they are dropped
-;1127:			// we need to know this because we can pick up our dropped flag (and return it)
-;1128:			// but we can't pick up our flag at base
-;1129:			if (ps->persistant[PERS_TEAM] == TEAM_RED) {
+NEI4 $220
+line 855
+;852:			// ent->modelindex2 is non-zero on items if they are dropped
+;853:			// we need to know this because we can pick up our dropped flag (and return it)
+;854:			// but we can't pick up our flag at base
+;855:			if (ps->persistant[PERS_TEAM] == TEAM_RED) {
 ADDRFP4 8
 INDIRP4
 CNSTI4 260
 ADDP4
 INDIRI4
 CNSTI4 1
-NEI4 $292
-line 1130
-;1130:				if (item->giTag == PW_BLUEFLAG ||
+NEI4 $222
+line 856
+;856:				if (item->giTag == PW_BLUEFLAG ||
 ADDRLP4 28
 ADDRLP4 0
 INDIRP4
@@ -2236,54 +1741,54 @@ ASGNI4
 ADDRLP4 28
 INDIRI4
 CNSTI4 8
-EQI4 $297
+EQI4 $227
 ADDRLP4 28
 INDIRI4
 CNSTI4 7
-NEI4 $298
+NEI4 $228
 ADDRFP4 4
 INDIRP4
 CNSTI4 164
 ADDP4
 INDIRI4
 CNSTI4 0
-NEI4 $297
-LABELV $298
+NEI4 $227
+LABELV $228
 ADDRLP4 0
 INDIRP4
 CNSTI4 40
 ADDP4
 INDIRI4
 CNSTI4 7
-NEI4 $293
+NEI4 $223
 ADDRFP4 8
 INDIRP4
 CNSTI4 344
 ADDP4
 INDIRI4
 CNSTI4 0
-EQI4 $293
-LABELV $297
-line 1133
-;1131:					(item->giTag == PW_REDFLAG && ent->modelindex2) ||
-;1132:					(item->giTag == PW_REDFLAG && ps->powerups[PW_BLUEFLAG]) )
-;1133:					return qtrue;
+EQI4 $223
+LABELV $227
+line 859
+;857:					(item->giTag == PW_REDFLAG && ent->modelindex2) ||
+;858:					(item->giTag == PW_REDFLAG && ps->powerups[PW_BLUEFLAG]) )
+;859:					return qtrue;
 CNSTI4 1
 RETI4
-ADDRGP4 $265
+ADDRGP4 $195
 JUMPV
-line 1134
-;1134:			} else if (ps->persistant[PERS_TEAM] == TEAM_BLUE) {
-LABELV $292
+line 860
+;860:			} else if (ps->persistant[PERS_TEAM] == TEAM_BLUE) {
+LABELV $222
 ADDRFP4 8
 INDIRP4
 CNSTI4 260
 ADDP4
 INDIRI4
 CNSTI4 2
-NEI4 $299
-line 1135
-;1135:				if (item->giTag == PW_REDFLAG ||
+NEI4 $229
+line 861
+;861:				if (item->giTag == PW_REDFLAG ||
 ADDRLP4 28
 ADDRLP4 0
 INDIRP4
@@ -2294,137 +1799,137 @@ ASGNI4
 ADDRLP4 28
 INDIRI4
 CNSTI4 7
-EQI4 $304
+EQI4 $234
 ADDRLP4 28
 INDIRI4
 CNSTI4 8
-NEI4 $305
+NEI4 $235
 ADDRFP4 4
 INDIRP4
 CNSTI4 164
 ADDP4
 INDIRI4
 CNSTI4 0
-NEI4 $304
-LABELV $305
+NEI4 $234
+LABELV $235
 ADDRLP4 0
 INDIRP4
 CNSTI4 40
 ADDP4
 INDIRI4
 CNSTI4 8
-NEI4 $301
+NEI4 $231
 ADDRFP4 8
 INDIRP4
 CNSTI4 340
 ADDP4
 INDIRI4
 CNSTI4 0
-EQI4 $301
-LABELV $304
-line 1138
-;1136:					(item->giTag == PW_BLUEFLAG && ent->modelindex2) ||
-;1137:					(item->giTag == PW_BLUEFLAG && ps->powerups[PW_REDFLAG]) )
-;1138:					return qtrue;
+EQI4 $231
+LABELV $234
+line 864
+;862:					(item->giTag == PW_BLUEFLAG && ent->modelindex2) ||
+;863:					(item->giTag == PW_BLUEFLAG && ps->powerups[PW_REDFLAG]) )
+;864:					return qtrue;
 CNSTI4 1
 RETI4
-ADDRGP4 $265
+ADDRGP4 $195
 JUMPV
-LABELV $301
-line 1139
-;1139:			}
-LABELV $299
-LABELV $293
-line 1140
-;1140:		}
-LABELV $290
-line 1147
-;1141:
-;1142:#ifdef MISSIONPACK
-;1143:		if( gametype == GT_HARVESTER ) {
-;1144:			return qtrue;
-;1145:		}
-;1146:#endif
-;1147:		return qfalse;
+LABELV $231
+line 865
+;865:			}
+LABELV $229
+LABELV $223
+line 866
+;866:		}
+LABELV $220
+line 873
+;867:
+;868:#ifdef MISSIONPACK
+;869:		if( gametype == GT_HARVESTER ) {
+;870:			return qtrue;
+;871:		}
+;872:#endif
+;873:		return qfalse;
 CNSTI4 0
 RETI4
-ADDRGP4 $265
+ADDRGP4 $195
 JUMPV
-LABELV $306
-line 1151
-;1148:
-;1149:	case IT_HOLDABLE:
-;1150:		// can only hold one item at a time
-;1151:		if ( ps->stats[STAT_HOLDABLE_ITEM] ) {
+LABELV $236
+line 877
+;874:
+;875:	case IT_HOLDABLE:
+;876:		// can only hold one item at a time
+;877:		if ( ps->stats[STAT_HOLDABLE_ITEM] ) {
 ADDRFP4 8
 INDIRP4
 CNSTI4 188
 ADDP4
 INDIRI4
 CNSTI4 0
-EQI4 $307
-line 1152
-;1152:			return qfalse;
+EQI4 $237
+line 878
+;878:			return qfalse;
 CNSTI4 0
 RETI4
-ADDRGP4 $265
+ADDRGP4 $195
 JUMPV
-LABELV $307
-line 1154
-;1153:		}
-;1154:		return qtrue;
+LABELV $237
+line 880
+;879:		}
+;880:		return qtrue;
 CNSTI4 1
 RETI4
-ADDRGP4 $265
+ADDRGP4 $195
 JUMPV
-LABELV $309
-line 1157
-;1155:
-;1156:        case IT_BAD:
-;1157:            Com_Error( ERR_DROP, "BG_CanItemBeGrabbed: IT_BAD" );
+LABELV $239
+line 883
+;881:
+;882:        case IT_BAD:
+;883:            Com_Error( ERR_DROP, "BG_CanItemBeGrabbed: IT_BAD" );
 CNSTI4 1
 ARGI4
-ADDRGP4 $310
+ADDRGP4 $240
 ARGP4
 ADDRGP4 Com_Error
 CALLV
 pop
-line 1164
-;1158:        default:
-;1159:#ifndef Q3_VM
-;1160:#ifndef NDEBUG // bk0001204
-;1161:          Com_Printf("BG_CanItemBeGrabbed: unknown enum %d\n", item->giType );
-;1162:#endif
-;1163:#endif
-;1164:         break;
-LABELV $271
-line 1167
-;1165:	}
-;1166:
-;1167:	return qfalse;
+line 890
+;884:        default:
+;885:#ifndef Q3_VM
+;886:#ifndef NDEBUG // bk0001204
+;887:          Com_Printf("BG_CanItemBeGrabbed: unknown enum %d\n", item->giType );
+;888:#endif
+;889:#endif
+;890:         break;
+LABELV $201
+line 893
+;891:	}
+;892:
+;893:	return qfalse;
 CNSTI4 0
 RETI4
-LABELV $265
+LABELV $195
 endproc BG_CanItemBeGrabbed 32 8
 export BG_EvaluateTrajectory
 proc BG_EvaluateTrajectory 104 12
-line 1178
-;1168:}
-;1169:
-;1170://======================================================================
-;1171:
-;1172:/*
-;1173:================
-;1174:BG_EvaluateTrajectory
-;1175:
-;1176:================
-;1177:*/
-;1178:void BG_EvaluateTrajectory( const trajectory_t *tr, int atTime, vec3_t result ) {
-line 1182
-;1179:	float		deltaTime;
-;1180:	float		phase;
-;1181:
-;1182:	switch( tr->trType ) {
+line 904
+;894:}
+;895:
+;896://======================================================================
+;897:
+;898:/*
+;899:================
+;900:BG_EvaluateTrajectory
+;901:
+;902:================
+;903:*/
+;904:void BG_EvaluateTrajectory( const trajectory_t *tr, int atTime, vec3_t result ) {
+line 908
+;905:	float		deltaTime;
+;906:	float		phase;
+;907:
+;908:	switch( tr->trType ) {
 ADDRLP4 8
 ADDRFP4 0
 INDIRP4
@@ -2433,35 +1938,35 @@ ASGNI4
 ADDRLP4 8
 INDIRI4
 CNSTI4 0
-LTI4 $313
+LTI4 $243
 ADDRLP4 8
 INDIRI4
 CNSTI4 6
-GTI4 $313
+GTI4 $243
 ADDRLP4 8
 INDIRI4
 CNSTI4 2
 LSHI4
-ADDRGP4 $327
+ADDRGP4 $257
 ADDP4
 INDIRP4
 JUMPV
 lit
 align 4
-LABELV $327
-address $316
-address $316
-address $317
-address $319
-address $318
-address $324
-address $325
+LABELV $257
+address $246
+address $246
+address $247
+address $249
+address $248
+address $254
+address $255
 code
-LABELV $316
-line 1185
-;1183:	case TR_STATIONARY:
-;1184:	case TR_INTERPOLATE:
-;1185:		VectorCopy( tr->trBase, result );
+LABELV $246
+line 911
+;909:	case TR_STATIONARY:
+;910:	case TR_INTERPOLATE:
+;911:		VectorCopy( tr->trBase, result );
 ADDRFP4 8
 INDIRP4
 ADDRFP4 0
@@ -2470,14 +1975,14 @@ CNSTI4 12
 ADDP4
 INDIRB
 ASGNB 12
-line 1186
-;1186:		break;
-ADDRGP4 $314
+line 912
+;912:		break;
+ADDRGP4 $244
 JUMPV
-LABELV $317
-line 1188
-;1187:	case TR_LINEAR:
-;1188:		deltaTime = ( atTime - tr->trTime ) * 0.001;	// milliseconds to seconds
+LABELV $247
+line 914
+;913:	case TR_LINEAR:
+;914:		deltaTime = ( atTime - tr->trTime ) * 0.001;	// milliseconds to seconds
 ADDRLP4 0
 CNSTF4 981668463
 ADDRFP4 4
@@ -2491,8 +1996,8 @@ SUBI4
 CVIF4 4
 MULF4
 ASGNF4
-line 1189
-;1189:		VectorMA( tr->trBase, deltaTime, tr->trDelta, result );
+line 915
+;915:		VectorMA( tr->trBase, deltaTime, tr->trDelta, result );
 ADDRLP4 16
 ADDRFP4 0
 INDIRP4
@@ -2560,14 +2065,14 @@ INDIRF4
 MULF4
 ADDF4
 ASGNF4
-line 1190
-;1190:		break;
-ADDRGP4 $314
+line 916
+;916:		break;
+ADDRGP4 $244
 JUMPV
-LABELV $318
-line 1192
-;1191:	case TR_SINE:
-;1192:		deltaTime = ( atTime - tr->trTime ) / (float) tr->trDuration;
+LABELV $248
+line 918
+;917:	case TR_SINE:
+;918:		deltaTime = ( atTime - tr->trTime ) / (float) tr->trDuration;
 ADDRLP4 28
 ADDRFP4 0
 INDIRP4
@@ -2590,8 +2095,8 @@ INDIRI4
 CVIF4 4
 DIVF4
 ASGNF4
-line 1193
-;1193:		phase = sin( deltaTime * M_PI * 2 );
+line 919
+;919:		phase = sin( deltaTime * M_PI * 2 );
 CNSTF4 1073741824
 CNSTF4 1078530011
 ADDRLP4 0
@@ -2607,8 +2112,8 @@ ADDRLP4 4
 ADDRLP4 32
 INDIRF4
 ASGNF4
-line 1194
-;1194:		VectorMA( tr->trBase, phase, tr->trDelta, result );
+line 920
+;920:		VectorMA( tr->trBase, phase, tr->trDelta, result );
 ADDRLP4 36
 ADDRFP4 0
 INDIRP4
@@ -2676,14 +2181,14 @@ INDIRF4
 MULF4
 ADDF4
 ASGNF4
-line 1195
-;1195:		break;
-ADDRGP4 $314
+line 921
+;921:		break;
+ADDRGP4 $244
 JUMPV
-LABELV $319
-line 1197
-;1196:	case TR_LINEAR_STOP:
-;1197:		if ( atTime > tr->trTime + tr->trDuration ) {
+LABELV $249
+line 923
+;922:	case TR_LINEAR_STOP:
+;923:		if ( atTime > tr->trTime + tr->trDuration ) {
 ADDRLP4 48
 ADDRFP4 0
 INDIRP4
@@ -2701,9 +2206,9 @@ CNSTI4 8
 ADDP4
 INDIRI4
 ADDI4
-LEI4 $320
-line 1198
-;1198:			atTime = tr->trTime + tr->trDuration;
+LEI4 $250
+line 924
+;924:			atTime = tr->trTime + tr->trDuration;
 ADDRLP4 52
 ADDRFP4 0
 INDIRP4
@@ -2721,11 +2226,11 @@ ADDP4
 INDIRI4
 ADDI4
 ASGNI4
-line 1199
-;1199:		}
-LABELV $320
-line 1200
-;1200:		deltaTime = ( atTime - tr->trTime ) * 0.001;	// milliseconds to seconds
+line 925
+;925:		}
+LABELV $250
+line 926
+;926:		deltaTime = ( atTime - tr->trTime ) * 0.001;	// milliseconds to seconds
 ADDRLP4 0
 CNSTF4 981668463
 ADDRFP4 4
@@ -2739,22 +2244,22 @@ SUBI4
 CVIF4 4
 MULF4
 ASGNF4
-line 1201
-;1201:		if ( deltaTime < 0 ) {
+line 927
+;927:		if ( deltaTime < 0 ) {
 ADDRLP4 0
 INDIRF4
 CNSTF4 0
-GEF4 $322
-line 1202
-;1202:			deltaTime = 0;
+GEF4 $252
+line 928
+;928:			deltaTime = 0;
 ADDRLP4 0
 CNSTF4 0
 ASGNF4
-line 1203
-;1203:		}
-LABELV $322
-line 1204
-;1204:		VectorMA( tr->trBase, deltaTime, tr->trDelta, result );
+line 929
+;929:		}
+LABELV $252
+line 930
+;930:		VectorMA( tr->trBase, deltaTime, tr->trDelta, result );
 ADDRLP4 52
 ADDRFP4 0
 INDIRP4
@@ -2822,14 +2327,14 @@ INDIRF4
 MULF4
 ADDF4
 ASGNF4
-line 1205
-;1205:		break;
-ADDRGP4 $314
+line 931
+;931:		break;
+ADDRGP4 $244
 JUMPV
-LABELV $324
-line 1207
-;1206:	case TR_GRAVITY:
-;1207:		deltaTime = ( atTime - tr->trTime ) * 0.001;	// milliseconds to seconds
+LABELV $254
+line 933
+;932:	case TR_GRAVITY:
+;933:		deltaTime = ( atTime - tr->trTime ) * 0.001;	// milliseconds to seconds
 ADDRLP4 0
 CNSTF4 981668463
 ADDRFP4 4
@@ -2843,8 +2348,8 @@ SUBI4
 CVIF4 4
 MULF4
 ASGNF4
-line 1208
-;1208:		VectorMA( tr->trBase, deltaTime, tr->trDelta, result );
+line 934
+;934:		VectorMA( tr->trBase, deltaTime, tr->trDelta, result );
 ADDRLP4 64
 ADDRFP4 0
 INDIRP4
@@ -2912,8 +2417,8 @@ INDIRF4
 MULF4
 ADDF4
 ASGNF4
-line 1209
-;1209:		result[2] -= 0.5 * DEFAULT_GRAVITY * deltaTime * deltaTime;		// FIXME: local gravity...
+line 935
+;935:		result[2] -= 0.5 * DEFAULT_GRAVITY * deltaTime * deltaTime;		// FIXME: local gravity...
 ADDRLP4 76
 ADDRFP4 8
 INDIRP4
@@ -2938,14 +2443,14 @@ INDIRF4
 MULF4
 SUBF4
 ASGNF4
-line 1210
-;1210:		break;
-ADDRGP4 $314
+line 936
+;936:		break;
+ADDRGP4 $244
 JUMPV
-LABELV $325
-line 1212
-;1211:	case TR_HALFGRAVITY:
-;1212:		deltaTime = ( atTime - tr->trTime ) * 0.001;	// milliseconds to seconds
+LABELV $255
+line 938
+;937:	case TR_HALFGRAVITY:
+;938:		deltaTime = ( atTime - tr->trTime ) * 0.001;	// milliseconds to seconds
 ADDRLP4 0
 CNSTF4 981668463
 ADDRFP4 4
@@ -2959,8 +2464,8 @@ SUBI4
 CVIF4 4
 MULF4
 ASGNF4
-line 1213
-;1213:		VectorMA( tr->trBase, deltaTime, tr->trDelta, result );
+line 939
+;939:		VectorMA( tr->trBase, deltaTime, tr->trDelta, result );
 ADDRLP4 84
 ADDRFP4 0
 INDIRP4
@@ -3028,8 +2533,8 @@ INDIRF4
 MULF4
 ADDF4
 ASGNF4
-line 1214
-;1214:		result[2] -= 0.1 * DEFAULT_GRAVITY * deltaTime * deltaTime;		// FIXME: local gravity...
+line 940
+;940:		result[2] -= 0.1 * DEFAULT_GRAVITY * deltaTime * deltaTime;		// FIXME: local gravity...
 ADDRLP4 96
 ADDRFP4 8
 INDIRP4
@@ -3054,17 +2559,17 @@ INDIRF4
 MULF4
 SUBF4
 ASGNF4
-line 1215
-;1215:		break;
-ADDRGP4 $314
+line 941
+;941:		break;
+ADDRGP4 $244
 JUMPV
-LABELV $313
-line 1217
-;1216:	default:
-;1217:		Com_Error( ERR_DROP, "BG_EvaluateTrajectory: unknown trType: %i", tr->trTime );
+LABELV $243
+line 943
+;942:	default:
+;943:		Com_Error( ERR_DROP, "BG_EvaluateTrajectory: unknown trType: %i", tr->trTime );
 CNSTI4 1
 ARGI4
-ADDRGP4 $326
+ADDRGP4 $256
 ARGP4
 ADDRFP4 0
 INDIRP4
@@ -3075,31 +2580,31 @@ ARGI4
 ADDRGP4 Com_Error
 CALLV
 pop
-line 1218
-;1218:		break;
-LABELV $314
-line 1220
-;1219:	}
-;1220:}
-LABELV $312
+line 944
+;944:		break;
+LABELV $244
+line 946
+;945:	}
+;946:}
+LABELV $242
 endproc BG_EvaluateTrajectory 104 12
 export BG_EvaluateTrajectoryDelta
 proc BG_EvaluateTrajectoryDelta 44 12
-line 1229
-;1221:
-;1222:/*
-;1223:================
-;1224:BG_EvaluateTrajectoryDelta
-;1225:
-;1226:For determining velocity at a given time
-;1227:================
-;1228:*/
-;1229:void BG_EvaluateTrajectoryDelta( const trajectory_t *tr, int atTime, vec3_t result ) {
-line 1233
-;1230:	float	deltaTime;
-;1231:	float	phase;
-;1232:
-;1233:	switch( tr->trType ) {
+line 955
+;947:
+;948:/*
+;949:================
+;950:BG_EvaluateTrajectoryDelta
+;951:
+;952:For determining velocity at a given time
+;953:================
+;954:*/
+;955:void BG_EvaluateTrajectoryDelta( const trajectory_t *tr, int atTime, vec3_t result ) {
+line 959
+;956:	float	deltaTime;
+;957:	float	phase;
+;958:
+;959:	switch( tr->trType ) {
 ADDRLP4 8
 ADDRFP4 0
 INDIRP4
@@ -3108,35 +2613,35 @@ ASGNI4
 ADDRLP4 8
 INDIRI4
 CNSTI4 0
-LTI4 $329
+LTI4 $259
 ADDRLP4 8
 INDIRI4
 CNSTI4 6
-GTI4 $329
+GTI4 $259
 ADDRLP4 8
 INDIRI4
 CNSTI4 2
 LSHI4
-ADDRGP4 $341
+ADDRGP4 $271
 ADDP4
 INDIRP4
 JUMPV
 lit
 align 4
-LABELV $341
-address $332
-address $332
-address $333
-address $335
-address $334
-address $338
-address $339
+LABELV $271
+address $262
+address $262
+address $263
+address $265
+address $264
+address $268
+address $269
 code
-LABELV $332
-line 1236
-;1234:	case TR_STATIONARY:
-;1235:	case TR_INTERPOLATE:
-;1236:		VectorClear( result );
+LABELV $262
+line 962
+;960:	case TR_STATIONARY:
+;961:	case TR_INTERPOLATE:
+;962:		VectorClear( result );
 ADDRLP4 16
 ADDRFP4 8
 INDIRP4
@@ -3163,14 +2668,14 @@ INDIRP4
 ADDRLP4 20
 INDIRF4
 ASGNF4
-line 1237
-;1237:		break;
-ADDRGP4 $330
+line 963
+;963:		break;
+ADDRGP4 $260
 JUMPV
-LABELV $333
-line 1239
-;1238:	case TR_LINEAR:
-;1239:		VectorCopy( tr->trDelta, result );
+LABELV $263
+line 965
+;964:	case TR_LINEAR:
+;965:		VectorCopy( tr->trDelta, result );
 ADDRFP4 8
 INDIRP4
 ADDRFP4 0
@@ -3179,14 +2684,14 @@ CNSTI4 24
 ADDP4
 INDIRB
 ASGNB 12
-line 1240
-;1240:		break;
-ADDRGP4 $330
+line 966
+;966:		break;
+ADDRGP4 $260
 JUMPV
-LABELV $334
-line 1242
-;1241:	case TR_SINE:
-;1242:		deltaTime = ( atTime - tr->trTime ) / (float) tr->trDuration;
+LABELV $264
+line 968
+;967:	case TR_SINE:
+;968:		deltaTime = ( atTime - tr->trTime ) / (float) tr->trDuration;
 ADDRLP4 24
 ADDRFP4 0
 INDIRP4
@@ -3209,8 +2714,8 @@ INDIRI4
 CVIF4 4
 DIVF4
 ASGNF4
-line 1243
-;1243:		phase = cos( deltaTime * M_PI * 2 );	// derivative of sin = cos
+line 969
+;969:		phase = cos( deltaTime * M_PI * 2 );	// derivative of sin = cos
 CNSTF4 1073741824
 CNSTF4 1078530011
 ADDRLP4 0
@@ -3226,16 +2731,16 @@ ADDRLP4 4
 ADDRLP4 28
 INDIRF4
 ASGNF4
-line 1244
-;1244:		phase *= 0.5;
+line 970
+;970:		phase *= 0.5;
 ADDRLP4 4
 CNSTF4 1056964608
 ADDRLP4 4
 INDIRF4
 MULF4
 ASGNF4
-line 1245
-;1245:		VectorScale( tr->trDelta, phase, result );
+line 971
+;971:		VectorScale( tr->trDelta, phase, result );
 ADDRFP4 8
 INDIRP4
 ADDRFP4 0
@@ -3273,14 +2778,14 @@ ADDRLP4 4
 INDIRF4
 MULF4
 ASGNF4
-line 1246
-;1246:		break;
-ADDRGP4 $330
+line 972
+;972:		break;
+ADDRGP4 $260
 JUMPV
-LABELV $335
-line 1248
-;1247:	case TR_LINEAR_STOP:
-;1248:		if ( atTime > tr->trTime + tr->trDuration ) {
+LABELV $265
+line 974
+;973:	case TR_LINEAR_STOP:
+;974:		if ( atTime > tr->trTime + tr->trDuration ) {
 ADDRLP4 32
 ADDRFP4 0
 INDIRP4
@@ -3298,9 +2803,9 @@ CNSTI4 8
 ADDP4
 INDIRI4
 ADDI4
-LEI4 $336
-line 1249
-;1249:			VectorClear( result );
+LEI4 $266
+line 975
+;975:			VectorClear( result );
 ADDRLP4 36
 ADDRFP4 8
 INDIRP4
@@ -3327,14 +2832,14 @@ INDIRP4
 ADDRLP4 40
 INDIRF4
 ASGNF4
-line 1250
-;1250:			return;
-ADDRGP4 $328
+line 976
+;976:			return;
+ADDRGP4 $258
 JUMPV
-LABELV $336
-line 1252
-;1251:		}
-;1252:		VectorCopy( tr->trDelta, result );
+LABELV $266
+line 978
+;977:		}
+;978:		VectorCopy( tr->trDelta, result );
 ADDRFP4 8
 INDIRP4
 ADDRFP4 0
@@ -3343,14 +2848,14 @@ CNSTI4 24
 ADDP4
 INDIRB
 ASGNB 12
-line 1253
-;1253:		break;
-ADDRGP4 $330
+line 979
+;979:		break;
+ADDRGP4 $260
 JUMPV
-LABELV $338
-line 1255
-;1254:	case TR_GRAVITY:
-;1255:		deltaTime = ( atTime - tr->trTime ) * 0.001;	// milliseconds to seconds
+LABELV $268
+line 981
+;980:	case TR_GRAVITY:
+;981:		deltaTime = ( atTime - tr->trTime ) * 0.001;	// milliseconds to seconds
 ADDRLP4 0
 CNSTF4 981668463
 ADDRFP4 4
@@ -3364,8 +2869,8 @@ SUBI4
 CVIF4 4
 MULF4
 ASGNF4
-line 1256
-;1256:		VectorCopy( tr->trDelta, result );
+line 982
+;982:		VectorCopy( tr->trDelta, result );
 ADDRFP4 8
 INDIRP4
 ADDRFP4 0
@@ -3374,8 +2879,8 @@ CNSTI4 24
 ADDP4
 INDIRB
 ASGNB 12
-line 1257
-;1257:		result[2] -= DEFAULT_GRAVITY * deltaTime;		// FIXME: local gravity...
+line 983
+;983:		result[2] -= DEFAULT_GRAVITY * deltaTime;		// FIXME: local gravity...
 ADDRLP4 36
 ADDRFP4 8
 INDIRP4
@@ -3393,14 +2898,14 @@ INDIRF4
 MULF4
 SUBF4
 ASGNF4
-line 1258
-;1258:		break;
-ADDRGP4 $330
+line 984
+;984:		break;
+ADDRGP4 $260
 JUMPV
-LABELV $339
-line 1260
-;1259:	case TR_HALFGRAVITY:
-;1260:		deltaTime = ( atTime - tr->trTime ) * 0.001;	// milliseconds to seconds
+LABELV $269
+line 986
+;985:	case TR_HALFGRAVITY:
+;986:		deltaTime = ( atTime - tr->trTime ) * 0.001;	// milliseconds to seconds
 ADDRLP4 0
 CNSTF4 981668463
 ADDRFP4 4
@@ -3414,8 +2919,8 @@ SUBI4
 CVIF4 4
 MULF4
 ASGNF4
-line 1261
-;1261:		VectorCopy( tr->trDelta, result );
+line 987
+;987:		VectorCopy( tr->trDelta, result );
 ADDRFP4 8
 INDIRP4
 ADDRFP4 0
@@ -3424,8 +2929,8 @@ CNSTI4 24
 ADDP4
 INDIRB
 ASGNB 12
-line 1262
-;1262:		result[2] -= DEFAULT_GRAVITY * deltaTime;		// FIXME: local gravity...
+line 988
+;988:		result[2] -= DEFAULT_GRAVITY * deltaTime;		// FIXME: local gravity...
 ADDRLP4 40
 ADDRFP4 8
 INDIRP4
@@ -3443,17 +2948,17 @@ INDIRF4
 MULF4
 SUBF4
 ASGNF4
-line 1263
-;1263:		break;
-ADDRGP4 $330
+line 989
+;989:		break;
+ADDRGP4 $260
 JUMPV
-LABELV $329
-line 1265
-;1264:	default:
-;1265:		Com_Error( ERR_DROP, "BG_EvaluateTrajectoryDelta: unknown trType: %i", tr->trTime );
+LABELV $259
+line 991
+;990:	default:
+;991:		Com_Error( ERR_DROP, "BG_EvaluateTrajectoryDelta: unknown trType: %i", tr->trTime );
 CNSTI4 1
 ARGI4
-ADDRGP4 $340
+ADDRGP4 $270
 ARGP4
 ADDRFP4 0
 INDIRP4
@@ -3464,226 +2969,219 @@ ARGI4
 ADDRGP4 Com_Error
 CALLV
 pop
-line 1266
-;1266:		break;
-LABELV $330
-line 1268
-;1267:	}
-;1268:}
-LABELV $328
+line 992
+;992:		break;
+LABELV $260
+line 994
+;993:	}
+;994:}
+LABELV $258
 endproc BG_EvaluateTrajectoryDelta 44 12
 data
 export eventnames
 align 4
 LABELV eventnames
-address $342
-address $343
-address $344
-address $345
-address $346
-address $347
-address $348
-address $349
-address $350
-address $351
-address $352
-address $353
-address $354
-address $355
-address $356
-address $357
-address $358
-address $359
-address $360
-address $361
-address $362
-address $363
-address $364
-address $365
-address $366
-address $367
-address $368
-address $369
-address $370
-address $371
-address $372
-address $373
-address $374
-address $375
-address $376
-address $377
-address $378
-address $379
-address $380
-address $381
-address $382
-address $383
-address $384
-address $385
-address $386
-address $387
-address $388
-address $389
-address $390
-address $391
-address $392
-address $393
-address $394
-address $395
-address $396
-address $397
-address $398
-address $399
-address $400
-address $401
-address $402
-address $403
-address $404
-address $405
-address $406
-address $407
-address $408
-address $409
-address $410
-address $411
-address $412
-address $413
-address $414
-address $415
-address $416
-address $417
+address $272
+address $273
+address $274
+address $275
+address $276
+address $277
+address $278
+address $279
+address $280
+address $281
+address $282
+address $283
+address $284
+address $285
+address $286
+address $287
+address $288
+address $289
+address $290
+address $291
+address $292
+address $293
+address $294
+address $295
+address $296
+address $297
+address $298
+address $299
+address $300
+address $301
+address $302
+address $303
+address $304
+address $305
+address $306
+address $307
+address $308
+address $309
+address $310
+address $311
+address $312
+address $313
+address $314
+address $315
+address $316
+address $317
+address $318
+address $319
+address $320
+address $321
+address $322
+address $323
+address $324
+address $325
+address $326
+address $327
+address $328
+address $329
+address $330
+address $331
+address $332
+address $333
+address $334
+address $335
+address $336
+address $337
+address $338
+address $339
+address $340
 export BG_AddPredictableEventToPlayerstate
 code
 proc BG_AddPredictableEventToPlayerstate 12 0
-line 1380
-;1269:
-;1270:char *eventnames[] = {
-;1271:	"EV_NONE",
-;1272:
-;1273:	"EV_FOOTSTEP",
-;1274:	"EV_FOOTSTEP_METAL",
-;1275:	"EV_FOOTSPLASH",
-;1276:	"EV_FOOTWADE",
-;1277:	"EV_SWIM",
-;1278:
-;1279:	"EV_STEP_4",
-;1280:	"EV_STEP_8",
-;1281:	"EV_STEP_12",
-;1282:	"EV_STEP_16",
-;1283:
-;1284:	"EV_FALL_SHORT",
-;1285:	"EV_FALL_MEDIUM",
-;1286:	"EV_FALL_FAR",
-;1287:
-;1288:	"EV_JUMP_PAD",			// boing sound at origin", jump sound on player
-;1289:
-;1290:	"EV_JUMP",
-;1291:	"EV_WATER_TOUCH",	// foot touches
-;1292:	"EV_WATER_LEAVE",	// foot leaves
-;1293:	"EV_WATER_UNDER",	// head touches
-;1294:	"EV_WATER_CLEAR",	// head leaves
-;1295:
-;1296:	"EV_ITEM_PICKUP",			// normal item pickups are predictable
-;1297:	"EV_GLOBAL_ITEM_PICKUP",	// powerup / team sounds are broadcast to everyone
-;1298:
-;1299:	"EV_NOAMMO",
-;1300:	"EV_CHANGE_WEAPON",
-;1301:	"EV_FIRE_WEAPON",
-;1302:
-;1303:	"EV_USE_ITEM0",
-;1304:	"EV_USE_ITEM1",
-;1305:	"EV_USE_ITEM2",
-;1306:	"EV_USE_ITEM3",
-;1307:	"EV_USE_ITEM4",
-;1308:	"EV_USE_ITEM5",
-;1309:	"EV_USE_ITEM6",
-;1310:	"EV_USE_ITEM7",
-;1311:	"EV_USE_ITEM8",
-;1312:	"EV_USE_ITEM9",
-;1313:	"EV_USE_ITEM10",
-;1314:	"EV_USE_ITEM11",
-;1315:	"EV_USE_ITEM12",
-;1316:	"EV_USE_ITEM13",
-;1317:	"EV_USE_ITEM14",
-;1318:	"EV_USE_ITEM15",
-;1319:
-;1320:	"EV_ITEM_RESPAWN",
-;1321:	"EV_ITEM_POP",
-;1322:	"EV_PLAYER_TELEPORT_IN",
-;1323:	"EV_PLAYER_TELEPORT_OUT",
-;1324:
-;1325:	"EV_GRENADE_BOUNCE",		// eventParm will be the soundindex
-;1326:
-;1327:	"EV_GENERAL_SOUND",
-;1328:	"EV_GLOBAL_SOUND",		// no attenuation
-;1329:	"EV_GLOBAL_TEAM_SOUND",
-;1330:
-;1331:	"EV_BULLET_HIT_FLESH",
-;1332:	"EV_BULLET_HIT_WALL",
-;1333:
-;1334:	"EV_MISSILE_HIT",
-;1335:	"EV_MISSILE_MISS",
-;1336:	"EV_MISSILE_MISS_METAL",
-;1337:	"EV_RAILTRAIL",
-;1338:	"EV_SHOTGUN",
-;1339:	"EV_BULLET",				// otherEntity is the shooter
-;1340:
-;1341:	"EV_PAIN",
-;1342:	"EV_DEATH1",
-;1343:	"EV_DEATH2",
-;1344:	"EV_DEATH3",
-;1345:	"EV_OBITUARY",
-;1346:
-;1347:	"EV_POWERUP_QUAD",
-;1348:	"EV_POWERUP_BATTLESUIT",
-;1349:	"EV_POWERUP_REGEN",
-;1350:
-;1351:	"EV_GIB_PLAYER",			// gib a previously living player
-;1352:	"EV_SCOREPLUM",			// score plum
-;1353:
-;1354://#ifdef MISSIONPACK
-;1355:	"EV_PROXIMITY_MINE_STICK",
-;1356:	"EV_PROXIMITY_MINE_TRIGGER",
-;1357:	"EV_KAMIKAZE",			// kamikaze explodes
-;1358:	"EV_OBELISKEXPLODE",		// obelisk explodes
-;1359:	"EV_INVUL_IMPACT",		// invulnerability sphere impact
-;1360:	"EV_JUICED",				// invulnerability juiced effect
-;1361:	"EV_LIGHTNINGBOLT",		// lightning bolt bounced of invulnerability sphere
-;1362://#endif
-;1363:
-;1364:	"EV_DEBUG_LINE",
-;1365:	"EV_STOPLOOPINGSOUND",
-;1366:	"EV_TAUNT"
-;1367:
-;1368:};
-;1369:
-;1370:/*
-;1371:===============
-;1372:BG_AddPredictableEventToPlayerstate
-;1373:
-;1374:Handles the sequence numbers
-;1375:===============
-;1376:*/
-;1377:
-;1378:void	trap_Cvar_VariableStringBuffer( const char *var_name, char *buffer, int bufsize );
-;1379:
-;1380:void BG_AddPredictableEventToPlayerstate( int newEvent, int eventParm, playerState_t *ps ) {
-line 1395
-;1381:
-;1382:#ifdef _DEBUG
-;1383:	{
-;1384:		char buf[256];
-;1385:		trap_Cvar_VariableStringBuffer("showevents", buf, sizeof(buf));
-;1386:		if ( atof(buf) != 0 ) {
-;1387:#ifdef QAGAME
-;1388:			Com_Printf(" game event svt %5d -> %5d: num = %20s parm %d\n", ps->pmove_framecount/*ps->commandTime*/, ps->eventSequence, eventnames[newEvent], eventParm);
-;1389:#else
-;1390:			Com_Printf("Cgame event svt %5d -> %5d: num = %20s parm %d\n", ps->pmove_framecount/*ps->commandTime*/, ps->eventSequence, eventnames[newEvent], eventParm);
-;1391:#endif
-;1392:		}
-;1393:	}
-;1394:#endif
-;1395:	ps->events[ps->eventSequence & (MAX_PS_EVENTS-1)] = newEvent;
+line 1106
+;995:
+;996:char *eventnames[] = {
+;997:	"EV_NONE",
+;998:
+;999:	"EV_FOOTSTEP",
+;1000:	"EV_FOOTSTEP_METAL",
+;1001:	"EV_FOOTSPLASH",
+;1002:	"EV_FOOTWADE",
+;1003:	"EV_SWIM",
+;1004:
+;1005:	"EV_STEP_4",
+;1006:	"EV_STEP_8",
+;1007:	"EV_STEP_12",
+;1008:	"EV_STEP_16",
+;1009:
+;1010:	"EV_FALL_SHORT",
+;1011:	"EV_FALL_MEDIUM",
+;1012:	"EV_FALL_FAR",
+;1013:
+;1014:	"EV_JUMP_PAD",			// boing sound at origin", jump sound on player
+;1015:
+;1016:	"EV_JUMP",
+;1017:	"EV_WATER_TOUCH",	// foot touches
+;1018:	"EV_WATER_LEAVE",	// foot leaves
+;1019:	"EV_WATER_UNDER",	// head touches
+;1020:	"EV_WATER_CLEAR",	// head leaves
+;1021:
+;1022:	"EV_ITEM_PICKUP",			// normal item pickups are predictable
+;1023:	"EV_GLOBAL_ITEM_PICKUP",	// powerup / team sounds are broadcast to everyone
+;1024:
+;1025:	"EV_NOAMMO",
+;1026:	"EV_CHANGE_WEAPON",
+;1027:	"EV_FIRE_WEAPON",
+;1028:
+;1029:	"EV_USE_ITEM0",
+;1030:	"EV_USE_ITEM1",
+;1031:	"EV_USE_ITEM2",
+;1032:	"EV_USE_ITEM3",
+;1033:	"EV_USE_ITEM4",
+;1034:	"EV_USE_ITEM5",
+;1035:	"EV_USE_ITEM6",
+;1036:	"EV_USE_ITEM7",
+;1037:	"EV_USE_ITEM8",
+;1038:	"EV_USE_ITEM9",
+;1039:	"EV_USE_ITEM10",
+;1040:	"EV_USE_ITEM11",
+;1041:	"EV_USE_ITEM12",
+;1042:	"EV_USE_ITEM13",
+;1043:	"EV_USE_ITEM14",
+;1044:	"EV_USE_ITEM15",
+;1045:
+;1046:	"EV_ITEM_RESPAWN",
+;1047:	"EV_ITEM_POP",
+;1048:	"EV_PLAYER_TELEPORT_IN",
+;1049:	"EV_PLAYER_TELEPORT_OUT",
+;1050:
+;1051:	"EV_GRENADE_BOUNCE",		// eventParm will be the soundindex
+;1052:
+;1053:	"EV_GENERAL_SOUND",
+;1054:	"EV_GLOBAL_SOUND",		// no attenuation
+;1055:	"EV_GLOBAL_TEAM_SOUND",
+;1056:
+;1057:	"EV_BULLET_HIT_FLESH",
+;1058:	"EV_BULLET_HIT_WALL",
+;1059:
+;1060:	"EV_MISSILE_HIT",
+;1061:	"EV_MISSILE_MISS",
+;1062:	"EV_MISSILE_MISS_METAL",
+;1063:	"EV_RAILTRAIL",
+;1064:	"EV_SHOTGUN",
+;1065:	"EV_BULLET",				// otherEntity is the shooter
+;1066:
+;1067:	"EV_PAIN",
+;1068:	"EV_DEATH1",
+;1069:	"EV_DEATH2",
+;1070:	"EV_DEATH3",
+;1071:	"EV_OBITUARY",
+;1072:
+;1073:	"EV_POWERUP_QUAD",
+;1074:	"EV_POWERUP_BATTLESUIT",
+;1075:	"EV_POWERUP_REGEN",
+;1076:
+;1077:	"EV_GIB_PLAYER",			// gib a previously living player
+;1078:	"EV_SCOREPLUM",			// score plum
+;1079:
+;1080:#ifdef MISSIONPACK
+;1081://	"EV_PROXIMITY_MINE_STICK",
+;1082://	"EV_PROXIMITY_MINE_TRIGGER",
+;1083:	"EV_KAMIKAZE",			// kamikaze explodes
+;1084://	"EV_OBELISKEXPLODE",		// obelisk explodes
+;1085://	"EV_INVUL_IMPACT",		// invulnerability sphere impact
+;1086://	"EV_JUICED",				// invulnerability juiced effect
+;1087://	"EV_LIGHTNINGBOLT",		// lightning bolt bounced of invulnerability sphere
+;1088:#endif
+;1089:
+;1090:	"EV_DEBUG_LINE",
+;1091:	"EV_STOPLOOPINGSOUND",
+;1092:	"EV_TAUNT"
+;1093:
+;1094:};
+;1095:
+;1096:/*
+;1097:===============
+;1098:BG_AddPredictableEventToPlayerstate
+;1099:
+;1100:Handles the sequence numbers
+;1101:===============
+;1102:*/
+;1103:
+;1104:void	trap_Cvar_VariableStringBuffer( const char *var_name, char *buffer, int bufsize );
+;1105:
+;1106:void BG_AddPredictableEventToPlayerstate( int newEvent, int eventParm, playerState_t *ps ) {
+line 1121
+;1107:
+;1108:#ifdef _DEBUG
+;1109:	{
+;1110:		char buf[256];
+;1111:		trap_Cvar_VariableStringBuffer("showevents", buf, sizeof(buf));
+;1112:		if ( atof(buf) != 0 ) {
+;1113:#ifdef QAGAME
+;1114:			Com_Printf(" game event svt %5d -> %5d: num = %20s parm %d\n", ps->pmove_framecount/*ps->commandTime*/, ps->eventSequence, eventnames[newEvent], eventParm);
+;1115:#else
+;1116:			Com_Printf("Cgame event svt %5d -> %5d: num = %20s parm %d\n", ps->pmove_framecount/*ps->commandTime*/, ps->eventSequence, eventnames[newEvent], eventParm);
+;1117:#endif
+;1118:		}
+;1119:	}
+;1120:#endif
+;1121:	ps->events[ps->eventSequence & (MAX_PS_EVENTS-1)] = newEvent;
 ADDRLP4 0
 ADDRFP4 8
 INDIRP4
@@ -3705,8 +3203,8 @@ ADDP4
 ADDRFP4 0
 INDIRI4
 ASGNI4
-line 1396
-;1396:	ps->eventParms[ps->eventSequence & (MAX_PS_EVENTS-1)] = eventParm;
+line 1122
+;1122:	ps->eventParms[ps->eventSequence & (MAX_PS_EVENTS-1)] = eventParm;
 ADDRLP4 4
 ADDRFP4 8
 INDIRP4
@@ -3728,8 +3226,8 @@ ADDP4
 ADDRFP4 4
 INDIRI4
 ASGNI4
-line 1397
-;1397:	ps->eventSequence++;
+line 1123
+;1123:	ps->eventSequence++;
 ADDRLP4 8
 ADDRFP4 8
 INDIRP4
@@ -3744,62 +3242,62 @@ INDIRI4
 CNSTI4 1
 ADDI4
 ASGNI4
-line 1398
-;1398:}
-LABELV $418
+line 1124
+;1124:}
+LABELV $341
 endproc BG_AddPredictableEventToPlayerstate 12 0
 export BG_TouchJumpPad
 proc BG_TouchJumpPad 28 12
-line 1405
-;1399:
-;1400:/*
-;1401:========================
-;1402:BG_TouchJumpPad
-;1403:========================
-;1404:*/
-;1405:void BG_TouchJumpPad( playerState_t *ps, entityState_t *jumppad ) {
-line 1411
-;1406:	vec3_t	angles;
-;1407:	float p;
-;1408:	int effectNum;
-;1409:
-;1410:	// spectators don't use jump pads
-;1411:	if ( ps->pm_type != PM_NORMAL ) {
+line 1131
+;1125:
+;1126:/*
+;1127:========================
+;1128:BG_TouchJumpPad
+;1129:========================
+;1130:*/
+;1131:void BG_TouchJumpPad( playerState_t *ps, entityState_t *jumppad ) {
+line 1137
+;1132:	vec3_t	angles;
+;1133:	float p;
+;1134:	int effectNum;
+;1135:
+;1136:	// spectators don't use jump pads
+;1137:	if ( ps->pm_type != PM_NORMAL ) {
 ADDRFP4 0
 INDIRP4
 CNSTI4 4
 ADDP4
 INDIRI4
 CNSTI4 0
-EQI4 $420
-line 1412
-;1412:		return;
-ADDRGP4 $419
+EQI4 $343
+line 1138
+;1138:		return;
+ADDRGP4 $342
 JUMPV
-LABELV $420
-line 1416
-;1413:	}
-;1414:
-;1415:	// flying characters don't hit bounce pads
-;1416:	if ( ps->powerups[PW_FLIGHT] ) {
+LABELV $343
+line 1142
+;1139:	}
+;1140:
+;1141:	// flying characters don't hit bounce pads
+;1142:	if ( ps->powerups[PW_FLIGHT] ) {
 ADDRFP4 0
 INDIRP4
 CNSTI4 336
 ADDP4
 INDIRI4
 CNSTI4 0
-EQI4 $422
-line 1417
-;1417:		return;
-ADDRGP4 $419
+EQI4 $345
+line 1143
+;1143:		return;
+ADDRGP4 $342
 JUMPV
-LABELV $422
-line 1422
-;1418:	}
-;1419:
-;1420:	// if we didn't hit this same jumppad the previous frame
-;1421:	// then don't play the event sound again if we are in a fat trigger
-;1422:	if ( ps->jumppad_ent != jumppad->number ) {
+LABELV $345
+line 1148
+;1144:	}
+;1145:
+;1146:	// if we didn't hit this same jumppad the previous frame
+;1147:	// then don't play the event sound again if we are in a fat trigger
+;1148:	if ( ps->jumppad_ent != jumppad->number ) {
 ADDRFP4 0
 INDIRP4
 CNSTI4 448
@@ -3808,10 +3306,10 @@ INDIRI4
 ADDRFP4 4
 INDIRP4
 INDIRI4
-EQI4 $424
-line 1424
-;1423:
-;1424:		vectoangles( jumppad->origin2, angles);
+EQI4 $347
+line 1150
+;1149:
+;1150:		vectoangles( jumppad->origin2, angles);
 ADDRFP4 4
 INDIRP4
 CNSTI4 104
@@ -3822,8 +3320,8 @@ ARGP4
 ADDRGP4 vectoangles
 CALLV
 pop
-line 1425
-;1425:		p = fabs( AngleNormalize180( angles[PITCH] ) );
+line 1151
+;1151:		p = fabs( AngleNormalize180( angles[PITCH] ) );
 ADDRLP4 0
 INDIRF4
 ARGF4
@@ -3842,32 +3340,32 @@ ADDRLP4 12
 ADDRLP4 24
 INDIRF4
 ASGNF4
-line 1426
-;1426:		if( p < 45 ) {
+line 1152
+;1152:		if( p < 45 ) {
 ADDRLP4 12
 INDIRF4
 CNSTF4 1110704128
-GEF4 $426
-line 1427
-;1427:			effectNum = 0;
+GEF4 $349
+line 1153
+;1153:			effectNum = 0;
 ADDRLP4 16
 CNSTI4 0
 ASGNI4
-line 1428
-;1428:		} else {
-ADDRGP4 $427
+line 1154
+;1154:		} else {
+ADDRGP4 $350
 JUMPV
-LABELV $426
-line 1429
-;1429:			effectNum = 1;
+LABELV $349
+line 1155
+;1155:			effectNum = 1;
 ADDRLP4 16
 CNSTI4 1
 ASGNI4
-line 1430
-;1430:		}
-LABELV $427
-line 1431
-;1431:		BG_AddPredictableEventToPlayerstate( EV_JUMP_PAD, effectNum, ps );
+line 1156
+;1156:		}
+LABELV $350
+line 1157
+;1157:		BG_AddPredictableEventToPlayerstate( EV_JUMP_PAD, effectNum, ps );
 CNSTI4 13
 ARGI4
 ADDRLP4 16
@@ -3879,12 +3377,12 @@ ARGP4
 ADDRGP4 BG_AddPredictableEventToPlayerstate
 CALLV
 pop
-line 1432
-;1432:	}
-LABELV $424
-line 1434
-;1433:	// remember hitting this jumppad this frame
-;1434:	ps->jumppad_ent = jumppad->number;
+line 1158
+;1158:	}
+LABELV $347
+line 1160
+;1159:	// remember hitting this jumppad this frame
+;1160:	ps->jumppad_ent = jumppad->number;
 ADDRFP4 0
 INDIRP4
 CNSTI4 448
@@ -3893,8 +3391,8 @@ ADDRFP4 4
 INDIRP4
 INDIRI4
 ASGNI4
-line 1435
-;1435:	ps->jumppad_frame = ps->pmove_framecount;
+line 1161
+;1161:	ps->jumppad_frame = ps->pmove_framecount;
 ADDRLP4 20
 ADDRFP4 0
 INDIRP4
@@ -3909,9 +3407,9 @@ CNSTI4 456
 ADDP4
 INDIRI4
 ASGNI4
-line 1437
-;1436:	// give the player the velocity from the jumppad
-;1437:	VectorCopy( jumppad->origin2, ps->velocity );
+line 1163
+;1162:	// give the player the velocity from the jumppad
+;1163:	VectorCopy( jumppad->origin2, ps->velocity );
 ADDRFP4 0
 INDIRP4
 CNSTI4 32
@@ -3922,27 +3420,27 @@ CNSTI4 104
 ADDP4
 INDIRB
 ASGNB 12
-line 1438
-;1438:}
-LABELV $419
+line 1164
+;1164:}
+LABELV $342
 endproc BG_TouchJumpPad 28 12
 export BG_PlayerStateToEntityState
 proc BG_PlayerStateToEntityState 28 0
-line 1448
-;1439:
-;1440:/*
-;1441:========================
-;1442:BG_PlayerStateToEntityState
-;1443:
-;1444:This is done after each set of usercmd_t on the server,
-;1445:and after local prediction on the client
-;1446:========================
-;1447:*/
-;1448:void BG_PlayerStateToEntityState( playerState_t *ps, entityState_t *s, qboolean snap ) {
-line 1451
-;1449:	int		i;
-;1450:
-;1451:	if ( ps->pm_type == PM_INTERMISSION || ps->pm_type == PM_SPECTATOR ) {
+line 1174
+;1165:
+;1166:/*
+;1167:========================
+;1168:BG_PlayerStateToEntityState
+;1169:
+;1170:This is done after each set of usercmd_t on the server,
+;1171:and after local prediction on the client
+;1172:========================
+;1173:*/
+;1174:void BG_PlayerStateToEntityState( playerState_t *ps, entityState_t *s, qboolean snap ) {
+line 1177
+;1175:	int		i;
+;1176:
+;1177:	if ( ps->pm_type == PM_INTERMISSION || ps->pm_type == PM_SPECTATOR ) {
 ADDRLP4 4
 ADDRFP4 0
 INDIRP4
@@ -3953,60 +3451,60 @@ ASGNI4
 ADDRLP4 4
 INDIRI4
 CNSTI4 5
-EQI4 $431
+EQI4 $354
 ADDRLP4 4
 INDIRI4
 CNSTI4 2
-NEI4 $429
-LABELV $431
-line 1452
-;1452:		s->eType = ET_INVISIBLE;
+NEI4 $352
+LABELV $354
+line 1178
+;1178:		s->eType = ET_INVISIBLE;
 ADDRFP4 4
 INDIRP4
 CNSTI4 4
 ADDP4
 CNSTI4 10
 ASGNI4
-line 1453
-;1453:	} else if ( ps->stats[STAT_HEALTH] <= GIB_HEALTH ) {
-ADDRGP4 $430
+line 1179
+;1179:	} else if ( ps->stats[STAT_HEALTH] <= GIB_HEALTH ) {
+ADDRGP4 $353
 JUMPV
-LABELV $429
+LABELV $352
 ADDRFP4 0
 INDIRP4
 CNSTI4 184
 ADDP4
 INDIRI4
 CNSTI4 -40
-GTI4 $432
-line 1454
-;1454:		s->eType = ET_INVISIBLE;
+GTI4 $355
+line 1180
+;1180:		s->eType = ET_INVISIBLE;
 ADDRFP4 4
 INDIRP4
 CNSTI4 4
 ADDP4
 CNSTI4 10
 ASGNI4
-line 1455
-;1455:	} else {
-ADDRGP4 $433
+line 1181
+;1181:	} else {
+ADDRGP4 $356
 JUMPV
-LABELV $432
-line 1456
-;1456:		s->eType = ET_PLAYER;
+LABELV $355
+line 1182
+;1182:		s->eType = ET_PLAYER;
 ADDRFP4 4
 INDIRP4
 CNSTI4 4
 ADDP4
 CNSTI4 1
 ASGNI4
-line 1457
-;1457:	}
-LABELV $433
-LABELV $430
-line 1459
-;1458:
-;1459:	s->number = ps->clientNum;
+line 1183
+;1183:	}
+LABELV $356
+LABELV $353
+line 1185
+;1184:
+;1185:	s->number = ps->clientNum;
 ADDRFP4 4
 INDIRP4
 ADDRFP4 0
@@ -4015,17 +3513,17 @@ CNSTI4 140
 ADDP4
 INDIRI4
 ASGNI4
-line 1461
-;1460:
-;1461:	s->pos.trType = TR_INTERPOLATE;
+line 1187
+;1186:
+;1187:	s->pos.trType = TR_INTERPOLATE;
 ADDRFP4 4
 INDIRP4
 CNSTI4 12
 ADDP4
 CNSTI4 1
 ASGNI4
-line 1462
-;1462:	VectorCopy( ps->origin, s->pos.trBase );
+line 1188
+;1188:	VectorCopy( ps->origin, s->pos.trBase );
 ADDRFP4 4
 INDIRP4
 CNSTI4 24
@@ -4036,14 +3534,14 @@ CNSTI4 20
 ADDP4
 INDIRB
 ASGNB 12
-line 1463
-;1463:	if ( snap ) {
+line 1189
+;1189:	if ( snap ) {
 ADDRFP4 8
 INDIRI4
 CNSTI4 0
-EQI4 $434
-line 1464
-;1464:		SnapVector( s->pos.trBase );
+EQI4 $357
+line 1190
+;1190:		SnapVector( s->pos.trBase );
 ADDRLP4 8
 ADDRFP4 4
 INDIRP4
@@ -4086,12 +3584,12 @@ INDIRF4
 CVFI4 4
 CVIF4 4
 ASGNF4
-line 1465
-;1465:	}
-LABELV $434
-line 1467
-;1466:	// set the trDelta for flag direction
-;1467:	VectorCopy( ps->velocity, s->pos.trDelta );
+line 1191
+;1191:	}
+LABELV $357
+line 1193
+;1192:	// set the trDelta for flag direction
+;1193:	VectorCopy( ps->velocity, s->pos.trDelta );
 ADDRFP4 4
 INDIRP4
 CNSTI4 36
@@ -4102,17 +3600,17 @@ CNSTI4 32
 ADDP4
 INDIRB
 ASGNB 12
-line 1469
-;1468:
-;1469:	s->apos.trType = TR_INTERPOLATE;
+line 1195
+;1194:
+;1195:	s->apos.trType = TR_INTERPOLATE;
 ADDRFP4 4
 INDIRP4
 CNSTI4 48
 ADDP4
 CNSTI4 1
 ASGNI4
-line 1470
-;1470:	VectorCopy( ps->viewangles, s->apos.trBase );
+line 1196
+;1196:	VectorCopy( ps->viewangles, s->apos.trBase );
 ADDRFP4 4
 INDIRP4
 CNSTI4 60
@@ -4123,14 +3621,14 @@ CNSTI4 152
 ADDP4
 INDIRB
 ASGNB 12
-line 1471
-;1471:	if ( snap ) {
+line 1197
+;1197:	if ( snap ) {
 ADDRFP4 8
 INDIRI4
 CNSTI4 0
-EQI4 $436
-line 1472
-;1472:		SnapVector( s->apos.trBase );
+EQI4 $359
+line 1198
+;1198:		SnapVector( s->apos.trBase );
 ADDRLP4 8
 ADDRFP4 4
 INDIRP4
@@ -4173,12 +3671,12 @@ INDIRF4
 CVFI4 4
 CVIF4 4
 ASGNF4
-line 1473
-;1473:	}
-LABELV $436
-line 1475
-;1474:
-;1475:	s->angles2[YAW] = ps->movementDir;
+line 1199
+;1199:	}
+LABELV $359
+line 1201
+;1200:
+;1201:	s->angles2[YAW] = ps->movementDir;
 ADDRFP4 4
 INDIRP4
 CNSTI4 132
@@ -4190,8 +3688,8 @@ ADDP4
 INDIRI4
 CVIF4 4
 ASGNF4
-line 1476
-;1476:	s->legsAnim = ps->legsAnim;
+line 1202
+;1202:	s->legsAnim = ps->legsAnim;
 ADDRFP4 4
 INDIRP4
 CNSTI4 196
@@ -4202,8 +3700,8 @@ CNSTI4 76
 ADDP4
 INDIRI4
 ASGNI4
-line 1477
-;1477:	s->torsoAnim = ps->torsoAnim;
+line 1203
+;1203:	s->torsoAnim = ps->torsoAnim;
 ADDRFP4 4
 INDIRP4
 CNSTI4 200
@@ -4214,8 +3712,8 @@ CNSTI4 84
 ADDP4
 INDIRI4
 ASGNI4
-line 1478
-;1478:	s->clientNum = ps->clientNum;		// ET_PLAYER looks here instead of at number
+line 1204
+;1204:	s->clientNum = ps->clientNum;		// ET_PLAYER looks here instead of at number
 ADDRFP4 4
 INDIRP4
 CNSTI4 168
@@ -4226,9 +3724,9 @@ CNSTI4 140
 ADDP4
 INDIRI4
 ASGNI4
-line 1480
-;1479:										// so corpses can also reference the proper config
-;1480:	s->eFlags = ps->eFlags;
+line 1206
+;1205:										// so corpses can also reference the proper config
+;1206:	s->eFlags = ps->eFlags;
 ADDRFP4 4
 INDIRP4
 CNSTI4 8
@@ -4239,17 +3737,17 @@ CNSTI4 104
 ADDP4
 INDIRI4
 ASGNI4
-line 1481
-;1481:	if ( ps->stats[STAT_HEALTH] <= 0 ) {
+line 1207
+;1207:	if ( ps->stats[STAT_HEALTH] <= 0 ) {
 ADDRFP4 0
 INDIRP4
 CNSTI4 184
 ADDP4
 INDIRI4
 CNSTI4 0
-GTI4 $438
-line 1482
-;1482:		s->eFlags |= EF_DEAD;
+GTI4 $361
+line 1208
+;1208:		s->eFlags |= EF_DEAD;
 ADDRLP4 8
 ADDRFP4 4
 INDIRP4
@@ -4264,13 +3762,13 @@ INDIRI4
 CNSTI4 1
 BORI4
 ASGNI4
-line 1483
-;1483:	} else {
-ADDRGP4 $439
+line 1209
+;1209:	} else {
+ADDRGP4 $362
 JUMPV
-LABELV $438
-line 1484
-;1484:		s->eFlags &= ~EF_DEAD;
+LABELV $361
+line 1210
+;1210:		s->eFlags &= ~EF_DEAD;
 ADDRLP4 8
 ADDRFP4 4
 INDIRP4
@@ -4285,21 +3783,21 @@ INDIRI4
 CNSTI4 -2
 BANDI4
 ASGNI4
-line 1485
-;1485:	}
-LABELV $439
-line 1487
-;1486:
-;1487:	if ( ps->externalEvent ) {
+line 1211
+;1211:	}
+LABELV $362
+line 1213
+;1212:
+;1213:	if ( ps->externalEvent ) {
 ADDRFP4 0
 INDIRP4
 CNSTI4 128
 ADDP4
 INDIRI4
 CNSTI4 0
-EQI4 $440
-line 1488
-;1488:		s->event = ps->externalEvent;
+EQI4 $363
+line 1214
+;1214:		s->event = ps->externalEvent;
 ADDRFP4 4
 INDIRP4
 CNSTI4 180
@@ -4310,8 +3808,8 @@ CNSTI4 128
 ADDP4
 INDIRI4
 ASGNI4
-line 1489
-;1489:		s->eventParm = ps->externalEventParm;
+line 1215
+;1215:		s->eventParm = ps->externalEventParm;
 ADDRFP4 4
 INDIRP4
 CNSTI4 184
@@ -4322,11 +3820,11 @@ CNSTI4 132
 ADDP4
 INDIRI4
 ASGNI4
-line 1490
-;1490:	} else if ( ps->entityEventSequence < ps->eventSequence ) {
-ADDRGP4 $441
+line 1216
+;1216:	} else if ( ps->entityEventSequence < ps->eventSequence ) {
+ADDRGP4 $364
 JUMPV
-LABELV $440
+LABELV $363
 ADDRLP4 8
 ADDRFP4 0
 INDIRP4
@@ -4341,11 +3839,11 @@ INDIRP4
 CNSTI4 108
 ADDP4
 INDIRI4
-GEI4 $442
-line 1493
-;1491:		int		seq;
-;1492:
-;1493:		if ( ps->entityEventSequence < ps->eventSequence - MAX_PS_EVENTS) {
+GEI4 $365
+line 1219
+;1217:		int		seq;
+;1218:
+;1219:		if ( ps->entityEventSequence < ps->eventSequence - MAX_PS_EVENTS) {
 ADDRLP4 16
 ADDRFP4 0
 INDIRP4
@@ -4362,9 +3860,9 @@ ADDP4
 INDIRI4
 CNSTI4 2
 SUBI4
-GEI4 $444
-line 1494
-;1494:			ps->entityEventSequence = ps->eventSequence - MAX_PS_EVENTS;
+GEI4 $367
+line 1220
+;1220:			ps->entityEventSequence = ps->eventSequence - MAX_PS_EVENTS;
 ADDRLP4 20
 ADDRFP4 0
 INDIRP4
@@ -4381,11 +3879,11 @@ INDIRI4
 CNSTI4 2
 SUBI4
 ASGNI4
-line 1495
-;1495:		}
-LABELV $444
-line 1496
-;1496:		seq = ps->entityEventSequence & (MAX_PS_EVENTS-1);
+line 1221
+;1221:		}
+LABELV $367
+line 1222
+;1222:		seq = ps->entityEventSequence & (MAX_PS_EVENTS-1);
 ADDRLP4 12
 ADDRFP4 0
 INDIRP4
@@ -4395,8 +3893,8 @@ INDIRI4
 CNSTI4 1
 BANDI4
 ASGNI4
-line 1497
-;1497:		s->event = ps->events[ seq ] | ( ( ps->entityEventSequence & 3 ) << 8 );
+line 1223
+;1223:		s->event = ps->events[ seq ] | ( ( ps->entityEventSequence & 3 ) << 8 );
 ADDRLP4 20
 ADDRFP4 0
 INDIRP4
@@ -4426,8 +3924,8 @@ CNSTI4 8
 LSHI4
 BORI4
 ASGNI4
-line 1498
-;1498:		s->eventParm = ps->eventParms[ seq ];
+line 1224
+;1224:		s->eventParm = ps->eventParms[ seq ];
 ADDRFP4 4
 INDIRP4
 CNSTI4 184
@@ -4443,8 +3941,8 @@ ADDP4
 ADDP4
 INDIRI4
 ASGNI4
-line 1499
-;1499:		ps->entityEventSequence++;
+line 1225
+;1225:		ps->entityEventSequence++;
 ADDRLP4 24
 ADDRFP4 0
 INDIRP4
@@ -4459,13 +3957,13 @@ INDIRI4
 CNSTI4 1
 ADDI4
 ASGNI4
-line 1500
-;1500:	}
-LABELV $442
-LABELV $441
-line 1502
-;1501:
-;1502:	s->weapon = ps->weapon;
+line 1226
+;1226:	}
+LABELV $365
+LABELV $364
+line 1228
+;1227:
+;1228:	s->weapon = ps->weapon;
 ADDRFP4 4
 INDIRP4
 CNSTI4 192
@@ -4476,8 +3974,8 @@ CNSTI4 144
 ADDP4
 INDIRI4
 ASGNI4
-line 1503
-;1503:	s->groundEntityNum = ps->groundEntityNum;
+line 1229
+;1229:	s->groundEntityNum = ps->groundEntityNum;
 ADDRFP4 4
 INDIRP4
 CNSTI4 148
@@ -4488,23 +3986,23 @@ CNSTI4 68
 ADDP4
 INDIRI4
 ASGNI4
-line 1505
-;1504:
-;1505:	s->powerups = 0;
+line 1231
+;1230:
+;1231:	s->powerups = 0;
 ADDRFP4 4
 INDIRP4
 CNSTI4 188
 ADDP4
 CNSTI4 0
 ASGNI4
-line 1506
-;1506:	for ( i = 0 ; i < MAX_POWERUPS ; i++ ) {
+line 1232
+;1232:	for ( i = 0 ; i < MAX_POWERUPS ; i++ ) {
 ADDRLP4 0
 CNSTI4 0
 ASGNI4
-LABELV $446
-line 1507
-;1507:		if ( ps->powerups[ i ] ) {
+LABELV $369
+line 1233
+;1233:		if ( ps->powerups[ i ] ) {
 ADDRLP4 0
 INDIRI4
 CNSTI4 2
@@ -4516,9 +4014,9 @@ ADDP4
 ADDP4
 INDIRI4
 CNSTI4 0
-EQI4 $450
-line 1508
-;1508:			s->powerups |= 1 << i;
+EQI4 $373
+line 1234
+;1234:			s->powerups |= 1 << i;
 ADDRLP4 12
 ADDRFP4 4
 INDIRP4
@@ -4536,13 +4034,13 @@ INDIRI4
 LSHI4
 BORI4
 ASGNI4
-line 1509
-;1509:		}
-LABELV $450
-line 1510
-;1510:	}
-LABELV $447
-line 1506
+line 1235
+;1235:		}
+LABELV $373
+line 1236
+;1236:	}
+LABELV $370
+line 1232
 ADDRLP4 0
 ADDRLP4 0
 INDIRI4
@@ -4552,10 +4050,10 @@ ASGNI4
 ADDRLP4 0
 INDIRI4
 CNSTI4 16
-LTI4 $446
-line 1512
-;1511:
-;1512:	s->loopSound = ps->loopSound;
+LTI4 $369
+line 1238
+;1237:
+;1238:	s->loopSound = ps->loopSound;
 ADDRFP4 4
 INDIRP4
 CNSTI4 156
@@ -4566,8 +4064,8 @@ CNSTI4 444
 ADDP4
 INDIRI4
 ASGNI4
-line 1513
-;1513:	s->generic1 = ps->generic1;
+line 1239
+;1239:	s->generic1 = ps->generic1;
 ADDRFP4 4
 INDIRP4
 CNSTI4 204
@@ -4578,27 +4076,27 @@ CNSTI4 440
 ADDP4
 INDIRI4
 ASGNI4
-line 1514
-;1514:}
-LABELV $428
+line 1240
+;1240:}
+LABELV $351
 endproc BG_PlayerStateToEntityState 28 0
 export BG_PlayerStateToEntityStateExtraPolate
 proc BG_PlayerStateToEntityStateExtraPolate 28 0
-line 1524
-;1515:
-;1516:/*
-;1517:========================
-;1518:BG_PlayerStateToEntityStateExtraPolate
-;1519:
-;1520:This is done after each set of usercmd_t on the server,
-;1521:and after local prediction on the client
-;1522:========================
-;1523:*/
-;1524:void BG_PlayerStateToEntityStateExtraPolate( playerState_t *ps, entityState_t *s, int time, qboolean snap ) {
-line 1527
-;1525:	int		i;
-;1526:
-;1527:	if ( ps->pm_type == PM_INTERMISSION || ps->pm_type == PM_SPECTATOR ) {
+line 1250
+;1241:
+;1242:/*
+;1243:========================
+;1244:BG_PlayerStateToEntityStateExtraPolate
+;1245:
+;1246:This is done after each set of usercmd_t on the server,
+;1247:and after local prediction on the client
+;1248:========================
+;1249:*/
+;1250:void BG_PlayerStateToEntityStateExtraPolate( playerState_t *ps, entityState_t *s, int time, qboolean snap ) {
+line 1253
+;1251:	int		i;
+;1252:
+;1253:	if ( ps->pm_type == PM_INTERMISSION || ps->pm_type == PM_SPECTATOR ) {
 ADDRLP4 4
 ADDRFP4 0
 INDIRP4
@@ -4609,60 +4107,60 @@ ASGNI4
 ADDRLP4 4
 INDIRI4
 CNSTI4 5
-EQI4 $455
+EQI4 $378
 ADDRLP4 4
 INDIRI4
 CNSTI4 2
-NEI4 $453
-LABELV $455
-line 1528
-;1528:		s->eType = ET_INVISIBLE;
+NEI4 $376
+LABELV $378
+line 1254
+;1254:		s->eType = ET_INVISIBLE;
 ADDRFP4 4
 INDIRP4
 CNSTI4 4
 ADDP4
 CNSTI4 10
 ASGNI4
-line 1529
-;1529:	} else if ( ps->stats[STAT_HEALTH] <= GIB_HEALTH ) {
-ADDRGP4 $454
+line 1255
+;1255:	} else if ( ps->stats[STAT_HEALTH] <= GIB_HEALTH ) {
+ADDRGP4 $377
 JUMPV
-LABELV $453
+LABELV $376
 ADDRFP4 0
 INDIRP4
 CNSTI4 184
 ADDP4
 INDIRI4
 CNSTI4 -40
-GTI4 $456
-line 1530
-;1530:		s->eType = ET_INVISIBLE;
+GTI4 $379
+line 1256
+;1256:		s->eType = ET_INVISIBLE;
 ADDRFP4 4
 INDIRP4
 CNSTI4 4
 ADDP4
 CNSTI4 10
 ASGNI4
-line 1531
-;1531:	} else {
-ADDRGP4 $457
+line 1257
+;1257:	} else {
+ADDRGP4 $380
 JUMPV
-LABELV $456
-line 1532
-;1532:		s->eType = ET_PLAYER;
+LABELV $379
+line 1258
+;1258:		s->eType = ET_PLAYER;
 ADDRFP4 4
 INDIRP4
 CNSTI4 4
 ADDP4
 CNSTI4 1
 ASGNI4
-line 1533
-;1533:	}
-LABELV $457
-LABELV $454
-line 1535
-;1534:
-;1535:	s->number = ps->clientNum;
+line 1259
+;1259:	}
+LABELV $380
+LABELV $377
+line 1261
+;1260:
+;1261:	s->number = ps->clientNum;
 ADDRFP4 4
 INDIRP4
 ADDRFP4 0
@@ -4671,17 +4169,17 @@ CNSTI4 140
 ADDP4
 INDIRI4
 ASGNI4
-line 1537
-;1536:
-;1537:	s->pos.trType = TR_LINEAR_STOP;
+line 1263
+;1262:
+;1263:	s->pos.trType = TR_LINEAR_STOP;
 ADDRFP4 4
 INDIRP4
 CNSTI4 12
 ADDP4
 CNSTI4 3
 ASGNI4
-line 1538
-;1538:	VectorCopy( ps->origin, s->pos.trBase );
+line 1264
+;1264:	VectorCopy( ps->origin, s->pos.trBase );
 ADDRFP4 4
 INDIRP4
 CNSTI4 24
@@ -4692,14 +4190,14 @@ CNSTI4 20
 ADDP4
 INDIRB
 ASGNB 12
-line 1539
-;1539:	if ( snap ) {
+line 1265
+;1265:	if ( snap ) {
 ADDRFP4 12
 INDIRI4
 CNSTI4 0
-EQI4 $458
-line 1540
-;1540:		SnapVector( s->pos.trBase );
+EQI4 $381
+line 1266
+;1266:		SnapVector( s->pos.trBase );
 ADDRLP4 8
 ADDRFP4 4
 INDIRP4
@@ -4742,12 +4240,12 @@ INDIRF4
 CVFI4 4
 CVIF4 4
 ASGNF4
-line 1541
-;1541:	}
-LABELV $458
-line 1543
-;1542:	// set the trDelta for flag direction and linear prediction
-;1543:	VectorCopy( ps->velocity, s->pos.trDelta );
+line 1267
+;1267:	}
+LABELV $381
+line 1269
+;1268:	// set the trDelta for flag direction and linear prediction
+;1269:	VectorCopy( ps->velocity, s->pos.trDelta );
 ADDRFP4 4
 INDIRP4
 CNSTI4 36
@@ -4758,9 +4256,9 @@ CNSTI4 32
 ADDP4
 INDIRB
 ASGNB 12
-line 1545
-;1544:	// set the time for linear prediction
-;1545:	s->pos.trTime = time;
+line 1271
+;1270:	// set the time for linear prediction
+;1271:	s->pos.trTime = time;
 ADDRFP4 4
 INDIRP4
 CNSTI4 16
@@ -4768,26 +4266,26 @@ ADDP4
 ADDRFP4 8
 INDIRI4
 ASGNI4
-line 1547
-;1546:	// set maximum extra polation time
-;1547:	s->pos.trDuration = 50; // 1000 / sv_fps (default = 20)
+line 1273
+;1272:	// set maximum extra polation time
+;1273:	s->pos.trDuration = 50; // 1000 / sv_fps (default = 20)
 ADDRFP4 4
 INDIRP4
 CNSTI4 20
 ADDP4
 CNSTI4 50
 ASGNI4
-line 1549
-;1548:
-;1549:	s->apos.trType = TR_INTERPOLATE;
+line 1275
+;1274:
+;1275:	s->apos.trType = TR_INTERPOLATE;
 ADDRFP4 4
 INDIRP4
 CNSTI4 48
 ADDP4
 CNSTI4 1
 ASGNI4
-line 1550
-;1550:	VectorCopy( ps->viewangles, s->apos.trBase );
+line 1276
+;1276:	VectorCopy( ps->viewangles, s->apos.trBase );
 ADDRFP4 4
 INDIRP4
 CNSTI4 60
@@ -4798,14 +4296,14 @@ CNSTI4 152
 ADDP4
 INDIRB
 ASGNB 12
-line 1551
-;1551:	if ( snap ) {
+line 1277
+;1277:	if ( snap ) {
 ADDRFP4 12
 INDIRI4
 CNSTI4 0
-EQI4 $460
-line 1552
-;1552:		SnapVector( s->apos.trBase );
+EQI4 $383
+line 1278
+;1278:		SnapVector( s->apos.trBase );
 ADDRLP4 8
 ADDRFP4 4
 INDIRP4
@@ -4848,12 +4346,12 @@ INDIRF4
 CVFI4 4
 CVIF4 4
 ASGNF4
-line 1553
-;1553:	}
-LABELV $460
-line 1555
-;1554:
-;1555:	s->angles2[YAW] = ps->movementDir;
+line 1279
+;1279:	}
+LABELV $383
+line 1281
+;1280:
+;1281:	s->angles2[YAW] = ps->movementDir;
 ADDRFP4 4
 INDIRP4
 CNSTI4 132
@@ -4865,8 +4363,8 @@ ADDP4
 INDIRI4
 CVIF4 4
 ASGNF4
-line 1556
-;1556:	s->legsAnim = ps->legsAnim;
+line 1282
+;1282:	s->legsAnim = ps->legsAnim;
 ADDRFP4 4
 INDIRP4
 CNSTI4 196
@@ -4877,8 +4375,8 @@ CNSTI4 76
 ADDP4
 INDIRI4
 ASGNI4
-line 1557
-;1557:	s->torsoAnim = ps->torsoAnim;
+line 1283
+;1283:	s->torsoAnim = ps->torsoAnim;
 ADDRFP4 4
 INDIRP4
 CNSTI4 200
@@ -4889,8 +4387,8 @@ CNSTI4 84
 ADDP4
 INDIRI4
 ASGNI4
-line 1558
-;1558:	s->clientNum = ps->clientNum;		// ET_PLAYER looks here instead of at number
+line 1284
+;1284:	s->clientNum = ps->clientNum;		// ET_PLAYER looks here instead of at number
 ADDRFP4 4
 INDIRP4
 CNSTI4 168
@@ -4901,9 +4399,9 @@ CNSTI4 140
 ADDP4
 INDIRI4
 ASGNI4
-line 1560
-;1559:										// so corpses can also reference the proper config
-;1560:	s->eFlags = ps->eFlags;
+line 1286
+;1285:										// so corpses can also reference the proper config
+;1286:	s->eFlags = ps->eFlags;
 ADDRFP4 4
 INDIRP4
 CNSTI4 8
@@ -4914,17 +4412,17 @@ CNSTI4 104
 ADDP4
 INDIRI4
 ASGNI4
-line 1561
-;1561:	if ( ps->stats[STAT_HEALTH] <= 0 ) {
+line 1287
+;1287:	if ( ps->stats[STAT_HEALTH] <= 0 ) {
 ADDRFP4 0
 INDIRP4
 CNSTI4 184
 ADDP4
 INDIRI4
 CNSTI4 0
-GTI4 $462
-line 1562
-;1562:		s->eFlags |= EF_DEAD;
+GTI4 $385
+line 1288
+;1288:		s->eFlags |= EF_DEAD;
 ADDRLP4 8
 ADDRFP4 4
 INDIRP4
@@ -4939,13 +4437,13 @@ INDIRI4
 CNSTI4 1
 BORI4
 ASGNI4
-line 1563
-;1563:	} else {
-ADDRGP4 $463
+line 1289
+;1289:	} else {
+ADDRGP4 $386
 JUMPV
-LABELV $462
-line 1564
-;1564:		s->eFlags &= ~EF_DEAD;
+LABELV $385
+line 1290
+;1290:		s->eFlags &= ~EF_DEAD;
 ADDRLP4 8
 ADDRFP4 4
 INDIRP4
@@ -4960,21 +4458,21 @@ INDIRI4
 CNSTI4 -2
 BANDI4
 ASGNI4
-line 1565
-;1565:	}
-LABELV $463
-line 1567
-;1566:
-;1567:	if ( ps->externalEvent ) {
+line 1291
+;1291:	}
+LABELV $386
+line 1293
+;1292:
+;1293:	if ( ps->externalEvent ) {
 ADDRFP4 0
 INDIRP4
 CNSTI4 128
 ADDP4
 INDIRI4
 CNSTI4 0
-EQI4 $464
-line 1568
-;1568:		s->event = ps->externalEvent;
+EQI4 $387
+line 1294
+;1294:		s->event = ps->externalEvent;
 ADDRFP4 4
 INDIRP4
 CNSTI4 180
@@ -4985,8 +4483,8 @@ CNSTI4 128
 ADDP4
 INDIRI4
 ASGNI4
-line 1569
-;1569:		s->eventParm = ps->externalEventParm;
+line 1295
+;1295:		s->eventParm = ps->externalEventParm;
 ADDRFP4 4
 INDIRP4
 CNSTI4 184
@@ -4997,11 +4495,11 @@ CNSTI4 132
 ADDP4
 INDIRI4
 ASGNI4
-line 1570
-;1570:	} else if ( ps->entityEventSequence < ps->eventSequence ) {
-ADDRGP4 $465
+line 1296
+;1296:	} else if ( ps->entityEventSequence < ps->eventSequence ) {
+ADDRGP4 $388
 JUMPV
-LABELV $464
+LABELV $387
 ADDRLP4 8
 ADDRFP4 0
 INDIRP4
@@ -5016,11 +4514,11 @@ INDIRP4
 CNSTI4 108
 ADDP4
 INDIRI4
-GEI4 $466
-line 1573
-;1571:		int		seq;
-;1572:
-;1573:		if ( ps->entityEventSequence < ps->eventSequence - MAX_PS_EVENTS) {
+GEI4 $389
+line 1299
+;1297:		int		seq;
+;1298:
+;1299:		if ( ps->entityEventSequence < ps->eventSequence - MAX_PS_EVENTS) {
 ADDRLP4 16
 ADDRFP4 0
 INDIRP4
@@ -5037,9 +4535,9 @@ ADDP4
 INDIRI4
 CNSTI4 2
 SUBI4
-GEI4 $468
-line 1574
-;1574:			ps->entityEventSequence = ps->eventSequence - MAX_PS_EVENTS;
+GEI4 $391
+line 1300
+;1300:			ps->entityEventSequence = ps->eventSequence - MAX_PS_EVENTS;
 ADDRLP4 20
 ADDRFP4 0
 INDIRP4
@@ -5056,11 +4554,11 @@ INDIRI4
 CNSTI4 2
 SUBI4
 ASGNI4
-line 1575
-;1575:		}
-LABELV $468
-line 1576
-;1576:		seq = ps->entityEventSequence & (MAX_PS_EVENTS-1);
+line 1301
+;1301:		}
+LABELV $391
+line 1302
+;1302:		seq = ps->entityEventSequence & (MAX_PS_EVENTS-1);
 ADDRLP4 12
 ADDRFP4 0
 INDIRP4
@@ -5070,8 +4568,8 @@ INDIRI4
 CNSTI4 1
 BANDI4
 ASGNI4
-line 1577
-;1577:		s->event = ps->events[ seq ] | ( ( ps->entityEventSequence & 3 ) << 8 );
+line 1303
+;1303:		s->event = ps->events[ seq ] | ( ( ps->entityEventSequence & 3 ) << 8 );
 ADDRLP4 20
 ADDRFP4 0
 INDIRP4
@@ -5101,8 +4599,8 @@ CNSTI4 8
 LSHI4
 BORI4
 ASGNI4
-line 1578
-;1578:		s->eventParm = ps->eventParms[ seq ];
+line 1304
+;1304:		s->eventParm = ps->eventParms[ seq ];
 ADDRFP4 4
 INDIRP4
 CNSTI4 184
@@ -5118,8 +4616,8 @@ ADDP4
 ADDP4
 INDIRI4
 ASGNI4
-line 1579
-;1579:		ps->entityEventSequence++;
+line 1305
+;1305:		ps->entityEventSequence++;
 ADDRLP4 24
 ADDRFP4 0
 INDIRP4
@@ -5134,13 +4632,13 @@ INDIRI4
 CNSTI4 1
 ADDI4
 ASGNI4
-line 1580
-;1580:	}
-LABELV $466
-LABELV $465
-line 1582
-;1581:
-;1582:	s->weapon = ps->weapon;
+line 1306
+;1306:	}
+LABELV $389
+LABELV $388
+line 1308
+;1307:
+;1308:	s->weapon = ps->weapon;
 ADDRFP4 4
 INDIRP4
 CNSTI4 192
@@ -5151,8 +4649,8 @@ CNSTI4 144
 ADDP4
 INDIRI4
 ASGNI4
-line 1583
-;1583:	s->groundEntityNum = ps->groundEntityNum;
+line 1309
+;1309:	s->groundEntityNum = ps->groundEntityNum;
 ADDRFP4 4
 INDIRP4
 CNSTI4 148
@@ -5163,23 +4661,23 @@ CNSTI4 68
 ADDP4
 INDIRI4
 ASGNI4
-line 1585
-;1584:
-;1585:	s->powerups = 0;
+line 1311
+;1310:
+;1311:	s->powerups = 0;
 ADDRFP4 4
 INDIRP4
 CNSTI4 188
 ADDP4
 CNSTI4 0
 ASGNI4
-line 1586
-;1586:	for ( i = 0 ; i < MAX_POWERUPS ; i++ ) {
+line 1312
+;1312:	for ( i = 0 ; i < MAX_POWERUPS ; i++ ) {
 ADDRLP4 0
 CNSTI4 0
 ASGNI4
-LABELV $470
-line 1587
-;1587:		if ( ps->powerups[ i ] ) {
+LABELV $393
+line 1313
+;1313:		if ( ps->powerups[ i ] ) {
 ADDRLP4 0
 INDIRI4
 CNSTI4 2
@@ -5191,9 +4689,9 @@ ADDP4
 ADDP4
 INDIRI4
 CNSTI4 0
-EQI4 $474
-line 1588
-;1588:			s->powerups |= 1 << i;
+EQI4 $397
+line 1314
+;1314:			s->powerups |= 1 << i;
 ADDRLP4 12
 ADDRFP4 4
 INDIRP4
@@ -5211,13 +4709,13 @@ INDIRI4
 LSHI4
 BORI4
 ASGNI4
-line 1589
-;1589:		}
-LABELV $474
-line 1590
-;1590:	}
-LABELV $471
-line 1586
+line 1315
+;1315:		}
+LABELV $397
+line 1316
+;1316:	}
+LABELV $394
+line 1312
 ADDRLP4 0
 ADDRLP4 0
 INDIRI4
@@ -5227,10 +4725,10 @@ ASGNI4
 ADDRLP4 0
 INDIRI4
 CNSTI4 16
-LTI4 $470
-line 1592
-;1591:
-;1592:	s->loopSound = ps->loopSound;
+LTI4 $393
+line 1318
+;1317:
+;1318:	s->loopSound = ps->loopSound;
 ADDRFP4 4
 INDIRP4
 CNSTI4 156
@@ -5241,8 +4739,8 @@ CNSTI4 444
 ADDP4
 INDIRI4
 ASGNI4
-line 1593
-;1593:	s->generic1 = ps->generic1;
+line 1319
+;1319:	s->generic1 = ps->generic1;
 ADDRFP4 4
 INDIRP4
 CNSTI4 204
@@ -5253,9 +4751,9 @@ CNSTI4 440
 ADDP4
 INDIRI4
 ASGNI4
-line 1594
-;1594:}
-LABELV $452
+line 1320
+;1320:}
+LABELV $375
 endproc BG_PlayerStateToEntityStateExtraPolate 28 0
 import trap_Cvar_VariableStringBuffer
 import Pmove
@@ -5412,7 +4910,7 @@ import srand
 import qsort
 lit
 align 1
-LABELV $417
+LABELV $340
 byte 1 69
 byte 1 86
 byte 1 95
@@ -5423,7 +4921,7 @@ byte 1 78
 byte 1 84
 byte 1 0
 align 1
-LABELV $416
+LABELV $339
 byte 1 69
 byte 1 86
 byte 1 95
@@ -5445,7 +4943,7 @@ byte 1 78
 byte 1 68
 byte 1 0
 align 1
-LABELV $415
+LABELV $338
 byte 1 69
 byte 1 86
 byte 1 95
@@ -5461,144 +4959,7 @@ byte 1 78
 byte 1 69
 byte 1 0
 align 1
-LABELV $414
-byte 1 69
-byte 1 86
-byte 1 95
-byte 1 76
-byte 1 73
-byte 1 71
-byte 1 72
-byte 1 84
-byte 1 78
-byte 1 73
-byte 1 78
-byte 1 71
-byte 1 66
-byte 1 79
-byte 1 76
-byte 1 84
-byte 1 0
-align 1
-LABELV $413
-byte 1 69
-byte 1 86
-byte 1 95
-byte 1 74
-byte 1 85
-byte 1 73
-byte 1 67
-byte 1 69
-byte 1 68
-byte 1 0
-align 1
-LABELV $412
-byte 1 69
-byte 1 86
-byte 1 95
-byte 1 73
-byte 1 78
-byte 1 86
-byte 1 85
-byte 1 76
-byte 1 95
-byte 1 73
-byte 1 77
-byte 1 80
-byte 1 65
-byte 1 67
-byte 1 84
-byte 1 0
-align 1
-LABELV $411
-byte 1 69
-byte 1 86
-byte 1 95
-byte 1 79
-byte 1 66
-byte 1 69
-byte 1 76
-byte 1 73
-byte 1 83
-byte 1 75
-byte 1 69
-byte 1 88
-byte 1 80
-byte 1 76
-byte 1 79
-byte 1 68
-byte 1 69
-byte 1 0
-align 1
-LABELV $410
-byte 1 69
-byte 1 86
-byte 1 95
-byte 1 75
-byte 1 65
-byte 1 77
-byte 1 73
-byte 1 75
-byte 1 65
-byte 1 90
-byte 1 69
-byte 1 0
-align 1
-LABELV $409
-byte 1 69
-byte 1 86
-byte 1 95
-byte 1 80
-byte 1 82
-byte 1 79
-byte 1 88
-byte 1 73
-byte 1 77
-byte 1 73
-byte 1 84
-byte 1 89
-byte 1 95
-byte 1 77
-byte 1 73
-byte 1 78
-byte 1 69
-byte 1 95
-byte 1 84
-byte 1 82
-byte 1 73
-byte 1 71
-byte 1 71
-byte 1 69
-byte 1 82
-byte 1 0
-align 1
-LABELV $408
-byte 1 69
-byte 1 86
-byte 1 95
-byte 1 80
-byte 1 82
-byte 1 79
-byte 1 88
-byte 1 73
-byte 1 77
-byte 1 73
-byte 1 84
-byte 1 89
-byte 1 95
-byte 1 77
-byte 1 73
-byte 1 78
-byte 1 69
-byte 1 95
-byte 1 83
-byte 1 84
-byte 1 73
-byte 1 67
-byte 1 75
-byte 1 0
-align 1
-LABELV $407
+LABELV $337
 byte 1 69
 byte 1 86
 byte 1 95
@@ -5613,7 +4974,7 @@ byte 1 85
 byte 1 77
 byte 1 0
 align 1
-LABELV $406
+LABELV $336
 byte 1 69
 byte 1 86
 byte 1 95
@@ -5629,7 +4990,7 @@ byte 1 69
 byte 1 82
 byte 1 0
 align 1
-LABELV $405
+LABELV $335
 byte 1 69
 byte 1 86
 byte 1 95
@@ -5648,7 +5009,7 @@ byte 1 69
 byte 1 78
 byte 1 0
 align 1
-LABELV $404
+LABELV $334
 byte 1 69
 byte 1 86
 byte 1 95
@@ -5672,7 +5033,7 @@ byte 1 73
 byte 1 84
 byte 1 0
 align 1
-LABELV $403
+LABELV $333
 byte 1 69
 byte 1 86
 byte 1 95
@@ -5690,7 +5051,7 @@ byte 1 65
 byte 1 68
 byte 1 0
 align 1
-LABELV $402
+LABELV $332
 byte 1 69
 byte 1 86
 byte 1 95
@@ -5704,7 +5065,7 @@ byte 1 82
 byte 1 89
 byte 1 0
 align 1
-LABELV $401
+LABELV $331
 byte 1 69
 byte 1 86
 byte 1 95
@@ -5716,7 +5077,7 @@ byte 1 72
 byte 1 51
 byte 1 0
 align 1
-LABELV $400
+LABELV $330
 byte 1 69
 byte 1 86
 byte 1 95
@@ -5728,7 +5089,7 @@ byte 1 72
 byte 1 50
 byte 1 0
 align 1
-LABELV $399
+LABELV $329
 byte 1 69
 byte 1 86
 byte 1 95
@@ -5740,7 +5101,7 @@ byte 1 72
 byte 1 49
 byte 1 0
 align 1
-LABELV $398
+LABELV $328
 byte 1 69
 byte 1 86
 byte 1 95
@@ -5750,7 +5111,7 @@ byte 1 73
 byte 1 78
 byte 1 0
 align 1
-LABELV $397
+LABELV $327
 byte 1 69
 byte 1 86
 byte 1 95
@@ -5762,7 +5123,7 @@ byte 1 69
 byte 1 84
 byte 1 0
 align 1
-LABELV $396
+LABELV $326
 byte 1 69
 byte 1 86
 byte 1 95
@@ -5775,7 +5136,7 @@ byte 1 85
 byte 1 78
 byte 1 0
 align 1
-LABELV $395
+LABELV $325
 byte 1 69
 byte 1 86
 byte 1 95
@@ -5790,7 +5151,7 @@ byte 1 73
 byte 1 76
 byte 1 0
 align 1
-LABELV $394
+LABELV $324
 byte 1 69
 byte 1 86
 byte 1 95
@@ -5814,7 +5175,7 @@ byte 1 65
 byte 1 76
 byte 1 0
 align 1
-LABELV $393
+LABELV $323
 byte 1 69
 byte 1 86
 byte 1 95
@@ -5832,7 +5193,7 @@ byte 1 83
 byte 1 83
 byte 1 0
 align 1
-LABELV $392
+LABELV $322
 byte 1 69
 byte 1 86
 byte 1 95
@@ -5849,7 +5210,7 @@ byte 1 73
 byte 1 84
 byte 1 0
 align 1
-LABELV $391
+LABELV $321
 byte 1 69
 byte 1 86
 byte 1 95
@@ -5870,7 +5231,7 @@ byte 1 76
 byte 1 76
 byte 1 0
 align 1
-LABELV $390
+LABELV $320
 byte 1 69
 byte 1 86
 byte 1 95
@@ -5892,7 +5253,7 @@ byte 1 83
 byte 1 72
 byte 1 0
 align 1
-LABELV $389
+LABELV $319
 byte 1 69
 byte 1 86
 byte 1 95
@@ -5915,7 +5276,7 @@ byte 1 78
 byte 1 68
 byte 1 0
 align 1
-LABELV $388
+LABELV $318
 byte 1 69
 byte 1 86
 byte 1 95
@@ -5933,7 +5294,7 @@ byte 1 78
 byte 1 68
 byte 1 0
 align 1
-LABELV $387
+LABELV $317
 byte 1 69
 byte 1 86
 byte 1 95
@@ -5952,7 +5313,7 @@ byte 1 78
 byte 1 68
 byte 1 0
 align 1
-LABELV $386
+LABELV $316
 byte 1 69
 byte 1 86
 byte 1 95
@@ -5972,7 +5333,7 @@ byte 1 67
 byte 1 69
 byte 1 0
 align 1
-LABELV $385
+LABELV $315
 byte 1 69
 byte 1 86
 byte 1 95
@@ -5997,7 +5358,7 @@ byte 1 85
 byte 1 84
 byte 1 0
 align 1
-LABELV $384
+LABELV $314
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6021,7 +5382,7 @@ byte 1 73
 byte 1 78
 byte 1 0
 align 1
-LABELV $383
+LABELV $313
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6035,7 +5396,7 @@ byte 1 79
 byte 1 80
 byte 1 0
 align 1
-LABELV $382
+LABELV $312
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6053,7 +5414,7 @@ byte 1 87
 byte 1 78
 byte 1 0
 align 1
-LABELV $381
+LABELV $311
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6069,7 +5430,7 @@ byte 1 49
 byte 1 53
 byte 1 0
 align 1
-LABELV $380
+LABELV $310
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6085,7 +5446,7 @@ byte 1 49
 byte 1 52
 byte 1 0
 align 1
-LABELV $379
+LABELV $309
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6101,7 +5462,7 @@ byte 1 49
 byte 1 51
 byte 1 0
 align 1
-LABELV $378
+LABELV $308
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6117,7 +5478,7 @@ byte 1 49
 byte 1 50
 byte 1 0
 align 1
-LABELV $377
+LABELV $307
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6133,7 +5494,7 @@ byte 1 49
 byte 1 49
 byte 1 0
 align 1
-LABELV $376
+LABELV $306
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6149,7 +5510,7 @@ byte 1 49
 byte 1 48
 byte 1 0
 align 1
-LABELV $375
+LABELV $305
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6164,7 +5525,7 @@ byte 1 77
 byte 1 57
 byte 1 0
 align 1
-LABELV $374
+LABELV $304
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6179,7 +5540,7 @@ byte 1 77
 byte 1 56
 byte 1 0
 align 1
-LABELV $373
+LABELV $303
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6194,7 +5555,7 @@ byte 1 77
 byte 1 55
 byte 1 0
 align 1
-LABELV $372
+LABELV $302
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6209,7 +5570,7 @@ byte 1 77
 byte 1 54
 byte 1 0
 align 1
-LABELV $371
+LABELV $301
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6224,7 +5585,7 @@ byte 1 77
 byte 1 53
 byte 1 0
 align 1
-LABELV $370
+LABELV $300
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6239,7 +5600,7 @@ byte 1 77
 byte 1 52
 byte 1 0
 align 1
-LABELV $369
+LABELV $299
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6254,7 +5615,7 @@ byte 1 77
 byte 1 51
 byte 1 0
 align 1
-LABELV $368
+LABELV $298
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6269,7 +5630,7 @@ byte 1 77
 byte 1 50
 byte 1 0
 align 1
-LABELV $367
+LABELV $297
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6284,7 +5645,7 @@ byte 1 77
 byte 1 49
 byte 1 0
 align 1
-LABELV $366
+LABELV $296
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6299,7 +5660,7 @@ byte 1 77
 byte 1 48
 byte 1 0
 align 1
-LABELV $365
+LABELV $295
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6316,7 +5677,7 @@ byte 1 79
 byte 1 78
 byte 1 0
 align 1
-LABELV $364
+LABELV $294
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6335,7 +5696,7 @@ byte 1 79
 byte 1 78
 byte 1 0
 align 1
-LABELV $363
+LABELV $293
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6347,7 +5708,7 @@ byte 1 77
 byte 1 79
 byte 1 0
 align 1
-LABELV $362
+LABELV $292
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6371,7 +5732,7 @@ byte 1 85
 byte 1 80
 byte 1 0
 align 1
-LABELV $361
+LABELV $291
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6388,7 +5749,7 @@ byte 1 85
 byte 1 80
 byte 1 0
 align 1
-LABELV $360
+LABELV $290
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6405,7 +5766,7 @@ byte 1 65
 byte 1 82
 byte 1 0
 align 1
-LABELV $359
+LABELV $289
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6422,7 +5783,7 @@ byte 1 69
 byte 1 82
 byte 1 0
 align 1
-LABELV $358
+LABELV $288
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6439,7 +5800,7 @@ byte 1 86
 byte 1 69
 byte 1 0
 align 1
-LABELV $357
+LABELV $287
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6456,7 +5817,7 @@ byte 1 67
 byte 1 72
 byte 1 0
 align 1
-LABELV $356
+LABELV $286
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6466,7 +5827,7 @@ byte 1 77
 byte 1 80
 byte 1 0
 align 1
-LABELV $355
+LABELV $285
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6480,7 +5841,7 @@ byte 1 65
 byte 1 68
 byte 1 0
 align 1
-LABELV $354
+LABELV $284
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6494,7 +5855,7 @@ byte 1 65
 byte 1 82
 byte 1 0
 align 1
-LABELV $353
+LABELV $283
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6511,7 +5872,7 @@ byte 1 85
 byte 1 77
 byte 1 0
 align 1
-LABELV $352
+LABELV $282
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6527,7 +5888,7 @@ byte 1 82
 byte 1 84
 byte 1 0
 align 1
-LABELV $351
+LABELV $281
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6540,7 +5901,7 @@ byte 1 49
 byte 1 54
 byte 1 0
 align 1
-LABELV $350
+LABELV $280
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6553,7 +5914,7 @@ byte 1 49
 byte 1 50
 byte 1 0
 align 1
-LABELV $349
+LABELV $279
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6565,7 +5926,7 @@ byte 1 95
 byte 1 56
 byte 1 0
 align 1
-LABELV $348
+LABELV $278
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6577,7 +5938,7 @@ byte 1 95
 byte 1 52
 byte 1 0
 align 1
-LABELV $347
+LABELV $277
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6587,7 +5948,7 @@ byte 1 73
 byte 1 77
 byte 1 0
 align 1
-LABELV $346
+LABELV $276
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6601,7 +5962,7 @@ byte 1 68
 byte 1 69
 byte 1 0
 align 1
-LABELV $345
+LABELV $275
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6617,7 +5978,7 @@ byte 1 83
 byte 1 72
 byte 1 0
 align 1
-LABELV $344
+LABELV $274
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6637,7 +5998,7 @@ byte 1 65
 byte 1 76
 byte 1 0
 align 1
-LABELV $343
+LABELV $273
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6651,7 +6012,7 @@ byte 1 69
 byte 1 80
 byte 1 0
 align 1
-LABELV $342
+LABELV $272
 byte 1 69
 byte 1 86
 byte 1 95
@@ -6661,7 +6022,7 @@ byte 1 78
 byte 1 69
 byte 1 0
 align 1
-LABELV $340
+LABELV $270
 byte 1 66
 byte 1 71
 byte 1 95
@@ -6710,7 +6071,7 @@ byte 1 37
 byte 1 105
 byte 1 0
 align 1
-LABELV $326
+LABELV $256
 byte 1 66
 byte 1 71
 byte 1 95
@@ -6754,7 +6115,7 @@ byte 1 37
 byte 1 105
 byte 1 0
 align 1
-LABELV $310
+LABELV $240
 byte 1 66
 byte 1 71
 byte 1 95
@@ -6784,7 +6145,7 @@ byte 1 65
 byte 1 68
 byte 1 0
 align 1
-LABELV $269
+LABELV $199
 byte 1 66
 byte 1 71
 byte 1 95
@@ -6826,7 +6187,7 @@ byte 1 103
 byte 1 101
 byte 1 0
 align 1
-LABELV $244
+LABELV $174
 byte 1 67
 byte 1 111
 byte 1 117
@@ -6861,7 +6222,7 @@ byte 1 37
 byte 1 105
 byte 1 0
 align 1
-LABELV $235
+LABELV $165
 byte 1 72
 byte 1 111
 byte 1 108
@@ -6886,1685 +6247,15 @@ byte 1 110
 byte 1 100
 byte 1 0
 align 1
-LABELV $212
-byte 1 66
-byte 1 108
-byte 1 117
-byte 1 101
-byte 1 32
-byte 1 70
-byte 1 108
-byte 1 97
-byte 1 103
-byte 1 0
-align 1
-LABELV $211
-byte 1 105
-byte 1 99
-byte 1 111
-byte 1 110
-byte 1 115
-byte 1 47
-byte 1 105
-byte 1 99
-byte 1 111
-byte 1 110
-byte 1 102
-byte 1 95
-byte 1 98
-byte 1 108
-byte 1 117
-byte 1 49
-byte 1 0
-align 1
-LABELV $210
-byte 1 109
-byte 1 111
-byte 1 100
-byte 1 101
-byte 1 108
-byte 1 115
-byte 1 47
-byte 1 102
-byte 1 108
-byte 1 97
-byte 1 103
-byte 1 115
-byte 1 47
-byte 1 98
-byte 1 95
-byte 1 102
-byte 1 108
-byte 1 97
-byte 1 103
-byte 1 46
-byte 1 109
-byte 1 100
-byte 1 51
-byte 1 0
-align 1
-LABELV $209
-byte 1 116
-byte 1 101
-byte 1 97
-byte 1 109
-byte 1 95
-byte 1 67
-byte 1 84
-byte 1 70
-byte 1 95
-byte 1 98
-byte 1 108
-byte 1 117
-byte 1 101
-byte 1 102
-byte 1 108
-byte 1 97
-byte 1 103
-byte 1 0
-align 1
-LABELV $208
-byte 1 82
-byte 1 101
-byte 1 100
-byte 1 32
-byte 1 70
-byte 1 108
-byte 1 97
-byte 1 103
-byte 1 0
-align 1
-LABELV $207
-byte 1 105
-byte 1 99
-byte 1 111
-byte 1 110
-byte 1 115
-byte 1 47
-byte 1 105
-byte 1 99
-byte 1 111
-byte 1 110
-byte 1 102
-byte 1 95
-byte 1 114
-byte 1 101
-byte 1 100
-byte 1 49
-byte 1 0
-align 1
-LABELV $206
-byte 1 109
-byte 1 111
-byte 1 100
-byte 1 101
-byte 1 108
-byte 1 115
-byte 1 47
-byte 1 102
-byte 1 108
-byte 1 97
-byte 1 103
-byte 1 115
-byte 1 47
-byte 1 114
-byte 1 95
-byte 1 102
-byte 1 108
-byte 1 97
-byte 1 103
-byte 1 46
-byte 1 109
-byte 1 100
-byte 1 51
-byte 1 0
-align 1
-LABELV $205
-byte 1 116
-byte 1 101
-byte 1 97
-byte 1 109
-byte 1 95
-byte 1 67
-byte 1 84
-byte 1 70
-byte 1 95
-byte 1 114
-byte 1 101
-byte 1 100
-byte 1 102
-byte 1 108
-byte 1 97
-byte 1 103
-byte 1 0
-align 1
-LABELV $204
-byte 1 70
-byte 1 108
-byte 1 105
-byte 1 103
-byte 1 104
-byte 1 116
-byte 1 0
-align 1
-LABELV $203
-byte 1 105
-byte 1 99
-byte 1 111
-byte 1 110
-byte 1 115
-byte 1 47
-byte 1 102
-byte 1 108
-byte 1 105
-byte 1 103
-byte 1 104
-byte 1 116
-byte 1 0
-align 1
-LABELV $202
-byte 1 109
-byte 1 111
-byte 1 100
-byte 1 101
-byte 1 108
-byte 1 115
-byte 1 47
-byte 1 112
-byte 1 111
-byte 1 119
-byte 1 101
-byte 1 114
-byte 1 117
-byte 1 112
-byte 1 115
-byte 1 47
-byte 1 105
-byte 1 110
-byte 1 115
-byte 1 116
-byte 1 97
-byte 1 110
-byte 1 116
-byte 1 47
-byte 1 102
-byte 1 108
-byte 1 105
-byte 1 103
-byte 1 104
-byte 1 116
-byte 1 95
-byte 1 114
-byte 1 105
-byte 1 110
-byte 1 103
-byte 1 46
-byte 1 109
-byte 1 100
-byte 1 51
-byte 1 0
-align 1
-LABELV $201
-byte 1 109
-byte 1 111
-byte 1 100
-byte 1 101
-byte 1 108
-byte 1 115
-byte 1 47
-byte 1 112
-byte 1 111
-byte 1 119
-byte 1 101
-byte 1 114
-byte 1 117
-byte 1 112
-byte 1 115
-byte 1 47
-byte 1 105
-byte 1 110
-byte 1 115
-byte 1 116
-byte 1 97
-byte 1 110
-byte 1 116
-byte 1 47
-byte 1 102
-byte 1 108
-byte 1 105
-byte 1 103
-byte 1 104
-byte 1 116
-byte 1 46
-byte 1 109
-byte 1 100
-byte 1 51
-byte 1 0
-align 1
-LABELV $200
-byte 1 115
-byte 1 111
-byte 1 117
-byte 1 110
-byte 1 100
-byte 1 47
-byte 1 105
-byte 1 116
-byte 1 101
-byte 1 109
-byte 1 115
-byte 1 47
-byte 1 102
-byte 1 108
-byte 1 105
-byte 1 103
-byte 1 104
-byte 1 116
-byte 1 46
-byte 1 119
-byte 1 97
-byte 1 118
-byte 1 0
-align 1
-LABELV $199
-byte 1 105
-byte 1 116
-byte 1 101
-byte 1 109
-byte 1 95
-byte 1 102
-byte 1 108
-byte 1 105
-byte 1 103
-byte 1 104
-byte 1 116
-byte 1 0
-align 1
-LABELV $198
-byte 1 115
-byte 1 111
-byte 1 117
-byte 1 110
-byte 1 100
-byte 1 47
-byte 1 105
-byte 1 116
-byte 1 101
-byte 1 109
-byte 1 115
-byte 1 47
-byte 1 114
-byte 1 101
-byte 1 103
-byte 1 101
-byte 1 110
-byte 1 46
-byte 1 119
-byte 1 97
-byte 1 118
-byte 1 0
-align 1
-LABELV $197
-byte 1 82
-byte 1 101
-byte 1 103
-byte 1 101
-byte 1 110
-byte 1 101
-byte 1 114
-byte 1 97
-byte 1 116
-byte 1 105
-byte 1 111
-byte 1 110
-byte 1 0
-align 1
-LABELV $196
-byte 1 105
-byte 1 99
-byte 1 111
-byte 1 110
-byte 1 115
-byte 1 47
-byte 1 114
-byte 1 101
-byte 1 103
-byte 1 101
-byte 1 110
-byte 1 0
-align 1
-LABELV $195
-byte 1 109
-byte 1 111
-byte 1 100
-byte 1 101
-byte 1 108
-byte 1 115
-byte 1 47
-byte 1 112
-byte 1 111
-byte 1 119
-byte 1 101
-byte 1 114
-byte 1 117
-byte 1 112
-byte 1 115
-byte 1 47
-byte 1 105
-byte 1 110
-byte 1 115
-byte 1 116
-byte 1 97
-byte 1 110
-byte 1 116
-byte 1 47
-byte 1 114
-byte 1 101
-byte 1 103
-byte 1 101
-byte 1 110
-byte 1 95
-byte 1 114
-byte 1 105
-byte 1 110
-byte 1 103
-byte 1 46
-byte 1 109
-byte 1 100
-byte 1 51
-byte 1 0
-align 1
-LABELV $194
-byte 1 109
-byte 1 111
-byte 1 100
-byte 1 101
-byte 1 108
-byte 1 115
-byte 1 47
-byte 1 112
-byte 1 111
-byte 1 119
-byte 1 101
-byte 1 114
-byte 1 117
-byte 1 112
-byte 1 115
-byte 1 47
-byte 1 105
-byte 1 110
-byte 1 115
-byte 1 116
-byte 1 97
-byte 1 110
-byte 1 116
-byte 1 47
-byte 1 114
-byte 1 101
-byte 1 103
-byte 1 101
-byte 1 110
-byte 1 46
-byte 1 109
-byte 1 100
-byte 1 51
-byte 1 0
-align 1
-LABELV $193
-byte 1 115
-byte 1 111
-byte 1 117
-byte 1 110
-byte 1 100
-byte 1 47
-byte 1 105
-byte 1 116
-byte 1 101
-byte 1 109
-byte 1 115
-byte 1 47
-byte 1 114
-byte 1 101
-byte 1 103
-byte 1 101
-byte 1 110
-byte 1 101
-byte 1 114
-byte 1 97
-byte 1 116
-byte 1 105
-byte 1 111
-byte 1 110
-byte 1 46
-byte 1 119
-byte 1 97
-byte 1 118
-byte 1 0
-align 1
-LABELV $192
-byte 1 105
-byte 1 116
-byte 1 101
-byte 1 109
-byte 1 95
-byte 1 114
-byte 1 101
-byte 1 103
-byte 1 101
-byte 1 110
-byte 1 0
-align 1
-LABELV $191
-byte 1 73
-byte 1 110
-byte 1 118
-byte 1 105
-byte 1 115
-byte 1 105
-byte 1 98
-byte 1 105
-byte 1 108
-byte 1 105
-byte 1 116
-byte 1 121
-byte 1 0
-align 1
-LABELV $190
-byte 1 105
-byte 1 99
-byte 1 111
-byte 1 110
-byte 1 115
-byte 1 47
-byte 1 105
-byte 1 110
-byte 1 118
-byte 1 105
-byte 1 115
-byte 1 0
-align 1
-LABELV $189
-byte 1 109
-byte 1 111
-byte 1 100
-byte 1 101
-byte 1 108
-byte 1 115
-byte 1 47
-byte 1 112
-byte 1 111
-byte 1 119
-byte 1 101
-byte 1 114
-byte 1 117
-byte 1 112
-byte 1 115
-byte 1 47
-byte 1 105
-byte 1 110
-byte 1 115
-byte 1 116
-byte 1 97
-byte 1 110
-byte 1 116
-byte 1 47
-byte 1 105
-byte 1 110
-byte 1 118
-byte 1 105
-byte 1 115
-byte 1 95
-byte 1 114
-byte 1 105
-byte 1 110
-byte 1 103
-byte 1 46
-byte 1 109
-byte 1 100
-byte 1 51
-byte 1 0
-align 1
-LABELV $188
-byte 1 109
-byte 1 111
-byte 1 100
-byte 1 101
-byte 1 108
-byte 1 115
-byte 1 47
-byte 1 112
-byte 1 111
-byte 1 119
-byte 1 101
-byte 1 114
-byte 1 117
-byte 1 112
-byte 1 115
-byte 1 47
-byte 1 105
-byte 1 110
-byte 1 115
-byte 1 116
-byte 1 97
-byte 1 110
-byte 1 116
-byte 1 47
-byte 1 105
-byte 1 110
-byte 1 118
-byte 1 105
-byte 1 115
-byte 1 46
-byte 1 109
-byte 1 100
-byte 1 51
-byte 1 0
-align 1
-LABELV $187
-byte 1 115
-byte 1 111
-byte 1 117
-byte 1 110
-byte 1 100
-byte 1 47
-byte 1 105
-byte 1 116
-byte 1 101
-byte 1 109
-byte 1 115
-byte 1 47
-byte 1 105
-byte 1 110
-byte 1 118
-byte 1 105
-byte 1 115
-byte 1 105
-byte 1 98
-byte 1 105
-byte 1 108
-byte 1 105
-byte 1 116
-byte 1 121
-byte 1 46
-byte 1 119
-byte 1 97
-byte 1 118
-byte 1 0
-align 1
-LABELV $186
-byte 1 105
-byte 1 116
-byte 1 101
-byte 1 109
-byte 1 95
-byte 1 105
-byte 1 110
-byte 1 118
-byte 1 105
-byte 1 115
-byte 1 0
-align 1
-LABELV $185
-byte 1 83
-byte 1 112
-byte 1 101
-byte 1 101
-byte 1 100
-byte 1 0
-align 1
-LABELV $184
-byte 1 105
-byte 1 99
-byte 1 111
-byte 1 110
-byte 1 115
-byte 1 47
-byte 1 104
-byte 1 97
-byte 1 115
-byte 1 116
-byte 1 101
-byte 1 0
-align 1
-LABELV $183
-byte 1 109
-byte 1 111
-byte 1 100
-byte 1 101
-byte 1 108
-byte 1 115
-byte 1 47
-byte 1 112
-byte 1 111
-byte 1 119
-byte 1 101
-byte 1 114
-byte 1 117
-byte 1 112
-byte 1 115
-byte 1 47
-byte 1 105
-byte 1 110
-byte 1 115
-byte 1 116
-byte 1 97
-byte 1 110
-byte 1 116
-byte 1 47
-byte 1 104
-byte 1 97
-byte 1 115
-byte 1 116
-byte 1 101
-byte 1 95
-byte 1 114
-byte 1 105
-byte 1 110
-byte 1 103
-byte 1 46
-byte 1 109
-byte 1 100
-byte 1 51
-byte 1 0
-align 1
-LABELV $182
-byte 1 109
-byte 1 111
-byte 1 100
-byte 1 101
-byte 1 108
-byte 1 115
-byte 1 47
-byte 1 112
-byte 1 111
-byte 1 119
-byte 1 101
-byte 1 114
-byte 1 117
-byte 1 112
-byte 1 115
-byte 1 47
-byte 1 105
-byte 1 110
-byte 1 115
-byte 1 116
-byte 1 97
-byte 1 110
-byte 1 116
-byte 1 47
-byte 1 104
-byte 1 97
-byte 1 115
-byte 1 116
-byte 1 101
-byte 1 46
-byte 1 109
-byte 1 100
-byte 1 51
-byte 1 0
-align 1
-LABELV $181
-byte 1 115
-byte 1 111
-byte 1 117
-byte 1 110
-byte 1 100
-byte 1 47
-byte 1 105
-byte 1 116
-byte 1 101
-byte 1 109
-byte 1 115
-byte 1 47
-byte 1 104
-byte 1 97
-byte 1 115
-byte 1 116
-byte 1 101
-byte 1 46
-byte 1 119
-byte 1 97
-byte 1 118
-byte 1 0
-align 1
-LABELV $180
-byte 1 105
-byte 1 116
-byte 1 101
-byte 1 109
-byte 1 95
-byte 1 104
-byte 1 97
-byte 1 115
-byte 1 116
-byte 1 101
-byte 1 0
-align 1
-LABELV $179
-byte 1 115
-byte 1 111
-byte 1 117
-byte 1 110
-byte 1 100
-byte 1 47
-byte 1 105
-byte 1 116
-byte 1 101
-byte 1 109
-byte 1 115
-byte 1 47
-byte 1 97
-byte 1 105
-byte 1 114
-byte 1 111
-byte 1 117
-byte 1 116
-byte 1 46
-byte 1 119
-byte 1 97
-byte 1 118
-byte 1 32
-byte 1 115
-byte 1 111
-byte 1 117
-byte 1 110
-byte 1 100
-byte 1 47
-byte 1 105
-byte 1 116
-byte 1 101
-byte 1 109
-byte 1 115
-byte 1 47
-byte 1 112
-byte 1 114
-byte 1 111
-byte 1 116
-byte 1 101
-byte 1 99
-byte 1 116
-byte 1 51
-byte 1 46
-byte 1 119
-byte 1 97
-byte 1 118
-byte 1 0
-align 1
-LABELV $178
-byte 1 66
-byte 1 97
-byte 1 116
-byte 1 116
-byte 1 108
-byte 1 101
-byte 1 32
-byte 1 83
-byte 1 117
-byte 1 105
-byte 1 116
-byte 1 0
-align 1
-LABELV $177
-byte 1 105
-byte 1 99
-byte 1 111
-byte 1 110
-byte 1 115
-byte 1 47
-byte 1 101
-byte 1 110
-byte 1 118
-byte 1 105
-byte 1 114
-byte 1 111
-byte 1 115
-byte 1 117
-byte 1 105
-byte 1 116
-byte 1 0
-align 1
-LABELV $176
-byte 1 109
-byte 1 111
-byte 1 100
-byte 1 101
-byte 1 108
-byte 1 115
-byte 1 47
-byte 1 112
-byte 1 111
-byte 1 119
-byte 1 101
-byte 1 114
-byte 1 117
-byte 1 112
-byte 1 115
-byte 1 47
-byte 1 105
-byte 1 110
-byte 1 115
-byte 1 116
-byte 1 97
-byte 1 110
-byte 1 116
-byte 1 47
-byte 1 101
-byte 1 110
-byte 1 118
-byte 1 105
-byte 1 114
-byte 1 111
-byte 1 95
-byte 1 114
-byte 1 105
-byte 1 110
-byte 1 103
-byte 1 46
-byte 1 109
-byte 1 100
-byte 1 51
-byte 1 0
-align 1
-LABELV $175
-byte 1 109
-byte 1 111
-byte 1 100
-byte 1 101
-byte 1 108
-byte 1 115
-byte 1 47
-byte 1 112
-byte 1 111
-byte 1 119
-byte 1 101
-byte 1 114
-byte 1 117
-byte 1 112
-byte 1 115
-byte 1 47
-byte 1 105
-byte 1 110
-byte 1 115
-byte 1 116
-byte 1 97
-byte 1 110
-byte 1 116
-byte 1 47
-byte 1 101
-byte 1 110
-byte 1 118
-byte 1 105
-byte 1 114
-byte 1 111
-byte 1 46
-byte 1 109
-byte 1 100
-byte 1 51
-byte 1 0
-align 1
-LABELV $174
-byte 1 115
-byte 1 111
-byte 1 117
-byte 1 110
-byte 1 100
-byte 1 47
-byte 1 105
-byte 1 116
-byte 1 101
-byte 1 109
-byte 1 115
-byte 1 47
-byte 1 112
-byte 1 114
-byte 1 111
-byte 1 116
-byte 1 101
-byte 1 99
-byte 1 116
-byte 1 46
-byte 1 119
-byte 1 97
-byte 1 118
-byte 1 0
-align 1
-LABELV $173
-byte 1 105
-byte 1 116
-byte 1 101
-byte 1 109
-byte 1 95
-byte 1 101
-byte 1 110
-byte 1 118
-byte 1 105
-byte 1 114
-byte 1 111
-byte 1 0
-align 1
-LABELV $172
-byte 1 115
-byte 1 111
-byte 1 117
-byte 1 110
-byte 1 100
-byte 1 47
-byte 1 105
-byte 1 116
-byte 1 101
-byte 1 109
-byte 1 115
-byte 1 47
-byte 1 100
-byte 1 97
-byte 1 109
-byte 1 97
-byte 1 103
-byte 1 101
-byte 1 50
-byte 1 46
-byte 1 119
-byte 1 97
-byte 1 118
-byte 1 32
-byte 1 115
-byte 1 111
-byte 1 117
-byte 1 110
-byte 1 100
-byte 1 47
-byte 1 105
-byte 1 116
-byte 1 101
-byte 1 109
-byte 1 115
-byte 1 47
-byte 1 100
-byte 1 97
-byte 1 109
-byte 1 97
-byte 1 103
-byte 1 101
-byte 1 51
-byte 1 46
-byte 1 119
-byte 1 97
-byte 1 118
-byte 1 0
-align 1
-LABELV $171
-byte 1 81
-byte 1 117
-byte 1 97
-byte 1 100
-byte 1 32
-byte 1 68
-byte 1 97
-byte 1 109
-byte 1 97
-byte 1 103
-byte 1 101
-byte 1 0
-align 1
-LABELV $170
-byte 1 105
-byte 1 99
-byte 1 111
-byte 1 110
-byte 1 115
-byte 1 47
-byte 1 113
-byte 1 117
-byte 1 97
-byte 1 100
-byte 1 0
-align 1
-LABELV $169
-byte 1 109
-byte 1 111
-byte 1 100
-byte 1 101
-byte 1 108
-byte 1 115
-byte 1 47
-byte 1 112
-byte 1 111
-byte 1 119
-byte 1 101
-byte 1 114
-byte 1 117
-byte 1 112
-byte 1 115
-byte 1 47
-byte 1 105
-byte 1 110
-byte 1 115
-byte 1 116
-byte 1 97
-byte 1 110
-byte 1 116
-byte 1 47
-byte 1 113
-byte 1 117
-byte 1 97
-byte 1 100
-byte 1 95
-byte 1 114
-byte 1 105
-byte 1 110
-byte 1 103
-byte 1 46
-byte 1 109
-byte 1 100
-byte 1 51
-byte 1 0
-align 1
-LABELV $168
-byte 1 109
-byte 1 111
-byte 1 100
-byte 1 101
-byte 1 108
-byte 1 115
-byte 1 47
-byte 1 112
-byte 1 111
-byte 1 119
-byte 1 101
-byte 1 114
-byte 1 117
-byte 1 112
-byte 1 115
-byte 1 47
-byte 1 105
-byte 1 110
-byte 1 115
-byte 1 116
-byte 1 97
-byte 1 110
-byte 1 116
-byte 1 47
-byte 1 113
-byte 1 117
-byte 1 97
-byte 1 100
-byte 1 46
-byte 1 109
-byte 1 100
-byte 1 51
-byte 1 0
-align 1
-LABELV $167
-byte 1 115
-byte 1 111
-byte 1 117
-byte 1 110
-byte 1 100
-byte 1 47
-byte 1 105
-byte 1 116
-byte 1 101
-byte 1 109
-byte 1 115
-byte 1 47
-byte 1 113
-byte 1 117
-byte 1 97
-byte 1 100
-byte 1 100
-byte 1 97
-byte 1 109
-byte 1 97
-byte 1 103
-byte 1 101
-byte 1 46
-byte 1 119
-byte 1 97
-byte 1 118
-byte 1 0
-align 1
-LABELV $166
-byte 1 105
-byte 1 116
-byte 1 101
-byte 1 109
-byte 1 95
-byte 1 113
-byte 1 117
-byte 1 97
-byte 1 100
-byte 1 0
-align 1
-LABELV $165
-byte 1 115
-byte 1 111
-byte 1 117
-byte 1 110
-byte 1 100
-byte 1 47
-byte 1 105
-byte 1 116
-byte 1 101
-byte 1 109
-byte 1 115
-byte 1 47
-byte 1 117
-byte 1 115
-byte 1 101
-byte 1 95
-byte 1 109
-byte 1 101
-byte 1 100
-byte 1 107
-byte 1 105
-byte 1 116
-byte 1 46
-byte 1 119
-byte 1 97
-byte 1 118
-byte 1 0
-align 1
-LABELV $164
-byte 1 77
-byte 1 101
-byte 1 100
-byte 1 107
-byte 1 105
-byte 1 116
-byte 1 0
-align 1
-LABELV $163
-byte 1 105
-byte 1 99
-byte 1 111
-byte 1 110
-byte 1 115
-byte 1 47
-byte 1 109
-byte 1 101
-byte 1 100
-byte 1 107
-byte 1 105
-byte 1 116
-byte 1 0
-align 1
-LABELV $162
-byte 1 109
-byte 1 111
-byte 1 100
-byte 1 101
-byte 1 108
-byte 1 115
-byte 1 47
-byte 1 112
-byte 1 111
-byte 1 119
-byte 1 101
-byte 1 114
-byte 1 117
-byte 1 112
-byte 1 115
-byte 1 47
-byte 1 104
-byte 1 111
-byte 1 108
-byte 1 100
-byte 1 97
-byte 1 98
-byte 1 108
-byte 1 101
-byte 1 47
-byte 1 109
-byte 1 101
-byte 1 100
-byte 1 107
-byte 1 105
-byte 1 116
-byte 1 95
-byte 1 115
-byte 1 112
-byte 1 104
-byte 1 101
-byte 1 114
-byte 1 101
-byte 1 46
-byte 1 109
-byte 1 100
-byte 1 51
-byte 1 0
-align 1
-LABELV $161
-byte 1 109
-byte 1 111
-byte 1 100
-byte 1 101
-byte 1 108
-byte 1 115
-byte 1 47
-byte 1 112
-byte 1 111
-byte 1 119
-byte 1 101
-byte 1 114
-byte 1 117
-byte 1 112
-byte 1 115
-byte 1 47
-byte 1 104
-byte 1 111
-byte 1 108
-byte 1 100
-byte 1 97
-byte 1 98
-byte 1 108
-byte 1 101
-byte 1 47
-byte 1 109
-byte 1 101
-byte 1 100
-byte 1 107
-byte 1 105
-byte 1 116
-byte 1 46
-byte 1 109
-byte 1 100
-byte 1 51
-byte 1 0
-align 1
-LABELV $160
-byte 1 104
-byte 1 111
-byte 1 108
-byte 1 100
-byte 1 97
-byte 1 98
-byte 1 108
-byte 1 101
-byte 1 95
-byte 1 109
-byte 1 101
-byte 1 100
-byte 1 107
-byte 1 105
-byte 1 116
-byte 1 0
-align 1
-LABELV $159
-byte 1 80
-byte 1 101
-byte 1 114
-byte 1 115
-byte 1 111
-byte 1 110
-byte 1 97
-byte 1 108
-byte 1 32
-byte 1 84
-byte 1 101
-byte 1 108
-byte 1 101
-byte 1 112
-byte 1 111
-byte 1 114
-byte 1 116
-byte 1 101
-byte 1 114
-byte 1 0
-align 1
-LABELV $158
-byte 1 105
-byte 1 99
-byte 1 111
-byte 1 110
-byte 1 115
-byte 1 47
-byte 1 116
-byte 1 101
-byte 1 108
-byte 1 101
-byte 1 112
-byte 1 111
-byte 1 114
-byte 1 116
-byte 1 101
-byte 1 114
-byte 1 0
-align 1
-LABELV $157
-byte 1 109
-byte 1 111
-byte 1 100
-byte 1 101
-byte 1 108
-byte 1 115
-byte 1 47
-byte 1 112
-byte 1 111
-byte 1 119
-byte 1 101
-byte 1 114
-byte 1 117
-byte 1 112
-byte 1 115
-byte 1 47
-byte 1 104
-byte 1 111
-byte 1 108
-byte 1 100
-byte 1 97
-byte 1 98
-byte 1 108
-byte 1 101
-byte 1 47
-byte 1 116
-byte 1 101
-byte 1 108
-byte 1 101
-byte 1 112
-byte 1 111
-byte 1 114
-byte 1 116
-byte 1 101
-byte 1 114
-byte 1 46
-byte 1 109
-byte 1 100
-byte 1 51
-byte 1 0
-align 1
-LABELV $156
-byte 1 115
-byte 1 111
-byte 1 117
-byte 1 110
-byte 1 100
-byte 1 47
-byte 1 105
-byte 1 116
-byte 1 101
-byte 1 109
-byte 1 115
-byte 1 47
-byte 1 104
-byte 1 111
-byte 1 108
-byte 1 100
-byte 1 97
-byte 1 98
-byte 1 108
-byte 1 101
-byte 1 46
-byte 1 119
-byte 1 97
-byte 1 118
-byte 1 0
-align 1
-LABELV $155
-byte 1 104
-byte 1 111
-byte 1 108
-byte 1 100
-byte 1 97
-byte 1 98
-byte 1 108
-byte 1 101
-byte 1 95
-byte 1 116
-byte 1 101
-byte 1 108
-byte 1 101
-byte 1 112
-byte 1 111
-byte 1 114
-byte 1 116
-byte 1 101
-byte 1 114
-byte 1 0
-align 1
-LABELV $154
-byte 1 66
-byte 1 102
-byte 1 103
-byte 1 32
-byte 1 65
-byte 1 109
-byte 1 109
-byte 1 111
-byte 1 0
-align 1
-LABELV $153
-byte 1 105
-byte 1 99
-byte 1 111
-byte 1 110
-byte 1 115
-byte 1 47
-byte 1 105
-byte 1 99
-byte 1 111
-byte 1 110
-byte 1 97
-byte 1 95
-byte 1 98
-byte 1 102
-byte 1 103
-byte 1 0
-align 1
-LABELV $152
-byte 1 109
-byte 1 111
-byte 1 100
-byte 1 101
-byte 1 108
-byte 1 115
-byte 1 47
-byte 1 112
-byte 1 111
-byte 1 119
-byte 1 101
-byte 1 114
-byte 1 117
-byte 1 112
-byte 1 115
-byte 1 47
-byte 1 97
-byte 1 109
-byte 1 109
-byte 1 111
-byte 1 47
-byte 1 98
-byte 1 102
-byte 1 103
-byte 1 97
-byte 1 109
-byte 1 46
-byte 1 109
-byte 1 100
-byte 1 51
-byte 1 0
-align 1
-LABELV $151
-byte 1 97
-byte 1 109
-byte 1 109
-byte 1 111
-byte 1 95
-byte 1 98
-byte 1 102
-byte 1 103
-byte 1 0
-align 1
-LABELV $150
-byte 1 83
-byte 1 108
-byte 1 117
-byte 1 103
-byte 1 115
-byte 1 0
-align 1
-LABELV $149
-byte 1 105
-byte 1 99
-byte 1 111
-byte 1 110
-byte 1 115
-byte 1 47
-byte 1 105
-byte 1 99
-byte 1 111
-byte 1 110
-byte 1 97
-byte 1 95
-byte 1 114
-byte 1 97
-byte 1 105
-byte 1 108
-byte 1 103
-byte 1 117
-byte 1 110
-byte 1 0
-align 1
-LABELV $148
-byte 1 109
-byte 1 111
-byte 1 100
-byte 1 101
-byte 1 108
-byte 1 115
-byte 1 47
-byte 1 112
-byte 1 111
-byte 1 119
-byte 1 101
-byte 1 114
-byte 1 117
-byte 1 112
-byte 1 115
-byte 1 47
-byte 1 97
-byte 1 109
-byte 1 109
-byte 1 111
-byte 1 47
-byte 1 114
-byte 1 97
-byte 1 105
-byte 1 108
-byte 1 103
-byte 1 117
-byte 1 110
-byte 1 97
-byte 1 109
-byte 1 46
-byte 1 109
-byte 1 100
-byte 1 51
-byte 1 0
-align 1
-LABELV $147
-byte 1 97
-byte 1 109
-byte 1 109
-byte 1 111
-byte 1 95
-byte 1 115
-byte 1 108
-byte 1 117
-byte 1 103
-byte 1 115
-byte 1 0
-align 1
-LABELV $146
-byte 1 82
-byte 1 111
-byte 1 99
-byte 1 107
-byte 1 101
-byte 1 116
-byte 1 115
-byte 1 0
-align 1
-LABELV $145
-byte 1 105
-byte 1 99
-byte 1 111
-byte 1 110
-byte 1 115
-byte 1 47
-byte 1 105
-byte 1 99
-byte 1 111
-byte 1 110
-byte 1 97
-byte 1 95
-byte 1 114
-byte 1 111
-byte 1 99
-byte 1 107
-byte 1 101
-byte 1 116
-byte 1 0
-align 1
-LABELV $144
-byte 1 109
-byte 1 111
-byte 1 100
-byte 1 101
-byte 1 108
-byte 1 115
-byte 1 47
-byte 1 112
-byte 1 111
-byte 1 119
-byte 1 101
-byte 1 114
-byte 1 117
-byte 1 112
-byte 1 115
-byte 1 47
-byte 1 97
-byte 1 109
-byte 1 109
-byte 1 111
-byte 1 47
-byte 1 114
-byte 1 111
-byte 1 99
-byte 1 107
-byte 1 101
-byte 1 116
-byte 1 97
-byte 1 109
-byte 1 46
-byte 1 109
-byte 1 100
-byte 1 51
-byte 1 0
-align 1
-LABELV $143
-byte 1 97
-byte 1 109
-byte 1 109
-byte 1 111
-byte 1 95
-byte 1 114
-byte 1 111
-byte 1 99
-byte 1 107
-byte 1 101
-byte 1 116
-byte 1 115
-byte 1 0
-align 1
 LABELV $142
-byte 1 76
-byte 1 105
-byte 1 103
-byte 1 104
-byte 1 116
-byte 1 110
-byte 1 105
-byte 1 110
+byte 1 66
+byte 1 108
+byte 1 117
+byte 1 101
+byte 1 32
+byte 1 70
+byte 1 108
+byte 1 97
 byte 1 103
 byte 1 0
 align 1
@@ -8579,17 +6270,12 @@ byte 1 105
 byte 1 99
 byte 1 111
 byte 1 110
-byte 1 97
+byte 1 102
 byte 1 95
+byte 1 98
 byte 1 108
-byte 1 105
-byte 1 103
-byte 1 104
-byte 1 116
-byte 1 110
-byte 1 105
-byte 1 110
-byte 1 103
+byte 1 117
+byte 1 49
 byte 1 0
 align 1
 LABELV $140
@@ -8600,31 +6286,18 @@ byte 1 101
 byte 1 108
 byte 1 115
 byte 1 47
-byte 1 112
-byte 1 111
-byte 1 119
-byte 1 101
-byte 1 114
-byte 1 117
-byte 1 112
+byte 1 102
+byte 1 108
+byte 1 97
+byte 1 103
 byte 1 115
 byte 1 47
-byte 1 97
-byte 1 109
-byte 1 109
-byte 1 111
-byte 1 47
+byte 1 98
+byte 1 95
+byte 1 102
 byte 1 108
-byte 1 105
-byte 1 103
-byte 1 104
-byte 1 116
-byte 1 110
-byte 1 105
-byte 1 110
-byte 1 103
 byte 1 97
-byte 1 109
+byte 1 103
 byte 1 46
 byte 1 109
 byte 1 100
@@ -8632,28 +6305,34 @@ byte 1 51
 byte 1 0
 align 1
 LABELV $139
+byte 1 116
+byte 1 101
 byte 1 97
 byte 1 109
-byte 1 109
-byte 1 111
 byte 1 95
+byte 1 67
+byte 1 84
+byte 1 70
+byte 1 95
+byte 1 98
 byte 1 108
-byte 1 105
-byte 1 103
-byte 1 104
-byte 1 116
-byte 1 110
-byte 1 105
-byte 1 110
+byte 1 117
+byte 1 101
+byte 1 102
+byte 1 108
+byte 1 97
 byte 1 103
 byte 1 0
 align 1
 LABELV $138
-byte 1 67
+byte 1 82
 byte 1 101
+byte 1 100
+byte 1 32
+byte 1 70
 byte 1 108
-byte 1 108
-byte 1 115
+byte 1 97
+byte 1 103
 byte 1 0
 align 1
 LABELV $137
@@ -8667,14 +6346,12 @@ byte 1 105
 byte 1 99
 byte 1 111
 byte 1 110
-byte 1 97
+byte 1 102
 byte 1 95
-byte 1 112
-byte 1 108
-byte 1 97
-byte 1 115
-byte 1 109
-byte 1 97
+byte 1 114
+byte 1 101
+byte 1 100
+byte 1 49
 byte 1 0
 align 1
 LABELV $136
@@ -8685,28 +6362,18 @@ byte 1 101
 byte 1 108
 byte 1 115
 byte 1 47
-byte 1 112
-byte 1 111
-byte 1 119
-byte 1 101
-byte 1 114
-byte 1 117
-byte 1 112
-byte 1 115
-byte 1 47
-byte 1 97
-byte 1 109
-byte 1 109
-byte 1 111
-byte 1 47
-byte 1 112
+byte 1 102
 byte 1 108
 byte 1 97
+byte 1 103
 byte 1 115
-byte 1 109
+byte 1 47
+byte 1 114
+byte 1 95
+byte 1 102
+byte 1 108
 byte 1 97
-byte 1 97
-byte 1 109
+byte 1 103
 byte 1 46
 byte 1 109
 byte 1 100
@@ -8714,27 +6381,31 @@ byte 1 51
 byte 1 0
 align 1
 LABELV $135
+byte 1 116
+byte 1 101
 byte 1 97
 byte 1 109
-byte 1 109
-byte 1 111
 byte 1 95
-byte 1 99
+byte 1 67
+byte 1 84
+byte 1 70
+byte 1 95
+byte 1 114
 byte 1 101
+byte 1 100
+byte 1 102
 byte 1 108
-byte 1 108
-byte 1 115
+byte 1 97
+byte 1 103
 byte 1 0
 align 1
 LABELV $134
-byte 1 71
-byte 1 114
-byte 1 101
-byte 1 110
-byte 1 97
-byte 1 100
-byte 1 101
-byte 1 115
+byte 1 70
+byte 1 108
+byte 1 105
+byte 1 103
+byte 1 104
+byte 1 116
 byte 1 0
 align 1
 LABELV $133
@@ -8744,19 +6415,12 @@ byte 1 111
 byte 1 110
 byte 1 115
 byte 1 47
+byte 1 102
+byte 1 108
 byte 1 105
-byte 1 99
-byte 1 111
-byte 1 110
-byte 1 97
-byte 1 95
 byte 1 103
-byte 1 114
-byte 1 101
-byte 1 110
-byte 1 97
-byte 1 100
-byte 1 101
+byte 1 104
+byte 1 116
 byte 1 0
 align 1
 LABELV $132
@@ -8776,20 +6440,25 @@ byte 1 117
 byte 1 112
 byte 1 115
 byte 1 47
-byte 1 97
-byte 1 109
-byte 1 109
-byte 1 111
-byte 1 47
-byte 1 103
-byte 1 114
-byte 1 101
+byte 1 105
 byte 1 110
+byte 1 115
+byte 1 116
 byte 1 97
-byte 1 100
-byte 1 101
-byte 1 97
-byte 1 109
+byte 1 110
+byte 1 116
+byte 1 47
+byte 1 102
+byte 1 108
+byte 1 105
+byte 1 103
+byte 1 104
+byte 1 116
+byte 1 95
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 103
 byte 1 46
 byte 1 109
 byte 1 100
@@ -8797,57 +6466,6 @@ byte 1 51
 byte 1 0
 align 1
 LABELV $131
-byte 1 97
-byte 1 109
-byte 1 109
-byte 1 111
-byte 1 95
-byte 1 103
-byte 1 114
-byte 1 101
-byte 1 110
-byte 1 97
-byte 1 100
-byte 1 101
-byte 1 115
-byte 1 0
-align 1
-LABELV $130
-byte 1 66
-byte 1 117
-byte 1 108
-byte 1 108
-byte 1 101
-byte 1 116
-byte 1 115
-byte 1 0
-align 1
-LABELV $129
-byte 1 105
-byte 1 99
-byte 1 111
-byte 1 110
-byte 1 115
-byte 1 47
-byte 1 105
-byte 1 99
-byte 1 111
-byte 1 110
-byte 1 97
-byte 1 95
-byte 1 109
-byte 1 97
-byte 1 99
-byte 1 104
-byte 1 105
-byte 1 110
-byte 1 101
-byte 1 103
-byte 1 117
-byte 1 110
-byte 1 0
-align 1
-LABELV $128
 byte 1 109
 byte 1 111
 byte 1 100
@@ -8864,73 +6482,157 @@ byte 1 117
 byte 1 112
 byte 1 115
 byte 1 47
-byte 1 97
-byte 1 109
-byte 1 109
-byte 1 111
-byte 1 47
-byte 1 109
-byte 1 97
-byte 1 99
-byte 1 104
 byte 1 105
 byte 1 110
-byte 1 101
-byte 1 103
-byte 1 117
-byte 1 110
+byte 1 115
+byte 1 116
 byte 1 97
-byte 1 109
+byte 1 110
+byte 1 116
+byte 1 47
+byte 1 102
+byte 1 108
+byte 1 105
+byte 1 103
+byte 1 104
+byte 1 116
 byte 1 46
 byte 1 109
 byte 1 100
 byte 1 51
 byte 1 0
 align 1
-LABELV $127
-byte 1 97
-byte 1 109
-byte 1 109
-byte 1 111
-byte 1 95
-byte 1 98
-byte 1 117
-byte 1 108
-byte 1 108
-byte 1 101
-byte 1 116
+LABELV $130
 byte 1 115
+byte 1 111
+byte 1 117
+byte 1 110
+byte 1 100
+byte 1 47
+byte 1 105
+byte 1 116
+byte 1 101
+byte 1 109
+byte 1 115
+byte 1 47
+byte 1 102
+byte 1 108
+byte 1 105
+byte 1 103
+byte 1 104
+byte 1 116
+byte 1 46
+byte 1 119
+byte 1 97
+byte 1 118
+byte 1 0
+align 1
+LABELV $129
+byte 1 105
+byte 1 116
+byte 1 101
+byte 1 109
+byte 1 95
+byte 1 102
+byte 1 108
+byte 1 105
+byte 1 103
+byte 1 104
+byte 1 116
+byte 1 0
+align 1
+LABELV $128
+byte 1 115
+byte 1 111
+byte 1 117
+byte 1 110
+byte 1 100
+byte 1 47
+byte 1 105
+byte 1 116
+byte 1 101
+byte 1 109
+byte 1 115
+byte 1 47
+byte 1 114
+byte 1 101
+byte 1 103
+byte 1 101
+byte 1 110
+byte 1 46
+byte 1 119
+byte 1 97
+byte 1 118
+byte 1 0
+align 1
+LABELV $127
+byte 1 82
+byte 1 101
+byte 1 103
+byte 1 101
+byte 1 110
+byte 1 101
+byte 1 114
+byte 1 97
+byte 1 116
+byte 1 105
+byte 1 111
+byte 1 110
 byte 1 0
 align 1
 LABELV $126
-byte 1 83
-byte 1 104
-byte 1 101
-byte 1 108
-byte 1 108
-byte 1 115
-byte 1 0
-align 1
-LABELV $125
 byte 1 105
 byte 1 99
 byte 1 111
 byte 1 110
 byte 1 115
 byte 1 47
-byte 1 105
-byte 1 99
-byte 1 111
-byte 1 110
-byte 1 97
-byte 1 95
-byte 1 115
-byte 1 104
-byte 1 111
-byte 1 116
+byte 1 114
+byte 1 101
 byte 1 103
-byte 1 117
+byte 1 101
 byte 1 110
+byte 1 0
+align 1
+LABELV $125
+byte 1 109
+byte 1 111
+byte 1 100
+byte 1 101
+byte 1 108
+byte 1 115
+byte 1 47
+byte 1 112
+byte 1 111
+byte 1 119
+byte 1 101
+byte 1 114
+byte 1 117
+byte 1 112
+byte 1 115
+byte 1 47
+byte 1 105
+byte 1 110
+byte 1 115
+byte 1 116
+byte 1 97
+byte 1 110
+byte 1 116
+byte 1 47
+byte 1 114
+byte 1 101
+byte 1 103
+byte 1 101
+byte 1 110
+byte 1 95
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 103
+byte 1 46
+byte 1 109
+byte 1 100
+byte 1 51
 byte 1 0
 align 1
 LABELV $124
@@ -8950,20 +6652,19 @@ byte 1 117
 byte 1 112
 byte 1 115
 byte 1 47
-byte 1 97
-byte 1 109
-byte 1 109
-byte 1 111
-byte 1 47
-byte 1 115
-byte 1 104
-byte 1 111
-byte 1 116
-byte 1 103
-byte 1 117
+byte 1 105
 byte 1 110
+byte 1 115
+byte 1 116
 byte 1 97
-byte 1 109
+byte 1 110
+byte 1 116
+byte 1 47
+byte 1 114
+byte 1 101
+byte 1 103
+byte 1 101
+byte 1 110
 byte 1 46
 byte 1 109
 byte 1 100
@@ -8977,18 +6678,24 @@ byte 1 117
 byte 1 110
 byte 1 100
 byte 1 47
-byte 1 109
 byte 1 105
-byte 1 115
-byte 1 99
-byte 1 47
-byte 1 97
+byte 1 116
+byte 1 101
 byte 1 109
-byte 1 95
-byte 1 112
-byte 1 107
-byte 1 117
-byte 1 112
+byte 1 115
+byte 1 47
+byte 1 114
+byte 1 101
+byte 1 103
+byte 1 101
+byte 1 110
+byte 1 101
+byte 1 114
+byte 1 97
+byte 1 116
+byte 1 105
+byte 1 111
+byte 1 110
 byte 1 46
 byte 1 119
 byte 1 97
@@ -8996,34 +6703,31 @@ byte 1 118
 byte 1 0
 align 1
 LABELV $122
-byte 1 97
-byte 1 109
-byte 1 109
-byte 1 111
-byte 1 95
-byte 1 115
-byte 1 104
+byte 1 105
+byte 1 116
 byte 1 101
-byte 1 108
-byte 1 108
-byte 1 115
+byte 1 109
+byte 1 95
+byte 1 114
+byte 1 101
+byte 1 103
+byte 1 101
+byte 1 110
 byte 1 0
 align 1
 LABELV $121
-byte 1 71
-byte 1 114
-byte 1 97
-byte 1 112
-byte 1 112
+byte 1 73
+byte 1 110
+byte 1 118
+byte 1 105
+byte 1 115
+byte 1 105
+byte 1 98
+byte 1 105
 byte 1 108
 byte 1 105
-byte 1 110
-byte 1 103
-byte 1 32
-byte 1 72
-byte 1 111
-byte 1 111
-byte 1 107
+byte 1 116
+byte 1 121
 byte 1 0
 align 1
 LABELV $120
@@ -9034,18 +6738,10 @@ byte 1 110
 byte 1 115
 byte 1 47
 byte 1 105
-byte 1 99
-byte 1 111
 byte 1 110
-byte 1 119
-byte 1 95
-byte 1 103
-byte 1 114
-byte 1 97
-byte 1 112
-byte 1 112
-byte 1 108
-byte 1 101
+byte 1 118
+byte 1 105
+byte 1 115
 byte 1 0
 align 1
 LABELV $119
@@ -9056,30 +6752,33 @@ byte 1 101
 byte 1 108
 byte 1 115
 byte 1 47
-byte 1 119
-byte 1 101
-byte 1 97
 byte 1 112
 byte 1 111
+byte 1 119
+byte 1 101
+byte 1 114
+byte 1 117
+byte 1 112
+byte 1 115
+byte 1 47
+byte 1 105
 byte 1 110
 byte 1 115
-byte 1 50
-byte 1 47
-byte 1 103
-byte 1 114
+byte 1 116
 byte 1 97
-byte 1 112
-byte 1 112
-byte 1 108
-byte 1 101
+byte 1 110
+byte 1 116
 byte 1 47
-byte 1 103
+byte 1 105
+byte 1 110
+byte 1 118
+byte 1 105
+byte 1 115
+byte 1 95
 byte 1 114
-byte 1 97
-byte 1 112
-byte 1 112
-byte 1 108
-byte 1 101
+byte 1 105
+byte 1 110
+byte 1 103
 byte 1 46
 byte 1 109
 byte 1 100
@@ -9087,315 +6786,305 @@ byte 1 51
 byte 1 0
 align 1
 LABELV $118
+byte 1 109
+byte 1 111
+byte 1 100
+byte 1 101
+byte 1 108
+byte 1 115
+byte 1 47
+byte 1 112
+byte 1 111
 byte 1 119
 byte 1 101
-byte 1 97
-byte 1 112
-byte 1 111
-byte 1 110
-byte 1 95
-byte 1 103
 byte 1 114
-byte 1 97
+byte 1 117
 byte 1 112
-byte 1 112
-byte 1 108
+byte 1 115
+byte 1 47
 byte 1 105
 byte 1 110
-byte 1 103
-byte 1 104
-byte 1 111
-byte 1 111
-byte 1 107
+byte 1 115
+byte 1 116
+byte 1 97
+byte 1 110
+byte 1 116
+byte 1 47
+byte 1 105
+byte 1 110
+byte 1 118
+byte 1 105
+byte 1 115
+byte 1 46
+byte 1 109
+byte 1 100
+byte 1 51
 byte 1 0
 align 1
 LABELV $117
-byte 1 66
-byte 1 70
-byte 1 71
-byte 1 49
-byte 1 48
-byte 1 75
+byte 1 115
+byte 1 111
+byte 1 117
+byte 1 110
+byte 1 100
+byte 1 47
+byte 1 105
+byte 1 116
+byte 1 101
+byte 1 109
+byte 1 115
+byte 1 47
+byte 1 105
+byte 1 110
+byte 1 118
+byte 1 105
+byte 1 115
+byte 1 105
+byte 1 98
+byte 1 105
+byte 1 108
+byte 1 105
+byte 1 116
+byte 1 121
+byte 1 46
+byte 1 119
+byte 1 97
+byte 1 118
 byte 1 0
 align 1
 LABELV $116
 byte 1 105
-byte 1 99
-byte 1 111
-byte 1 110
-byte 1 115
-byte 1 47
-byte 1 105
-byte 1 99
-byte 1 111
-byte 1 110
-byte 1 119
+byte 1 116
+byte 1 101
+byte 1 109
 byte 1 95
-byte 1 98
-byte 1 102
-byte 1 103
+byte 1 105
+byte 1 110
+byte 1 118
+byte 1 105
+byte 1 115
 byte 1 0
 align 1
 LABELV $115
-byte 1 109
-byte 1 111
-byte 1 100
-byte 1 101
-byte 1 108
-byte 1 115
-byte 1 47
-byte 1 119
-byte 1 101
-byte 1 97
+byte 1 83
 byte 1 112
-byte 1 111
-byte 1 110
-byte 1 115
-byte 1 50
-byte 1 47
-byte 1 98
-byte 1 102
-byte 1 103
-byte 1 47
-byte 1 98
-byte 1 102
-byte 1 103
-byte 1 46
-byte 1 109
+byte 1 101
+byte 1 101
 byte 1 100
-byte 1 51
 byte 1 0
 align 1
 LABELV $114
-byte 1 119
-byte 1 101
-byte 1 97
-byte 1 112
+byte 1 105
+byte 1 99
 byte 1 111
 byte 1 110
-byte 1 95
-byte 1 98
-byte 1 102
-byte 1 103
+byte 1 115
+byte 1 47
+byte 1 104
+byte 1 97
+byte 1 115
+byte 1 116
+byte 1 101
 byte 1 0
 align 1
 LABELV $113
-byte 1 80
+byte 1 109
+byte 1 111
+byte 1 100
+byte 1 101
 byte 1 108
+byte 1 115
+byte 1 47
+byte 1 112
+byte 1 111
+byte 1 119
+byte 1 101
+byte 1 114
+byte 1 117
+byte 1 112
+byte 1 115
+byte 1 47
+byte 1 105
+byte 1 110
+byte 1 115
+byte 1 116
+byte 1 97
+byte 1 110
+byte 1 116
+byte 1 47
+byte 1 104
 byte 1 97
 byte 1 115
-byte 1 109
-byte 1 97
-byte 1 32
-byte 1 71
-byte 1 117
+byte 1 116
+byte 1 101
+byte 1 95
+byte 1 114
+byte 1 105
 byte 1 110
+byte 1 103
+byte 1 46
+byte 1 109
+byte 1 100
+byte 1 51
 byte 1 0
 align 1
 LABELV $112
-byte 1 105
-byte 1 99
+byte 1 109
 byte 1 111
-byte 1 110
+byte 1 100
+byte 1 101
+byte 1 108
+byte 1 115
+byte 1 47
+byte 1 112
+byte 1 111
+byte 1 119
+byte 1 101
+byte 1 114
+byte 1 117
+byte 1 112
 byte 1 115
 byte 1 47
 byte 1 105
-byte 1 99
-byte 1 111
 byte 1 110
-byte 1 119
-byte 1 95
-byte 1 112
-byte 1 108
+byte 1 115
+byte 1 116
+byte 1 97
+byte 1 110
+byte 1 116
+byte 1 47
+byte 1 104
 byte 1 97
 byte 1 115
+byte 1 116
+byte 1 101
+byte 1 46
 byte 1 109
-byte 1 97
+byte 1 100
+byte 1 51
 byte 1 0
 align 1
 LABELV $111
-byte 1 109
-byte 1 111
-byte 1 100
-byte 1 101
-byte 1 108
 byte 1 115
-byte 1 47
-byte 1 119
-byte 1 101
-byte 1 97
-byte 1 112
 byte 1 111
+byte 1 117
 byte 1 110
-byte 1 115
-byte 1 50
-byte 1 47
-byte 1 112
-byte 1 108
-byte 1 97
-byte 1 115
-byte 1 109
-byte 1 97
-byte 1 47
-byte 1 112
-byte 1 108
-byte 1 97
-byte 1 115
-byte 1 109
-byte 1 97
-byte 1 46
-byte 1 109
 byte 1 100
-byte 1 51
+byte 1 47
+byte 1 105
+byte 1 116
+byte 1 101
+byte 1 109
+byte 1 115
+byte 1 47
+byte 1 104
+byte 1 97
+byte 1 115
+byte 1 116
+byte 1 101
+byte 1 46
+byte 1 119
+byte 1 97
+byte 1 118
 byte 1 0
 align 1
 LABELV $110
-byte 1 119
+byte 1 105
+byte 1 116
 byte 1 101
-byte 1 97
-byte 1 112
-byte 1 111
-byte 1 110
+byte 1 109
 byte 1 95
-byte 1 112
-byte 1 108
+byte 1 104
 byte 1 97
 byte 1 115
-byte 1 109
-byte 1 97
-byte 1 103
-byte 1 117
-byte 1 110
+byte 1 116
+byte 1 101
 byte 1 0
 align 1
 LABELV $109
-byte 1 82
-byte 1 97
-byte 1 105
-byte 1 108
-byte 1 103
+byte 1 115
+byte 1 111
 byte 1 117
 byte 1 110
+byte 1 100
+byte 1 47
+byte 1 105
+byte 1 116
+byte 1 101
+byte 1 109
+byte 1 115
+byte 1 47
+byte 1 97
+byte 1 105
+byte 1 114
+byte 1 111
+byte 1 117
+byte 1 116
+byte 1 46
+byte 1 119
+byte 1 97
+byte 1 118
+byte 1 32
+byte 1 115
+byte 1 111
+byte 1 117
+byte 1 110
+byte 1 100
+byte 1 47
+byte 1 105
+byte 1 116
+byte 1 101
+byte 1 109
+byte 1 115
+byte 1 47
+byte 1 112
+byte 1 114
+byte 1 111
+byte 1 116
+byte 1 101
+byte 1 99
+byte 1 116
+byte 1 51
+byte 1 46
+byte 1 119
+byte 1 97
+byte 1 118
 byte 1 0
 align 1
 LABELV $108
-byte 1 105
-byte 1 99
-byte 1 111
-byte 1 110
-byte 1 115
-byte 1 47
-byte 1 105
-byte 1 99
-byte 1 111
-byte 1 110
-byte 1 119
-byte 1 95
-byte 1 114
+byte 1 66
 byte 1 97
-byte 1 105
+byte 1 116
+byte 1 116
 byte 1 108
-byte 1 103
+byte 1 101
+byte 1 32
+byte 1 83
 byte 1 117
-byte 1 110
+byte 1 105
+byte 1 116
 byte 1 0
 align 1
 LABELV $107
-byte 1 109
-byte 1 111
-byte 1 100
-byte 1 101
-byte 1 108
-byte 1 115
-byte 1 47
-byte 1 119
-byte 1 101
-byte 1 97
-byte 1 112
+byte 1 105
+byte 1 99
 byte 1 111
 byte 1 110
 byte 1 115
-byte 1 50
 byte 1 47
-byte 1 114
-byte 1 97
-byte 1 105
-byte 1 108
-byte 1 103
-byte 1 117
+byte 1 101
 byte 1 110
-byte 1 47
-byte 1 114
-byte 1 97
+byte 1 118
 byte 1 105
-byte 1 108
-byte 1 103
+byte 1 114
+byte 1 111
+byte 1 115
 byte 1 117
-byte 1 110
-byte 1 46
-byte 1 109
-byte 1 100
-byte 1 51
+byte 1 105
+byte 1 116
 byte 1 0
 align 1
 LABELV $106
-byte 1 119
-byte 1 101
-byte 1 97
-byte 1 112
-byte 1 111
-byte 1 110
-byte 1 95
-byte 1 114
-byte 1 97
-byte 1 105
-byte 1 108
-byte 1 103
-byte 1 117
-byte 1 110
-byte 1 0
-align 1
-LABELV $105
-byte 1 76
-byte 1 105
-byte 1 103
-byte 1 104
-byte 1 116
-byte 1 110
-byte 1 105
-byte 1 110
-byte 1 103
-byte 1 32
-byte 1 71
-byte 1 117
-byte 1 110
-byte 1 0
-align 1
-LABELV $104
-byte 1 105
-byte 1 99
-byte 1 111
-byte 1 110
-byte 1 115
-byte 1 47
-byte 1 105
-byte 1 99
-byte 1 111
-byte 1 110
-byte 1 119
-byte 1 95
-byte 1 108
-byte 1 105
-byte 1 103
-byte 1 104
-byte 1 116
-byte 1 110
-byte 1 105
-byte 1 110
-byte 1 103
-byte 1 0
-align 1
-LABELV $103
 byte 1 109
 byte 1 111
 byte 1 100
@@ -9403,31 +7092,31 @@ byte 1 101
 byte 1 108
 byte 1 115
 byte 1 47
-byte 1 119
-byte 1 101
-byte 1 97
 byte 1 112
 byte 1 111
+byte 1 119
+byte 1 101
+byte 1 114
+byte 1 117
+byte 1 112
+byte 1 115
+byte 1 47
+byte 1 105
 byte 1 110
 byte 1 115
-byte 1 50
-byte 1 47
-byte 1 108
-byte 1 105
-byte 1 103
-byte 1 104
 byte 1 116
+byte 1 97
 byte 1 110
-byte 1 105
-byte 1 110
-byte 1 103
-byte 1 47
-byte 1 108
-byte 1 105
-byte 1 103
-byte 1 104
 byte 1 116
+byte 1 47
+byte 1 101
 byte 1 110
+byte 1 118
+byte 1 105
+byte 1 114
+byte 1 111
+byte 1 95
+byte 1 114
 byte 1 105
 byte 1 110
 byte 1 103
@@ -9437,41 +7126,145 @@ byte 1 100
 byte 1 51
 byte 1 0
 align 1
-LABELV $102
-byte 1 119
+LABELV $105
+byte 1 109
+byte 1 111
+byte 1 100
 byte 1 101
-byte 1 97
+byte 1 108
+byte 1 115
+byte 1 47
 byte 1 112
 byte 1 111
-byte 1 110
-byte 1 95
-byte 1 108
+byte 1 119
+byte 1 101
+byte 1 114
+byte 1 117
+byte 1 112
+byte 1 115
+byte 1 47
 byte 1 105
-byte 1 103
-byte 1 104
+byte 1 110
+byte 1 115
 byte 1 116
+byte 1 97
 byte 1 110
+byte 1 116
+byte 1 47
+byte 1 101
+byte 1 110
+byte 1 118
 byte 1 105
+byte 1 114
+byte 1 111
+byte 1 46
+byte 1 109
+byte 1 100
+byte 1 51
+byte 1 0
+align 1
+LABELV $104
+byte 1 115
+byte 1 111
+byte 1 117
 byte 1 110
+byte 1 100
+byte 1 47
+byte 1 105
+byte 1 116
+byte 1 101
+byte 1 109
+byte 1 115
+byte 1 47
+byte 1 112
+byte 1 114
+byte 1 111
+byte 1 116
+byte 1 101
+byte 1 99
+byte 1 116
+byte 1 46
+byte 1 119
+byte 1 97
+byte 1 118
+byte 1 0
+align 1
+LABELV $103
+byte 1 105
+byte 1 116
+byte 1 101
+byte 1 109
+byte 1 95
+byte 1 101
+byte 1 110
+byte 1 118
+byte 1 105
+byte 1 114
+byte 1 111
+byte 1 0
+align 1
+LABELV $102
+byte 1 115
+byte 1 111
+byte 1 117
+byte 1 110
+byte 1 100
+byte 1 47
+byte 1 105
+byte 1 116
+byte 1 101
+byte 1 109
+byte 1 115
+byte 1 47
+byte 1 100
+byte 1 97
+byte 1 109
+byte 1 97
 byte 1 103
+byte 1 101
+byte 1 50
+byte 1 46
+byte 1 119
+byte 1 97
+byte 1 118
+byte 1 32
+byte 1 115
+byte 1 111
+byte 1 117
+byte 1 110
+byte 1 100
+byte 1 47
+byte 1 105
+byte 1 116
+byte 1 101
+byte 1 109
+byte 1 115
+byte 1 47
+byte 1 100
+byte 1 97
+byte 1 109
+byte 1 97
+byte 1 103
+byte 1 101
+byte 1 51
+byte 1 46
+byte 1 119
+byte 1 97
+byte 1 118
 byte 1 0
 align 1
 LABELV $101
-byte 1 82
-byte 1 111
-byte 1 99
-byte 1 107
-byte 1 101
-byte 1 116
-byte 1 32
-byte 1 76
-byte 1 97
+byte 1 81
 byte 1 117
-byte 1 110
-byte 1 99
-byte 1 104
+byte 1 97
+byte 1 100
+byte 1 32
+byte 1 68
+byte 1 97
+byte 1 109
+byte 1 97
+byte 1 103
 byte 1 101
-byte 1 114
 byte 1 0
 align 1
 LABELV $100
@@ -9481,18 +7274,10 @@ byte 1 111
 byte 1 110
 byte 1 115
 byte 1 47
-byte 1 105
-byte 1 99
-byte 1 111
-byte 1 110
-byte 1 119
-byte 1 95
-byte 1 114
-byte 1 111
-byte 1 99
-byte 1 107
-byte 1 101
-byte 1 116
+byte 1 113
+byte 1 117
+byte 1 97
+byte 1 100
 byte 1 0
 align 1
 LABELV $99
@@ -9503,30 +7288,32 @@ byte 1 101
 byte 1 108
 byte 1 115
 byte 1 47
-byte 1 119
-byte 1 101
-byte 1 97
 byte 1 112
 byte 1 111
+byte 1 119
+byte 1 101
+byte 1 114
+byte 1 117
+byte 1 112
+byte 1 115
+byte 1 47
+byte 1 105
 byte 1 110
 byte 1 115
-byte 1 50
-byte 1 47
-byte 1 114
-byte 1 111
-byte 1 99
-byte 1 107
-byte 1 101
 byte 1 116
-byte 1 108
-byte 1 47
-byte 1 114
-byte 1 111
-byte 1 99
-byte 1 107
-byte 1 101
+byte 1 97
+byte 1 110
 byte 1 116
-byte 1 108
+byte 1 47
+byte 1 113
+byte 1 117
+byte 1 97
+byte 1 100
+byte 1 95
+byte 1 114
+byte 1 105
+byte 1 110
+byte 1 103
 byte 1 46
 byte 1 109
 byte 1 100
@@ -9534,27 +7321,38 @@ byte 1 51
 byte 1 0
 align 1
 LABELV $98
-byte 1 119
+byte 1 109
+byte 1 111
+byte 1 100
 byte 1 101
-byte 1 97
+byte 1 108
+byte 1 115
+byte 1 47
 byte 1 112
 byte 1 111
-byte 1 110
-byte 1 95
-byte 1 114
-byte 1 111
-byte 1 99
-byte 1 107
+byte 1 119
 byte 1 101
-byte 1 116
-byte 1 108
-byte 1 97
+byte 1 114
 byte 1 117
+byte 1 112
+byte 1 115
+byte 1 47
+byte 1 105
 byte 1 110
-byte 1 99
-byte 1 104
-byte 1 101
-byte 1 114
+byte 1 115
+byte 1 116
+byte 1 97
+byte 1 110
+byte 1 116
+byte 1 47
+byte 1 113
+byte 1 117
+byte 1 97
+byte 1 100
+byte 1 46
+byte 1 109
+byte 1 100
+byte 1 51
 byte 1 0
 align 1
 LABELV $97
@@ -9564,65 +7362,22 @@ byte 1 117
 byte 1 110
 byte 1 100
 byte 1 47
-byte 1 119
+byte 1 105
+byte 1 116
 byte 1 101
-byte 1 97
-byte 1 112
-byte 1 111
-byte 1 110
+byte 1 109
 byte 1 115
 byte 1 47
-byte 1 103
-byte 1 114
-byte 1 101
-byte 1 110
-byte 1 97
-byte 1 100
-byte 1 101
-byte 1 47
-byte 1 104
-byte 1 103
-byte 1 114
-byte 1 101
-byte 1 110
-byte 1 98
-byte 1 49
-byte 1 97
-byte 1 46
-byte 1 119
-byte 1 97
-byte 1 118
-byte 1 32
-byte 1 115
-byte 1 111
+byte 1 113
 byte 1 117
-byte 1 110
-byte 1 100
-byte 1 47
-byte 1 119
-byte 1 101
-byte 1 97
-byte 1 112
-byte 1 111
-byte 1 110
-byte 1 115
-byte 1 47
-byte 1 103
-byte 1 114
-byte 1 101
-byte 1 110
 byte 1 97
 byte 1 100
-byte 1 101
-byte 1 47
-byte 1 104
-byte 1 103
-byte 1 114
-byte 1 101
-byte 1 110
-byte 1 98
-byte 1 50
+byte 1 100
 byte 1 97
+byte 1 109
+byte 1 97
+byte 1 103
+byte 1 101
 byte 1 46
 byte 1 119
 byte 1 97
@@ -9630,246 +7385,213 @@ byte 1 118
 byte 1 0
 align 1
 LABELV $96
-byte 1 71
-byte 1 114
+byte 1 105
+byte 1 116
 byte 1 101
-byte 1 110
+byte 1 109
+byte 1 95
+byte 1 113
+byte 1 117
 byte 1 97
 byte 1 100
-byte 1 101
-byte 1 32
-byte 1 76
-byte 1 97
-byte 1 117
-byte 1 110
-byte 1 99
-byte 1 104
-byte 1 101
-byte 1 114
 byte 1 0
 align 1
 LABELV $95
-byte 1 105
-byte 1 99
-byte 1 111
-byte 1 110
 byte 1 115
+byte 1 111
+byte 1 117
+byte 1 110
+byte 1 100
 byte 1 47
 byte 1 105
-byte 1 99
-byte 1 111
-byte 1 110
-byte 1 119
+byte 1 116
+byte 1 101
+byte 1 109
+byte 1 115
+byte 1 47
+byte 1 117
+byte 1 115
+byte 1 101
 byte 1 95
-byte 1 103
-byte 1 114
+byte 1 109
 byte 1 101
-byte 1 110
-byte 1 97
 byte 1 100
-byte 1 101
+byte 1 107
+byte 1 105
+byte 1 116
+byte 1 46
+byte 1 119
+byte 1 97
+byte 1 118
 byte 1 0
 align 1
 LABELV $94
-byte 1 109
-byte 1 111
+byte 1 77
+byte 1 101
 byte 1 100
-byte 1 101
-byte 1 108
-byte 1 115
-byte 1 47
-byte 1 119
-byte 1 101
-byte 1 97
-byte 1 112
-byte 1 111
-byte 1 110
-byte 1 115
-byte 1 50
-byte 1 47
-byte 1 103
-byte 1 114
-byte 1 101
-byte 1 110
-byte 1 97
-byte 1 100
-byte 1 101
-byte 1 108
-byte 1 47
-byte 1 103
-byte 1 114
-byte 1 101
-byte 1 110
-byte 1 97
-byte 1 100
-byte 1 101
-byte 1 108
-byte 1 46
-byte 1 109
-byte 1 100
-byte 1 51
+byte 1 107
+byte 1 105
+byte 1 116
 byte 1 0
 align 1
 LABELV $93
-byte 1 119
-byte 1 101
-byte 1 97
-byte 1 112
+byte 1 105
+byte 1 99
 byte 1 111
 byte 1 110
-byte 1 95
-byte 1 103
-byte 1 114
+byte 1 115
+byte 1 47
+byte 1 109
 byte 1 101
-byte 1 110
-byte 1 97
 byte 1 100
-byte 1 101
-byte 1 108
-byte 1 97
-byte 1 117
-byte 1 110
-byte 1 99
-byte 1 104
-byte 1 101
-byte 1 114
+byte 1 107
+byte 1 105
+byte 1 116
 byte 1 0
 align 1
 LABELV $92
-byte 1 77
-byte 1 97
-byte 1 99
-byte 1 104
-byte 1 105
-byte 1 110
+byte 1 109
+byte 1 111
+byte 1 100
 byte 1 101
-byte 1 103
+byte 1 108
+byte 1 115
+byte 1 47
+byte 1 112
+byte 1 111
+byte 1 119
+byte 1 101
+byte 1 114
 byte 1 117
-byte 1 110
+byte 1 112
+byte 1 115
+byte 1 47
+byte 1 104
+byte 1 111
+byte 1 108
+byte 1 100
+byte 1 97
+byte 1 98
+byte 1 108
+byte 1 101
+byte 1 47
+byte 1 109
+byte 1 101
+byte 1 100
+byte 1 107
+byte 1 105
+byte 1 116
+byte 1 95
+byte 1 115
+byte 1 112
+byte 1 104
+byte 1 101
+byte 1 114
+byte 1 101
+byte 1 46
+byte 1 109
+byte 1 100
+byte 1 51
 byte 1 0
 align 1
 LABELV $91
-byte 1 105
-byte 1 99
+byte 1 109
 byte 1 111
-byte 1 110
+byte 1 100
+byte 1 101
+byte 1 108
 byte 1 115
 byte 1 47
-byte 1 105
-byte 1 99
+byte 1 112
 byte 1 111
-byte 1 110
 byte 1 119
-byte 1 95
-byte 1 109
-byte 1 97
-byte 1 99
-byte 1 104
-byte 1 105
-byte 1 110
 byte 1 101
-byte 1 103
+byte 1 114
 byte 1 117
-byte 1 110
+byte 1 112
+byte 1 115
+byte 1 47
+byte 1 104
+byte 1 111
+byte 1 108
+byte 1 100
+byte 1 97
+byte 1 98
+byte 1 108
+byte 1 101
+byte 1 47
+byte 1 109
+byte 1 101
+byte 1 100
+byte 1 107
+byte 1 105
+byte 1 116
+byte 1 46
+byte 1 109
+byte 1 100
+byte 1 51
 byte 1 0
 align 1
 LABELV $90
-byte 1 109
+byte 1 104
 byte 1 111
-byte 1 100
-byte 1 101
 byte 1 108
-byte 1 115
-byte 1 47
-byte 1 119
-byte 1 101
-byte 1 97
-byte 1 112
-byte 1 111
-byte 1 110
-byte 1 115
-byte 1 50
-byte 1 47
-byte 1 109
-byte 1 97
-byte 1 99
-byte 1 104
-byte 1 105
-byte 1 110
-byte 1 101
-byte 1 103
-byte 1 117
-byte 1 110
-byte 1 47
-byte 1 109
-byte 1 97
-byte 1 99
-byte 1 104
-byte 1 105
-byte 1 110
-byte 1 101
-byte 1 103
-byte 1 117
-byte 1 110
-byte 1 46
-byte 1 109
 byte 1 100
-byte 1 51
+byte 1 97
+byte 1 98
+byte 1 108
+byte 1 101
+byte 1 95
+byte 1 109
+byte 1 101
+byte 1 100
+byte 1 107
+byte 1 105
+byte 1 116
 byte 1 0
 align 1
 LABELV $89
-byte 1 119
+byte 1 80
 byte 1 101
-byte 1 97
-byte 1 112
+byte 1 114
+byte 1 115
 byte 1 111
 byte 1 110
-byte 1 95
-byte 1 109
 byte 1 97
-byte 1 99
-byte 1 104
-byte 1 105
-byte 1 110
+byte 1 108
+byte 1 32
+byte 1 84
 byte 1 101
-byte 1 103
-byte 1 117
-byte 1 110
+byte 1 108
+byte 1 101
+byte 1 112
+byte 1 111
+byte 1 114
+byte 1 116
+byte 1 101
+byte 1 114
 byte 1 0
 align 1
 LABELV $88
-byte 1 83
-byte 1 104
-byte 1 111
-byte 1 116
-byte 1 103
-byte 1 117
-byte 1 110
-byte 1 0
-align 1
-LABELV $87
 byte 1 105
 byte 1 99
 byte 1 111
 byte 1 110
 byte 1 115
 byte 1 47
-byte 1 105
-byte 1 99
-byte 1 111
-byte 1 110
-byte 1 119
-byte 1 95
-byte 1 115
-byte 1 104
-byte 1 111
 byte 1 116
-byte 1 103
-byte 1 117
-byte 1 110
+byte 1 101
+byte 1 108
+byte 1 101
+byte 1 112
+byte 1 111
+byte 1 114
+byte 1 116
+byte 1 101
+byte 1 114
 byte 1 0
 align 1
-LABELV $86
+LABELV $87
 byte 1 109
 byte 1 111
 byte 1 100
@@ -9877,62 +7599,94 @@ byte 1 101
 byte 1 108
 byte 1 115
 byte 1 47
-byte 1 119
-byte 1 101
-byte 1 97
 byte 1 112
 byte 1 111
-byte 1 110
+byte 1 119
+byte 1 101
+byte 1 114
+byte 1 117
+byte 1 112
 byte 1 115
-byte 1 50
 byte 1 47
-byte 1 115
 byte 1 104
 byte 1 111
-byte 1 116
-byte 1 103
-byte 1 117
-byte 1 110
+byte 1 108
+byte 1 100
+byte 1 97
+byte 1 98
+byte 1 108
+byte 1 101
 byte 1 47
-byte 1 115
-byte 1 104
-byte 1 111
 byte 1 116
-byte 1 103
-byte 1 117
-byte 1 110
+byte 1 101
+byte 1 108
+byte 1 101
+byte 1 112
+byte 1 111
+byte 1 114
+byte 1 116
+byte 1 101
+byte 1 114
 byte 1 46
 byte 1 109
 byte 1 100
 byte 1 51
 byte 1 0
 align 1
-LABELV $85
-byte 1 119
-byte 1 101
-byte 1 97
-byte 1 112
-byte 1 111
-byte 1 110
-byte 1 95
+LABELV $86
 byte 1 115
-byte 1 104
 byte 1 111
-byte 1 116
-byte 1 103
 byte 1 117
 byte 1 110
+byte 1 100
+byte 1 47
+byte 1 105
+byte 1 116
+byte 1 101
+byte 1 109
+byte 1 115
+byte 1 47
+byte 1 104
+byte 1 111
+byte 1 108
+byte 1 100
+byte 1 97
+byte 1 98
+byte 1 108
+byte 1 101
+byte 1 46
+byte 1 119
+byte 1 97
+byte 1 118
+byte 1 0
+align 1
+LABELV $85
+byte 1 104
+byte 1 111
+byte 1 108
+byte 1 100
+byte 1 97
+byte 1 98
+byte 1 108
+byte 1 101
+byte 1 95
+byte 1 116
+byte 1 101
+byte 1 108
+byte 1 101
+byte 1 112
+byte 1 111
+byte 1 114
+byte 1 116
+byte 1 101
+byte 1 114
 byte 1 0
 align 1
 LABELV $84
-byte 1 71
+byte 1 72
 byte 1 97
-byte 1 117
 byte 1 110
-byte 1 116
-byte 1 108
-byte 1 101
-byte 1 116
+byte 1 100
 byte 1 0
 align 1
 LABELV $83
@@ -9948,14 +7702,10 @@ byte 1 111
 byte 1 110
 byte 1 119
 byte 1 95
-byte 1 103
+byte 1 104
 byte 1 97
-byte 1 117
 byte 1 110
-byte 1 116
-byte 1 108
-byte 1 101
-byte 1 116
+byte 1 100
 byte 1 0
 align 1
 LABELV $82
@@ -9975,23 +7725,15 @@ byte 1 110
 byte 1 115
 byte 1 50
 byte 1 47
-byte 1 103
+byte 1 104
 byte 1 97
-byte 1 117
 byte 1 110
-byte 1 116
-byte 1 108
-byte 1 101
-byte 1 116
+byte 1 100
 byte 1 47
-byte 1 103
+byte 1 104
 byte 1 97
-byte 1 117
 byte 1 110
-byte 1 116
-byte 1 108
-byte 1 101
-byte 1 116
+byte 1 100
 byte 1 46
 byte 1 109
 byte 1 100
@@ -10030,14 +7772,10 @@ byte 1 112
 byte 1 111
 byte 1 110
 byte 1 95
-byte 1 103
+byte 1 104
 byte 1 97
-byte 1 117
 byte 1 110
-byte 1 116
-byte 1 108
-byte 1 101
-byte 1 116
+byte 1 100
 byte 1 0
 align 1
 LABELV $79

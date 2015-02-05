@@ -203,7 +203,7 @@ line 47
 LABELV $53
 endproc AddScore 8 12
 export TossClientItems
-proc TossClientItems 40 12
+proc TossClientItems 44 12
 line 56
 ;48:
 ;49:/*
@@ -236,14 +236,19 @@ line 70
 ;67:	// weapon that isn't the mg or gauntlet.  Without this, a client
 ;68:	// can pick up a weapon, be killed, and not drop the weapon because
 ;69:	// their weapon change hasn't completed yet and they are still holding the MG.
-;70:	if ( weapon == WP_MACHINEGUN || weapon == WP_GRAPPLING_HOOK ) {
+;70:	if ( weapon == WP_HAND|| weapon == WP_HAND ) {
+ADDRLP4 24
+CNSTI4 1
+ASGNI4
 ADDRLP4 12
 INDIRI4
-CNSTI4 2
+ADDRLP4 24
+INDIRI4
 EQI4 $66
 ADDRLP4 12
 INDIRI4
-CNSTI4 10
+ADDRLP4 24
+INDIRI4
 NEI4 $64
 LABELV $66
 line 71
@@ -292,9 +297,9 @@ BANDI4
 CNSTI4 0
 NEI4 $69
 line 75
-;75:			weapon = WP_NONE;
+;75:			weapon = WP_HAND;
 ADDRLP4 12
-CNSTI4 0
+CNSTI4 1
 ASGNI4
 line 76
 ;76:		}
@@ -304,23 +309,23 @@ line 77
 LABELV $64
 line 79
 ;78:
-;79:	if ( weapon > WP_MACHINEGUN && weapon != WP_GRAPPLING_HOOK && 
-ADDRLP4 28
-CNSTI4 2
+;79:	if ( weapon > WP_HAND && weapon != WP_HAND && 
+ADDRLP4 32
+CNSTI4 1
 ASGNI4
 ADDRLP4 12
 INDIRI4
-ADDRLP4 28
+ADDRLP4 32
 INDIRI4
 LEI4 $71
 ADDRLP4 12
 INDIRI4
-CNSTI4 10
+ADDRLP4 32
+INDIRI4
 EQI4 $71
 ADDRLP4 12
 INDIRI4
-ADDRLP4 28
-INDIRI4
+CNSTI4 2
 LSHI4
 ADDRFP4 0
 INDIRP4
@@ -341,12 +346,12 @@ line 82
 ADDRLP4 12
 INDIRI4
 ARGI4
-ADDRLP4 32
+ADDRLP4 36
 ADDRGP4 BG_FindItemForWeapon
 CALLP4
 ASGNP4
 ADDRLP4 8
-ADDRLP4 32
+ADDRLP4 36
 INDIRP4
 ASGNP4
 line 85
@@ -409,12 +414,12 @@ line 93
 ADDRLP4 0
 INDIRI4
 ARGI4
-ADDRLP4 32
+ADDRLP4 36
 ADDRGP4 BG_FindItemForPowerup
 CALLP4
 ASGNP4
 ADDRLP4 8
-ADDRLP4 32
+ADDRLP4 36
 INDIRP4
 ASGNP4
 line 94
@@ -441,12 +446,12 @@ ARGP4
 ADDRLP4 16
 INDIRF4
 ARGF4
-ADDRLP4 36
+ADDRLP4 40
 ADDRGP4 Drop_Item
 CALLP4
 ASGNP4
 ADDRLP4 4
-ADDRLP4 36
+ADDRLP4 40
 INDIRP4
 ASGNP4
 line 99
@@ -526,7 +531,7 @@ LABELV $73
 line 107
 ;107:}
 LABELV $63
-endproc TossClientItems 40 12
+endproc TossClientItems 44 12
 export LookAtKiller
 proc LookAtKiller 52 4
 line 197
@@ -902,7 +907,7 @@ LABELV $102
 line 230
 ;230:			ent = &g_entities[i];
 ADDRLP4 0
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 4
 INDIRI4
 MULI4
@@ -2808,7 +2813,7 @@ INDIRI4
 NEI4 $244
 line 586
 ;586:			Cmd_Score_f( g_entities + i );
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 0
 INDIRI4
 MULI4
@@ -2848,12 +2853,12 @@ CNSTI4 1
 ASGNI4
 line 592
 ;591:
-;592:	self->s.weapon = WP_NONE;
+;592:	self->s.weapon = WP_HAND;
 ADDRFP4 0
 INDIRP4
 CNSTI4 192
 ADDP4
-CNSTI4 0
+CNSTI4 1
 ASGNI4
 line 593
 ;593:	self->s.powerups = 0;
@@ -3994,7 +3999,7 @@ NEU4 $283
 line 833
 ;833:		inflictor = &g_entities[ENTITYNUM_WORLD];
 ADDRFP4 4
-ADDRGP4 g_entities+825776
+ADDRGP4 g_entities+833952
 ASGNP4
 line 834
 ;834:	}
@@ -4009,7 +4014,7 @@ NEU4 $286
 line 836
 ;836:		attacker = &g_entities[ENTITYNUM_WORLD];
 ADDRFP4 8
-ADDRGP4 g_entities+825776
+ADDRGP4 g_entities+833952
 ASGNP4
 line 837
 ;837:	}
@@ -5870,7 +5875,7 @@ LABELV $407
 line 1137
 ;1137:		ent = &g_entities[entityList[ e ]];
 ADDRLP4 4
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 20
 INDIRI4
 CNSTI4 2
@@ -6572,7 +6577,7 @@ import TeleportPlayer
 import trigger_teleporter_touch
 import Touch_DoorTrigger
 import G_RunMover
-import fire_grapple
+import fire_hand
 import fire_bfg
 import fire_rocket
 import fire_grenade

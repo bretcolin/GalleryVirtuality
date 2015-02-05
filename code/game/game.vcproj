@@ -2113,6 +2113,9 @@
 				RelativePath="match.h">
 			</File>
 			<File
+				RelativePath=".\menudef.h">
+			</File>
+			<File
 				RelativePath="q_shared.h">
 			</File>
 			<File

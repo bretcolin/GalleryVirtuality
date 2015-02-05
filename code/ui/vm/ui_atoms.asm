@@ -3454,7 +3454,6 @@ import UI_RemoveBots_Cache
 import UI_AddBotsMenu
 import UI_AddBots_Cache
 import trap_SetPbClStatus
-import trap_VerifyCDKey
 import trap_R_RemapShader
 import trap_RealTime
 import trap_CIN_SetExtents
@@ -3465,8 +3464,6 @@ import trap_CIN_PlayCinematic
 import trap_S_StartBackgroundTrack
 import trap_S_StopBackgroundTrack
 import trap_R_RegisterFont
-import trap_SetCDKey
-import trap_GetCDKey
 import trap_MemoryRemaining
 import trap_LAN_CompareServers
 import trap_LAN_ServerStatus
@@ -3593,9 +3590,6 @@ import PlayerSettings_Cache
 import UI_PlayerSettingsMenu
 import PlayerModel_Cache
 import UI_PlayerModelMenu
-import UI_CDKeyMenu_f
-import UI_CDKeyMenu_Cache
-import UI_CDKeyMenu
 import UI_ModsMenu_Cache
 import UI_ModsMenu
 import UI_CinematicsMenu_Cache
@@ -3716,8 +3710,6 @@ import ui_netGameType
 import ui_gameType
 import ui_fragLimit
 import ui_captureLimit
-import ui_cdkeychecked
-import ui_cdkey
 import ui_server16
 import ui_server15
 import ui_server14

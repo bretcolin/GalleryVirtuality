@@ -995,7 +995,7 @@ ADDRLP4 68+8
 CNSTF4 0
 ASGNF4
 line 226
-;226:		UI_PlayerInfo_SetInfo( &s_playersettings.playerinfo, LEGS_IDLE, TORSO_STAND, viewangles, vec3_origin, WP_MACHINEGUN, qfalse );
+;226:		UI_PlayerInfo_SetInfo( &s_playersettings.playerinfo, LEGS_IDLE, TORSO_STAND, viewangles, vec3_origin, WP_HAND, qfalse );
 ADDRGP4 s_playersettings+1268
 ARGP4
 CNSTI4 22
@@ -1006,7 +1006,7 @@ ADDRLP4 68
 ARGP4
 ADDRGP4 vec3_origin
 ARGP4
-CNSTI4 2
+CNSTI4 1
 ARGI4
 CNSTI4 0
 ARGI4
@@ -1303,7 +1303,7 @@ ADDRGP4 UI_PlayerInfo_SetModel
 CALLV
 pop
 line 292
-;292:	UI_PlayerInfo_SetInfo( &s_playersettings.playerinfo, LEGS_IDLE, TORSO_STAND, viewangles, vec3_origin, WP_MACHINEGUN, qfalse );
+;292:	UI_PlayerInfo_SetInfo( &s_playersettings.playerinfo, LEGS_IDLE, TORSO_STAND, viewangles, vec3_origin, WP_HAND, qfalse );
 ADDRGP4 s_playersettings+1268
 ARGP4
 CNSTI4 22
@@ -1314,7 +1314,7 @@ ADDRLP4 4
 ARGP4
 ADDRGP4 vec3_origin
 ARGP4
-CNSTI4 2
+CNSTI4 1
 ARGI4
 CNSTI4 0
 ARGI4

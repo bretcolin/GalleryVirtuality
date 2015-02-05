@@ -5,7 +5,7 @@
 // because games can change separately from the main system version, we need a
 // second version that must match between game and cgame
 
-#define	GAME_VERSION		"baseg1-1"
+#define	GAME_VERSION		"baseg1"
 
 #define	DEFAULT_GRAVITY		800
 #define	GIB_HEALTH			-40
@@ -129,7 +129,7 @@ typedef enum {
 #define	PMF_TIME_WATERJUMP	256		// pm_time is waterjump
 #define	PMF_RESPAWNED		512		// clear after attack and jump buttons come up
 #define	PMF_USE_ITEM_HELD	1024
-#define PMF_GRAPPLE_PULL	2048	// pull towards grapple location
+#define PMF_HAND_PULL	2048	// pull towards grapple location
 #define PMF_FOLLOW			4096	// spectate following another player
 #define PMF_SCOREBOARD		8192	// spectate as a scoreboard
 #define PMF_INVULEXPAND		16384	// invulnerability sphere set to full size
@@ -282,23 +282,8 @@ typedef enum {
 
 
 typedef enum {
-	WP_NONE,
-
-	WP_GAUNTLET,
-	WP_MACHINEGUN,
-	WP_SHOTGUN,
-	WP_GRENADE_LAUNCHER,
-	WP_ROCKET_LAUNCHER,
-	WP_LIGHTNING,
-	WP_RAILGUN,
-	WP_PLASMAGUN,
-	WP_BFG,
-	WP_GRAPPLING_HOOK,
-#ifdef MISSIONPACK
-	WP_NAILGUN,
-	WP_PROX_LAUNCHER,
-	WP_CHAINGUN,
-#endif
+    WP_NONE,
+	WP_HAND,
 
 	WP_NUM_WEAPONS
 } weapon_t;
@@ -394,7 +379,6 @@ typedef enum {
 	EV_RAILTRAIL,
 	EV_SHOTGUN,
 	EV_BULLET,				// otherEntity is the shooter
-
 	EV_PAIN,
 	EV_DEATH1,
 	EV_DEATH2,
@@ -408,16 +392,16 @@ typedef enum {
 	EV_GIB_PLAYER,			// gib a previously living player
 	EV_SCOREPLUM,			// score plum
 
-//#ifdef MISSIONPACK
-	EV_PROXIMITY_MINE_STICK,
-	EV_PROXIMITY_MINE_TRIGGER,
+
+//	EV_PROXIMITY_MINE_STICK,
+//	EV_PROXIMITY_MINE_TRIGGER,
 	EV_KAMIKAZE,			// kamikaze explodes
-	EV_OBELISKEXPLODE,		// obelisk explodes
-	EV_OBELISKPAIN,			// obelisk is in pain
-	EV_INVUL_IMPACT,		// invulnerability sphere impact
-	EV_JUICED,				// invulnerability juiced effect
-	EV_LIGHTNINGBOLT,		// lightning bolt bounced of invulnerability sphere
-//#endif
+//	EV_OBELISKEXPLODE,		// obelisk explodes
+//	EV_OBELISKPAIN,			// obelisk is in pain
+//	EV_INVUL_IMPACT,		// invulnerability sphere impact
+//	EV_JUICED,				// invulnerability juiced effect
+//	EV_LIGHTNINGBOLT,		// lightning bolt bounced of invulnerability sphere
+
 
 	EV_DEBUG_LINE,
 	EV_STOPLOOPINGSOUND,
@@ -573,14 +557,12 @@ typedef enum {
 	MOD_SUICIDE,
 	MOD_TARGET_LASER,
 	MOD_TRIGGER_HURT,
-#ifdef MISSIONPACK
 	MOD_NAIL,
 	MOD_CHAINGUN,
 	MOD_PROXIMITY_MINE,
 	MOD_KAMIKAZE,
 	MOD_JUICED,
-#endif
-	MOD_GRAPPLE
+	MOD_HAND
 } meansOfDeath_t;
 
 
@@ -663,7 +645,7 @@ typedef enum {
 	ET_PUSH_TRIGGER,
 	ET_TELEPORT_TRIGGER,
 	ET_INVISIBLE,
-	ET_GRAPPLE,				// grapple hooked on wall
+	ET_HAND,				// hand hooked on wall
 	ET_INFO,				// infosight entity type
 	ET_LASER,				// lasersight entity type
 	ET_TEAM,

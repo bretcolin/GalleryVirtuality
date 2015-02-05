@@ -440,14 +440,11 @@ static void CG_Missile( centity_t *cent ) {
 	VectorCopy( cent->lerpOrigin, ent.origin);
 	VectorCopy( cent->lerpOrigin, ent.oldorigin);
 
-	if ( cent->currentState.weapon == WP_PLASMAGUN ) {
 		ent.reType = RT_SPRITE;
 		ent.radius = 16;
 		ent.rotation = 0;
 		ent.customShader = cgs.media.plasmaBallShader;
 		trap_R_AddRefEntityToScene( &ent );
-		return;
-	}
 
 	// flicker between two skins
 	ent.skinNum = cg.clientFrame & 1;
@@ -954,7 +951,7 @@ static void CG_AddCEntity( centity_t *cent ) {
 	case ET_SPEAKER:
 		CG_Speaker( cent );
 		break;
-	case ET_GRAPPLE:
+	case ET_HAND:
 		CG_Grapple( cent );
 		break;
 	case ET_INFO:

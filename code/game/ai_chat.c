@@ -280,7 +280,7 @@ char *BotWeaponNameForMeansOfDeath(int mod) {
 		case MOD_KAMIKAZE: return "Kamikaze";
 		case MOD_JUICED: return "Prox mine";
 #endif
-		case MOD_GRAPPLE: return "Grapple";
+		case MOD_HAND: return "Hand";
 		default: return "[unknown weapon]";
 	}
 }

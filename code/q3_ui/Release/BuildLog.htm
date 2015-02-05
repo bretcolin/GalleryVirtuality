@@ -11,7 +11,13 @@ Build Log
 </h3>
 </pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
 Command Lines
-</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Creating temporary file "c:\quake3\source\code\q3_ui\Release\RSP00001E.rsp" with contents
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Creating temporary file "c:\quake3\source\code\q3_ui\Release\RSP000029.rsp" with contents
+[
+/O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_USRDLL" /D "Q3_UI_EXPORTS" /D "_WINDLL" /D "_MBCS" /FD /EHsc /MT /YX"stdafx.h" /Fp".\Release/q3_ui.pch" /Fo".\Release/" /Fd".\Release/" /W3 /c /TC
+.\ui_cdkey.c
+]
+Creating command line "cl.exe @c:\quake3\source\code\q3_ui\Release\RSP000029.rsp /nologo"
+Creating temporary file "c:\quake3\source\code\q3_ui\Release\RSP00002A.rsp" with contents
 [
 /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "Q3_UI_EXPORTS" /FD /EHsc /MT /YX"stdafx.h" /Fp".\Release/q3_ui.pch" /Fo".\Release/" /Fd".\Release/" /W3 /c /TC
 .\ui_video.c
@@ -56,8 +62,8 @@ Command Lines
 \quake3\source\code\game\q_math.c
 \quake3\source\code\game\bg_misc.c
 ]
-Creating command line "cl.exe @c:\quake3\source\code\q3_ui\Release\RSP00001E.rsp /nologo"
-Creating temporary file "c:\quake3\source\code\q3_ui\Release\RSP00001F.rsp" with contents
+Creating command line "cl.exe @c:\quake3\source\code\q3_ui\Release\RSP00002A.rsp /nologo"
+Creating temporary file "c:\quake3\source\code\q3_ui\Release\RSP00002B.rsp" with contents
 [
 /OUT:"../Release/uix86.dll" /INCREMENTAL:NO /NOLOGO /DLL /DEF:".\ui.def" /PDB:".\Release/uix86.pdb" /IMPLIB:".\Release/uix86.lib" /MACHINE:X86  kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib
 .\Release\bg_misc.obj
@@ -65,6 +71,7 @@ Creating temporary file "c:\quake3\source\code\q3_ui\Release\RSP00001F.rsp" with
 .\Release\q_shared.obj
 .\Release\ui_addbots.obj
 .\Release\ui_atoms.obj
+.\Release\ui_cdkey.obj
 .\Release\ui_cinematics.obj
 .\Release\ui_confirm.obj
 .\Release\ui_connect.obj
@@ -102,10 +109,12 @@ Creating temporary file "c:\quake3\source\code\q3_ui\Release\RSP00001F.rsp" with
 .\Release\ui_teamorders.obj
 .\Release\ui_video.obj
 ]
-Creating command line "link.exe @c:\quake3\source\code\q3_ui\Release\RSP00001F.rsp"
+Creating command line "link.exe @c:\quake3\source\code\q3_ui\Release\RSP00002B.rsp"
 </pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
 Output Window
 </font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Compiling...
+ui_cdkey.c
+Compiling...
 ui_video.c
 ui_teamorders.c
 ui_team.c

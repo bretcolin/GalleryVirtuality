@@ -618,13 +618,13 @@ void Con_DrawSolidConsole( float frac ) {
 
 	re.SetColor( g_color_table[ColorIndex(COLOR_YELLOW)] );
 
-	i = strlen( Q3_VERSION );
+	i = strlen( G1_VERSION );
 
 	for (x=0 ; x<i ; x++) {
 
 		SCR_DrawSmallChar( cls.glconfig.vidWidth - ( i - x ) * SMALLCHAR_WIDTH, 
 
-			(lines-(SMALLCHAR_HEIGHT+SMALLCHAR_HEIGHT/2)), Q3_VERSION[x] );
+			(lines-(SMALLCHAR_HEIGHT+SMALLCHAR_HEIGHT/2)), G1_VERSION[x] );
 
 	}
 

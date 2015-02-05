@@ -33,10 +33,10 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 #include <io.h>
 #include <conio.h>
 
-#define	CD_BASEDIR	"gallery"
+#define	CD_BASEDIR	"baseg1"
 #define	CD_EXE		"gallery.exe"
 #define	CD_BASEDIR_LINUX	"bin\\x86\\glibc-2.1"
-#define	CD_EXE_LINUX "gallery"
+#define	CD_EXE_LINUX "baseg1"
 #define MEM_THRESHOLD 96*1024*1024
 
 static char		sys_cmdline[MAX_STRING_CHARS];

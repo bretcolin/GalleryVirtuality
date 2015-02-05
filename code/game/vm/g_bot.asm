@@ -1126,7 +1126,7 @@ LABELV $138
 line 232
 ;231:			}
 ;232:			if ( !(g_entities[cl->ps.clientNum].r.svFlags & SVF_BOT) ) {
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 0
 INDIRP4
 CNSTI4 140
@@ -1330,7 +1330,7 @@ LABELV $160
 line 255
 ;254:			}
 ;255:			if ( !(g_entities[cl->ps.clientNum].r.svFlags & SVF_BOT) ) {
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 0
 INDIRP4
 CNSTI4 140
@@ -1608,7 +1608,7 @@ LABELV $190
 line 297
 ;296:		}
 ;297:		if ( !(g_entities[cl->ps.clientNum].r.svFlags & SVF_BOT) ) {
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 0
 INDIRP4
 CNSTI4 140
@@ -1771,7 +1771,7 @@ LABELV $205
 line 326
 ;325:		}
 ;326:		if ( g_entities[cl->ps.clientNum].r.svFlags & SVF_BOT ) {
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 0
 INDIRP4
 CNSTI4 140
@@ -1901,7 +1901,7 @@ LABELV $219
 line 352
 ;351:		}
 ;352:		if ( !(g_entities[cl->ps.clientNum].r.svFlags & SVF_BOT) ) {
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 4
 INDIRP4
 CNSTI4 140
@@ -3720,7 +3720,7 @@ line 661
 ;660:
 ;661:	bot = &g_entities[ clientNum ];
 ADDRLP4 1052
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 1036
 INDIRI4
 MULI4
@@ -5849,7 +5849,7 @@ import TeleportPlayer
 import trigger_teleporter_touch
 import Touch_DoorTrigger
 import G_RunMover
-import fire_grapple
+import fire_hand
 import fire_bfg
 import fire_rocket
 import fire_grenade

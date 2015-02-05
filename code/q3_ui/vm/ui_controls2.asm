@@ -1083,13 +1083,13 @@ INDIRI4
 ADDRLP4 12
 INDIRI4
 LSHI4
-ADDRGP4 $271-8
+ADDRGP4 $265-8
 ADDP4
 INDIRP4
 JUMPV
 lit
 align 4
-LABELV $271
+LABELV $265
 address $223
 address $225
 address $227
@@ -1100,20 +1100,20 @@ address $231
 address $234
 address $249
 address $251
+address $222
+address $222
+address $222
+address $222
+address $222
+address $222
+address $222
+address $222
+address $222
 address $253
 address $255
 address $257
-address $222
-address $222
-address $222
-address $222
-address $222
-address $222
 address $259
-address $261
 address $263
-address $265
-address $269
 code
 LABELV $223
 line 407
@@ -1273,8 +1273,8 @@ JUMPV
 LABELV $253
 line 449
 ;447:
-;448:	case ANIM_WEAPON1:
-;449:		s_controls.playerWeapon = WP_GAUNTLET;
+;448:	case ANIM_WEAPON10:
+;449:		s_controls.playerWeapon = WP_HAND;
 ADDRGP4 s_controls+4168
 CNSTI4 1
 ASGNI4
@@ -1285,10 +1285,10 @@ JUMPV
 LABELV $255
 line 453
 ;451:
-;452:	case ANIM_WEAPON2:
-;453:		s_controls.playerWeapon = WP_MACHINEGUN;
-ADDRGP4 s_controls+4168
-CNSTI4 2
+;452:	case ANIM_ATTACK:
+;453:		s_controls.playerTorso = TORSO_ATTACK;
+ADDRGP4 s_controls+4164
+CNSTI4 7
 ASGNI4
 line 454
 ;454:		break;
@@ -1297,10 +1297,10 @@ JUMPV
 LABELV $257
 line 457
 ;455:
-;456:	case ANIM_WEAPON3:
-;457:		s_controls.playerWeapon = WP_SHOTGUN;
-ADDRGP4 s_controls+4168
-CNSTI4 3
+;456:	case ANIM_GESTURE:
+;457:		s_controls.playerTorso = TORSO_GESTURE;
+ADDRGP4 s_controls+4164
+CNSTI4 6
 ASGNI4
 line 458
 ;458:		break;
@@ -1309,80 +1309,44 @@ JUMPV
 LABELV $259
 line 461
 ;459:
-;460:	case ANIM_WEAPON10:
-;461:		s_controls.playerWeapon = WP_GRAPPLING_HOOK;
-ADDRGP4 s_controls+4168
-CNSTI4 10
-ASGNI4
-line 462
-;462:		break;
-ADDRGP4 $222
-JUMPV
-LABELV $261
-line 465
-;463:
-;464:	case ANIM_ATTACK:
-;465:		s_controls.playerTorso = TORSO_ATTACK;
-ADDRGP4 s_controls+4164
-CNSTI4 7
-ASGNI4
-line 466
-;466:		break;
-ADDRGP4 $222
-JUMPV
-LABELV $263
-line 469
-;467:
-;468:	case ANIM_GESTURE:
-;469:		s_controls.playerTorso = TORSO_GESTURE;
-ADDRGP4 s_controls+4164
-CNSTI4 6
-ASGNI4
-line 470
-;470:		break;
-ADDRGP4 $222
-JUMPV
-LABELV $265
-line 473
-;471:
-;472:	case ANIM_DIE:
-;473:		s_controls.playerLegs = BOTH_DEATH1;
+;460:	case ANIM_DIE:
+;461:		s_controls.playerLegs = BOTH_DEATH1;
 ADDRGP4 s_controls+4160
 CNSTI4 0
 ASGNI4
-line 474
-;474:		s_controls.playerTorso = BOTH_DEATH1;
+line 462
+;462:		s_controls.playerTorso = BOTH_DEATH1;
 ADDRGP4 s_controls+4164
 CNSTI4 0
 ASGNI4
-line 475
-;475:		s_controls.playerWeapon = WP_NONE;
+line 463
+;463:		s_controls.playerWeapon = WP_HAND;
 ADDRGP4 s_controls+4168
-CNSTI4 0
+CNSTI4 1
 ASGNI4
-line 476
-;476:		break;
+line 464
+;464:		break;
 ADDRGP4 $222
 JUMPV
-LABELV $269
-line 479
-;477:
-;478:	case ANIM_CHAT:
-;479:		s_controls.playerChat = qtrue;
+LABELV $263
+line 467
+;465:
+;466:	case ANIM_CHAT:
+;467:		s_controls.playerChat = qtrue;
 ADDRGP4 s_controls+4172
 CNSTI4 1
 ASGNI4
-line 480
-;480:		break;
-line 483
-;481:
-;482:	default:
-;483:		break;
+line 468
+;468:		break;
+line 471
+;469:
+;470:	default:
+;471:		break;
 LABELV $222
-line 486
-;484:	}
-;485:
-;486:	UI_PlayerInfo_SetInfo( &s_controls.playerinfo, s_controls.playerLegs, s_controls.playerTorso, s_controls.playerViewangles, s_controls.playerMoveangles, s_controls.playerWeapon, s_controls.playerChat );
+line 474
+;472:	}
+;473:
+;474:	UI_PlayerInfo_SetInfo( &s_controls.playerinfo, s_controls.playerLegs, s_controls.playerTorso, s_controls.playerViewangles, s_controls.playerMoveangles, s_controls.playerWeapon, s_controls.playerChat );
 ADDRGP4 s_controls+2572
 ARGP4
 ADDRGP4 s_controls+4160
@@ -1404,35 +1368,35 @@ ARGI4
 ADDRGP4 UI_PlayerInfo_SetInfo
 CALLV
 pop
-line 487
-;487:}
+line 475
+;475:}
 LABELV $200
 endproc Controls_UpdateModel 24 28
 proc Controls_Update 96 0
-line 495
-;488:
+line 483
+;476:
+;477:
+;478:/*
+;479:=================
+;480:Controls_Update
+;481:=================
+;482:*/
+;483:static void Controls_Update( void ) {
+line 491
+;484:	int		i;
+;485:	int		j;
+;486:	int		y;
+;487:	menucommon_s	**controls;
+;488:	menucommon_s	*control;
 ;489:
-;490:/*
-;491:=================
-;492:Controls_Update
-;493:=================
-;494:*/
-;495:static void Controls_Update( void ) {
-line 503
-;496:	int		i;
-;497:	int		j;
-;498:	int		y;
-;499:	menucommon_s	**controls;
-;500:	menucommon_s	*control;
-;501:
-;502:	// disable all controls in all groups
-;503:	for( i = 0; i < C_MAX; i++ ) {
+;490:	// disable all controls in all groups
+;491:	for( i = 0; i < C_MAX; i++ ) {
 ADDRLP4 12
 CNSTI4 0
 ASGNI4
-LABELV $281
-line 504
-;504:		controls = g_controls[i];
+LABELV $275
+line 492
+;492:		controls = g_controls[i];
 ADDRLP4 8
 ADDRLP4 12
 INDIRI4
@@ -1442,17 +1406,17 @@ ADDRGP4 g_controls
 ADDP4
 INDIRP4
 ASGNP4
-line 506
-;505:		// bk001204 - parentheses
-;506:		for( j = 0;  (control = controls[j]) ; j++ ) {
+line 494
+;493:		// bk001204 - parentheses
+;494:		for( j = 0;  (control = controls[j]) ; j++ ) {
 ADDRLP4 4
 CNSTI4 0
 ASGNI4
-ADDRGP4 $288
+ADDRGP4 $282
 JUMPV
-LABELV $285
-line 507
-;507:			control->flags |= (QMF_HIDDEN|QMF_INACTIVE);
+LABELV $279
+line 495
+;495:			control->flags |= (QMF_HIDDEN|QMF_INACTIVE);
 ADDRLP4 20
 ADDRLP4 0
 INDIRP4
@@ -1467,17 +1431,17 @@ INDIRU4
 CNSTU4 20480
 BORU4
 ASGNU4
-line 508
-;508:		}
-LABELV $286
-line 506
+line 496
+;496:		}
+LABELV $280
+line 494
 ADDRLP4 4
 ADDRLP4 4
 INDIRI4
 CNSTI4 1
 ADDI4
 ASGNI4
-LABELV $288
+LABELV $282
 ADDRLP4 20
 ADDRLP4 4
 INDIRI4
@@ -1496,11 +1460,11 @@ ADDRLP4 20
 INDIRP4
 CVPU4 4
 CNSTU4 0
-NEU4 $285
-line 509
-;509:	}
-LABELV $282
-line 503
+NEU4 $279
+line 497
+;497:	}
+LABELV $276
+line 491
 ADDRLP4 12
 ADDRLP4 12
 INDIRI4
@@ -1510,10 +1474,10 @@ ASGNI4
 ADDRLP4 12
 INDIRI4
 CNSTI4 4
-LTI4 $281
-line 511
-;510:
-;511:	controls = g_controls[s_controls.section];
+LTI4 $275
+line 499
+;498:
+;499:	controls = g_controls[s_controls.section];
 ADDRLP4 8
 ADDRGP4 s_controls+4064
 INDIRI4
@@ -1523,19 +1487,19 @@ ADDRGP4 g_controls
 ADDP4
 INDIRP4
 ASGNP4
-line 515
-;512:
-;513:	// enable controls in active group (and count number of items for vertical centering)
-;514:	// bk001204 - parentheses
-;515:	for( j = 0;  (control = controls[j]) ; j++ ) {
+line 503
+;500:
+;501:	// enable controls in active group (and count number of items for vertical centering)
+;502:	// bk001204 - parentheses
+;503:	for( j = 0;  (control = controls[j]) ; j++ ) {
 ADDRLP4 4
 CNSTI4 0
 ASGNI4
-ADDRGP4 $293
+ADDRGP4 $287
 JUMPV
-LABELV $290
-line 516
-;516:		control->flags &= ~(QMF_GRAYED|QMF_HIDDEN|QMF_INACTIVE);
+LABELV $284
+line 504
+;504:		control->flags &= ~(QMF_GRAYED|QMF_HIDDEN|QMF_INACTIVE);
 ADDRLP4 20
 ADDRLP4 0
 INDIRP4
@@ -1550,17 +1514,17 @@ INDIRU4
 CNSTU4 4294938623
 BANDU4
 ASGNU4
-line 517
-;517:	}
-LABELV $291
-line 515
+line 505
+;505:	}
+LABELV $285
+line 503
 ADDRLP4 4
 ADDRLP4 4
 INDIRI4
 CNSTI4 1
 ADDI4
 ASGNI4
-LABELV $293
+LABELV $287
 ADDRLP4 20
 ADDRLP4 4
 INDIRI4
@@ -1579,11 +1543,11 @@ ADDRLP4 20
 INDIRP4
 CVPU4 4
 CNSTU4 0
-NEU4 $290
-line 520
-;518:
-;519:	// position controls
-;520:	y = ( SCREEN_HEIGHT - j * SMALLCHAR_HEIGHT ) / 2;
+NEU4 $284
+line 508
+;506:
+;507:	// position controls
+;508:	y = ( SCREEN_HEIGHT - j * SMALLCHAR_HEIGHT ) / 2;
 ADDRLP4 16
 CNSTI4 480
 ADDRLP4 4
@@ -1594,25 +1558,25 @@ SUBI4
 CNSTI4 2
 DIVI4
 ASGNI4
-line 522
-;521:	// bk001204 - parentheses
-;522:	for( j = 0;	(control = controls[j]) ; j++, y += SMALLCHAR_HEIGHT ) {
+line 510
+;509:	// bk001204 - parentheses
+;510:	for( j = 0;	(control = controls[j]) ; j++, y += SMALLCHAR_HEIGHT ) {
 ADDRLP4 4
 CNSTI4 0
 ASGNI4
-ADDRGP4 $297
+ADDRGP4 $291
 JUMPV
-LABELV $294
-line 523
-;523:		control->x      = 320;
+LABELV $288
+line 511
+;511:		control->x      = 320;
 ADDRLP4 0
 INDIRP4
 CNSTI4 12
 ADDP4
 CNSTI4 320
 ASGNI4
-line 524
-;524:		control->y      = y;
+line 512
+;512:		control->y      = y;
 ADDRLP4 0
 INDIRP4
 CNSTI4 16
@@ -1620,24 +1584,24 @@ ADDP4
 ADDRLP4 16
 INDIRI4
 ASGNI4
-line 525
-;525:		control->left   = 320 - 19*SMALLCHAR_WIDTH;
+line 513
+;513:		control->left   = 320 - 19*SMALLCHAR_WIDTH;
 ADDRLP4 0
 INDIRP4
 CNSTI4 20
 ADDP4
 CNSTI4 168
 ASGNI4
-line 526
-;526:		control->right  = 320 + 21*SMALLCHAR_WIDTH;
+line 514
+;514:		control->right  = 320 + 21*SMALLCHAR_WIDTH;
 ADDRLP4 0
 INDIRP4
 CNSTI4 28
 ADDP4
 CNSTI4 488
 ASGNI4
-line 527
-;527:		control->top    = y;
+line 515
+;515:		control->top    = y;
 ADDRLP4 0
 INDIRP4
 CNSTI4 24
@@ -1645,8 +1609,8 @@ ADDP4
 ADDRLP4 16
 INDIRI4
 ASGNI4
-line 528
-;528:		control->bottom = y + SMALLCHAR_HEIGHT;
+line 516
+;516:		control->bottom = y + SMALLCHAR_HEIGHT;
 ADDRLP4 0
 INDIRP4
 CNSTI4 32
@@ -1656,10 +1620,10 @@ INDIRI4
 CNSTI4 16
 ADDI4
 ASGNI4
-line 529
-;529:	}
-LABELV $295
-line 522
+line 517
+;517:	}
+LABELV $289
+line 510
 ADDRLP4 4
 ADDRLP4 4
 INDIRI4
@@ -1672,7 +1636,7 @@ INDIRI4
 CNSTI4 16
 ADDI4
 ASGNI4
-LABELV $297
+LABELV $291
 ADDRLP4 24
 ADDRLP4 4
 INDIRI4
@@ -1691,25 +1655,25 @@ ADDRLP4 24
 INDIRP4
 CVPU4 4
 CNSTU4 0
-NEU4 $294
-line 531
-;530:
-;531:	if( s_controls.waitingforkey ) {
+NEU4 $288
+line 519
+;518:
+;519:	if( s_controls.waitingforkey ) {
 ADDRGP4 s_controls+4068
 INDIRI4
 CNSTI4 0
-EQI4 $298
-line 533
-;532:		// disable everybody
-;533:		for( i = 0; i < s_controls.menu.nitems; i++ ) {
+EQI4 $292
+line 521
+;520:		// disable everybody
+;521:		for( i = 0; i < s_controls.menu.nitems; i++ ) {
 ADDRLP4 12
 CNSTI4 0
 ASGNI4
-ADDRGP4 $304
+ADDRGP4 $298
 JUMPV
-LABELV $301
-line 534
-;534:			((menucommon_s*)(s_controls.menu.items[i]))->flags |= QMF_GRAYED;
+LABELV $295
+line 522
+;522:			((menucommon_s*)(s_controls.menu.items[i]))->flags |= QMF_GRAYED;
 ADDRLP4 28
 ADDRLP4 12
 INDIRI4
@@ -1729,26 +1693,26 @@ INDIRU4
 CNSTU4 8192
 BORU4
 ASGNU4
-line 535
-;535:		}
-LABELV $302
-line 533
+line 523
+;523:		}
+LABELV $296
+line 521
 ADDRLP4 12
 ADDRLP4 12
 INDIRI4
 CNSTI4 1
 ADDI4
 ASGNI4
-LABELV $304
+LABELV $298
 ADDRLP4 12
 INDIRI4
 ADDRGP4 s_controls+8
 INDIRI4
-LTI4 $301
-line 538
-;536:
-;537:		// enable action item
-;538:		((menucommon_s*)(s_controls.menu.items[s_controls.menu.cursor]))->flags &= ~QMF_GRAYED;
+LTI4 $295
+line 526
+;524:
+;525:		// enable action item
+;526:		((menucommon_s*)(s_controls.menu.items[s_controls.menu.cursor]))->flags &= ~QMF_GRAYED;
 ADDRLP4 28
 ADDRGP4 s_controls
 INDIRI4
@@ -1768,10 +1732,10 @@ INDIRU4
 CNSTU4 4294959103
 BANDU4
 ASGNU4
-line 541
-;539:
-;540:		// don't gray out player's name
-;541:		s_controls.name.generic.flags &= ~QMF_GRAYED;
+line 529
+;527:
+;528:		// don't gray out player's name
+;529:		s_controls.name.generic.flags &= ~QMF_GRAYED;
 ADDRLP4 32
 ADDRGP4 s_controls+4264+44
 ASGNP4
@@ -1783,25 +1747,25 @@ INDIRU4
 CNSTU4 4294959103
 BANDU4
 ASGNU4
-line 543
-;542:
-;543:		return;
-ADDRGP4 $280
+line 531
+;530:
+;531:		return;
+ADDRGP4 $274
 JUMPV
-LABELV $298
-line 547
-;544:	}
-;545:
-;546:	// enable everybody
-;547:	for( i = 0; i < s_controls.menu.nitems; i++ ) {
+LABELV $292
+line 535
+;532:	}
+;533:
+;534:	// enable everybody
+;535:	for( i = 0; i < s_controls.menu.nitems; i++ ) {
 ADDRLP4 12
 CNSTI4 0
 ASGNI4
-ADDRGP4 $313
+ADDRGP4 $307
 JUMPV
-LABELV $310
-line 548
-;548:		((menucommon_s*)(s_controls.menu.items[i]))->flags &= ~QMF_GRAYED;
+LABELV $304
+line 536
+;536:		((menucommon_s*)(s_controls.menu.items[i]))->flags &= ~QMF_GRAYED;
 ADDRLP4 28
 ADDRLP4 12
 INDIRI4
@@ -1821,26 +1785,26 @@ INDIRU4
 CNSTU4 4294959103
 BANDU4
 ASGNU4
-line 549
-;549:	}
-LABELV $311
-line 547
+line 537
+;537:	}
+LABELV $305
+line 535
 ADDRLP4 12
 ADDRLP4 12
 INDIRI4
 CNSTI4 1
 ADDI4
 ASGNI4
-LABELV $313
+LABELV $307
 ADDRLP4 12
 INDIRI4
 ADDRGP4 s_controls+8
 INDIRI4
-LTI4 $310
-line 552
-;550:
-;551:	// makes sure flags are right on the group selection controls
-;552:	s_controls.looking.generic.flags  &= ~(QMF_GRAYED|QMF_HIGHLIGHT|QMF_HIGHLIGHT_IF_FOCUS);
+LTI4 $304
+line 540
+;538:
+;539:	// makes sure flags are right on the group selection controls
+;540:	s_controls.looking.generic.flags  &= ~(QMF_GRAYED|QMF_HIGHLIGHT|QMF_HIGHLIGHT_IF_FOCUS);
 ADDRLP4 28
 ADDRGP4 s_controls+520+44
 ASGNP4
@@ -1852,8 +1816,8 @@ INDIRU4
 CNSTU4 4294958911
 BANDU4
 ASGNU4
-line 553
-;553:	s_controls.movement.generic.flags &= ~(QMF_GRAYED|QMF_HIGHLIGHT|QMF_HIGHLIGHT_IF_FOCUS);
+line 541
+;541:	s_controls.movement.generic.flags &= ~(QMF_GRAYED|QMF_HIGHLIGHT|QMF_HIGHLIGHT_IF_FOCUS);
 ADDRLP4 32
 ADDRGP4 s_controls+448+44
 ASGNP4
@@ -1865,8 +1829,8 @@ INDIRU4
 CNSTU4 4294958911
 BANDU4
 ASGNU4
-line 554
-;554:	s_controls.weapons.generic.flags  &= ~(QMF_GRAYED|QMF_HIGHLIGHT|QMF_HIGHLIGHT_IF_FOCUS);
+line 542
+;542:	s_controls.weapons.generic.flags  &= ~(QMF_GRAYED|QMF_HIGHLIGHT|QMF_HIGHLIGHT_IF_FOCUS);
 ADDRLP4 36
 ADDRGP4 s_controls+592+44
 ASGNP4
@@ -1878,8 +1842,8 @@ INDIRU4
 CNSTU4 4294958911
 BANDU4
 ASGNU4
-line 555
-;555:	s_controls.misc.generic.flags     &= ~(QMF_GRAYED|QMF_HIGHLIGHT|QMF_HIGHLIGHT_IF_FOCUS);
+line 543
+;543:	s_controls.misc.generic.flags     &= ~(QMF_GRAYED|QMF_HIGHLIGHT|QMF_HIGHLIGHT_IF_FOCUS);
 ADDRLP4 40
 ADDRGP4 s_controls+664+44
 ASGNP4
@@ -1891,9 +1855,9 @@ INDIRU4
 CNSTU4 4294958911
 BANDU4
 ASGNU4
-line 557
-;556:
-;557:	s_controls.looking.generic.flags  |= QMF_PULSEIFFOCUS;
+line 545
+;544:
+;545:	s_controls.looking.generic.flags  |= QMF_PULSEIFFOCUS;
 ADDRLP4 44
 ADDRGP4 s_controls+520+44
 ASGNP4
@@ -1905,8 +1869,8 @@ INDIRU4
 CNSTU4 256
 BORU4
 ASGNU4
-line 558
-;558:	s_controls.movement.generic.flags |= QMF_PULSEIFFOCUS;
+line 546
+;546:	s_controls.movement.generic.flags |= QMF_PULSEIFFOCUS;
 ADDRLP4 48
 ADDRGP4 s_controls+448+44
 ASGNP4
@@ -1918,8 +1882,8 @@ INDIRU4
 CNSTU4 256
 BORU4
 ASGNU4
-line 559
-;559:	s_controls.weapons.generic.flags  |= QMF_PULSEIFFOCUS;
+line 547
+;547:	s_controls.weapons.generic.flags  |= QMF_PULSEIFFOCUS;
 ADDRLP4 52
 ADDRGP4 s_controls+592+44
 ASGNP4
@@ -1931,8 +1895,8 @@ INDIRU4
 CNSTU4 256
 BORU4
 ASGNU4
-line 560
-;560:	s_controls.misc.generic.flags     |= QMF_PULSEIFFOCUS;
+line 548
+;548:	s_controls.misc.generic.flags     |= QMF_PULSEIFFOCUS;
 ADDRLP4 56
 ADDRGP4 s_controls+664+44
 ASGNP4
@@ -1944,10 +1908,10 @@ INDIRU4
 CNSTU4 256
 BORU4
 ASGNU4
-line 563
-;561:
-;562:	// set buttons
-;563:	switch( s_controls.section ) {
+line 551
+;549:
+;550:	// set buttons
+;551:	switch( s_controls.section ) {
 ADDRLP4 60
 ADDRGP4 s_controls+4064
 INDIRI4
@@ -1955,192 +1919,192 @@ ASGNI4
 ADDRLP4 60
 INDIRI4
 CNSTI4 0
-LTI4 $332
+LTI4 $326
 ADDRLP4 60
 INDIRI4
 CNSTI4 3
-GTI4 $332
+GTI4 $326
 ADDRLP4 60
 INDIRI4
 CNSTI4 2
 LSHI4
-ADDRGP4 $355
+ADDRGP4 $349
 ADDP4
 INDIRP4
 JUMPV
 lit
 align 4
-LABELV $355
-address $335
-address $340
-address $345
-address $350
+LABELV $349
+address $329
+address $334
+address $339
+address $344
 code
-LABELV $335
+LABELV $329
+line 553
+;552:	case C_MOVEMENT:
+;553:		s_controls.movement.generic.flags &= ~QMF_PULSEIFFOCUS;
+ADDRLP4 64
+ADDRGP4 s_controls+448+44
+ASGNP4
+ADDRLP4 64
+INDIRP4
+ADDRLP4 64
+INDIRP4
+INDIRU4
+CNSTU4 4294967039
+BANDU4
+ASGNU4
+line 554
+;554:		s_controls.movement.generic.flags |= (QMF_HIGHLIGHT|QMF_HIGHLIGHT_IF_FOCUS);
+ADDRLP4 68
+ADDRGP4 s_controls+448+44
+ASGNP4
+ADDRLP4 68
+INDIRP4
+ADDRLP4 68
+INDIRP4
+INDIRU4
+CNSTU4 192
+BORU4
+ASGNU4
+line 555
+;555:		break;
+ADDRGP4 $327
+JUMPV
+LABELV $334
+line 558
+;556:	
+;557:	case C_LOOKING:
+;558:		s_controls.looking.generic.flags &= ~QMF_PULSEIFFOCUS;
+ADDRLP4 72
+ADDRGP4 s_controls+520+44
+ASGNP4
+ADDRLP4 72
+INDIRP4
+ADDRLP4 72
+INDIRP4
+INDIRU4
+CNSTU4 4294967039
+BANDU4
+ASGNU4
+line 559
+;559:		s_controls.looking.generic.flags |= (QMF_HIGHLIGHT|QMF_HIGHLIGHT_IF_FOCUS);
+ADDRLP4 76
+ADDRGP4 s_controls+520+44
+ASGNP4
+ADDRLP4 76
+INDIRP4
+ADDRLP4 76
+INDIRP4
+INDIRU4
+CNSTU4 192
+BORU4
+ASGNU4
+line 560
+;560:		break;
+ADDRGP4 $327
+JUMPV
+LABELV $339
+line 563
+;561:	
+;562:	case C_WEAPONS:
+;563:		s_controls.weapons.generic.flags &= ~QMF_PULSEIFFOCUS;
+ADDRLP4 80
+ADDRGP4 s_controls+592+44
+ASGNP4
+ADDRLP4 80
+INDIRP4
+ADDRLP4 80
+INDIRP4
+INDIRU4
+CNSTU4 4294967039
+BANDU4
+ASGNU4
+line 564
+;564:		s_controls.weapons.generic.flags |= (QMF_HIGHLIGHT|QMF_HIGHLIGHT_IF_FOCUS);
+ADDRLP4 84
+ADDRGP4 s_controls+592+44
+ASGNP4
+ADDRLP4 84
+INDIRP4
+ADDRLP4 84
+INDIRP4
+INDIRU4
+CNSTU4 192
+BORU4
+ASGNU4
 line 565
-;564:	case C_MOVEMENT:
-;565:		s_controls.movement.generic.flags &= ~QMF_PULSEIFFOCUS;
-ADDRLP4 64
-ADDRGP4 s_controls+448+44
+;565:		break;		
+ADDRGP4 $327
+JUMPV
+LABELV $344
+line 568
+;566:
+;567:	case C_MISC:
+;568:		s_controls.misc.generic.flags &= ~QMF_PULSEIFFOCUS;
+ADDRLP4 88
+ADDRGP4 s_controls+664+44
 ASGNP4
-ADDRLP4 64
+ADDRLP4 88
 INDIRP4
-ADDRLP4 64
+ADDRLP4 88
 INDIRP4
 INDIRU4
 CNSTU4 4294967039
 BANDU4
 ASGNU4
-line 566
-;566:		s_controls.movement.generic.flags |= (QMF_HIGHLIGHT|QMF_HIGHLIGHT_IF_FOCUS);
-ADDRLP4 68
-ADDRGP4 s_controls+448+44
+line 569
+;569:		s_controls.misc.generic.flags |= (QMF_HIGHLIGHT|QMF_HIGHLIGHT_IF_FOCUS);
+ADDRLP4 92
+ADDRGP4 s_controls+664+44
 ASGNP4
-ADDRLP4 68
+ADDRLP4 92
 INDIRP4
-ADDRLP4 68
+ADDRLP4 92
 INDIRP4
 INDIRU4
 CNSTU4 192
 BORU4
 ASGNU4
-line 567
-;567:		break;
-ADDRGP4 $333
-JUMPV
-LABELV $340
 line 570
-;568:	
-;569:	case C_LOOKING:
-;570:		s_controls.looking.generic.flags &= ~QMF_PULSEIFFOCUS;
-ADDRLP4 72
-ADDRGP4 s_controls+520+44
-ASGNP4
-ADDRLP4 72
-INDIRP4
-ADDRLP4 72
-INDIRP4
-INDIRU4
-CNSTU4 4294967039
-BANDU4
-ASGNU4
-line 571
-;571:		s_controls.looking.generic.flags |= (QMF_HIGHLIGHT|QMF_HIGHLIGHT_IF_FOCUS);
-ADDRLP4 76
-ADDRGP4 s_controls+520+44
-ASGNP4
-ADDRLP4 76
-INDIRP4
-ADDRLP4 76
-INDIRP4
-INDIRU4
-CNSTU4 192
-BORU4
-ASGNU4
+;570:		break;
+LABELV $326
+LABELV $327
 line 572
-;572:		break;
-ADDRGP4 $333
-JUMPV
-LABELV $345
-line 575
-;573:	
-;574:	case C_WEAPONS:
-;575:		s_controls.weapons.generic.flags &= ~QMF_PULSEIFFOCUS;
-ADDRLP4 80
-ADDRGP4 s_controls+592+44
-ASGNP4
-ADDRLP4 80
-INDIRP4
-ADDRLP4 80
-INDIRP4
-INDIRU4
-CNSTU4 4294967039
-BANDU4
-ASGNU4
-line 576
-;576:		s_controls.weapons.generic.flags |= (QMF_HIGHLIGHT|QMF_HIGHLIGHT_IF_FOCUS);
-ADDRLP4 84
-ADDRGP4 s_controls+592+44
-ASGNP4
-ADDRLP4 84
-INDIRP4
-ADDRLP4 84
-INDIRP4
-INDIRU4
-CNSTU4 192
-BORU4
-ASGNU4
-line 577
-;577:		break;		
-ADDRGP4 $333
-JUMPV
-LABELV $350
-line 580
-;578:
-;579:	case C_MISC:
-;580:		s_controls.misc.generic.flags &= ~QMF_PULSEIFFOCUS;
-ADDRLP4 88
-ADDRGP4 s_controls+664+44
-ASGNP4
-ADDRLP4 88
-INDIRP4
-ADDRLP4 88
-INDIRP4
-INDIRU4
-CNSTU4 4294967039
-BANDU4
-ASGNU4
-line 581
-;581:		s_controls.misc.generic.flags |= (QMF_HIGHLIGHT|QMF_HIGHLIGHT_IF_FOCUS);
-ADDRLP4 92
-ADDRGP4 s_controls+664+44
-ASGNP4
-ADDRLP4 92
-INDIRP4
-ADDRLP4 92
-INDIRP4
-INDIRU4
-CNSTU4 192
-BORU4
-ASGNU4
-line 582
-;582:		break;
-LABELV $332
-LABELV $333
-line 584
-;583:	}
-;584:}
-LABELV $280
+;571:	}
+;572:}
+LABELV $274
 endproc Controls_Update 96 0
 proc Controls_DrawKeyBinding 120 20
-line 593
-;585:
-;586:
-;587:/*
-;588:=================
-;589:Controls_DrawKeyBinding
-;590:=================
-;591:*/
-;592:static void Controls_DrawKeyBinding( void *self )
-;593:{
-line 603
-;594:	menuaction_s*	a;
-;595:	int				x;
-;596:	int				y;
-;597:	int				b1;
-;598:	int				b2;
-;599:	qboolean		c;
-;600:	char			name[32];
-;601:	char			name2[32];
-;602:
-;603:	a = (menuaction_s*) self;
+line 581
+;573:
+;574:
+;575:/*
+;576:=================
+;577:Controls_DrawKeyBinding
+;578:=================
+;579:*/
+;580:static void Controls_DrawKeyBinding( void *self )
+;581:{
+line 591
+;582:	menuaction_s*	a;
+;583:	int				x;
+;584:	int				y;
+;585:	int				b1;
+;586:	int				b2;
+;587:	qboolean		c;
+;588:	char			name[32];
+;589:	char			name2[32];
+;590:
+;591:	a = (menuaction_s*) self;
 ADDRLP4 0
 ADDRFP4 0
 INDIRP4
 ASGNP4
-line 605
-;604:
-;605:	x =	a->generic.x;
+line 593
+;592:
+;593:	x =	a->generic.x;
 ADDRLP4 4
 ADDRLP4 0
 INDIRP4
@@ -2148,8 +2112,8 @@ CNSTI4 12
 ADDP4
 INDIRI4
 ASGNI4
-line 606
-;606:	y = a->generic.y;
+line 594
+;594:	y = a->generic.y;
 ADDRLP4 8
 ADDRLP4 0
 INDIRP4
@@ -2157,9 +2121,9 @@ CNSTI4 16
 ADDP4
 INDIRI4
 ASGNI4
-line 608
-;607:
-;608:	c = (Menu_ItemAtCursor( a->generic.parent ) == a);
+line 596
+;595:
+;596:	c = (Menu_ItemAtCursor( a->generic.parent ) == a);
 ADDRLP4 0
 INDIRP4
 CNSTI4 36
@@ -2176,24 +2140,24 @@ CVPU4 4
 ADDRLP4 96
 INDIRP4
 CVPU4 4
-NEU4 $358
+NEU4 $352
 ADDRLP4 88
 CNSTI4 1
 ASGNI4
-ADDRGP4 $359
+ADDRGP4 $353
 JUMPV
-LABELV $358
+LABELV $352
 ADDRLP4 88
 CNSTI4 0
 ASGNI4
-LABELV $359
+LABELV $353
 ADDRLP4 48
 ADDRLP4 88
 INDIRI4
 ASGNI4
-line 610
-;609:
-;610:	b1 = g_bindings[a->generic.id].bind1;
+line 598
+;597:
+;598:	b1 = g_bindings[a->generic.id].bind1;
 ADDRLP4 44
 ADDRLP4 0
 INDIRP4
@@ -2206,29 +2170,29 @@ ADDRGP4 g_bindings+24
 ADDP4
 INDIRI4
 ASGNI4
-line 611
-;611:	if (b1 == -1)
+line 599
+;599:	if (b1 == -1)
 ADDRLP4 44
 INDIRI4
 CNSTI4 -1
-NEI4 $361
-line 612
-;612:		strcpy(name,"???");
+NEI4 $355
+line 600
+;600:		strcpy(name,"???");
 ADDRLP4 12
 ARGP4
-ADDRGP4 $363
+ADDRGP4 $357
 ARGP4
 ADDRGP4 strcpy
 CALLP4
 pop
-ADDRGP4 $362
+ADDRGP4 $356
 JUMPV
-LABELV $361
-line 614
-;613:	else
-;614:	{
-line 615
-;615:		trap_Key_KeynumToStringBuf( b1, name, 32 );
+LABELV $355
+line 602
+;601:	else
+;602:	{
+line 603
+;603:		trap_Key_KeynumToStringBuf( b1, name, 32 );
 ADDRLP4 44
 INDIRI4
 ARGI4
@@ -2239,16 +2203,16 @@ ARGI4
 ADDRGP4 trap_Key_KeynumToStringBuf
 CALLV
 pop
-line 616
-;616:		Q_strupr(name);
+line 604
+;604:		Q_strupr(name);
 ADDRLP4 12
 ARGP4
 ADDRGP4 Q_strupr
 CALLP4
 pop
-line 618
-;617:
-;618:		b2 = g_bindings[a->generic.id].bind2;
+line 606
+;605:
+;606:		b2 = g_bindings[a->generic.id].bind2;
 ADDRLP4 52
 ADDRLP4 0
 INDIRP4
@@ -2261,16 +2225,16 @@ ADDRGP4 g_bindings+28
 ADDP4
 INDIRI4
 ASGNI4
-line 619
-;619:		if (b2 != -1)
+line 607
+;607:		if (b2 != -1)
 ADDRLP4 52
 INDIRI4
 CNSTI4 -1
-EQI4 $365
-line 620
-;620:		{
-line 621
-;621:			trap_Key_KeynumToStringBuf( b2, name2, 32 );
+EQI4 $359
+line 608
+;608:		{
+line 609
+;609:			trap_Key_KeynumToStringBuf( b2, name2, 32 );
 ADDRLP4 52
 INDIRI4
 ARGI4
@@ -2281,25 +2245,25 @@ ARGI4
 ADDRGP4 trap_Key_KeynumToStringBuf
 CALLV
 pop
-line 622
-;622:			Q_strupr(name2);
+line 610
+;610:			Q_strupr(name2);
 ADDRLP4 56
 ARGP4
 ADDRGP4 Q_strupr
 CALLP4
 pop
-line 624
-;623:
-;624:			strcat( name, " or " );
+line 612
+;611:
+;612:			strcat( name, " or " );
 ADDRLP4 12
 ARGP4
-ADDRGP4 $367
+ADDRGP4 $361
 ARGP4
 ADDRGP4 strcat
 CALLP4
 pop
-line 625
-;625:			strcat( name, name2 );
+line 613
+;613:			strcat( name, name2 );
 ADDRLP4 12
 ARGP4
 ADDRLP4 56
@@ -2307,23 +2271,23 @@ ARGP4
 ADDRGP4 strcat
 CALLP4
 pop
-line 626
-;626:		}
-LABELV $365
-line 627
-;627:	}
-LABELV $362
-line 629
-;628:
-;629:	if (c)
+line 614
+;614:		}
+LABELV $359
+line 615
+;615:	}
+LABELV $356
+line 617
+;616:
+;617:	if (c)
 ADDRLP4 48
 INDIRI4
 CNSTI4 0
-EQI4 $368
-line 630
-;630:	{
-line 631
-;631:		UI_FillRect( a->generic.left, a->generic.top, a->generic.right-a->generic.left+1, a->generic.bottom-a->generic.top+1, listbar_color ); 
+EQI4 $362
+line 618
+;618:	{
+line 619
+;619:		UI_FillRect( a->generic.left, a->generic.top, a->generic.right-a->generic.left+1, a->generic.bottom-a->generic.top+1, listbar_color ); 
 ADDRLP4 104
 ADDRLP4 0
 INDIRP4
@@ -2380,9 +2344,9 @@ ARGP4
 ADDRGP4 UI_FillRect
 CALLV
 pop
-line 633
-;632:
-;633:		UI_DrawString( x - SMALLCHAR_WIDTH, y, g_bindings[a->generic.id].label, UI_RIGHT|UI_SMALLFONT, text_color_highlight );
+line 621
+;620:
+;621:		UI_DrawString( x - SMALLCHAR_WIDTH, y, g_bindings[a->generic.id].label, UI_RIGHT|UI_SMALLFONT, text_color_highlight );
 ADDRLP4 116
 CNSTI4 8
 ASGNI4
@@ -2414,8 +2378,8 @@ ARGP4
 ADDRGP4 UI_DrawString
 CALLV
 pop
-line 634
-;634:		UI_DrawString( x + SMALLCHAR_WIDTH, y, name, UI_LEFT|UI_SMALLFONT|UI_PULSE, text_color_highlight );
+line 622
+;622:		UI_DrawString( x + SMALLCHAR_WIDTH, y, name, UI_LEFT|UI_SMALLFONT|UI_PULSE, text_color_highlight );
 ADDRLP4 4
 INDIRI4
 CNSTI4 8
@@ -2433,17 +2397,17 @@ ARGP4
 ADDRGP4 UI_DrawString
 CALLV
 pop
-line 636
-;635:
-;636:		if (s_controls.waitingforkey)
+line 624
+;623:
+;624:		if (s_controls.waitingforkey)
 ADDRGP4 s_controls+4068
 INDIRI4
 CNSTI4 0
-EQI4 $371
-line 637
-;637:		{
-line 638
-;638:			UI_DrawChar( x, y, '=', UI_CENTER|UI_BLINK|UI_SMALLFONT, text_color_highlight);
+EQI4 $365
+line 625
+;625:		{
+line 626
+;626:			UI_DrawChar( x, y, '=', UI_CENTER|UI_BLINK|UI_SMALLFONT, text_color_highlight);
 ADDRLP4 4
 INDIRI4
 ARGI4
@@ -2459,13 +2423,13 @@ ARGP4
 ADDRGP4 UI_DrawChar
 CALLV
 pop
-line 639
-;639:			UI_DrawString(SCREEN_WIDTH * 0.50, SCREEN_HEIGHT * 0.80, "Waiting for new key ... ESCAPE to cancel", UI_SMALLFONT|UI_CENTER|UI_PULSE, colorWhite );
+line 627
+;627:			UI_DrawString(SCREEN_WIDTH * 0.50, SCREEN_HEIGHT * 0.80, "Waiting for new key ... ESCAPE to cancel", UI_SMALLFONT|UI_CENTER|UI_PULSE, colorWhite );
 CNSTI4 320
 ARGI4
 CNSTI4 384
 ARGI4
-ADDRGP4 $374
+ADDRGP4 $368
 ARGP4
 CNSTI4 16401
 ARGI4
@@ -2474,16 +2438,16 @@ ARGP4
 ADDRGP4 UI_DrawString
 CALLV
 pop
-line 640
-;640:		}
-ADDRGP4 $369
+line 628
+;628:		}
+ADDRGP4 $363
 JUMPV
-LABELV $371
-line 642
-;641:		else
-;642:		{
-line 643
-;643:			UI_DrawChar( x, y, 13, UI_CENTER|UI_BLINK|UI_SMALLFONT, text_color_highlight);
+LABELV $365
+line 630
+;629:		else
+;630:		{
+line 631
+;631:			UI_DrawChar( x, y, 13, UI_CENTER|UI_BLINK|UI_SMALLFONT, text_color_highlight);
 ADDRLP4 4
 INDIRI4
 ARGI4
@@ -2499,13 +2463,13 @@ ARGP4
 ADDRGP4 UI_DrawChar
 CALLV
 pop
-line 644
-;644:			UI_DrawString(SCREEN_WIDTH * 0.50, SCREEN_HEIGHT * 0.78, "Press ENTER or CLICK to change", UI_SMALLFONT|UI_CENTER, colorWhite );
+line 632
+;632:			UI_DrawString(SCREEN_WIDTH * 0.50, SCREEN_HEIGHT * 0.78, "Press ENTER or CLICK to change", UI_SMALLFONT|UI_CENTER, colorWhite );
 CNSTI4 320
 ARGI4
 CNSTI4 374
 ARGI4
-ADDRGP4 $375
+ADDRGP4 $369
 ARGP4
 CNSTI4 17
 ARGI4
@@ -2514,11 +2478,181 @@ ARGP4
 ADDRGP4 UI_DrawString
 CALLV
 pop
-line 645
-;645:			UI_DrawString(SCREEN_WIDTH * 0.50, SCREEN_HEIGHT * 0.82, "Press BACKSPACE to clear", UI_SMALLFONT|UI_CENTER, colorWhite );
+line 633
+;633:			UI_DrawString(SCREEN_WIDTH * 0.50, SCREEN_HEIGHT * 0.82, "Press BACKSPACE to clear", UI_SMALLFONT|UI_CENTER, colorWhite );
 CNSTI4 320
 ARGI4
 CNSTI4 393
+ARGI4
+ADDRGP4 $370
+ARGP4
+CNSTI4 17
+ARGI4
+ADDRGP4 colorWhite
+ARGP4
+ADDRGP4 UI_DrawString
+CALLV
+pop
+line 634
+;634:		}
+line 635
+;635:	}
+ADDRGP4 $363
+JUMPV
+LABELV $362
+line 637
+;636:	else
+;637:	{
+line 638
+;638:		if (a->generic.flags & QMF_GRAYED)
+ADDRLP4 0
+INDIRP4
+CNSTI4 44
+ADDP4
+INDIRU4
+CNSTU4 8192
+BANDU4
+CNSTU4 0
+EQU4 $371
+line 639
+;639:		{
+line 640
+;640:			UI_DrawString( x - SMALLCHAR_WIDTH, y, g_bindings[a->generic.id].label, UI_RIGHT|UI_SMALLFONT, text_color_disabled );
+ADDRLP4 100
+CNSTI4 8
+ASGNI4
+ADDRLP4 4
+INDIRI4
+ADDRLP4 100
+INDIRI4
+SUBI4
+ARGI4
+ADDRLP4 8
+INDIRI4
+ARGI4
+ADDRLP4 0
+INDIRP4
+ADDRLP4 100
+INDIRI4
+ADDP4
+INDIRI4
+CNSTI4 5
+LSHI4
+ADDRGP4 g_bindings+4
+ADDP4
+INDIRP4
+ARGP4
+CNSTI4 18
+ARGI4
+ADDRGP4 text_color_disabled
+ARGP4
+ADDRGP4 UI_DrawString
+CALLV
+pop
+line 641
+;641:			UI_DrawString( x + SMALLCHAR_WIDTH, y, name, UI_LEFT|UI_SMALLFONT, text_color_disabled );
+ADDRLP4 4
+INDIRI4
+CNSTI4 8
+ADDI4
+ARGI4
+ADDRLP4 8
+INDIRI4
+ARGI4
+ADDRLP4 12
+ARGP4
+CNSTI4 16
+ARGI4
+ADDRGP4 text_color_disabled
+ARGP4
+ADDRGP4 UI_DrawString
+CALLV
+pop
+line 642
+;642:		}
+ADDRGP4 $372
+JUMPV
+LABELV $371
+line 644
+;643:		else
+;644:		{
+line 645
+;645:			UI_DrawString( x - SMALLCHAR_WIDTH, y, g_bindings[a->generic.id].label, UI_RIGHT|UI_SMALLFONT, controls_binding_color );
+ADDRLP4 100
+CNSTI4 8
+ASGNI4
+ADDRLP4 4
+INDIRI4
+ADDRLP4 100
+INDIRI4
+SUBI4
+ARGI4
+ADDRLP4 8
+INDIRI4
+ARGI4
+ADDRLP4 0
+INDIRP4
+ADDRLP4 100
+INDIRI4
+ADDP4
+INDIRI4
+CNSTI4 5
+LSHI4
+ADDRGP4 g_bindings+4
+ADDP4
+INDIRP4
+ARGP4
+CNSTI4 18
+ARGI4
+ADDRGP4 controls_binding_color
+ARGP4
+ADDRGP4 UI_DrawString
+CALLV
+pop
+line 646
+;646:			UI_DrawString( x + SMALLCHAR_WIDTH, y, name, UI_LEFT|UI_SMALLFONT, controls_binding_color );
+ADDRLP4 4
+INDIRI4
+CNSTI4 8
+ADDI4
+ARGI4
+ADDRLP4 8
+INDIRI4
+ARGI4
+ADDRLP4 12
+ARGP4
+CNSTI4 16
+ARGI4
+ADDRGP4 controls_binding_color
+ARGP4
+ADDRGP4 UI_DrawString
+CALLV
+pop
+line 647
+;647:		}
+LABELV $372
+line 648
+;648:	}
+LABELV $363
+line 649
+;649:}
+LABELV $350
+endproc Controls_DrawKeyBinding 120 20
+proc Controls_StatusBar 0 20
+line 657
+;650:
+;651:/*
+;652:=================
+;653:Controls_StatusBar
+;654:=================
+;655:*/
+;656:static void Controls_StatusBar( void *self )
+;657:{
+line 658
+;658:	UI_DrawString(SCREEN_WIDTH * 0.50, SCREEN_HEIGHT * 0.80, "Use Arrow Keys or CLICK to change", UI_SMALLFONT|UI_CENTER, colorWhite );
+CNSTI4 320
+ARGI4
+CNSTI4 384
 ARGI4
 ADDRGP4 $376
 ARGP4
@@ -2529,196 +2663,26 @@ ARGP4
 ADDRGP4 UI_DrawString
 CALLV
 pop
-line 646
-;646:		}
-line 647
-;647:	}
-ADDRGP4 $369
-JUMPV
-LABELV $368
-line 649
-;648:	else
-;649:	{
-line 650
-;650:		if (a->generic.flags & QMF_GRAYED)
-ADDRLP4 0
-INDIRP4
-CNSTI4 44
-ADDP4
-INDIRU4
-CNSTU4 8192
-BANDU4
-CNSTU4 0
-EQU4 $377
-line 651
-;651:		{
-line 652
-;652:			UI_DrawString( x - SMALLCHAR_WIDTH, y, g_bindings[a->generic.id].label, UI_RIGHT|UI_SMALLFONT, text_color_disabled );
-ADDRLP4 100
-CNSTI4 8
-ASGNI4
-ADDRLP4 4
-INDIRI4
-ADDRLP4 100
-INDIRI4
-SUBI4
-ARGI4
-ADDRLP4 8
-INDIRI4
-ARGI4
-ADDRLP4 0
-INDIRP4
-ADDRLP4 100
-INDIRI4
-ADDP4
-INDIRI4
-CNSTI4 5
-LSHI4
-ADDRGP4 g_bindings+4
-ADDP4
-INDIRP4
-ARGP4
-CNSTI4 18
-ARGI4
-ADDRGP4 text_color_disabled
-ARGP4
-ADDRGP4 UI_DrawString
-CALLV
-pop
-line 653
-;653:			UI_DrawString( x + SMALLCHAR_WIDTH, y, name, UI_LEFT|UI_SMALLFONT, text_color_disabled );
-ADDRLP4 4
-INDIRI4
-CNSTI4 8
-ADDI4
-ARGI4
-ADDRLP4 8
-INDIRI4
-ARGI4
-ADDRLP4 12
-ARGP4
-CNSTI4 16
-ARGI4
-ADDRGP4 text_color_disabled
-ARGP4
-ADDRGP4 UI_DrawString
-CALLV
-pop
-line 654
-;654:		}
-ADDRGP4 $378
-JUMPV
-LABELV $377
-line 656
-;655:		else
-;656:		{
-line 657
-;657:			UI_DrawString( x - SMALLCHAR_WIDTH, y, g_bindings[a->generic.id].label, UI_RIGHT|UI_SMALLFONT, controls_binding_color );
-ADDRLP4 100
-CNSTI4 8
-ASGNI4
-ADDRLP4 4
-INDIRI4
-ADDRLP4 100
-INDIRI4
-SUBI4
-ARGI4
-ADDRLP4 8
-INDIRI4
-ARGI4
-ADDRLP4 0
-INDIRP4
-ADDRLP4 100
-INDIRI4
-ADDP4
-INDIRI4
-CNSTI4 5
-LSHI4
-ADDRGP4 g_bindings+4
-ADDP4
-INDIRP4
-ARGP4
-CNSTI4 18
-ARGI4
-ADDRGP4 controls_binding_color
-ARGP4
-ADDRGP4 UI_DrawString
-CALLV
-pop
-line 658
-;658:			UI_DrawString( x + SMALLCHAR_WIDTH, y, name, UI_LEFT|UI_SMALLFONT, controls_binding_color );
-ADDRLP4 4
-INDIRI4
-CNSTI4 8
-ADDI4
-ARGI4
-ADDRLP4 8
-INDIRI4
-ARGI4
-ADDRLP4 12
-ARGP4
-CNSTI4 16
-ARGI4
-ADDRGP4 controls_binding_color
-ARGP4
-ADDRGP4 UI_DrawString
-CALLV
-pop
 line 659
-;659:		}
-LABELV $378
-line 660
-;660:	}
-LABELV $369
-line 661
-;661:}
-LABELV $356
-endproc Controls_DrawKeyBinding 120 20
-proc Controls_StatusBar 0 20
-line 669
-;662:
-;663:/*
-;664:=================
-;665:Controls_StatusBar
-;666:=================
-;667:*/
-;668:static void Controls_StatusBar( void *self )
-;669:{
-line 670
-;670:	UI_DrawString(SCREEN_WIDTH * 0.50, SCREEN_HEIGHT * 0.80, "Use Arrow Keys or CLICK to change", UI_SMALLFONT|UI_CENTER, colorWhite );
-CNSTI4 320
-ARGI4
-CNSTI4 384
-ARGI4
-ADDRGP4 $382
-ARGP4
-CNSTI4 17
-ARGI4
-ADDRGP4 colorWhite
-ARGP4
-ADDRGP4 UI_DrawString
-CALLV
-pop
-line 671
-;671:}
-LABELV $381
+;659:}
+LABELV $375
 endproc Controls_StatusBar 0 20
 proc Controls_DrawPlayer 76 24
-line 679
-;672:
-;673:
-;674:/*
-;675:=================
-;676:Controls_DrawPlayer
-;677:=================
-;678:*/
-;679:static void Controls_DrawPlayer( void *self ) {
-line 683
-;680:	menubitmap_s	*b;
-;681:	char			buf[MAX_QPATH];
-;682:
-;683:	trap_Cvar_VariableStringBuffer( "model", buf, sizeof( buf ) );
-ADDRGP4 $384
+line 667
+;660:
+;661:
+;662:/*
+;663:=================
+;664:Controls_DrawPlayer
+;665:=================
+;666:*/
+;667:static void Controls_DrawPlayer( void *self ) {
+line 671
+;668:	menubitmap_s	*b;
+;669:	char			buf[MAX_QPATH];
+;670:
+;671:	trap_Cvar_VariableStringBuffer( "model", buf, sizeof( buf ) );
+ADDRGP4 $378
 ARGP4
 ADDRLP4 4
 ARGP4
@@ -2727,8 +2691,8 @@ ARGI4
 ADDRGP4 trap_Cvar_VariableStringBuffer
 CALLV
 pop
-line 684
-;684:	if ( strcmp( buf, s_controls.playerModel ) != 0 ) {
+line 672
+;672:	if ( strcmp( buf, s_controls.playerModel ) != 0 ) {
 ADDRLP4 4
 ARGP4
 ADDRGP4 s_controls+4072
@@ -2740,9 +2704,9 @@ ASGNI4
 ADDRLP4 68
 INDIRI4
 CNSTI4 0
-EQI4 $385
-line 685
-;685:		UI_PlayerInfo_SetModel( &s_controls.playerinfo, buf );
+EQI4 $379
+line 673
+;673:		UI_PlayerInfo_SetModel( &s_controls.playerinfo, buf );
 ADDRGP4 s_controls+2572
 ARGP4
 ADDRLP4 4
@@ -2750,8 +2714,8 @@ ARGP4
 ADDRGP4 UI_PlayerInfo_SetModel
 CALLV
 pop
-line 686
-;686:		strcpy( s_controls.playerModel, buf );
+line 674
+;674:		strcpy( s_controls.playerModel, buf );
 ADDRGP4 s_controls+4072
 ARGP4
 ADDRLP4 4
@@ -2759,25 +2723,25 @@ ARGP4
 ADDRGP4 strcpy
 CALLP4
 pop
-line 687
-;687:		Controls_UpdateModel( ANIM_IDLE );
+line 675
+;675:		Controls_UpdateModel( ANIM_IDLE );
 CNSTI4 0
 ARGI4
 ADDRGP4 Controls_UpdateModel
 CALLV
 pop
-line 688
-;688:	}
-LABELV $385
-line 690
-;689:
-;690:	b = (menubitmap_s*) self;
+line 676
+;676:	}
+LABELV $379
+line 678
+;677:
+;678:	b = (menubitmap_s*) self;
 ADDRLP4 0
 ADDRFP4 0
 INDIRP4
 ASGNP4
-line 691
-;691:	UI_DrawPlayer( b->generic.x, b->generic.y, b->width, b->height, &s_controls.playerinfo, uis.realtime/2 );
+line 679
+;679:	UI_DrawPlayer( b->generic.x, b->generic.y, b->width, b->height, &s_controls.playerinfo, uis.realtime/2 );
 ADDRLP4 0
 INDIRP4
 CNSTI4 12
@@ -2816,27 +2780,27 @@ ARGI4
 ADDRGP4 UI_DrawPlayer
 CALLV
 pop
-line 692
-;692:}
-LABELV $383
+line 680
+;680:}
+LABELV $377
 endproc Controls_DrawPlayer 76 24
 proc Controls_GetKeyAssignment 276 12
-line 701
+line 689
+;681:
+;682:
+;683:/*
+;684:=================
+;685:Controls_GetKeyAssignment
+;686:=================
+;687:*/
+;688:static void Controls_GetKeyAssignment (char *command, int *twokeys)
+;689:{
+line 694
+;690:	int		count;
+;691:	int		j;
+;692:	char	b[256];
 ;693:
-;694:
-;695:/*
-;696:=================
-;697:Controls_GetKeyAssignment
-;698:=================
-;699:*/
-;700:static void Controls_GetKeyAssignment (char *command, int *twokeys)
-;701:{
-line 706
-;702:	int		count;
-;703:	int		j;
-;704:	char	b[256];
-;705:
-;706:	twokeys[0] = twokeys[1] = -1;
+;694:	twokeys[0] = twokeys[1] = -1;
 ADDRLP4 264
 ADDRFP4 4
 INDIRP4
@@ -2856,22 +2820,22 @@ INDIRP4
 ADDRLP4 268
 INDIRI4
 ASGNI4
-line 707
-;707:	count = 0;
+line 695
+;695:	count = 0;
 ADDRLP4 260
 CNSTI4 0
 ASGNI4
-line 709
-;708:
-;709:	for ( j = 0; j < 256; j++ )
+line 697
+;696:
+;697:	for ( j = 0; j < 256; j++ )
 ADDRLP4 0
 CNSTI4 0
 ASGNI4
-LABELV $393
-line 710
-;710:	{
-line 711
-;711:		trap_Key_GetBindingBuf( j, b, 256 );
+LABELV $387
+line 698
+;698:	{
+line 699
+;699:		trap_Key_GetBindingBuf( j, b, 256 );
 ADDRLP4 0
 INDIRI4
 ARGI4
@@ -2882,21 +2846,21 @@ ARGI4
 ADDRGP4 trap_Key_GetBindingBuf
 CALLV
 pop
-line 712
-;712:		if ( *b == 0 ) {
+line 700
+;700:		if ( *b == 0 ) {
 ADDRLP4 4
 INDIRI1
 CVII4 1
 CNSTI4 0
-NEI4 $397
-line 713
-;713:			continue;
-ADDRGP4 $394
+NEI4 $391
+line 701
+;701:			continue;
+ADDRGP4 $388
 JUMPV
-LABELV $397
-line 715
-;714:		}
-;715:		if ( !Q_stricmp( b, command ) ) {
+LABELV $391
+line 703
+;702:		}
+;703:		if ( !Q_stricmp( b, command ) ) {
 ADDRLP4 4
 ARGP4
 ADDRFP4 0
@@ -2909,9 +2873,9 @@ ASGNI4
 ADDRLP4 272
 INDIRI4
 CNSTI4 0
-NEI4 $399
-line 716
-;716:			twokeys[count] = j;
+NEI4 $393
+line 704
+;704:			twokeys[count] = j;
 ADDRLP4 260
 INDIRI4
 CNSTI4 2
@@ -2922,32 +2886,32 @@ ADDP4
 ADDRLP4 0
 INDIRI4
 ASGNI4
-line 717
-;717:			count++;
+line 705
+;705:			count++;
 ADDRLP4 260
 ADDRLP4 260
 INDIRI4
 CNSTI4 1
 ADDI4
 ASGNI4
-line 718
-;718:			if (count == 2)
+line 706
+;706:			if (count == 2)
 ADDRLP4 260
 INDIRI4
 CNSTI4 2
-NEI4 $401
-line 719
-;719:				break;
-ADDRGP4 $395
+NEI4 $395
+line 707
+;707:				break;
+ADDRGP4 $389
 JUMPV
-LABELV $401
-line 720
-;720:		}
-LABELV $399
-line 721
-;721:	}
-LABELV $394
+LABELV $395
+line 708
+;708:		}
+LABELV $393
 line 709
+;709:	}
+LABELV $388
+line 697
 ADDRLP4 0
 ADDRLP4 0
 INDIRI4
@@ -2957,44 +2921,44 @@ ASGNI4
 ADDRLP4 0
 INDIRI4
 CNSTI4 256
-LTI4 $393
-LABELV $395
-line 722
-;722:}
-LABELV $392
+LTI4 $387
+LABELV $389
+line 710
+;710:}
+LABELV $386
 endproc Controls_GetKeyAssignment 276 12
 proc Controls_GetConfig 56 12
-line 730
-;723:
-;724:/*
-;725:=================
-;726:Controls_GetConfig
-;727:=================
-;728:*/
-;729:static void Controls_GetConfig( void )
-;730:{
-line 736
-;731:	int		i;
-;732:	int		twokeys[2];
-;733:	bind_t*	bindptr;
-;734:
-;735:	// put the bindings into a local store
-;736:	bindptr = g_bindings;
+line 718
+;711:
+;712:/*
+;713:=================
+;714:Controls_GetConfig
+;715:=================
+;716:*/
+;717:static void Controls_GetConfig( void )
+;718:{
+line 724
+;719:	int		i;
+;720:	int		twokeys[2];
+;721:	bind_t*	bindptr;
+;722:
+;723:	// put the bindings into a local store
+;724:	bindptr = g_bindings;
 ADDRLP4 0
 ADDRGP4 g_bindings
 ASGNP4
-line 739
-;737:
-;738:	// iterate each command, get its numeric binding
-;739:	for (i=0; ;i++,bindptr++)
+line 727
+;725:
+;726:	// iterate each command, get its numeric binding
+;727:	for (i=0; ;i++,bindptr++)
 ADDRLP4 12
 CNSTI4 0
 ASGNI4
-LABELV $404
-line 740
-;740:	{
-line 741
-;741:		if (!bindptr->label)
+LABELV $398
+line 728
+;728:	{
+line 729
+;729:		if (!bindptr->label)
 ADDRLP4 0
 INDIRP4
 CNSTI4 4
@@ -3002,15 +2966,15 @@ ADDP4
 INDIRP4
 CVPU4 4
 CNSTU4 0
-NEU4 $408
-line 742
-;742:			break;
-ADDRGP4 $406
+NEU4 $402
+line 730
+;730:			break;
+ADDRGP4 $400
 JUMPV
-LABELV $408
-line 744
-;743:
-;744:		Controls_GetKeyAssignment(bindptr->command, twokeys);
+LABELV $402
+line 732
+;731:
+;732:		Controls_GetKeyAssignment(bindptr->command, twokeys);
 ADDRLP4 0
 INDIRP4
 INDIRP4
@@ -3020,9 +2984,9 @@ ARGP4
 ADDRGP4 Controls_GetKeyAssignment
 CALLV
 pop
-line 746
-;745:
-;746:		bindptr->bind1 = twokeys[0];
+line 734
+;733:
+;734:		bindptr->bind1 = twokeys[0];
 ADDRLP4 0
 INDIRP4
 CNSTI4 24
@@ -3030,8 +2994,8 @@ ADDP4
 ADDRLP4 4
 INDIRI4
 ASGNI4
-line 747
-;747:		bindptr->bind2 = twokeys[1];
+line 735
+;735:		bindptr->bind2 = twokeys[1];
 ADDRLP4 0
 INDIRP4
 CNSTI4 28
@@ -3039,10 +3003,10 @@ ADDP4
 ADDRLP4 4+4
 INDIRI4
 ASGNI4
-line 748
-;748:	}
-LABELV $405
-line 739
+line 736
+;736:	}
+LABELV $399
+line 727
 ADDRLP4 12
 ADDRLP4 12
 INDIRI4
@@ -3055,12 +3019,12 @@ INDIRP4
 CNSTI4 32
 ADDP4
 ASGNP4
-ADDRGP4 $404
+ADDRGP4 $398
 JUMPV
-LABELV $406
-line 750
-;749:
-;750:	s_controls.invertmouse.curvalue  = Controls_GetCvarValue( "m_pitch" ) < 0;
+LABELV $400
+line 738
+;737:
+;738:	s_controls.invertmouse.curvalue  = Controls_GetCvarValue( "m_pitch" ) < 0;
 ADDRGP4 $138
 ARGP4
 ADDRLP4 20
@@ -3070,23 +3034,23 @@ ASGNF4
 ADDRLP4 20
 INDIRF4
 CNSTF4 0
-GEF4 $414
+GEF4 $408
 ADDRLP4 16
 CNSTI4 1
 ASGNI4
-ADDRGP4 $415
+ADDRGP4 $409
 JUMPV
-LABELV $414
+LABELV $408
 ADDRLP4 16
 CNSTI4 0
 ASGNI4
-LABELV $415
+LABELV $409
 ADDRGP4 s_controls+2120+60
 ADDRLP4 16
 INDIRI4
 ASGNI4
-line 751
-;751:	s_controls.smoothmouse.curvalue  = UI_ClampCvar( 0, 1, Controls_GetCvarValue( "m_filter" ) );	
+line 739
+;739:	s_controls.smoothmouse.curvalue  = UI_ClampCvar( 0, 1, Controls_GetCvarValue( "m_filter" ) );	
 ADDRGP4 $141
 ARGP4
 ADDRLP4 24
@@ -3109,8 +3073,8 @@ ADDRLP4 28
 INDIRF4
 CVFI4 4
 ASGNI4
-line 752
-;752:	s_controls.autoswitch.curvalue   = UI_ClampCvar( 0, 1, Controls_GetCvarValue( "cg_autoswitch" ) );
+line 740
+;740:	s_controls.autoswitch.curvalue   = UI_ClampCvar( 0, 1, Controls_GetCvarValue( "cg_autoswitch" ) );
 ADDRGP4 $139
 ARGP4
 ADDRLP4 32
@@ -3133,8 +3097,8 @@ ADDRLP4 36
 INDIRF4
 CVFI4 4
 ASGNI4
-line 753
-;753:	s_controls.sensitivity.curvalue  = UI_ClampCvar( 2, 30, Controls_GetCvarValue( "sensitivity" ) );
+line 741
+;741:	s_controls.sensitivity.curvalue  = UI_ClampCvar( 2, 30, Controls_GetCvarValue( "sensitivity" ) );
 ADDRGP4 $140
 ARGP4
 ADDRLP4 40
@@ -3156,10 +3120,10 @@ ADDRGP4 s_controls+2184+68
 ADDRLP4 44
 INDIRF4
 ASGNF4
-line 756
-;754://	s_controls.joyenable.curvalue    = UI_ClampCvar( 0, 1, Controls_GetCvarValue( "in_joystick" ) );
-;755://	s_controls.joythreshold.curvalue = UI_ClampCvar( 0.05f, 0.75f, Controls_GetCvarValue( "joy_threshold" ) );
-;756:	s_controls.freelook.curvalue     = UI_ClampCvar( 0, 1, Controls_GetCvarValue( "cl_freelook" ) );
+line 744
+;742://	s_controls.joyenable.curvalue    = UI_ClampCvar( 0, 1, Controls_GetCvarValue( "in_joystick" ) );
+;743://	s_controls.joythreshold.curvalue = UI_ClampCvar( 0.05f, 0.75f, Controls_GetCvarValue( "joy_threshold" ) );
+;744:	s_controls.freelook.curvalue     = UI_ClampCvar( 0, 1, Controls_GetCvarValue( "cl_freelook" ) );
 ADDRGP4 $142
 ARGP4
 ADDRLP4 48
@@ -3182,41 +3146,41 @@ ADDRLP4 52
 INDIRF4
 CVFI4 4
 ASGNI4
-line 757
-;757:}
-LABELV $403
+line 745
+;745:}
+LABELV $397
 endproc Controls_GetConfig 56 12
 proc Controls_SetConfig 24 8
-line 765
-;758:
-;759:/*
-;760:=================
-;761:Controls_SetConfig
-;762:=================
-;763:*/
-;764:static void Controls_SetConfig( void )
-;765:{
-line 770
-;766:	int		i;
-;767:	bind_t*	bindptr;
-;768:
-;769:	// set the bindings from the local store
-;770:	bindptr = g_bindings;
+line 753
+;746:
+;747:/*
+;748:=================
+;749:Controls_SetConfig
+;750:=================
+;751:*/
+;752:static void Controls_SetConfig( void )
+;753:{
+line 758
+;754:	int		i;
+;755:	bind_t*	bindptr;
+;756:
+;757:	// set the bindings from the local store
+;758:	bindptr = g_bindings;
 ADDRLP4 0
 ADDRGP4 g_bindings
 ASGNP4
-line 773
-;771:
-;772:	// iterate each command, get its numeric binding
-;773:	for (i=0; ;i++,bindptr++)
+line 761
+;759:
+;760:	// iterate each command, get its numeric binding
+;761:	for (i=0; ;i++,bindptr++)
 ADDRLP4 4
 CNSTI4 0
 ASGNI4
-LABELV $425
-line 774
-;774:	{
-line 775
-;775:		if (!bindptr->label)
+LABELV $419
+line 762
+;762:	{
+line 763
+;763:		if (!bindptr->label)
 ADDRLP4 0
 INDIRP4
 CNSTI4 4
@@ -3224,26 +3188,26 @@ ADDP4
 INDIRP4
 CVPU4 4
 CNSTU4 0
-NEU4 $429
-line 776
-;776:			break;
-ADDRGP4 $427
+NEU4 $423
+line 764
+;764:			break;
+ADDRGP4 $421
 JUMPV
-LABELV $429
-line 778
-;777:
-;778:		if (bindptr->bind1 != -1)
+LABELV $423
+line 766
+;765:
+;766:		if (bindptr->bind1 != -1)
 ADDRLP4 0
 INDIRP4
 CNSTI4 24
 ADDP4
 INDIRI4
 CNSTI4 -1
-EQI4 $431
-line 779
-;779:		{	
-line 780
-;780:			trap_Key_SetBinding( bindptr->bind1, bindptr->command );
+EQI4 $425
+line 767
+;767:		{	
+line 768
+;768:			trap_Key_SetBinding( bindptr->bind1, bindptr->command );
 ADDRLP4 0
 INDIRP4
 CNSTI4 24
@@ -3257,18 +3221,18 @@ ARGP4
 ADDRGP4 trap_Key_SetBinding
 CALLV
 pop
-line 782
-;781:
-;782:			if (bindptr->bind2 != -1)
+line 770
+;769:
+;770:			if (bindptr->bind2 != -1)
 ADDRLP4 0
 INDIRP4
 CNSTI4 28
 ADDP4
 INDIRI4
 CNSTI4 -1
-EQI4 $433
-line 783
-;783:				trap_Key_SetBinding( bindptr->bind2, bindptr->command );
+EQI4 $427
+line 771
+;771:				trap_Key_SetBinding( bindptr->bind2, bindptr->command );
 ADDRLP4 0
 INDIRP4
 CNSTI4 28
@@ -3282,14 +3246,14 @@ ARGP4
 ADDRGP4 trap_Key_SetBinding
 CALLV
 pop
-LABELV $433
-line 784
-;784:		}
-LABELV $431
-line 785
-;785:	}
-LABELV $426
+LABELV $427
+line 772
+;772:		}
+LABELV $425
 line 773
+;773:	}
+LABELV $420
+line 761
 ADDRLP4 4
 ADDRLP4 4
 INDIRI4
@@ -3302,18 +3266,18 @@ INDIRP4
 CNSTI4 32
 ADDP4
 ASGNP4
-ADDRGP4 $425
+ADDRGP4 $419
 JUMPV
-LABELV $427
-line 787
-;786:
-;787:	if ( s_controls.invertmouse.curvalue )
+LABELV $421
+line 775
+;774:
+;775:	if ( s_controls.invertmouse.curvalue )
 ADDRGP4 s_controls+2120+60
 INDIRI4
 CNSTI4 0
-EQI4 $435
-line 788
-;788:		trap_Cvar_SetValue( "m_pitch", -fabs( trap_Cvar_VariableValue( "m_pitch" ) ) );
+EQI4 $429
+line 776
+;776:		trap_Cvar_SetValue( "m_pitch", -fabs( trap_Cvar_VariableValue( "m_pitch" ) ) );
 ADDRGP4 $138
 ARGP4
 ADDRLP4 8
@@ -3336,12 +3300,12 @@ ARGF4
 ADDRGP4 trap_Cvar_SetValue
 CALLV
 pop
-ADDRGP4 $436
+ADDRGP4 $430
 JUMPV
-LABELV $435
-line 790
-;789:	else
-;790:		trap_Cvar_SetValue( "m_pitch", fabs( trap_Cvar_VariableValue( "m_pitch" ) ) );
+LABELV $429
+line 778
+;777:	else
+;778:		trap_Cvar_SetValue( "m_pitch", fabs( trap_Cvar_VariableValue( "m_pitch" ) ) );
 ADDRGP4 $138
 ARGP4
 ADDRLP4 16
@@ -3363,10 +3327,10 @@ ARGF4
 ADDRGP4 trap_Cvar_SetValue
 CALLV
 pop
-LABELV $436
-line 792
-;791:
-;792:	trap_Cvar_SetValue( "m_filter", s_controls.smoothmouse.curvalue );
+LABELV $430
+line 780
+;779:
+;780:	trap_Cvar_SetValue( "m_filter", s_controls.smoothmouse.curvalue );
 ADDRGP4 $141
 ARGP4
 ADDRGP4 s_controls+2260+60
@@ -3376,9 +3340,9 @@ ARGF4
 ADDRGP4 trap_Cvar_SetValue
 CALLV
 pop
-line 793
-;793:	trap_Cvar_SetValue( "cl_run", s_controls.alwaysrun.curvalue );
-ADDRGP4 $441
+line 781
+;781:	trap_Cvar_SetValue( "cl_run", s_controls.alwaysrun.curvalue );
+ADDRGP4 $435
 ARGP4
 ADDRGP4 s_controls+2324+60
 INDIRI4
@@ -3387,8 +3351,8 @@ ARGF4
 ADDRGP4 trap_Cvar_SetValue
 CALLV
 pop
-line 794
-;794:	trap_Cvar_SetValue( "cg_autoswitch", s_controls.autoswitch.curvalue );
+line 782
+;782:	trap_Cvar_SetValue( "cg_autoswitch", s_controls.autoswitch.curvalue );
 ADDRGP4 $139
 ARGP4
 ADDRGP4 s_controls+2448+60
@@ -3398,8 +3362,8 @@ ARGF4
 ADDRGP4 trap_Cvar_SetValue
 CALLV
 pop
-line 795
-;795:	trap_Cvar_SetValue( "sensitivity", s_controls.sensitivity.curvalue );
+line 783
+;783:	trap_Cvar_SetValue( "sensitivity", s_controls.sensitivity.curvalue );
 ADDRGP4 $140
 ARGP4
 ADDRGP4 s_controls+2184+68
@@ -3408,10 +3372,10 @@ ARGF4
 ADDRGP4 trap_Cvar_SetValue
 CALLV
 pop
-line 798
-;796://	trap_Cvar_SetValue( "in_joystick", s_controls.joyenable.curvalue );
-;797://	trap_Cvar_SetValue( "joy_threshold", s_controls.joythreshold.curvalue );
-;798:	trap_Cvar_SetValue( "cl_freelook", s_controls.freelook.curvalue );
+line 786
+;784://	trap_Cvar_SetValue( "in_joystick", s_controls.joyenable.curvalue );
+;785://	trap_Cvar_SetValue( "joy_threshold", s_controls.joythreshold.curvalue );
+;786:	trap_Cvar_SetValue( "cl_freelook", s_controls.freelook.curvalue );
 ADDRGP4 $142
 ARGP4
 ADDRGP4 s_controls+1876+60
@@ -3421,50 +3385,50 @@ ARGF4
 ADDRGP4 trap_Cvar_SetValue
 CALLV
 pop
-line 799
-;799:	trap_Cmd_ExecuteText( EXEC_APPEND, "in_restart\n" );
+line 787
+;787:	trap_Cmd_ExecuteText( EXEC_APPEND, "in_restart\n" );
 CNSTI4 2
 ARGI4
-ADDRGP4 $450
+ADDRGP4 $444
 ARGP4
 ADDRGP4 trap_Cmd_ExecuteText
 CALLV
 pop
-line 800
-;800:}
-LABELV $424
+line 788
+;788:}
+LABELV $418
 endproc Controls_SetConfig 24 8
 proc Controls_SetDefaults 32 4
-line 808
-;801:
-;802:/*
-;803:=================
-;804:Controls_SetDefaults
-;805:=================
-;806:*/
-;807:static void Controls_SetDefaults( void )
-;808:{
-line 813
-;809:	int	i;
-;810:	bind_t*	bindptr;
-;811:
-;812:	// set the bindings from the local store
-;813:	bindptr = g_bindings;
+line 796
+;789:
+;790:/*
+;791:=================
+;792:Controls_SetDefaults
+;793:=================
+;794:*/
+;795:static void Controls_SetDefaults( void )
+;796:{
+line 801
+;797:	int	i;
+;798:	bind_t*	bindptr;
+;799:
+;800:	// set the bindings from the local store
+;801:	bindptr = g_bindings;
 ADDRLP4 0
 ADDRGP4 g_bindings
 ASGNP4
-line 816
-;814:
-;815:	// iterate each command, set its default binding
-;816:	for (i=0; ;i++,bindptr++)
+line 804
+;802:
+;803:	// iterate each command, set its default binding
+;804:	for (i=0; ;i++,bindptr++)
 ADDRLP4 4
 CNSTI4 0
 ASGNI4
-LABELV $452
-line 817
-;817:	{
-line 818
-;818:		if (!bindptr->label)
+LABELV $446
+line 805
+;805:	{
+line 806
+;806:		if (!bindptr->label)
 ADDRLP4 0
 INDIRP4
 CNSTI4 4
@@ -3472,15 +3436,15 @@ ADDP4
 INDIRP4
 CVPU4 4
 CNSTU4 0
-NEU4 $456
-line 819
-;819:			break;
-ADDRGP4 $454
+NEU4 $450
+line 807
+;807:			break;
+ADDRGP4 $448
 JUMPV
-LABELV $456
-line 821
-;820:
-;821:		bindptr->bind1 = bindptr->defaultbind1;
+LABELV $450
+line 809
+;808:
+;809:		bindptr->bind1 = bindptr->defaultbind1;
 ADDRLP4 0
 INDIRP4
 CNSTI4 24
@@ -3491,8 +3455,8 @@ CNSTI4 16
 ADDP4
 INDIRI4
 ASGNI4
-line 822
-;822:		bindptr->bind2 = bindptr->defaultbind2;
+line 810
+;810:		bindptr->bind2 = bindptr->defaultbind2;
 ADDRLP4 0
 INDIRP4
 CNSTI4 28
@@ -3503,10 +3467,10 @@ CNSTI4 20
 ADDP4
 INDIRI4
 ASGNI4
-line 823
-;823:	}
-LABELV $453
-line 816
+line 811
+;811:	}
+LABELV $447
+line 804
 ADDRLP4 4
 ADDRLP4 4
 INDIRI4
@@ -3519,12 +3483,12 @@ INDIRP4
 CNSTI4 32
 ADDP4
 ASGNP4
-ADDRGP4 $452
+ADDRGP4 $446
 JUMPV
-LABELV $454
-line 825
-;824:
-;825:	s_controls.invertmouse.curvalue  = Controls_GetCvarDefault( "m_pitch" ) < 0;
+LABELV $448
+line 813
+;812:
+;813:	s_controls.invertmouse.curvalue  = Controls_GetCvarDefault( "m_pitch" ) < 0;
 ADDRGP4 $138
 ARGP4
 ADDRLP4 12
@@ -3534,23 +3498,23 @@ ASGNF4
 ADDRLP4 12
 INDIRF4
 CNSTF4 0
-GEF4 $461
+GEF4 $455
 ADDRLP4 8
 CNSTI4 1
 ASGNI4
-ADDRGP4 $462
+ADDRGP4 $456
 JUMPV
-LABELV $461
+LABELV $455
 ADDRLP4 8
 CNSTI4 0
 ASGNI4
-LABELV $462
+LABELV $456
 ADDRGP4 s_controls+2120+60
 ADDRLP4 8
 INDIRI4
 ASGNI4
-line 826
-;826:	s_controls.smoothmouse.curvalue  = Controls_GetCvarDefault( "m_filter" );	
+line 814
+;814:	s_controls.smoothmouse.curvalue  = Controls_GetCvarDefault( "m_filter" );	
 ADDRGP4 $141
 ARGP4
 ADDRLP4 16
@@ -3562,8 +3526,8 @@ ADDRLP4 16
 INDIRF4
 CVFI4 4
 ASGNI4
-line 827
-;827:	s_controls.autoswitch.curvalue   = Controls_GetCvarDefault( "cg_autoswitch" );
+line 815
+;815:	s_controls.autoswitch.curvalue   = Controls_GetCvarDefault( "cg_autoswitch" );
 ADDRGP4 $139
 ARGP4
 ADDRLP4 20
@@ -3575,8 +3539,8 @@ ADDRLP4 20
 INDIRF4
 CVFI4 4
 ASGNI4
-line 828
-;828:	s_controls.sensitivity.curvalue  = Controls_GetCvarDefault( "sensitivity" );
+line 816
+;816:	s_controls.sensitivity.curvalue  = Controls_GetCvarDefault( "sensitivity" );
 ADDRGP4 $140
 ARGP4
 ADDRLP4 24
@@ -3587,10 +3551,10 @@ ADDRGP4 s_controls+2184+68
 ADDRLP4 24
 INDIRF4
 ASGNF4
-line 831
-;829://	s_controls.joyenable.curvalue    = Controls_GetCvarDefault( "in_joystick" );
-;830://	s_controls.joythreshold.curvalue = Controls_GetCvarDefault( "joy_threshold" );
-;831:	s_controls.freelook.curvalue     = Controls_GetCvarDefault( "cl_freelook" );
+line 819
+;817://	s_controls.joyenable.curvalue    = Controls_GetCvarDefault( "in_joystick" );
+;818://	s_controls.joythreshold.curvalue = Controls_GetCvarDefault( "joy_threshold" );
+;819:	s_controls.freelook.curvalue     = Controls_GetCvarDefault( "cl_freelook" );
 ADDRGP4 $142
 ARGP4
 ADDRLP4 28
@@ -3602,40 +3566,40 @@ ADDRLP4 28
 INDIRF4
 CVFI4 4
 ASGNI4
-line 832
-;832:}
-LABELV $451
+line 820
+;820:}
+LABELV $445
 endproc Controls_SetDefaults 32 4
 proc Controls_MenuKey 40 8
-line 840
-;833:
-;834:/*
-;835:=================
-;836:Controls_MenuKey
-;837:=================
-;838:*/
-;839:static sfxHandle_t Controls_MenuKey( int key )
-;840:{
-line 845
-;841:	int			id;
-;842:	int			i;
-;843:	qboolean	found;
-;844:	bind_t*		bindptr;
-;845:	found = qfalse;
+line 828
+;821:
+;822:/*
+;823:=================
+;824:Controls_MenuKey
+;825:=================
+;826:*/
+;827:static sfxHandle_t Controls_MenuKey( int key )
+;828:{
+line 833
+;829:	int			id;
+;830:	int			i;
+;831:	qboolean	found;
+;832:	bind_t*		bindptr;
+;833:	found = qfalse;
 ADDRLP4 12
 CNSTI4 0
 ASGNI4
-line 847
-;846:
-;847:	if (!s_controls.waitingforkey)
+line 835
+;834:
+;835:	if (!s_controls.waitingforkey)
 ADDRGP4 s_controls+4068
 INDIRI4
 CNSTI4 0
-NEI4 $472
-line 848
-;848:	{
-line 849
-;849:		switch (key)
+NEI4 $466
+line 836
+;836:	{
+line 837
+;837:		switch (key)
 ADDRLP4 16
 ADDRFP4 0
 INDIRI4
@@ -3647,13 +3611,13 @@ ADDRLP4 16
 INDIRI4
 ADDRLP4 20
 INDIRI4
-EQI4 $477
+EQI4 $471
 ADDRLP4 16
 INDIRI4
 ADDRLP4 20
 INDIRI4
-GTI4 $484
-LABELV $483
+GTI4 $478
+LABELV $477
 ADDRLP4 24
 ADDRFP4 0
 INDIRI4
@@ -3665,20 +3629,20 @@ ADDRLP4 24
 INDIRI4
 ADDRLP4 28
 INDIRI4
-EQI4 $478
+EQI4 $472
 ADDRLP4 24
 INDIRI4
 ADDRLP4 28
 INDIRI4
-LTI4 $482
-LABELV $485
+LTI4 $476
+LABELV $479
 ADDRFP4 0
 INDIRI4
 CNSTI4 127
-EQI4 $477
-ADDRGP4 $482
+EQI4 $471
+ADDRGP4 $476
 JUMPV
-LABELV $484
+LABELV $478
 ADDRLP4 32
 ADDRFP4 0
 INDIRI4
@@ -3690,80 +3654,80 @@ ADDRLP4 32
 INDIRI4
 ADDRLP4 36
 INDIRI4
-EQI4 $477
+EQI4 $471
 ADDRLP4 32
 INDIRI4
 ADDRLP4 36
 INDIRI4
-LTI4 $482
-LABELV $486
+LTI4 $476
+LABELV $480
 ADDRFP4 0
 INDIRI4
 CNSTI4 179
-EQI4 $478
-ADDRGP4 $482
+EQI4 $472
+ADDRGP4 $476
 JUMPV
-line 850
-;850:		{
-LABELV $477
-line 854
-;851:			case K_BACKSPACE:
-;852:			case K_DEL:
-;853:			case K_KP_DEL:
-;854:				key = -1;
+line 838
+;838:		{
+LABELV $471
+line 842
+;839:			case K_BACKSPACE:
+;840:			case K_DEL:
+;841:			case K_KP_DEL:
+;842:				key = -1;
 ADDRFP4 0
 CNSTI4 -1
 ASGNI4
-line 855
-;855:				break;
-ADDRGP4 $473
+line 843
+;843:				break;
+ADDRGP4 $467
 JUMPV
-LABELV $478
-line 859
-;856:		
-;857:			case K_MOUSE2:
-;858:			case K_ESCAPE:
-;859:				if (s_controls.changesmade)
+LABELV $472
+line 847
+;844:		
+;845:			case K_MOUSE2:
+;846:			case K_ESCAPE:
+;847:				if (s_controls.changesmade)
 ADDRGP4 s_controls+3680
 INDIRI4
 CNSTI4 0
-EQI4 $482
-line 860
-;860:					Controls_SetConfig();
+EQI4 $476
+line 848
+;848:					Controls_SetConfig();
 ADDRGP4 Controls_SetConfig
 CALLV
 pop
-line 861
-;861:				goto ignorekey;	
-ADDRGP4 $482
+line 849
+;849:				goto ignorekey;	
+ADDRGP4 $476
 JUMPV
-line 864
-;862:
-;863:			default:
-;864:				goto ignorekey;
-line 866
-;865:		}
-;866:	}
-LABELV $472
-line 868
-;867:	else
-;868:	{
-line 869
-;869:		if (key & K_CHAR_FLAG)
+line 852
+;850:
+;851:			default:
+;852:				goto ignorekey;
+line 854
+;853:		}
+;854:	}
+LABELV $466
+line 856
+;855:	else
+;856:	{
+line 857
+;857:		if (key & K_CHAR_FLAG)
 ADDRFP4 0
 INDIRI4
 CNSTI4 1024
 BANDI4
 CNSTI4 0
-EQI4 $487
-line 870
-;870:			goto ignorekey;
-ADDRGP4 $482
+EQI4 $481
+line 858
+;858:			goto ignorekey;
+ADDRGP4 $476
 JUMPV
-LABELV $487
-line 872
-;871:
-;872:		switch (key)
+LABELV $481
+line 860
+;859:
+;860:		switch (key)
 ADDRLP4 16
 ADDRFP4 0
 INDIRI4
@@ -3775,80 +3739,80 @@ ADDRLP4 16
 INDIRI4
 ADDRLP4 20
 INDIRI4
-EQI4 $491
+EQI4 $485
 ADDRLP4 16
 INDIRI4
 ADDRLP4 20
 INDIRI4
-LTI4 $489
-LABELV $494
+LTI4 $483
+LABELV $488
 ADDRFP4 0
 INDIRI4
 CNSTI4 96
-EQI4 $482
-ADDRGP4 $489
+EQI4 $476
+ADDRGP4 $483
 JUMPV
-line 873
-;873:		{
-LABELV $491
-line 875
-;874:			case K_ESCAPE:
-;875:				s_controls.waitingforkey = qfalse;
+line 861
+;861:		{
+LABELV $485
+line 863
+;862:			case K_ESCAPE:
+;863:				s_controls.waitingforkey = qfalse;
 ADDRGP4 s_controls+4068
 CNSTI4 0
 ASGNI4
-line 876
-;876:				Controls_Update();
+line 864
+;864:				Controls_Update();
 ADDRGP4 Controls_Update
 CALLV
 pop
-line 877
-;877:				return (menu_out_sound);
+line 865
+;865:				return (menu_out_sound);
 ADDRGP4 menu_out_sound
 INDIRI4
 RETI4
-ADDRGP4 $471
+ADDRGP4 $465
 JUMPV
-line 880
-;878:	
-;879:			case '`':
-;880:				goto ignorekey;
-LABELV $489
-line 882
-;881:		}
-;882:	}
-LABELV $473
-line 884
-;883:
-;884:	s_controls.changesmade = qtrue;
+line 868
+;866:	
+;867:			case '`':
+;868:				goto ignorekey;
+LABELV $483
+line 870
+;869:		}
+;870:	}
+LABELV $467
+line 872
+;871:
+;872:	s_controls.changesmade = qtrue;
 ADDRGP4 s_controls+3680
 CNSTI4 1
 ASGNI4
-line 886
-;885:	
-;886:	if (key != -1)
+line 874
+;873:	
+;874:	if (key != -1)
 ADDRFP4 0
 INDIRI4
 CNSTI4 -1
-EQI4 $496
-line 887
-;887:	{
-line 889
-;888:		// remove from any other bind
-;889:		bindptr = g_bindings;
+EQI4 $490
+line 875
+;875:	{
+line 877
+;876:		// remove from any other bind
+;877:		bindptr = g_bindings;
 ADDRLP4 0
 ADDRGP4 g_bindings
 ASGNP4
-line 890
-;890:		for (i=0; ;i++,bindptr++)
+line 878
+;878:		for (i=0; ;i++,bindptr++)
 ADDRLP4 4
 CNSTI4 0
 ASGNI4
-LABELV $498
-line 891
-;891:		{
-line 892
-;892:			if (!bindptr->label)	
+LABELV $492
+line 879
+;879:		{
+line 880
+;880:			if (!bindptr->label)	
 ADDRLP4 0
 INDIRP4
 CNSTI4 4
@@ -3856,15 +3820,15 @@ ADDP4
 INDIRP4
 CVPU4 4
 CNSTU4 0
-NEU4 $502
-line 893
-;893:				break;
-ADDRGP4 $500
+NEU4 $496
+line 881
+;881:				break;
+ADDRGP4 $494
 JUMPV
-LABELV $502
-line 895
-;894:
-;895:			if (bindptr->bind2 == key)
+LABELV $496
+line 883
+;882:
+;883:			if (bindptr->bind2 == key)
 ADDRLP4 0
 INDIRP4
 CNSTI4 28
@@ -3872,19 +3836,19 @@ ADDP4
 INDIRI4
 ADDRFP4 0
 INDIRI4
-NEI4 $504
-line 896
-;896:				bindptr->bind2 = -1;
+NEI4 $498
+line 884
+;884:				bindptr->bind2 = -1;
 ADDRLP4 0
 INDIRP4
 CNSTI4 28
 ADDP4
 CNSTI4 -1
 ASGNI4
-LABELV $504
-line 898
-;897:
-;898:			if (bindptr->bind1 == key)
+LABELV $498
+line 886
+;885:
+;886:			if (bindptr->bind1 == key)
 ADDRLP4 0
 INDIRP4
 CNSTI4 24
@@ -3892,11 +3856,11 @@ ADDP4
 INDIRI4
 ADDRFP4 0
 INDIRI4
-NEI4 $506
-line 899
-;899:			{
-line 900
-;900:				bindptr->bind1 = bindptr->bind2;	
+NEI4 $500
+line 887
+;887:			{
+line 888
+;888:				bindptr->bind1 = bindptr->bind2;	
 ADDRLP4 0
 INDIRP4
 CNSTI4 24
@@ -3907,21 +3871,21 @@ CNSTI4 28
 ADDP4
 INDIRI4
 ASGNI4
-line 901
-;901:				bindptr->bind2 = -1;
+line 889
+;889:				bindptr->bind2 = -1;
 ADDRLP4 0
 INDIRP4
 CNSTI4 28
 ADDP4
 CNSTI4 -1
 ASGNI4
-line 902
-;902:			}
-LABELV $506
-line 903
-;903:		}
-LABELV $499
 line 890
+;890:			}
+LABELV $500
+line 891
+;891:		}
+LABELV $493
+line 878
 ADDRLP4 4
 ADDRLP4 4
 INDIRI4
@@ -3934,16 +3898,16 @@ INDIRP4
 CNSTI4 32
 ADDP4
 ASGNP4
-ADDRGP4 $498
+ADDRGP4 $492
 JUMPV
-LABELV $500
-line 904
-;904:	}
-LABELV $496
-line 907
-;905:
-;906:	// assign key to local store
-;907:	id      = ((menucommon_s*)(s_controls.menu.items[s_controls.menu.cursor]))->id;
+LABELV $494
+line 892
+;892:	}
+LABELV $490
+line 895
+;893:
+;894:	// assign key to local store
+;895:	id      = ((menucommon_s*)(s_controls.menu.items[s_controls.menu.cursor]))->id;
 ADDRLP4 8
 ADDRGP4 s_controls
 INDIRI4
@@ -3956,21 +3920,21 @@ CNSTI4 8
 ADDP4
 INDIRI4
 ASGNI4
-line 908
-;908:	bindptr = g_bindings;
+line 896
+;896:	bindptr = g_bindings;
 ADDRLP4 0
 ADDRGP4 g_bindings
 ASGNP4
-line 909
-;909:	for (i=0; ;i++,bindptr++)
+line 897
+;897:	for (i=0; ;i++,bindptr++)
 ADDRLP4 4
 CNSTI4 0
 ASGNI4
-LABELV $509
-line 910
-;910:	{
-line 911
-;911:		if (!bindptr->label)	
+LABELV $503
+line 898
+;898:	{
+line 899
+;899:		if (!bindptr->label)	
 ADDRLP4 0
 INDIRP4
 CNSTI4 4
@@ -3978,15 +3942,15 @@ ADDP4
 INDIRP4
 CVPU4 4
 CNSTU4 0
-NEU4 $513
-line 912
-;912:			break;
-ADDRGP4 $511
+NEU4 $507
+line 900
+;900:			break;
+ADDRGP4 $505
 JUMPV
-LABELV $513
-line 914
-;913:		
-;914:		if (bindptr->id == id)
+LABELV $507
+line 902
+;901:		
+;902:		if (bindptr->id == id)
 ADDRLP4 0
 INDIRP4
 CNSTI4 8
@@ -3994,204 +3958,204 @@ ADDP4
 INDIRI4
 ADDRLP4 8
 INDIRI4
-NEI4 $515
-line 915
-;915:		{
-line 916
-;916:			found = qtrue;
+NEI4 $509
+line 903
+;903:		{
+line 904
+;904:			found = qtrue;
 ADDRLP4 12
 CNSTI4 1
 ASGNI4
-line 917
-;917:			if (key == -1)
+line 905
+;905:			if (key == -1)
 ADDRFP4 0
 INDIRI4
 CNSTI4 -1
-NEI4 $517
-line 918
-;918:			{
-line 919
-;919:				if( bindptr->bind1 != -1 ) {
+NEI4 $511
+line 906
+;906:			{
+line 907
+;907:				if( bindptr->bind1 != -1 ) {
 ADDRLP4 0
 INDIRP4
 CNSTI4 24
 ADDP4
 INDIRI4
 CNSTI4 -1
-EQI4 $519
-line 920
-;920:					trap_Key_SetBinding( bindptr->bind1, "" );
+EQI4 $513
+line 908
+;908:					trap_Key_SetBinding( bindptr->bind1, "" );
 ADDRLP4 0
 INDIRP4
 CNSTI4 24
 ADDP4
 INDIRI4
 ARGI4
-ADDRGP4 $521
+ADDRGP4 $515
 ARGP4
 ADDRGP4 trap_Key_SetBinding
 CALLV
 pop
-line 921
-;921:					bindptr->bind1 = -1;
+line 909
+;909:					bindptr->bind1 = -1;
 ADDRLP4 0
 INDIRP4
 CNSTI4 24
 ADDP4
 CNSTI4 -1
 ASGNI4
-line 922
-;922:				}
-LABELV $519
-line 923
-;923:				if( bindptr->bind2 != -1 ) {
+line 910
+;910:				}
+LABELV $513
+line 911
+;911:				if( bindptr->bind2 != -1 ) {
 ADDRLP4 0
 INDIRP4
 CNSTI4 28
 ADDP4
 INDIRI4
 CNSTI4 -1
-EQI4 $511
-line 924
-;924:					trap_Key_SetBinding( bindptr->bind2, "" );
+EQI4 $505
+line 912
+;912:					trap_Key_SetBinding( bindptr->bind2, "" );
 ADDRLP4 0
 INDIRP4
 CNSTI4 28
 ADDP4
 INDIRI4
 ARGI4
-ADDRGP4 $521
+ADDRGP4 $515
+ARGP4
+ADDRGP4 trap_Key_SetBinding
+CALLV
+pop
+line 913
+;913:					bindptr->bind2 = -1;
+ADDRLP4 0
+INDIRP4
+CNSTI4 28
+ADDP4
+CNSTI4 -1
+ASGNI4
+line 914
+;914:				}
+line 915
+;915:			}
+ADDRGP4 $505
+JUMPV
+LABELV $511
+line 916
+;916:			else if (bindptr->bind1 == -1) {
+ADDRLP4 0
+INDIRP4
+CNSTI4 24
+ADDP4
+INDIRI4
+CNSTI4 -1
+NEI4 $518
+line 917
+;917:				bindptr->bind1 = key;
+ADDRLP4 0
+INDIRP4
+CNSTI4 24
+ADDP4
+ADDRFP4 0
+INDIRI4
+ASGNI4
+line 918
+;918:			}
+ADDRGP4 $505
+JUMPV
+LABELV $518
+line 919
+;919:			else if (bindptr->bind1 != key && bindptr->bind2 == -1) {
+ADDRLP4 0
+INDIRP4
+CNSTI4 24
+ADDP4
+INDIRI4
+ADDRFP4 0
+INDIRI4
+EQI4 $520
+ADDRLP4 0
+INDIRP4
+CNSTI4 28
+ADDP4
+INDIRI4
+CNSTI4 -1
+NEI4 $520
+line 920
+;920:				bindptr->bind2 = key;
+ADDRLP4 0
+INDIRP4
+CNSTI4 28
+ADDP4
+ADDRFP4 0
+INDIRI4
+ASGNI4
+line 921
+;921:			}
+ADDRGP4 $505
+JUMPV
+LABELV $520
+line 923
+;922:			else
+;923:			{
+line 924
+;924:				trap_Key_SetBinding( bindptr->bind1, "" );
+ADDRLP4 0
+INDIRP4
+CNSTI4 24
+ADDP4
+INDIRI4
+ARGI4
+ADDRGP4 $515
 ARGP4
 ADDRGP4 trap_Key_SetBinding
 CALLV
 pop
 line 925
-;925:					bindptr->bind2 = -1;
+;925:				trap_Key_SetBinding( bindptr->bind2, "" );
 ADDRLP4 0
 INDIRP4
 CNSTI4 28
 ADDP4
-CNSTI4 -1
-ASGNI4
+INDIRI4
+ARGI4
+ADDRGP4 $515
+ARGP4
+ADDRGP4 trap_Key_SetBinding
+CALLV
+pop
 line 926
-;926:				}
+;926:				bindptr->bind1 = key;
+ADDRLP4 0
+INDIRP4
+CNSTI4 24
+ADDP4
+ADDRFP4 0
+INDIRI4
+ASGNI4
 line 927
-;927:			}
-ADDRGP4 $511
-JUMPV
-LABELV $517
+;927:				bindptr->bind2 = -1;
+ADDRLP4 0
+INDIRP4
+CNSTI4 28
+ADDP4
+CNSTI4 -1
+ASGNI4
 line 928
-;928:			else if (bindptr->bind1 == -1) {
-ADDRLP4 0
-INDIRP4
-CNSTI4 24
-ADDP4
-INDIRI4
-CNSTI4 -1
-NEI4 $524
+;928:			}						
 line 929
-;929:				bindptr->bind1 = key;
-ADDRLP4 0
-INDIRP4
-CNSTI4 24
-ADDP4
-ADDRFP4 0
-INDIRI4
-ASGNI4
-line 930
-;930:			}
-ADDRGP4 $511
+;929:			break;
+ADDRGP4 $505
 JUMPV
-LABELV $524
+LABELV $509
 line 931
-;931:			else if (bindptr->bind1 != key && bindptr->bind2 == -1) {
-ADDRLP4 0
-INDIRP4
-CNSTI4 24
-ADDP4
-INDIRI4
-ADDRFP4 0
-INDIRI4
-EQI4 $526
-ADDRLP4 0
-INDIRP4
-CNSTI4 28
-ADDP4
-INDIRI4
-CNSTI4 -1
-NEI4 $526
-line 932
-;932:				bindptr->bind2 = key;
-ADDRLP4 0
-INDIRP4
-CNSTI4 28
-ADDP4
-ADDRFP4 0
-INDIRI4
-ASGNI4
-line 933
-;933:			}
-ADDRGP4 $511
-JUMPV
-LABELV $526
-line 935
-;934:			else
-;935:			{
-line 936
-;936:				trap_Key_SetBinding( bindptr->bind1, "" );
-ADDRLP4 0
-INDIRP4
-CNSTI4 24
-ADDP4
-INDIRI4
-ARGI4
-ADDRGP4 $521
-ARGP4
-ADDRGP4 trap_Key_SetBinding
-CALLV
-pop
-line 937
-;937:				trap_Key_SetBinding( bindptr->bind2, "" );
-ADDRLP4 0
-INDIRP4
-CNSTI4 28
-ADDP4
-INDIRI4
-ARGI4
-ADDRGP4 $521
-ARGP4
-ADDRGP4 trap_Key_SetBinding
-CALLV
-pop
-line 938
-;938:				bindptr->bind1 = key;
-ADDRLP4 0
-INDIRP4
-CNSTI4 24
-ADDP4
-ADDRFP4 0
-INDIRI4
-ASGNI4
-line 939
-;939:				bindptr->bind2 = -1;
-ADDRLP4 0
-INDIRP4
-CNSTI4 28
-ADDP4
-CNSTI4 -1
-ASGNI4
-line 940
-;940:			}						
-line 941
-;941:			break;
-ADDRGP4 $511
-JUMPV
-LABELV $515
-line 943
-;942:		}
-;943:	}				
-LABELV $510
-line 909
+;930:		}
+;931:	}				
+LABELV $504
+line 897
 ADDRLP4 4
 ADDRLP4 4
 INDIRI4
@@ -4204,43 +4168,43 @@ INDIRP4
 CNSTI4 32
 ADDP4
 ASGNP4
-ADDRGP4 $509
+ADDRGP4 $503
 JUMPV
-LABELV $511
-line 945
-;944:		
-;945:	s_controls.waitingforkey = qfalse;
+LABELV $505
+line 933
+;932:		
+;933:	s_controls.waitingforkey = qfalse;
 ADDRGP4 s_controls+4068
 CNSTI4 0
 ASGNI4
-line 947
-;946:
-;947:	if (found)
+line 935
+;934:
+;935:	if (found)
 ADDRLP4 12
 INDIRI4
 CNSTI4 0
-EQI4 $529
-line 948
-;948:	{	
-line 949
-;949:		Controls_Update();
+EQI4 $523
+line 936
+;936:	{	
+line 937
+;937:		Controls_Update();
 ADDRGP4 Controls_Update
 CALLV
 pop
-line 950
-;950:		return (menu_out_sound);
+line 938
+;938:		return (menu_out_sound);
 ADDRGP4 menu_out_sound
 INDIRI4
 RETI4
-ADDRGP4 $471
+ADDRGP4 $465
 JUMPV
-LABELV $529
-LABELV $482
-line 954
-;951:	}
-;952:
-;953:ignorekey:
-;954:	return Menu_DefaultKey( &s_controls.menu, key );
+LABELV $523
+LABELV $476
+line 942
+;939:	}
+;940:
+;941:ignorekey:
+;942:	return Menu_DefaultKey( &s_controls.menu, key );
 ADDRGP4 s_controls
 ARGP4
 ADDRFP4 0
@@ -4253,66 +4217,66 @@ ASGNI4
 ADDRLP4 16
 INDIRI4
 RETI4
-LABELV $471
+LABELV $465
 endproc Controls_MenuKey 40 8
 proc Controls_ResetDefaults_Action 0 0
-line 962
-;955:}
-;956:
-;957:/*
-;958:=================
-;959:Controls_ResetDefaults_Action
-;960:=================
-;961:*/
-;962:static void Controls_ResetDefaults_Action( qboolean result ) {
-line 963
-;963:	if( !result ) {
+line 950
+;943:}
+;944:
+;945:/*
+;946:=================
+;947:Controls_ResetDefaults_Action
+;948:=================
+;949:*/
+;950:static void Controls_ResetDefaults_Action( qboolean result ) {
+line 951
+;951:	if( !result ) {
 ADDRFP4 0
 INDIRI4
 CNSTI4 0
-NEI4 $532
-line 964
-;964:		return;
-ADDRGP4 $531
+NEI4 $526
+line 952
+;952:		return;
+ADDRGP4 $525
 JUMPV
-LABELV $532
-line 967
-;965:	}
-;966:
-;967:	s_controls.changesmade = qtrue;
+LABELV $526
+line 955
+;953:	}
+;954:
+;955:	s_controls.changesmade = qtrue;
 ADDRGP4 s_controls+3680
 CNSTI4 1
 ASGNI4
-line 968
-;968:	Controls_SetDefaults();
+line 956
+;956:	Controls_SetDefaults();
 ADDRGP4 Controls_SetDefaults
 CALLV
 pop
-line 969
-;969:	Controls_Update();
+line 957
+;957:	Controls_Update();
 ADDRGP4 Controls_Update
 CALLV
 pop
-line 970
-;970:}
-LABELV $531
+line 958
+;958:}
+LABELV $525
 endproc Controls_ResetDefaults_Action 0 0
 proc Controls_ResetDefaults_Draw 0 20
-line 977
-;971:
-;972:/*
-;973:=================
-;974:Controls_ResetDefaults_Draw
-;975:=================
-;976:*/
-;977:static void Controls_ResetDefaults_Draw( void ) {
-line 978
-;978:	UI_DrawProportionalString( SCREEN_WIDTH/2, 356 + PROP_HEIGHT * 0, "WARNING: This will reset all", UI_CENTER|UI_SMALLFONT, color_yellow );
+line 965
+;959:
+;960:/*
+;961:=================
+;962:Controls_ResetDefaults_Draw
+;963:=================
+;964:*/
+;965:static void Controls_ResetDefaults_Draw( void ) {
+line 966
+;966:	UI_DrawProportionalString( SCREEN_WIDTH/2, 356 + PROP_HEIGHT * 0, "WARNING: This will reset all", UI_CENTER|UI_SMALLFONT, color_yellow );
 CNSTI4 320
 ARGI4
 CNSTI4 356
 ARGI4
-ADDRGP4 $536
+ADDRGP4 $530
 ARGP4
 CNSTI4 17
 ARGI4
@@ -4321,13 +4285,13 @@ ARGP4
 ADDRGP4 UI_DrawProportionalString
 CALLV
 pop
-line 979
-;979:	UI_DrawProportionalString( SCREEN_WIDTH/2, 356 + PROP_HEIGHT * 1, "controls to their default values.", UI_CENTER|UI_SMALLFONT, color_yellow );
+line 967
+;967:	UI_DrawProportionalString( SCREEN_WIDTH/2, 356 + PROP_HEIGHT * 1, "controls to their default values.", UI_CENTER|UI_SMALLFONT, color_yellow );
 CNSTI4 320
 ARGI4
 CNSTI4 383
 ARGI4
-ADDRGP4 $537
+ADDRGP4 $531
 ARGP4
 CNSTI4 17
 ARGI4
@@ -4336,22 +4300,22 @@ ARGP4
 ADDRGP4 UI_DrawProportionalString
 CALLV
 pop
-line 980
-;980:}
-LABELV $535
+line 968
+;968:}
+LABELV $529
 endproc Controls_ResetDefaults_Draw 0 20
 proc Controls_MenuEvent 12 12
-line 988
-;981:
-;982:/*
-;983:=================
-;984:Controls_MenuEvent
-;985:=================
-;986:*/
-;987:static void Controls_MenuEvent( void* ptr, int event )
-;988:{
-line 989
-;989:	switch (((menucommon_s*)ptr)->id)
+line 976
+;969:
+;970:/*
+;971:=================
+;972:Controls_MenuEvent
+;973:=================
+;974:*/
+;975:static void Controls_MenuEvent( void* ptr, int event )
+;976:{
+line 977
+;977:	switch (((menucommon_s*)ptr)->id)
 ADDRLP4 0
 ADDRFP4 0
 INDIRP4
@@ -4362,183 +4326,183 @@ ASGNI4
 ADDRLP4 0
 INDIRI4
 CNSTI4 34
-LTI4 $539
+LTI4 $533
 ADDRLP4 0
 INDIRI4
 CNSTI4 41
-GTI4 $575
+GTI4 $569
 ADDRLP4 0
 INDIRI4
 CNSTI4 2
 LSHI4
-ADDRGP4 $576-136
+ADDRGP4 $570-136
 ADDP4
 INDIRP4
 JUMPV
 lit
 align 4
-LABELV $576
-address $540
-address $540
-address $539
-address $540
-address $540
-address $539
-address $539
-address $540
+LABELV $570
+address $534
+address $534
+address $533
+address $534
+address $534
+address $533
+address $533
+address $534
 code
-LABELV $575
+LABELV $569
 ADDRLP4 0
 INDIRI4
 CNSTI4 100
-LTI4 $539
+LTI4 $533
 ADDRLP4 0
 INDIRI4
 CNSTI4 107
-GTI4 $539
+GTI4 $533
 ADDRLP4 0
 INDIRI4
 CNSTI4 2
 LSHI4
-ADDRGP4 $578-400
+ADDRGP4 $572-400
 ADDP4
 INDIRP4
 JUMPV
 lit
 align 4
-LABELV $578
-address $542
-address $546
-address $550
-address $554
-address $558
+LABELV $572
+address $536
+address $540
+address $544
+address $548
+address $552
+address $556
 address $562
-address $568
-address $571
+address $565
 code
-line 990
-;990:	{
-LABELV $542
-line 992
-;991:		case ID_MOVEMENT:
-;992:			if (event == QM_ACTIVATED)
+line 978
+;978:	{
+LABELV $536
+line 980
+;979:		case ID_MOVEMENT:
+;980:			if (event == QM_ACTIVATED)
 ADDRFP4 4
 INDIRI4
 CNSTI4 3
-NEI4 $540
-line 993
-;993:			{
-line 994
-;994:				s_controls.section = C_MOVEMENT; 
+NEI4 $534
+line 981
+;981:			{
+line 982
+;982:				s_controls.section = C_MOVEMENT; 
 ADDRGP4 s_controls+4064
 CNSTI4 0
 ASGNI4
-line 995
-;995:				Controls_Update();
+line 983
+;983:				Controls_Update();
 ADDRGP4 Controls_Update
 CALLV
 pop
-line 996
-;996:			}
-line 997
-;997:			break;
-ADDRGP4 $540
+line 984
+;984:			}
+line 985
+;985:			break;
+ADDRGP4 $534
 JUMPV
-LABELV $546
-line 1000
-;998:
-;999:		case ID_LOOKING:
-;1000:			if (event == QM_ACTIVATED)
+LABELV $540
+line 988
+;986:
+;987:		case ID_LOOKING:
+;988:			if (event == QM_ACTIVATED)
 ADDRFP4 4
 INDIRI4
 CNSTI4 3
-NEI4 $540
-line 1001
-;1001:			{
-line 1002
-;1002:				s_controls.section = C_LOOKING; 
+NEI4 $534
+line 989
+;989:			{
+line 990
+;990:				s_controls.section = C_LOOKING; 
 ADDRGP4 s_controls+4064
 CNSTI4 1
 ASGNI4
-line 1003
-;1003:				Controls_Update();
+line 991
+;991:				Controls_Update();
 ADDRGP4 Controls_Update
 CALLV
 pop
-line 1004
-;1004:			}
-line 1005
-;1005:			break;
-ADDRGP4 $540
+line 992
+;992:			}
+line 993
+;993:			break;
+ADDRGP4 $534
 JUMPV
-LABELV $550
-line 1008
-;1006:
-;1007:		case ID_WEAPONS:
-;1008:			if (event == QM_ACTIVATED)
+LABELV $544
+line 996
+;994:
+;995:		case ID_WEAPONS:
+;996:			if (event == QM_ACTIVATED)
 ADDRFP4 4
 INDIRI4
 CNSTI4 3
-NEI4 $540
-line 1009
-;1009:			{
-line 1010
-;1010:				s_controls.section = C_WEAPONS; 
+NEI4 $534
+line 997
+;997:			{
+line 998
+;998:				s_controls.section = C_WEAPONS; 
 ADDRGP4 s_controls+4064
 CNSTI4 2
 ASGNI4
-line 1011
-;1011:				Controls_Update();
+line 999
+;999:				Controls_Update();
 ADDRGP4 Controls_Update
 CALLV
 pop
-line 1012
-;1012:			}
-line 1013
-;1013:			break;
-ADDRGP4 $540
+line 1000
+;1000:			}
+line 1001
+;1001:			break;
+ADDRGP4 $534
 JUMPV
-LABELV $554
-line 1016
-;1014:
-;1015:		case ID_MISC:
-;1016:			if (event == QM_ACTIVATED)
+LABELV $548
+line 1004
+;1002:
+;1003:		case ID_MISC:
+;1004:			if (event == QM_ACTIVATED)
 ADDRFP4 4
 INDIRI4
 CNSTI4 3
-NEI4 $540
-line 1017
-;1017:			{
-line 1018
-;1018:				s_controls.section = C_MISC; 
+NEI4 $534
+line 1005
+;1005:			{
+line 1006
+;1006:				s_controls.section = C_MISC; 
 ADDRGP4 s_controls+4064
 CNSTI4 3
 ASGNI4
-line 1019
-;1019:				Controls_Update();
+line 1007
+;1007:				Controls_Update();
 ADDRGP4 Controls_Update
 CALLV
 pop
-line 1020
-;1020:			}
-line 1021
-;1021:			break;
-ADDRGP4 $540
+line 1008
+;1008:			}
+line 1009
+;1009:			break;
+ADDRGP4 $534
 JUMPV
-LABELV $558
-line 1024
-;1022:
-;1023:		case ID_DEFAULTS:
-;1024:			if (event == QM_ACTIVATED)
+LABELV $552
+line 1012
+;1010:
+;1011:		case ID_DEFAULTS:
+;1012:			if (event == QM_ACTIVATED)
 ADDRFP4 4
 INDIRI4
 CNSTI4 3
-NEI4 $540
-line 1025
-;1025:			{
-line 1026
-;1026:				UI_ConfirmMenu( "SET TO DEFAULTS?", Controls_ResetDefaults_Draw, Controls_ResetDefaults_Action );
-ADDRGP4 $561
+NEI4 $534
+line 1013
+;1013:			{
+line 1014
+;1014:				UI_ConfirmMenu( "SET TO DEFAULTS?", Controls_ResetDefaults_Draw, Controls_ResetDefaults_Action );
+ADDRGP4 $555
 ARGP4
 ADDRGP4 Controls_ResetDefaults_Draw
 ARGP4
@@ -4547,154 +4511,154 @@ ARGP4
 ADDRGP4 UI_ConfirmMenu
 CALLV
 pop
-line 1027
-;1027:			}
-line 1028
-;1028:			break;
-ADDRGP4 $540
+line 1015
+;1015:			}
+line 1016
+;1016:			break;
+ADDRGP4 $534
 JUMPV
-LABELV $562
-line 1031
-;1029:
-;1030:		case ID_BACK:
-;1031:			if (event == QM_ACTIVATED)
+LABELV $556
+line 1019
+;1017:
+;1018:		case ID_BACK:
+;1019:			if (event == QM_ACTIVATED)
 ADDRFP4 4
 INDIRI4
 CNSTI4 3
-NEI4 $540
-line 1032
-;1032:			{
-line 1033
-;1033:				if (s_controls.changesmade)
+NEI4 $534
+line 1020
+;1020:			{
+line 1021
+;1021:				if (s_controls.changesmade)
 ADDRGP4 s_controls+3680
 INDIRI4
 CNSTI4 0
-EQI4 $565
-line 1034
-;1034:					Controls_SetConfig();
+EQI4 $559
+line 1022
+;1022:					Controls_SetConfig();
 ADDRGP4 Controls_SetConfig
 CALLV
 pop
+LABELV $559
+line 1023
+;1023:				UI_PopMenu();
+ADDRGP4 UI_PopMenu
+CALLV
+pop
+line 1024
+;1024:			}
+line 1025
+;1025:			break;
+ADDRGP4 $534
+JUMPV
+LABELV $562
+line 1028
+;1026:
+;1027:		case ID_SAVEANDEXIT:
+;1028:			if (event == QM_ACTIVATED)
+ADDRFP4 4
+INDIRI4
+CNSTI4 3
+NEI4 $534
+line 1029
+;1029:			{
+line 1030
+;1030:				Controls_SetConfig();
+ADDRGP4 Controls_SetConfig
+CALLV
+pop
+line 1031
+;1031:				UI_PopMenu();
+ADDRGP4 UI_PopMenu
+CALLV
+pop
+line 1032
+;1032:			}
+line 1033
+;1033:			break;
+ADDRGP4 $534
+JUMPV
 LABELV $565
-line 1035
-;1035:				UI_PopMenu();
-ADDRGP4 UI_PopMenu
-CALLV
-pop
 line 1036
-;1036:			}
+;1034:
+;1035:		case ID_EXIT:
+;1036:			if (event == QM_ACTIVATED)
+ADDRFP4 4
+INDIRI4
+CNSTI4 3
+NEI4 $534
 line 1037
-;1037:			break;
-ADDRGP4 $540
-JUMPV
-LABELV $568
+;1037:			{
+line 1038
+;1038:				UI_PopMenu();
+ADDRGP4 UI_PopMenu
+CALLV
+pop
+line 1039
+;1039:			}
 line 1040
-;1038:
-;1039:		case ID_SAVEANDEXIT:
-;1040:			if (event == QM_ACTIVATED)
-ADDRFP4 4
-INDIRI4
-CNSTI4 3
-NEI4 $540
-line 1041
-;1041:			{
-line 1042
-;1042:				Controls_SetConfig();
-ADDRGP4 Controls_SetConfig
-CALLV
-pop
-line 1043
-;1043:				UI_PopMenu();
-ADDRGP4 UI_PopMenu
-CALLV
-pop
-line 1044
-;1044:			}
-line 1045
-;1045:			break;
-ADDRGP4 $540
-JUMPV
-LABELV $571
-line 1048
-;1046:
-;1047:		case ID_EXIT:
-;1048:			if (event == QM_ACTIVATED)
-ADDRFP4 4
-INDIRI4
-CNSTI4 3
-NEI4 $540
-line 1049
-;1049:			{
-line 1050
-;1050:				UI_PopMenu();
-ADDRGP4 UI_PopMenu
-CALLV
-pop
-line 1051
-;1051:			}
-line 1052
-;1052:			break;
-line 1065
-;1053:
-;1054:		case ID_FREELOOK:
-;1055:		case ID_MOUSESPEED:
-;1056:		case ID_INVERTMOUSE:
-;1057:		case ID_SMOOTHMOUSE:	
-;1058:		case ID_AUTOSWITCH:
-;1059://		case ID_JOYENABLE:
-;1060://		case ID_JOYTHRESHOLD:
-;1061://			if (event == QM_ACTIVATED)
-;1062://			{
-;1063://				s_controls.changesmade = qtrue;
-;1064://			}
-;1065:			break;		
-LABELV $539
-LABELV $540
-line 1067
-;1066:	}
-;1067:}
-LABELV $538
+;1040:			break;
+line 1053
+;1041:
+;1042:		case ID_FREELOOK:
+;1043:		case ID_MOUSESPEED:
+;1044:		case ID_INVERTMOUSE:
+;1045:		case ID_SMOOTHMOUSE:	
+;1046:		case ID_AUTOSWITCH:
+;1047://		case ID_JOYENABLE:
+;1048://		case ID_JOYTHRESHOLD:
+;1049://			if (event == QM_ACTIVATED)
+;1050://			{
+;1051://				s_controls.changesmade = qtrue;
+;1052://			}
+;1053:			break;		
+LABELV $533
+LABELV $534
+line 1055
+;1054:	}
+;1055:}
+LABELV $532
 endproc Controls_MenuEvent 12 12
 proc Controls_ActionEvent 0 4
-line 1075
-;1068:
-;1069:/*
-;1070:=================
-;1071:Controls_ActionEvent
-;1072:=================
-;1073:*/
-;1074:static void Controls_ActionEvent( void* ptr, int event )
-;1075:{
-line 1076
-;1076:	if (event == QM_LOSTFOCUS)
+line 1063
+;1056:
+;1057:/*
+;1058:=================
+;1059:Controls_ActionEvent
+;1060:=================
+;1061:*/
+;1062:static void Controls_ActionEvent( void* ptr, int event )
+;1063:{
+line 1064
+;1064:	if (event == QM_LOSTFOCUS)
 ADDRFP4 4
 INDIRI4
 CNSTI4 2
-NEI4 $581
-line 1077
-;1077:	{
-line 1078
-;1078:		Controls_UpdateModel( ANIM_IDLE );
+NEI4 $575
+line 1065
+;1065:	{
+line 1066
+;1066:		Controls_UpdateModel( ANIM_IDLE );
 CNSTI4 0
 ARGI4
 ADDRGP4 Controls_UpdateModel
 CALLV
 pop
-line 1079
-;1079:	}
-ADDRGP4 $582
+line 1067
+;1067:	}
+ADDRGP4 $576
 JUMPV
-LABELV $581
-line 1080
-;1080:	else if (event == QM_GOTFOCUS)
+LABELV $575
+line 1068
+;1068:	else if (event == QM_GOTFOCUS)
 ADDRFP4 4
 INDIRI4
 CNSTI4 1
-NEI4 $583
-line 1081
-;1081:	{
-line 1082
-;1082:		Controls_UpdateModel( g_bindings[((menucommon_s*)ptr)->id].anim );
+NEI4 $577
+line 1069
+;1069:	{
+line 1070
+;1070:		Controls_UpdateModel( g_bindings[((menucommon_s*)ptr)->id].anim );
 ADDRFP4 0
 INDIRP4
 CNSTI4 8
@@ -4709,54 +4673,54 @@ ARGI4
 ADDRGP4 Controls_UpdateModel
 CALLV
 pop
-line 1083
-;1083:	}
-ADDRGP4 $584
+line 1071
+;1071:	}
+ADDRGP4 $578
 JUMPV
-LABELV $583
-line 1084
-;1084:	else if ((event == QM_ACTIVATED) && !s_controls.waitingforkey)
+LABELV $577
+line 1072
+;1072:	else if ((event == QM_ACTIVATED) && !s_controls.waitingforkey)
 ADDRFP4 4
 INDIRI4
 CNSTI4 3
-NEI4 $586
+NEI4 $580
 ADDRGP4 s_controls+4068
 INDIRI4
 CNSTI4 0
-NEI4 $586
-line 1085
-;1085:	{
-line 1086
-;1086:		s_controls.waitingforkey = 1;
+NEI4 $580
+line 1073
+;1073:	{
+line 1074
+;1074:		s_controls.waitingforkey = 1;
 ADDRGP4 s_controls+4068
 CNSTI4 1
 ASGNI4
-line 1087
-;1087:		Controls_Update();
+line 1075
+;1075:		Controls_Update();
 ADDRGP4 Controls_Update
 CALLV
 pop
-line 1088
-;1088:	}
-LABELV $586
-LABELV $584
-LABELV $582
-line 1089
-;1089:}
+line 1076
+;1076:	}
 LABELV $580
+LABELV $578
+LABELV $576
+line 1077
+;1077:}
+LABELV $574
 endproc Controls_ActionEvent 0 4
 proc Controls_InitModel 4 12
-line 1097
-;1090:
-;1091:/*
-;1092:=================
-;1093:Controls_InitModel
-;1094:=================
-;1095:*/
-;1096:static void Controls_InitModel( void )
-;1097:{
-line 1098
-;1098:	memset( &s_controls.playerinfo, 0, sizeof(playerInfo_t) );
+line 1085
+;1078:
+;1079:/*
+;1080:=================
+;1081:Controls_InitModel
+;1082:=================
+;1083:*/
+;1084:static void Controls_InitModel( void )
+;1085:{
+line 1086
+;1086:	memset( &s_controls.playerinfo, 0, sizeof(playerInfo_t) );
 ADDRGP4 s_controls+2572
 ARGP4
 CNSTI4 0
@@ -4766,10 +4730,10 @@ ARGI4
 ADDRGP4 memset
 CALLP4
 pop
-line 1100
-;1099:
-;1100:	UI_PlayerInfo_SetModel( &s_controls.playerinfo, UI_Cvar_VariableString( "model" ) );
-ADDRGP4 $384
+line 1088
+;1087:
+;1088:	UI_PlayerInfo_SetModel( &s_controls.playerinfo, UI_Cvar_VariableString( "model" ) );
+ADDRGP4 $378
 ARGP4
 ADDRLP4 0
 ADDRGP4 UI_Cvar_VariableString
@@ -4783,54 +4747,54 @@ ARGP4
 ADDRGP4 UI_PlayerInfo_SetModel
 CALLV
 pop
-line 1102
-;1101:
-;1102:	Controls_UpdateModel( ANIM_IDLE );
+line 1090
+;1089:
+;1090:	Controls_UpdateModel( ANIM_IDLE );
 CNSTI4 0
 ARGI4
 ADDRGP4 Controls_UpdateModel
 CALLV
 pop
-line 1103
-;1103:}
-LABELV $590
+line 1091
+;1091:}
+LABELV $584
 endproc Controls_InitModel 4 12
 proc Controls_InitWeapons 4 4
-line 1110
-;1104:
-;1105:/*
-;1106:=================
-;1107:Controls_InitWeapons
-;1108:=================
-;1109:*/
-;1110:static void Controls_InitWeapons( void ) {
-line 1113
-;1111:	gitem_t *	item;
-;1112:
-;1113:	for ( item = bg_itemlist + 1 ; item->classname ; item++ ) {
+line 1098
+;1092:
+;1093:/*
+;1094:=================
+;1095:Controls_InitWeapons
+;1096:=================
+;1097:*/
+;1098:static void Controls_InitWeapons( void ) {
+line 1101
+;1099:	gitem_t *	item;
+;1100:
+;1101:	for ( item = bg_itemlist + 1 ; item->classname ; item++ ) {
 ADDRLP4 0
 ADDRGP4 bg_itemlist+52
 ASGNP4
-ADDRGP4 $597
+ADDRGP4 $591
 JUMPV
-LABELV $594
-line 1114
-;1114:		if ( item->giType != IT_WEAPON ) {
+LABELV $588
+line 1102
+;1102:		if ( item->giType != IT_WEAPON ) {
 ADDRLP4 0
 INDIRP4
 CNSTI4 36
 ADDP4
 INDIRI4
 CNSTI4 1
-EQI4 $599
-line 1115
-;1115:			continue;
-ADDRGP4 $595
+EQI4 $593
+line 1103
+;1103:			continue;
+ADDRGP4 $589
 JUMPV
-LABELV $599
-line 1117
-;1116:		}
-;1117:		trap_R_RegisterModel( item->world_model[0] );
+LABELV $593
+line 1105
+;1104:		}
+;1105:		trap_R_RegisterModel( item->world_model[0] );
 ADDRLP4 0
 INDIRP4
 CNSTI4 8
@@ -4840,47 +4804,47 @@ ARGP4
 ADDRGP4 trap_R_RegisterModel
 CALLI4
 pop
-line 1118
-;1118:	}
-LABELV $595
-line 1113
+line 1106
+;1106:	}
+LABELV $589
+line 1101
 ADDRLP4 0
 ADDRLP4 0
 INDIRP4
 CNSTI4 52
 ADDP4
 ASGNP4
-LABELV $597
+LABELV $591
 ADDRLP4 0
 INDIRP4
 INDIRP4
 CVPU4 4
 CNSTU4 0
-NEU4 $594
-line 1119
-;1119:}
-LABELV $593
+NEU4 $588
+line 1107
+;1107:}
+LABELV $587
 endproc Controls_InitWeapons 4 4
 bss
 align 1
-LABELV $602
+LABELV $596
 skip 32
 code
 proc Controls_MenuInit 0 12
-line 1127
-;1120:
-;1121:/*
-;1122:=================
-;1123:Controls_MenuInit
-;1124:=================
-;1125:*/
-;1126:static void Controls_MenuInit( void )
-;1127:{
-line 1131
-;1128:	static char playername[32];
-;1129:
-;1130:	// zero set all our globals
-;1131:	memset( &s_controls, 0 ,sizeof(controls_t) );
+line 1115
+;1108:
+;1109:/*
+;1110:=================
+;1111:Controls_MenuInit
+;1112:=================
+;1113:*/
+;1114:static void Controls_MenuInit( void )
+;1115:{
+line 1119
+;1116:	static char playername[32];
+;1117:
+;1118:	// zero set all our globals
+;1119:	memset( &s_controls, 0 ,sizeof(controls_t) );
 ADDRGP4 s_controls
 ARGP4
 CNSTI4 0
@@ -4890,1403 +4854,1403 @@ ARGI4
 ADDRGP4 memset
 CALLP4
 pop
-line 1133
-;1132:
-;1133:	Controls_Cache();
+line 1121
+;1120:
+;1121:	Controls_Cache();
 ADDRGP4 Controls_Cache
 CALLV
 pop
-line 1135
-;1134:
-;1135:	s_controls.menu.key        = Controls_MenuKey;
+line 1123
+;1122:
+;1123:	s_controls.menu.key        = Controls_MenuKey;
 ADDRGP4 s_controls+272
 ADDRGP4 Controls_MenuKey
 ASGNP4
-line 1136
-;1136:	s_controls.menu.wrapAround = qtrue;
+line 1124
+;1124:	s_controls.menu.wrapAround = qtrue;
 ADDRGP4 s_controls+276
 CNSTI4 1
 ASGNI4
-line 1137
-;1137:	s_controls.menu.fullscreen = qtrue;
+line 1125
+;1125:	s_controls.menu.fullscreen = qtrue;
 ADDRGP4 s_controls+280
 CNSTI4 1
 ASGNI4
-line 1139
-;1138:
-;1139:	s_controls.banner.generic.type	= MTYPE_BTEXT;
+line 1127
+;1126:
+;1127:	s_controls.banner.generic.type	= MTYPE_BTEXT;
 ADDRGP4 s_controls+288
 CNSTI4 10
 ASGNI4
-line 1140
-;1140:	s_controls.banner.generic.flags	= QMF_CENTER_JUSTIFY;
+line 1128
+;1128:	s_controls.banner.generic.flags	= QMF_CENTER_JUSTIFY;
 ADDRGP4 s_controls+288+44
 CNSTU4 8
 ASGNU4
-line 1141
-;1141:	s_controls.banner.generic.x		= 320;
+line 1129
+;1129:	s_controls.banner.generic.x		= 320;
 ADDRGP4 s_controls+288+12
 CNSTI4 320
 ASGNI4
-line 1142
-;1142:	s_controls.banner.generic.y		= 16;
+line 1130
+;1130:	s_controls.banner.generic.y		= 16;
 ADDRGP4 s_controls+288+16
 CNSTI4 16
 ASGNI4
-line 1143
-;1143:	s_controls.banner.string		= "CONTROLS";
+line 1131
+;1131:	s_controls.banner.string		= "CONTROLS";
 ADDRGP4 s_controls+288+60
-ADDRGP4 $615
+ADDRGP4 $609
 ASGNP4
-line 1144
-;1144:	s_controls.banner.color			= color_white;
+line 1132
+;1132:	s_controls.banner.color			= color_white;
 ADDRGP4 s_controls+288+68
 ADDRGP4 color_white
 ASGNP4
-line 1145
-;1145:	s_controls.banner.style			= UI_CENTER;
+line 1133
+;1133:	s_controls.banner.style			= UI_CENTER;
 ADDRGP4 s_controls+288+64
 CNSTI4 1
 ASGNI4
-line 1163
-;1146:/*
-;1147:	s_controls.framel.generic.type  = MTYPE_BITMAP;
-;1148:	s_controls.framel.generic.name  = ART_FRAMEL;
-;1149:	s_controls.framel.generic.flags = QMF_LEFT_JUSTIFY|QMF_INACTIVE;
-;1150:	s_controls.framel.generic.x     = 0;
-;1151:	s_controls.framel.generic.y     = 78;
-;1152:	s_controls.framel.width  	    = 256;
-;1153:	s_controls.framel.height  	    = 329;
-;1154:
-;1155:	s_controls.framer.generic.type  = MTYPE_BITMAP;
-;1156:	s_controls.framer.generic.name  = ART_FRAMER;
-;1157:	s_controls.framer.generic.flags = QMF_LEFT_JUSTIFY|QMF_INACTIVE;
-;1158:	s_controls.framer.generic.x     = 376;
-;1159:	s_controls.framer.generic.y     = 76;
-;1160:	s_controls.framer.width  	    = 256;
-;1161:	s_controls.framer.height  	    = 334;
-;1162:*/
-;1163:	s_controls.looking.generic.type     = MTYPE_PTEXT;
+line 1151
+;1134:/*
+;1135:	s_controls.framel.generic.type  = MTYPE_BITMAP;
+;1136:	s_controls.framel.generic.name  = ART_FRAMEL;
+;1137:	s_controls.framel.generic.flags = QMF_LEFT_JUSTIFY|QMF_INACTIVE;
+;1138:	s_controls.framel.generic.x     = 0;
+;1139:	s_controls.framel.generic.y     = 78;
+;1140:	s_controls.framel.width  	    = 256;
+;1141:	s_controls.framel.height  	    = 329;
+;1142:
+;1143:	s_controls.framer.generic.type  = MTYPE_BITMAP;
+;1144:	s_controls.framer.generic.name  = ART_FRAMER;
+;1145:	s_controls.framer.generic.flags = QMF_LEFT_JUSTIFY|QMF_INACTIVE;
+;1146:	s_controls.framer.generic.x     = 376;
+;1147:	s_controls.framer.generic.y     = 76;
+;1148:	s_controls.framer.width  	    = 256;
+;1149:	s_controls.framer.height  	    = 334;
+;1150:*/
+;1151:	s_controls.looking.generic.type     = MTYPE_PTEXT;
 ADDRGP4 s_controls+520
 CNSTI4 9
 ASGNI4
-line 1164
-;1164:	s_controls.looking.generic.flags    = QMF_RIGHT_JUSTIFY|QMF_PULSEIFFOCUS;
+line 1152
+;1152:	s_controls.looking.generic.flags    = QMF_RIGHT_JUSTIFY|QMF_PULSEIFFOCUS;
 ADDRGP4 s_controls+520+44
 CNSTU4 272
 ASGNU4
-line 1165
-;1165:	s_controls.looking.generic.id	    = ID_LOOKING;
+line 1153
+;1153:	s_controls.looking.generic.id	    = ID_LOOKING;
 ADDRGP4 s_controls+520+8
 CNSTI4 101
 ASGNI4
-line 1166
-;1166:	s_controls.looking.generic.callback	= Controls_MenuEvent;
+line 1154
+;1154:	s_controls.looking.generic.callback	= Controls_MenuEvent;
 ADDRGP4 s_controls+520+48
 ADDRGP4 Controls_MenuEvent
 ASGNP4
-line 1167
-;1167:	s_controls.looking.generic.x	    = 152;
+line 1155
+;1155:	s_controls.looking.generic.x	    = 152;
 ADDRGP4 s_controls+520+12
 CNSTI4 152
 ASGNI4
-line 1168
-;1168:	s_controls.looking.generic.y	    = 240 - 2 * PROP_HEIGHT;
+line 1156
+;1156:	s_controls.looking.generic.y	    = 240 - 2 * PROP_HEIGHT;
 ADDRGP4 s_controls+520+16
 CNSTI4 186
 ASGNI4
-line 1169
-;1169:	s_controls.looking.string			= "LOOK";
+line 1157
+;1157:	s_controls.looking.string			= "LOOK";
 ADDRGP4 s_controls+520+60
-ADDRGP4 $633
+ADDRGP4 $627
 ASGNP4
-line 1170
-;1170:	s_controls.looking.style			= UI_RIGHT;
+line 1158
+;1158:	s_controls.looking.style			= UI_RIGHT;
 ADDRGP4 s_controls+520+64
 CNSTI4 2
 ASGNI4
-line 1171
-;1171:	s_controls.looking.color			= color_yellow;
+line 1159
+;1159:	s_controls.looking.color			= color_yellow;
 ADDRGP4 s_controls+520+68
 ADDRGP4 color_yellow
 ASGNP4
-line 1173
-;1172:
-;1173:	s_controls.movement.generic.type     = MTYPE_PTEXT;
+line 1161
+;1160:
+;1161:	s_controls.movement.generic.type     = MTYPE_PTEXT;
 ADDRGP4 s_controls+448
 CNSTI4 9
 ASGNI4
-line 1174
-;1174:	s_controls.movement.generic.flags    = QMF_RIGHT_JUSTIFY|QMF_PULSEIFFOCUS;
+line 1162
+;1162:	s_controls.movement.generic.flags    = QMF_RIGHT_JUSTIFY|QMF_PULSEIFFOCUS;
 ADDRGP4 s_controls+448+44
 CNSTU4 272
 ASGNU4
-line 1175
-;1175:	s_controls.movement.generic.id	     = ID_MOVEMENT;
+line 1163
+;1163:	s_controls.movement.generic.id	     = ID_MOVEMENT;
 ADDRGP4 s_controls+448+8
 CNSTI4 100
 ASGNI4
-line 1176
-;1176:	s_controls.movement.generic.callback = Controls_MenuEvent;
+line 1164
+;1164:	s_controls.movement.generic.callback = Controls_MenuEvent;
 ADDRGP4 s_controls+448+48
 ADDRGP4 Controls_MenuEvent
 ASGNP4
-line 1177
-;1177:	s_controls.movement.generic.x	     = 152;
+line 1165
+;1165:	s_controls.movement.generic.x	     = 152;
 ADDRGP4 s_controls+448+12
 CNSTI4 152
 ASGNI4
-line 1178
-;1178:	s_controls.movement.generic.y	     = 240 - PROP_HEIGHT;
+line 1166
+;1166:	s_controls.movement.generic.y	     = 240 - PROP_HEIGHT;
 ADDRGP4 s_controls+448+16
 CNSTI4 213
 ASGNI4
-line 1179
-;1179:	s_controls.movement.string			= "MOVE";
+line 1167
+;1167:	s_controls.movement.string			= "MOVE";
 ADDRGP4 s_controls+448+60
-ADDRGP4 $651
+ADDRGP4 $645
 ASGNP4
-line 1180
-;1180:	s_controls.movement.style			= UI_RIGHT;
+line 1168
+;1168:	s_controls.movement.style			= UI_RIGHT;
 ADDRGP4 s_controls+448+64
 CNSTI4 2
 ASGNI4
-line 1181
-;1181:	s_controls.movement.color			= color_yellow;
+line 1169
+;1169:	s_controls.movement.color			= color_yellow;
 ADDRGP4 s_controls+448+68
 ADDRGP4 color_yellow
 ASGNP4
-line 1183
-;1182:
-;1183:	s_controls.weapons.generic.type	    = MTYPE_PTEXT;
+line 1171
+;1170:
+;1171:	s_controls.weapons.generic.type	    = MTYPE_PTEXT;
 ADDRGP4 s_controls+592
 CNSTI4 9
 ASGNI4
-line 1184
-;1184:	s_controls.weapons.generic.flags    = QMF_RIGHT_JUSTIFY|QMF_PULSEIFFOCUS;
+line 1172
+;1172:	s_controls.weapons.generic.flags    = QMF_RIGHT_JUSTIFY|QMF_PULSEIFFOCUS;
 ADDRGP4 s_controls+592+44
 CNSTU4 272
 ASGNU4
-line 1185
-;1185:	s_controls.weapons.generic.id	    = ID_WEAPONS;
+line 1173
+;1173:	s_controls.weapons.generic.id	    = ID_WEAPONS;
 ADDRGP4 s_controls+592+8
 CNSTI4 102
 ASGNI4
-line 1186
-;1186:	s_controls.weapons.generic.callback	= Controls_MenuEvent;
+line 1174
+;1174:	s_controls.weapons.generic.callback	= Controls_MenuEvent;
 ADDRGP4 s_controls+592+48
 ADDRGP4 Controls_MenuEvent
 ASGNP4
-line 1187
-;1187:	s_controls.weapons.generic.x	    = 152;
+line 1175
+;1175:	s_controls.weapons.generic.x	    = 152;
 ADDRGP4 s_controls+592+12
 CNSTI4 152
 ASGNI4
-line 1188
-;1188:	s_controls.weapons.generic.y	    = 240;
+line 1176
+;1176:	s_controls.weapons.generic.y	    = 240;
 ADDRGP4 s_controls+592+16
 CNSTI4 240
 ASGNI4
-line 1189
-;1189:	s_controls.weapons.string			= "SHOOT";
+line 1177
+;1177:	s_controls.weapons.string			= "SHOOT";
 ADDRGP4 s_controls+592+60
-ADDRGP4 $669
+ADDRGP4 $663
 ASGNP4
-line 1190
-;1190:	s_controls.weapons.style			= UI_RIGHT;
+line 1178
+;1178:	s_controls.weapons.style			= UI_RIGHT;
 ADDRGP4 s_controls+592+64
 CNSTI4 2
 ASGNI4
-line 1191
-;1191:	s_controls.weapons.color			= color_yellow;
+line 1179
+;1179:	s_controls.weapons.color			= color_yellow;
 ADDRGP4 s_controls+592+68
 ADDRGP4 color_yellow
 ASGNP4
-line 1193
-;1192:
-;1193:	s_controls.misc.generic.type	 = MTYPE_PTEXT;
+line 1181
+;1180:
+;1181:	s_controls.misc.generic.type	 = MTYPE_PTEXT;
 ADDRGP4 s_controls+664
 CNSTI4 9
 ASGNI4
-line 1194
-;1194:	s_controls.misc.generic.flags    = QMF_RIGHT_JUSTIFY|QMF_PULSEIFFOCUS;
+line 1182
+;1182:	s_controls.misc.generic.flags    = QMF_RIGHT_JUSTIFY|QMF_PULSEIFFOCUS;
 ADDRGP4 s_controls+664+44
 CNSTU4 272
 ASGNU4
-line 1195
-;1195:	s_controls.misc.generic.id	     = ID_MISC;
+line 1183
+;1183:	s_controls.misc.generic.id	     = ID_MISC;
 ADDRGP4 s_controls+664+8
 CNSTI4 103
 ASGNI4
-line 1196
-;1196:	s_controls.misc.generic.callback = Controls_MenuEvent;
+line 1184
+;1184:	s_controls.misc.generic.callback = Controls_MenuEvent;
 ADDRGP4 s_controls+664+48
 ADDRGP4 Controls_MenuEvent
 ASGNP4
-line 1197
-;1197:	s_controls.misc.generic.x		 = 152;
+line 1185
+;1185:	s_controls.misc.generic.x		 = 152;
 ADDRGP4 s_controls+664+12
 CNSTI4 152
 ASGNI4
-line 1198
-;1198:	s_controls.misc.generic.y		 = 240 + PROP_HEIGHT;
+line 1186
+;1186:	s_controls.misc.generic.y		 = 240 + PROP_HEIGHT;
 ADDRGP4 s_controls+664+16
 CNSTI4 267
 ASGNI4
-line 1199
-;1199:	s_controls.misc.string			= "MISC";
+line 1187
+;1187:	s_controls.misc.string			= "MISC";
 ADDRGP4 s_controls+664+60
-ADDRGP4 $687
+ADDRGP4 $681
 ASGNP4
-line 1200
-;1200:	s_controls.misc.style			= UI_RIGHT;
+line 1188
+;1188:	s_controls.misc.style			= UI_RIGHT;
 ADDRGP4 s_controls+664+64
 CNSTI4 2
 ASGNI4
-line 1201
-;1201:	s_controls.misc.color			= color_yellow;
+line 1189
+;1189:	s_controls.misc.color			= color_yellow;
 ADDRGP4 s_controls+664+68
 ADDRGP4 color_yellow
 ASGNP4
-line 1203
-;1202:
-;1203:	s_controls.back.generic.type	 = MTYPE_BITMAP;
+line 1191
+;1190:
+;1191:	s_controls.back.generic.type	 = MTYPE_BITMAP;
 ADDRGP4 s_controls+4176
 CNSTI4 6
 ASGNI4
-line 1204
-;1204:	s_controls.back.generic.name     = ART_BACK0;
+line 1192
+;1192:	s_controls.back.generic.name     = ART_BACK0;
 ADDRGP4 s_controls+4176+4
-ADDRGP4 $695
+ADDRGP4 $689
 ASGNP4
-line 1205
-;1205:	s_controls.back.generic.flags    = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS;
+line 1193
+;1193:	s_controls.back.generic.flags    = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS;
 ADDRGP4 s_controls+4176+44
 CNSTU4 260
 ASGNU4
-line 1206
-;1206:	s_controls.back.generic.x		 = 0;
+line 1194
+;1194:	s_controls.back.generic.x		 = 0;
 ADDRGP4 s_controls+4176+12
 CNSTI4 0
 ASGNI4
-line 1207
-;1207:	s_controls.back.generic.y		 = 480-64;
+line 1195
+;1195:	s_controls.back.generic.y		 = 480-64;
 ADDRGP4 s_controls+4176+16
 CNSTI4 416
 ASGNI4
-line 1208
-;1208:	s_controls.back.generic.id	     = ID_BACK;
+line 1196
+;1196:	s_controls.back.generic.id	     = ID_BACK;
 ADDRGP4 s_controls+4176+8
 CNSTI4 105
 ASGNI4
-line 1209
-;1209:	s_controls.back.generic.callback = Controls_MenuEvent;
+line 1197
+;1197:	s_controls.back.generic.callback = Controls_MenuEvent;
 ADDRGP4 s_controls+4176+48
 ADDRGP4 Controls_MenuEvent
 ASGNP4
-line 1210
-;1210:	s_controls.back.width  		     = 128;
+line 1198
+;1198:	s_controls.back.width  		     = 128;
 ADDRGP4 s_controls+4176+76
 CNSTI4 128
 ASGNI4
-line 1211
-;1211:	s_controls.back.height  		 = 64;
+line 1199
+;1199:	s_controls.back.height  		 = 64;
 ADDRGP4 s_controls+4176+80
 CNSTI4 64
 ASGNI4
-line 1212
-;1212:	s_controls.back.focuspic         = ART_BACK1;
+line 1200
+;1200:	s_controls.back.focuspic         = ART_BACK1;
 ADDRGP4 s_controls+4176+60
-ADDRGP4 $712
+ADDRGP4 $706
 ASGNP4
-line 1214
-;1213:
-;1214:	s_controls.player.generic.type      = MTYPE_BITMAP;
+line 1202
+;1201:
+;1202:	s_controls.player.generic.type      = MTYPE_BITMAP;
 ADDRGP4 s_controls+360
 CNSTI4 6
 ASGNI4
-line 1215
-;1215:	s_controls.player.generic.flags     = QMF_INACTIVE;
+line 1203
+;1203:	s_controls.player.generic.flags     = QMF_INACTIVE;
 ADDRGP4 s_controls+360+44
 CNSTU4 16384
 ASGNU4
-line 1216
-;1216:	s_controls.player.generic.ownerdraw = Controls_DrawPlayer;
+line 1204
+;1204:	s_controls.player.generic.ownerdraw = Controls_DrawPlayer;
 ADDRGP4 s_controls+360+56
 ADDRGP4 Controls_DrawPlayer
 ASGNP4
-line 1217
-;1217:	s_controls.player.generic.x	        = 400;
+line 1205
+;1205:	s_controls.player.generic.x	        = 400;
 ADDRGP4 s_controls+360+12
 CNSTI4 400
 ASGNI4
-line 1218
-;1218:	s_controls.player.generic.y	        = -40;
+line 1206
+;1206:	s_controls.player.generic.y	        = -40;
 ADDRGP4 s_controls+360+16
 CNSTI4 -40
 ASGNI4
-line 1219
-;1219:	s_controls.player.width	            = 32*10;
+line 1207
+;1207:	s_controls.player.width	            = 32*10;
 ADDRGP4 s_controls+360+76
 CNSTI4 320
 ASGNI4
-line 1220
-;1220:	s_controls.player.height            = 56*10;
+line 1208
+;1208:	s_controls.player.height            = 56*10;
 ADDRGP4 s_controls+360+80
 CNSTI4 560
 ASGNI4
-line 1222
-;1221:
-;1222:	s_controls.walkforward.generic.type	     = MTYPE_ACTION;
+line 1210
+;1209:
+;1210:	s_controls.walkforward.generic.type	     = MTYPE_ACTION;
 ADDRGP4 s_controls+736
 CNSTI4 2
 ASGNI4
-line 1223
-;1223:	s_controls.walkforward.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
+line 1211
+;1211:	s_controls.walkforward.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
 ADDRGP4 s_controls+736+44
 CNSTU4 12548
 ASGNU4
-line 1224
-;1224:	s_controls.walkforward.generic.callback  = Controls_ActionEvent;
+line 1212
+;1212:	s_controls.walkforward.generic.callback  = Controls_ActionEvent;
 ADDRGP4 s_controls+736+48
 ADDRGP4 Controls_ActionEvent
 ASGNP4
-line 1225
-;1225:	s_controls.walkforward.generic.ownerdraw = Controls_DrawKeyBinding;
+line 1213
+;1213:	s_controls.walkforward.generic.ownerdraw = Controls_DrawKeyBinding;
 ADDRGP4 s_controls+736+56
 ADDRGP4 Controls_DrawKeyBinding
 ASGNP4
-line 1226
-;1226:	s_controls.walkforward.generic.id 	     = ID_FORWARD;
+line 1214
+;1214:	s_controls.walkforward.generic.id 	     = ID_FORWARD;
 ADDRGP4 s_controls+736+8
 CNSTI4 3
 ASGNI4
-line 1228
-;1227:
-;1228:	s_controls.backpedal.generic.type	   = MTYPE_ACTION;
+line 1216
+;1215:
+;1216:	s_controls.backpedal.generic.type	   = MTYPE_ACTION;
 ADDRGP4 s_controls+796
 CNSTI4 2
 ASGNI4
-line 1229
-;1229:	s_controls.backpedal.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
+line 1217
+;1217:	s_controls.backpedal.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
 ADDRGP4 s_controls+796+44
 CNSTU4 12548
 ASGNU4
-line 1230
-;1230:	s_controls.backpedal.generic.callback  = Controls_ActionEvent;
+line 1218
+;1218:	s_controls.backpedal.generic.callback  = Controls_ActionEvent;
 ADDRGP4 s_controls+796+48
 ADDRGP4 Controls_ActionEvent
 ASGNP4
-line 1231
-;1231:	s_controls.backpedal.generic.ownerdraw = Controls_DrawKeyBinding;
+line 1219
+;1219:	s_controls.backpedal.generic.ownerdraw = Controls_DrawKeyBinding;
 ADDRGP4 s_controls+796+56
 ADDRGP4 Controls_DrawKeyBinding
 ASGNP4
-line 1232
-;1232:	s_controls.backpedal.generic.id 	   = ID_BACKPEDAL;
+line 1220
+;1220:	s_controls.backpedal.generic.id 	   = ID_BACKPEDAL;
 ADDRGP4 s_controls+796+8
 CNSTI4 4
 ASGNI4
-line 1234
-;1233:
-;1234:	s_controls.stepleft.generic.type	  = MTYPE_ACTION;
+line 1222
+;1221:
+;1222:	s_controls.stepleft.generic.type	  = MTYPE_ACTION;
 ADDRGP4 s_controls+856
 CNSTI4 2
 ASGNI4
-line 1235
-;1235:	s_controls.stepleft.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
+line 1223
+;1223:	s_controls.stepleft.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
 ADDRGP4 s_controls+856+44
 CNSTU4 12548
 ASGNU4
-line 1236
-;1236:	s_controls.stepleft.generic.callback  = Controls_ActionEvent;
+line 1224
+;1224:	s_controls.stepleft.generic.callback  = Controls_ActionEvent;
 ADDRGP4 s_controls+856+48
 ADDRGP4 Controls_ActionEvent
 ASGNP4
-line 1237
-;1237:	s_controls.stepleft.generic.ownerdraw = Controls_DrawKeyBinding;
+line 1225
+;1225:	s_controls.stepleft.generic.ownerdraw = Controls_DrawKeyBinding;
 ADDRGP4 s_controls+856+56
 ADDRGP4 Controls_DrawKeyBinding
 ASGNP4
-line 1238
-;1238:	s_controls.stepleft.generic.id 		  = ID_MOVELEFT;
+line 1226
+;1226:	s_controls.stepleft.generic.id 		  = ID_MOVELEFT;
 ADDRGP4 s_controls+856+8
 CNSTI4 5
 ASGNI4
-line 1240
-;1239:
-;1240:	s_controls.stepright.generic.type	   = MTYPE_ACTION;
+line 1228
+;1227:
+;1228:	s_controls.stepright.generic.type	   = MTYPE_ACTION;
 ADDRGP4 s_controls+916
 CNSTI4 2
 ASGNI4
-line 1241
-;1241:	s_controls.stepright.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
+line 1229
+;1229:	s_controls.stepright.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
 ADDRGP4 s_controls+916+44
 CNSTU4 12548
 ASGNU4
-line 1242
-;1242:	s_controls.stepright.generic.callback  = Controls_ActionEvent;
+line 1230
+;1230:	s_controls.stepright.generic.callback  = Controls_ActionEvent;
 ADDRGP4 s_controls+916+48
 ADDRGP4 Controls_ActionEvent
 ASGNP4
-line 1243
-;1243:	s_controls.stepright.generic.ownerdraw = Controls_DrawKeyBinding;
+line 1231
+;1231:	s_controls.stepright.generic.ownerdraw = Controls_DrawKeyBinding;
 ADDRGP4 s_controls+916+56
 ADDRGP4 Controls_DrawKeyBinding
 ASGNP4
-line 1244
-;1244:	s_controls.stepright.generic.id        = ID_MOVERIGHT;
+line 1232
+;1232:	s_controls.stepright.generic.id        = ID_MOVERIGHT;
 ADDRGP4 s_controls+916+8
 CNSTI4 6
 ASGNI4
-line 1246
-;1245:
-;1246:	s_controls.moveup.generic.type	    = MTYPE_ACTION;
+line 1234
+;1233:
+;1234:	s_controls.moveup.generic.type	    = MTYPE_ACTION;
 ADDRGP4 s_controls+976
 CNSTI4 2
 ASGNI4
-line 1247
-;1247:	s_controls.moveup.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
+line 1235
+;1235:	s_controls.moveup.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
 ADDRGP4 s_controls+976+44
 CNSTU4 12548
 ASGNU4
-line 1248
-;1248:	s_controls.moveup.generic.callback  = Controls_ActionEvent;
+line 1236
+;1236:	s_controls.moveup.generic.callback  = Controls_ActionEvent;
 ADDRGP4 s_controls+976+48
 ADDRGP4 Controls_ActionEvent
 ASGNP4
-line 1249
-;1249:	s_controls.moveup.generic.ownerdraw = Controls_DrawKeyBinding;
+line 1237
+;1237:	s_controls.moveup.generic.ownerdraw = Controls_DrawKeyBinding;
 ADDRGP4 s_controls+976+56
 ADDRGP4 Controls_DrawKeyBinding
 ASGNP4
-line 1250
-;1250:	s_controls.moveup.generic.id        = ID_MOVEUP;
+line 1238
+;1238:	s_controls.moveup.generic.id        = ID_MOVEUP;
 ADDRGP4 s_controls+976+8
 CNSTI4 7
 ASGNI4
-line 1252
-;1251:
-;1252:	s_controls.movedown.generic.type	  = MTYPE_ACTION;
+line 1240
+;1239:
+;1240:	s_controls.movedown.generic.type	  = MTYPE_ACTION;
 ADDRGP4 s_controls+1036
 CNSTI4 2
 ASGNI4
-line 1253
-;1253:	s_controls.movedown.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
+line 1241
+;1241:	s_controls.movedown.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
 ADDRGP4 s_controls+1036+44
 CNSTU4 12548
 ASGNU4
-line 1254
-;1254:	s_controls.movedown.generic.callback  = Controls_ActionEvent;
+line 1242
+;1242:	s_controls.movedown.generic.callback  = Controls_ActionEvent;
 ADDRGP4 s_controls+1036+48
 ADDRGP4 Controls_ActionEvent
 ASGNP4
-line 1255
-;1255:	s_controls.movedown.generic.ownerdraw = Controls_DrawKeyBinding;
+line 1243
+;1243:	s_controls.movedown.generic.ownerdraw = Controls_DrawKeyBinding;
 ADDRGP4 s_controls+1036+56
 ADDRGP4 Controls_DrawKeyBinding
 ASGNP4
-line 1256
-;1256:	s_controls.movedown.generic.id        = ID_MOVEDOWN;
+line 1244
+;1244:	s_controls.movedown.generic.id        = ID_MOVEDOWN;
 ADDRGP4 s_controls+1036+8
 CNSTI4 8
 ASGNI4
-line 1258
-;1257:
-;1258:	s_controls.turnleft.generic.type	  = MTYPE_ACTION;
+line 1246
+;1245:
+;1246:	s_controls.turnleft.generic.type	  = MTYPE_ACTION;
 ADDRGP4 s_controls+1096
 CNSTI4 2
 ASGNI4
-line 1259
-;1259:	s_controls.turnleft.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
+line 1247
+;1247:	s_controls.turnleft.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
 ADDRGP4 s_controls+1096+44
 CNSTU4 12548
 ASGNU4
-line 1260
-;1260:	s_controls.turnleft.generic.callback  = Controls_ActionEvent;
+line 1248
+;1248:	s_controls.turnleft.generic.callback  = Controls_ActionEvent;
 ADDRGP4 s_controls+1096+48
 ADDRGP4 Controls_ActionEvent
 ASGNP4
-line 1261
-;1261:	s_controls.turnleft.generic.ownerdraw = Controls_DrawKeyBinding;
+line 1249
+;1249:	s_controls.turnleft.generic.ownerdraw = Controls_DrawKeyBinding;
 ADDRGP4 s_controls+1096+56
 ADDRGP4 Controls_DrawKeyBinding
 ASGNP4
-line 1262
-;1262:	s_controls.turnleft.generic.id        = ID_LEFT;
+line 1250
+;1250:	s_controls.turnleft.generic.id        = ID_LEFT;
 ADDRGP4 s_controls+1096+8
 CNSTI4 9
 ASGNI4
-line 1264
-;1263:
-;1264:	s_controls.turnright.generic.type	   = MTYPE_ACTION;
+line 1252
+;1251:
+;1252:	s_controls.turnright.generic.type	   = MTYPE_ACTION;
 ADDRGP4 s_controls+1156
 CNSTI4 2
 ASGNI4
-line 1265
-;1265:	s_controls.turnright.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
+line 1253
+;1253:	s_controls.turnright.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
 ADDRGP4 s_controls+1156+44
 CNSTU4 12548
 ASGNU4
-line 1266
-;1266:	s_controls.turnright.generic.callback  = Controls_ActionEvent;
+line 1254
+;1254:	s_controls.turnright.generic.callback  = Controls_ActionEvent;
 ADDRGP4 s_controls+1156+48
 ADDRGP4 Controls_ActionEvent
 ASGNP4
-line 1267
-;1267:	s_controls.turnright.generic.ownerdraw = Controls_DrawKeyBinding;
+line 1255
+;1255:	s_controls.turnright.generic.ownerdraw = Controls_DrawKeyBinding;
 ADDRGP4 s_controls+1156+56
 ADDRGP4 Controls_DrawKeyBinding
 ASGNP4
-line 1268
-;1268:	s_controls.turnright.generic.id        = ID_RIGHT;
+line 1256
+;1256:	s_controls.turnright.generic.id        = ID_RIGHT;
 ADDRGP4 s_controls+1156+8
 CNSTI4 10
 ASGNI4
-line 1270
-;1269:
-;1270:	s_controls.sidestep.generic.type	  = MTYPE_ACTION;
+line 1258
+;1257:
+;1258:	s_controls.sidestep.generic.type	  = MTYPE_ACTION;
 ADDRGP4 s_controls+1216
 CNSTI4 2
 ASGNI4
-line 1271
-;1271:	s_controls.sidestep.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
+line 1259
+;1259:	s_controls.sidestep.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
 ADDRGP4 s_controls+1216+44
 CNSTU4 12548
 ASGNU4
-line 1272
-;1272:	s_controls.sidestep.generic.callback  = Controls_ActionEvent;
+line 1260
+;1260:	s_controls.sidestep.generic.callback  = Controls_ActionEvent;
 ADDRGP4 s_controls+1216+48
 ADDRGP4 Controls_ActionEvent
 ASGNP4
-line 1273
-;1273:	s_controls.sidestep.generic.ownerdraw = Controls_DrawKeyBinding;
+line 1261
+;1261:	s_controls.sidestep.generic.ownerdraw = Controls_DrawKeyBinding;
 ADDRGP4 s_controls+1216+56
 ADDRGP4 Controls_DrawKeyBinding
 ASGNP4
-line 1274
-;1274:	s_controls.sidestep.generic.id        = ID_STRAFE;
+line 1262
+;1262:	s_controls.sidestep.generic.id        = ID_STRAFE;
 ADDRGP4 s_controls+1216+8
 CNSTI4 11
 ASGNI4
-line 1276
-;1275:
-;1276:	s_controls.chainsaw.generic.type	  = MTYPE_ACTION;
+line 1264
+;1263:
+;1264:	s_controls.chainsaw.generic.type	  = MTYPE_ACTION;
 ADDRGP4 s_controls+1396
 CNSTI4 2
 ASGNI4
-line 1277
-;1277:	s_controls.chainsaw.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
+line 1265
+;1265:	s_controls.chainsaw.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
 ADDRGP4 s_controls+1396+44
 CNSTU4 12548
 ASGNU4
-line 1278
-;1278:	s_controls.chainsaw.generic.callback  = Controls_ActionEvent;
+line 1266
+;1266:	s_controls.chainsaw.generic.callback  = Controls_ActionEvent;
 ADDRGP4 s_controls+1396+48
 ADDRGP4 Controls_ActionEvent
 ASGNP4
-line 1279
-;1279:	s_controls.chainsaw.generic.ownerdraw = Controls_DrawKeyBinding;
+line 1267
+;1267:	s_controls.chainsaw.generic.ownerdraw = Controls_DrawKeyBinding;
 ADDRGP4 s_controls+1396+56
 ADDRGP4 Controls_DrawKeyBinding
 ASGNP4
-line 1280
-;1280:	s_controls.chainsaw.generic.id        = ID_WEAPON1;
+line 1268
+;1268:	s_controls.chainsaw.generic.id        = ID_WEAPON1;
 ADDRGP4 s_controls+1396+8
 CNSTI4 17
 ASGNI4
-line 1282
-;1281:
-;1282:	s_controls.machinegun.generic.type	    = MTYPE_ACTION;
+line 1270
+;1269:
+;1270:	s_controls.machinegun.generic.type	    = MTYPE_ACTION;
 ADDRGP4 s_controls+1336
 CNSTI4 2
 ASGNI4
-line 1283
-;1283:	s_controls.machinegun.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
+line 1271
+;1271:	s_controls.machinegun.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
 ADDRGP4 s_controls+1336+44
 CNSTU4 12548
 ASGNU4
-line 1284
-;1284:	s_controls.machinegun.generic.callback  = Controls_ActionEvent;
+line 1272
+;1272:	s_controls.machinegun.generic.callback  = Controls_ActionEvent;
 ADDRGP4 s_controls+1336+48
 ADDRGP4 Controls_ActionEvent
 ASGNP4
-line 1285
-;1285:	s_controls.machinegun.generic.ownerdraw = Controls_DrawKeyBinding;
+line 1273
+;1273:	s_controls.machinegun.generic.ownerdraw = Controls_DrawKeyBinding;
 ADDRGP4 s_controls+1336+56
 ADDRGP4 Controls_DrawKeyBinding
 ASGNP4
-line 1286
-;1286:	s_controls.machinegun.generic.id        = ID_WEAPON2;
+line 1274
+;1274:	s_controls.machinegun.generic.id        = ID_WEAPON2;
 ADDRGP4 s_controls+1336+8
 CNSTI4 18
 ASGNI4
-line 1288
-;1287:
-;1288:	s_controls.shotgun.generic.type	     = MTYPE_ACTION;
+line 1276
+;1275:
+;1276:	s_controls.shotgun.generic.type	     = MTYPE_ACTION;
 ADDRGP4 s_controls+1456
 CNSTI4 2
 ASGNI4
-line 1289
-;1289:	s_controls.shotgun.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
+line 1277
+;1277:	s_controls.shotgun.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
 ADDRGP4 s_controls+1456+44
 CNSTU4 12548
 ASGNU4
-line 1290
-;1290:	s_controls.shotgun.generic.callback  = Controls_ActionEvent;
+line 1278
+;1278:	s_controls.shotgun.generic.callback  = Controls_ActionEvent;
 ADDRGP4 s_controls+1456+48
 ADDRGP4 Controls_ActionEvent
 ASGNP4
-line 1291
-;1291:	s_controls.shotgun.generic.ownerdraw = Controls_DrawKeyBinding;
+line 1279
+;1279:	s_controls.shotgun.generic.ownerdraw = Controls_DrawKeyBinding;
 ADDRGP4 s_controls+1456+56
 ADDRGP4 Controls_DrawKeyBinding
 ASGNP4
-line 1292
-;1292:	s_controls.shotgun.generic.id        = ID_WEAPON3;
+line 1280
+;1280:	s_controls.shotgun.generic.id        = ID_WEAPON3;
 ADDRGP4 s_controls+1456+8
 CNSTI4 19
 ASGNI4
-line 1294
-;1293:
-;1294:	s_controls.attack.generic.type	    = MTYPE_ACTION;
+line 1282
+;1281:
+;1282:	s_controls.attack.generic.type	    = MTYPE_ACTION;
 ADDRGP4 s_controls+1516
 CNSTI4 2
 ASGNI4
-line 1295
-;1295:	s_controls.attack.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
+line 1283
+;1283:	s_controls.attack.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
 ADDRGP4 s_controls+1516+44
 CNSTU4 12548
 ASGNU4
-line 1296
-;1296:	s_controls.attack.generic.callback  = Controls_ActionEvent;
+line 1284
+;1284:	s_controls.attack.generic.callback  = Controls_ActionEvent;
 ADDRGP4 s_controls+1516+48
 ADDRGP4 Controls_ActionEvent
 ASGNP4
-line 1297
-;1297:	s_controls.attack.generic.ownerdraw = Controls_DrawKeyBinding;
+line 1285
+;1285:	s_controls.attack.generic.ownerdraw = Controls_DrawKeyBinding;
 ADDRGP4 s_controls+1516+56
 ADDRGP4 Controls_DrawKeyBinding
 ASGNP4
-line 1298
-;1298:	s_controls.attack.generic.id        = ID_ATTACK;
+line 1286
+;1286:	s_controls.attack.generic.id        = ID_ATTACK;
 ADDRGP4 s_controls+1516+8
 CNSTI4 26
 ASGNI4
-line 1300
-;1299:
-;1300:	s_controls.prevweapon.generic.type	    = MTYPE_ACTION;
+line 1288
+;1287:
+;1288:	s_controls.prevweapon.generic.type	    = MTYPE_ACTION;
 ADDRGP4 s_controls+1576
 CNSTI4 2
 ASGNI4
-line 1301
-;1301:	s_controls.prevweapon.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
+line 1289
+;1289:	s_controls.prevweapon.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
 ADDRGP4 s_controls+1576+44
 CNSTU4 12548
 ASGNU4
-line 1302
-;1302:	s_controls.prevweapon.generic.callback  = Controls_ActionEvent;
+line 1290
+;1290:	s_controls.prevweapon.generic.callback  = Controls_ActionEvent;
 ADDRGP4 s_controls+1576+48
 ADDRGP4 Controls_ActionEvent
 ASGNP4
-line 1303
-;1303:	s_controls.prevweapon.generic.ownerdraw = Controls_DrawKeyBinding;
+line 1291
+;1291:	s_controls.prevweapon.generic.ownerdraw = Controls_DrawKeyBinding;
 ADDRGP4 s_controls+1576+56
 ADDRGP4 Controls_DrawKeyBinding
 ASGNP4
-line 1304
-;1304:	s_controls.prevweapon.generic.id        = ID_WEAPPREV;
+line 1292
+;1292:	s_controls.prevweapon.generic.id        = ID_WEAPPREV;
 ADDRGP4 s_controls+1576+8
 CNSTI4 27
 ASGNI4
-line 1306
-;1305:
-;1306:	s_controls.nextweapon.generic.type	    = MTYPE_ACTION;
+line 1294
+;1293:
+;1294:	s_controls.nextweapon.generic.type	    = MTYPE_ACTION;
 ADDRGP4 s_controls+1636
 CNSTI4 2
 ASGNI4
-line 1307
-;1307:	s_controls.nextweapon.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
+line 1295
+;1295:	s_controls.nextweapon.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
 ADDRGP4 s_controls+1636+44
 CNSTU4 12548
 ASGNU4
-line 1308
-;1308:	s_controls.nextweapon.generic.callback  = Controls_ActionEvent;
+line 1296
+;1296:	s_controls.nextweapon.generic.callback  = Controls_ActionEvent;
 ADDRGP4 s_controls+1636+48
 ADDRGP4 Controls_ActionEvent
 ASGNP4
-line 1309
-;1309:	s_controls.nextweapon.generic.ownerdraw = Controls_DrawKeyBinding;
+line 1297
+;1297:	s_controls.nextweapon.generic.ownerdraw = Controls_DrawKeyBinding;
 ADDRGP4 s_controls+1636+56
 ADDRGP4 Controls_DrawKeyBinding
 ASGNP4
-line 1310
-;1310:	s_controls.nextweapon.generic.id        = ID_WEAPNEXT;
+line 1298
+;1298:	s_controls.nextweapon.generic.id        = ID_WEAPNEXT;
 ADDRGP4 s_controls+1636+8
 CNSTI4 28
 ASGNI4
-line 1312
-;1311:
-;1312:	s_controls.lookup.generic.type	    = MTYPE_ACTION;
+line 1300
+;1299:
+;1300:	s_controls.lookup.generic.type	    = MTYPE_ACTION;
 ADDRGP4 s_controls+1696
 CNSTI4 2
 ASGNI4
-line 1313
-;1313:	s_controls.lookup.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
+line 1301
+;1301:	s_controls.lookup.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
 ADDRGP4 s_controls+1696+44
 CNSTU4 12548
 ASGNU4
-line 1314
-;1314:	s_controls.lookup.generic.callback  = Controls_ActionEvent;
+line 1302
+;1302:	s_controls.lookup.generic.callback  = Controls_ActionEvent;
 ADDRGP4 s_controls+1696+48
 ADDRGP4 Controls_ActionEvent
 ASGNP4
-line 1315
-;1315:	s_controls.lookup.generic.ownerdraw = Controls_DrawKeyBinding;
+line 1303
+;1303:	s_controls.lookup.generic.ownerdraw = Controls_DrawKeyBinding;
 ADDRGP4 s_controls+1696+56
 ADDRGP4 Controls_DrawKeyBinding
 ASGNP4
-line 1316
-;1316:	s_controls.lookup.generic.id        = ID_LOOKUP;
+line 1304
+;1304:	s_controls.lookup.generic.id        = ID_LOOKUP;
 ADDRGP4 s_controls+1696+8
 CNSTI4 12
 ASGNI4
-line 1318
-;1317:
-;1318:	s_controls.lookdown.generic.type	  = MTYPE_ACTION;
+line 1306
+;1305:
+;1306:	s_controls.lookdown.generic.type	  = MTYPE_ACTION;
 ADDRGP4 s_controls+1756
 CNSTI4 2
 ASGNI4
-line 1319
-;1319:	s_controls.lookdown.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
+line 1307
+;1307:	s_controls.lookdown.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
 ADDRGP4 s_controls+1756+44
 CNSTU4 12548
 ASGNU4
-line 1320
-;1320:	s_controls.lookdown.generic.callback  = Controls_ActionEvent;
+line 1308
+;1308:	s_controls.lookdown.generic.callback  = Controls_ActionEvent;
 ADDRGP4 s_controls+1756+48
 ADDRGP4 Controls_ActionEvent
 ASGNP4
-line 1321
-;1321:	s_controls.lookdown.generic.ownerdraw = Controls_DrawKeyBinding;
+line 1309
+;1309:	s_controls.lookdown.generic.ownerdraw = Controls_DrawKeyBinding;
 ADDRGP4 s_controls+1756+56
 ADDRGP4 Controls_DrawKeyBinding
 ASGNP4
-line 1322
-;1322:	s_controls.lookdown.generic.id        = ID_LOOKDOWN;
+line 1310
+;1310:	s_controls.lookdown.generic.id        = ID_LOOKDOWN;
 ADDRGP4 s_controls+1756+8
 CNSTI4 13
 ASGNI4
-line 1324
-;1323:
-;1324:	s_controls.mouselook.generic.type	   = MTYPE_ACTION;
+line 1312
+;1311:
+;1312:	s_controls.mouselook.generic.type	   = MTYPE_ACTION;
 ADDRGP4 s_controls+1816
 CNSTI4 2
 ASGNI4
-line 1325
-;1325:	s_controls.mouselook.generic.flags     = QMF_LEFT_JUSTIFY|QMF_HIGHLIGHT_IF_FOCUS|QMF_GRAYED|QMF_HIDDEN;
+line 1313
+;1313:	s_controls.mouselook.generic.flags     = QMF_LEFT_JUSTIFY|QMF_HIGHLIGHT_IF_FOCUS|QMF_GRAYED|QMF_HIDDEN;
 ADDRGP4 s_controls+1816+44
 CNSTU4 12420
 ASGNU4
-line 1326
-;1326:	s_controls.mouselook.generic.callback  = Controls_ActionEvent;
+line 1314
+;1314:	s_controls.mouselook.generic.callback  = Controls_ActionEvent;
 ADDRGP4 s_controls+1816+48
 ADDRGP4 Controls_ActionEvent
 ASGNP4
-line 1327
-;1327:	s_controls.mouselook.generic.ownerdraw = Controls_DrawKeyBinding;
+line 1315
+;1315:	s_controls.mouselook.generic.ownerdraw = Controls_DrawKeyBinding;
 ADDRGP4 s_controls+1816+56
 ADDRGP4 Controls_DrawKeyBinding
 ASGNP4
-line 1328
-;1328:	s_controls.mouselook.generic.id        = ID_MOUSELOOK;
+line 1316
+;1316:	s_controls.mouselook.generic.id        = ID_MOUSELOOK;
 ADDRGP4 s_controls+1816+8
 CNSTI4 14
 ASGNI4
-line 1330
-;1329:
-;1330:	s_controls.freelook.generic.type		= MTYPE_RADIOBUTTON;
+line 1318
+;1317:
+;1318:	s_controls.freelook.generic.type		= MTYPE_RADIOBUTTON;
 ADDRGP4 s_controls+1876
 CNSTI4 5
 ASGNI4
-line 1331
-;1331:	s_controls.freelook.generic.flags		= QMF_SMALLFONT;
+line 1319
+;1319:	s_controls.freelook.generic.flags		= QMF_SMALLFONT;
 ADDRGP4 s_controls+1876+44
 CNSTU4 2
 ASGNU4
-line 1332
-;1332:	s_controls.freelook.generic.x			= SCREEN_WIDTH/2;
+line 1320
+;1320:	s_controls.freelook.generic.x			= SCREEN_WIDTH/2;
 ADDRGP4 s_controls+1876+12
 CNSTI4 320
 ASGNI4
-line 1333
-;1333:	s_controls.freelook.generic.name		= "free look";
+line 1321
+;1321:	s_controls.freelook.generic.name		= "free look";
 ADDRGP4 s_controls+1876+4
-ADDRGP4 $895
+ADDRGP4 $889
 ASGNP4
-line 1334
-;1334:	s_controls.freelook.generic.id			= ID_FREELOOK;
+line 1322
+;1322:	s_controls.freelook.generic.id			= ID_FREELOOK;
 ADDRGP4 s_controls+1876+8
 CNSTI4 34
 ASGNI4
-line 1335
-;1335:	s_controls.freelook.generic.callback	= Controls_MenuEvent;
+line 1323
+;1323:	s_controls.freelook.generic.callback	= Controls_MenuEvent;
 ADDRGP4 s_controls+1876+48
 ADDRGP4 Controls_MenuEvent
 ASGNP4
-line 1336
-;1336:	s_controls.freelook.generic.statusbar	= Controls_StatusBar;
+line 1324
+;1324:	s_controls.freelook.generic.statusbar	= Controls_StatusBar;
 ADDRGP4 s_controls+1876+52
 ADDRGP4 Controls_StatusBar
 ASGNP4
-line 1338
-;1337:
-;1338:	s_controls.centerview.generic.type	    = MTYPE_ACTION;
+line 1326
+;1325:
+;1326:	s_controls.centerview.generic.type	    = MTYPE_ACTION;
 ADDRGP4 s_controls+1940
 CNSTI4 2
 ASGNI4
-line 1339
-;1339:	s_controls.centerview.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
+line 1327
+;1327:	s_controls.centerview.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
 ADDRGP4 s_controls+1940+44
 CNSTU4 12548
 ASGNU4
-line 1340
-;1340:	s_controls.centerview.generic.callback  = Controls_ActionEvent;
+line 1328
+;1328:	s_controls.centerview.generic.callback  = Controls_ActionEvent;
 ADDRGP4 s_controls+1940+48
 ADDRGP4 Controls_ActionEvent
 ASGNP4
-line 1341
-;1341:	s_controls.centerview.generic.ownerdraw = Controls_DrawKeyBinding;
+line 1329
+;1329:	s_controls.centerview.generic.ownerdraw = Controls_DrawKeyBinding;
 ADDRGP4 s_controls+1940+56
 ADDRGP4 Controls_DrawKeyBinding
 ASGNP4
-line 1342
-;1342:	s_controls.centerview.generic.id        = ID_CENTERVIEW;
+line 1330
+;1330:	s_controls.centerview.generic.id        = ID_CENTERVIEW;
 ADDRGP4 s_controls+1940+8
 CNSTI4 15
 ASGNI4
-line 1344
-;1343:
-;1344:	s_controls.zoomview.generic.type	  = MTYPE_ACTION;
+line 1332
+;1331:
+;1332:	s_controls.zoomview.generic.type	  = MTYPE_ACTION;
 ADDRGP4 s_controls+2000
 CNSTI4 2
 ASGNI4
-line 1345
-;1345:	s_controls.zoomview.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
+line 1333
+;1333:	s_controls.zoomview.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
 ADDRGP4 s_controls+2000+44
 CNSTU4 12548
 ASGNU4
-line 1346
-;1346:	s_controls.zoomview.generic.callback  = Controls_ActionEvent;
+line 1334
+;1334:	s_controls.zoomview.generic.callback  = Controls_ActionEvent;
 ADDRGP4 s_controls+2000+48
 ADDRGP4 Controls_ActionEvent
 ASGNP4
-line 1347
-;1347:	s_controls.zoomview.generic.ownerdraw = Controls_DrawKeyBinding;
+line 1335
+;1335:	s_controls.zoomview.generic.ownerdraw = Controls_DrawKeyBinding;
 ADDRGP4 s_controls+2000+56
 ADDRGP4 Controls_DrawKeyBinding
 ASGNP4
-line 1348
-;1348:	s_controls.zoomview.generic.id        = ID_ZOOMVIEW;
+line 1336
+;1336:	s_controls.zoomview.generic.id        = ID_ZOOMVIEW;
 ADDRGP4 s_controls+2000+8
 CNSTI4 16
 ASGNI4
-line 1350
-;1349:
-;1350:	s_controls.useitem.generic.type	     = MTYPE_ACTION;
+line 1338
+;1337:
+;1338:	s_controls.useitem.generic.type	     = MTYPE_ACTION;
 ADDRGP4 s_controls+2512
 CNSTI4 2
 ASGNI4
-line 1351
-;1351:	s_controls.useitem.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
+line 1339
+;1339:	s_controls.useitem.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
 ADDRGP4 s_controls+2512+44
 CNSTU4 12548
 ASGNU4
-line 1352
-;1352:	s_controls.useitem.generic.callback  = Controls_ActionEvent;
+line 1340
+;1340:	s_controls.useitem.generic.callback  = Controls_ActionEvent;
 ADDRGP4 s_controls+2512+48
 ADDRGP4 Controls_ActionEvent
 ASGNP4
-line 1353
-;1353:	s_controls.useitem.generic.ownerdraw = Controls_DrawKeyBinding;
+line 1341
+;1341:	s_controls.useitem.generic.ownerdraw = Controls_DrawKeyBinding;
 ADDRGP4 s_controls+2512+56
 ADDRGP4 Controls_DrawKeyBinding
 ASGNP4
-line 1354
-;1354:	s_controls.useitem.generic.id        = ID_USEITEM;
+line 1342
+;1342:	s_controls.useitem.generic.id        = ID_USEITEM;
 ADDRGP4 s_controls+2512+8
 CNSTI4 1
 ASGNI4
-line 1356
-;1355:
-;1356:	s_controls.showscores.generic.type	    = MTYPE_ACTION;
+line 1344
+;1343:
+;1344:	s_controls.showscores.generic.type	    = MTYPE_ACTION;
 ADDRGP4 s_controls+2388
 CNSTI4 2
 ASGNI4
-line 1357
-;1357:	s_controls.showscores.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
+line 1345
+;1345:	s_controls.showscores.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
 ADDRGP4 s_controls+2388+44
 CNSTU4 12548
 ASGNU4
-line 1358
-;1358:	s_controls.showscores.generic.callback  = Controls_ActionEvent;
+line 1346
+;1346:	s_controls.showscores.generic.callback  = Controls_ActionEvent;
 ADDRGP4 s_controls+2388+48
 ADDRGP4 Controls_ActionEvent
 ASGNP4
-line 1359
-;1359:	s_controls.showscores.generic.ownerdraw = Controls_DrawKeyBinding;
+line 1347
+;1347:	s_controls.showscores.generic.ownerdraw = Controls_DrawKeyBinding;
 ADDRGP4 s_controls+2388+56
 ADDRGP4 Controls_DrawKeyBinding
 ASGNP4
-line 1360
-;1360:	s_controls.showscores.generic.id        = ID_SHOWSCORES;
+line 1348
+;1348:	s_controls.showscores.generic.id        = ID_SHOWSCORES;
 ADDRGP4 s_controls+2388+8
 CNSTI4 0
 ASGNI4
-line 1362
-;1361:
-;1362:	s_controls.invertmouse.generic.type      = MTYPE_RADIOBUTTON;
+line 1350
+;1349:
+;1350:	s_controls.invertmouse.generic.type      = MTYPE_RADIOBUTTON;
 ADDRGP4 s_controls+2120
 CNSTI4 5
 ASGNI4
-line 1363
-;1363:	s_controls.invertmouse.generic.flags	 = QMF_SMALLFONT;
+line 1351
+;1351:	s_controls.invertmouse.generic.flags	 = QMF_SMALLFONT;
 ADDRGP4 s_controls+2120+44
 CNSTU4 2
 ASGNU4
-line 1364
-;1364:	s_controls.invertmouse.generic.x	     = SCREEN_WIDTH/2;
+line 1352
+;1352:	s_controls.invertmouse.generic.x	     = SCREEN_WIDTH/2;
 ADDRGP4 s_controls+2120+12
 CNSTI4 320
 ASGNI4
-line 1365
-;1365:	s_controls.invertmouse.generic.name	     = "invert mouse";
+line 1353
+;1353:	s_controls.invertmouse.generic.name	     = "invert mouse";
 ADDRGP4 s_controls+2120+4
-ADDRGP4 $945
+ADDRGP4 $939
 ASGNP4
-line 1366
-;1366:	s_controls.invertmouse.generic.id        = ID_INVERTMOUSE;
+line 1354
+;1354:	s_controls.invertmouse.generic.id        = ID_INVERTMOUSE;
 ADDRGP4 s_controls+2120+8
 CNSTI4 35
 ASGNI4
-line 1367
-;1367:	s_controls.invertmouse.generic.callback  = Controls_MenuEvent;
+line 1355
+;1355:	s_controls.invertmouse.generic.callback  = Controls_MenuEvent;
 ADDRGP4 s_controls+2120+48
 ADDRGP4 Controls_MenuEvent
 ASGNP4
-line 1368
-;1368:	s_controls.invertmouse.generic.statusbar = Controls_StatusBar;
+line 1356
+;1356:	s_controls.invertmouse.generic.statusbar = Controls_StatusBar;
 ADDRGP4 s_controls+2120+52
 ADDRGP4 Controls_StatusBar
 ASGNP4
-line 1370
-;1369:
-;1370:	s_controls.smoothmouse.generic.type      = MTYPE_RADIOBUTTON;
+line 1358
+;1357:
+;1358:	s_controls.smoothmouse.generic.type      = MTYPE_RADIOBUTTON;
 ADDRGP4 s_controls+2260
 CNSTI4 5
 ASGNI4
-line 1371
-;1371:	s_controls.smoothmouse.generic.flags	 = QMF_SMALLFONT;
+line 1359
+;1359:	s_controls.smoothmouse.generic.flags	 = QMF_SMALLFONT;
 ADDRGP4 s_controls+2260+44
 CNSTU4 2
 ASGNU4
-line 1372
-;1372:	s_controls.smoothmouse.generic.x	     = SCREEN_WIDTH/2;
+line 1360
+;1360:	s_controls.smoothmouse.generic.x	     = SCREEN_WIDTH/2;
 ADDRGP4 s_controls+2260+12
 CNSTI4 320
 ASGNI4
-line 1373
-;1373:	s_controls.smoothmouse.generic.name	     = "smooth mouse";
+line 1361
+;1361:	s_controls.smoothmouse.generic.name	     = "smooth mouse";
 ADDRGP4 s_controls+2260+4
-ADDRGP4 $959
+ADDRGP4 $953
 ASGNP4
-line 1374
-;1374:	s_controls.smoothmouse.generic.id        = ID_SMOOTHMOUSE;
+line 1362
+;1362:	s_controls.smoothmouse.generic.id        = ID_SMOOTHMOUSE;
 ADDRGP4 s_controls+2260+8
 CNSTI4 41
 ASGNI4
-line 1375
-;1375:	s_controls.smoothmouse.generic.callback  = Controls_MenuEvent;
+line 1363
+;1363:	s_controls.smoothmouse.generic.callback  = Controls_MenuEvent;
 ADDRGP4 s_controls+2260+48
 ADDRGP4 Controls_MenuEvent
 ASGNP4
-line 1376
-;1376:	s_controls.smoothmouse.generic.statusbar = Controls_StatusBar;
+line 1364
+;1364:	s_controls.smoothmouse.generic.statusbar = Controls_StatusBar;
 ADDRGP4 s_controls+2260+52
 ADDRGP4 Controls_StatusBar
 ASGNP4
-line 1378
-;1377:
-;1378:	s_controls.autoswitch.generic.type      = MTYPE_RADIOBUTTON;
+line 1366
+;1365:
+;1366:	s_controls.autoswitch.generic.type      = MTYPE_RADIOBUTTON;
 ADDRGP4 s_controls+2448
 CNSTI4 5
 ASGNI4
-line 1379
-;1379:	s_controls.autoswitch.generic.flags	    = QMF_SMALLFONT;
+line 1367
+;1367:	s_controls.autoswitch.generic.flags	    = QMF_SMALLFONT;
 ADDRGP4 s_controls+2448+44
 CNSTU4 2
 ASGNU4
-line 1380
-;1380:	s_controls.autoswitch.generic.x	        = SCREEN_WIDTH/2;
+line 1368
+;1368:	s_controls.autoswitch.generic.x	        = SCREEN_WIDTH/2;
 ADDRGP4 s_controls+2448+12
 CNSTI4 320
 ASGNI4
-line 1381
-;1381:	s_controls.autoswitch.generic.name	    = "autoswitch weapons";
+line 1369
+;1369:	s_controls.autoswitch.generic.name	    = "autoswitch weapons";
 ADDRGP4 s_controls+2448+4
-ADDRGP4 $973
+ADDRGP4 $967
 ASGNP4
-line 1382
-;1382:	s_controls.autoswitch.generic.id        = ID_AUTOSWITCH;
+line 1370
+;1370:	s_controls.autoswitch.generic.id        = ID_AUTOSWITCH;
 ADDRGP4 s_controls+2448+8
 CNSTI4 37
 ASGNI4
-line 1383
-;1383:	s_controls.autoswitch.generic.callback  = Controls_MenuEvent;
+line 1371
+;1371:	s_controls.autoswitch.generic.callback  = Controls_MenuEvent;
 ADDRGP4 s_controls+2448+48
 ADDRGP4 Controls_MenuEvent
 ASGNP4
-line 1384
-;1384:	s_controls.autoswitch.generic.statusbar = Controls_StatusBar;
+line 1372
+;1372:	s_controls.autoswitch.generic.statusbar = Controls_StatusBar;
 ADDRGP4 s_controls+2448+52
 ADDRGP4 Controls_StatusBar
 ASGNP4
-line 1386
-;1385:
-;1386:	s_controls.sensitivity.generic.type	     = MTYPE_SLIDER;
+line 1374
+;1373:
+;1374:	s_controls.sensitivity.generic.type	     = MTYPE_SLIDER;
 ADDRGP4 s_controls+2184
 CNSTI4 1
 ASGNI4
-line 1387
-;1387:	s_controls.sensitivity.generic.x		 = SCREEN_WIDTH/2;
+line 1375
+;1375:	s_controls.sensitivity.generic.x		 = SCREEN_WIDTH/2;
 ADDRGP4 s_controls+2184+12
 CNSTI4 320
 ASGNI4
-line 1388
-;1388:	s_controls.sensitivity.generic.flags	 = QMF_SMALLFONT;
+line 1376
+;1376:	s_controls.sensitivity.generic.flags	 = QMF_SMALLFONT;
 ADDRGP4 s_controls+2184+44
 CNSTU4 2
 ASGNU4
-line 1389
-;1389:	s_controls.sensitivity.generic.name	     = "mouse speed";
+line 1377
+;1377:	s_controls.sensitivity.generic.name	     = "mouse speed";
 ADDRGP4 s_controls+2184+4
-ADDRGP4 $987
+ADDRGP4 $981
 ASGNP4
-line 1390
-;1390:	s_controls.sensitivity.generic.id 	     = ID_MOUSESPEED;
+line 1378
+;1378:	s_controls.sensitivity.generic.id 	     = ID_MOUSESPEED;
 ADDRGP4 s_controls+2184+8
 CNSTI4 38
 ASGNI4
-line 1391
-;1391:	s_controls.sensitivity.generic.callback  = Controls_MenuEvent;
+line 1379
+;1379:	s_controls.sensitivity.generic.callback  = Controls_MenuEvent;
 ADDRGP4 s_controls+2184+48
 ADDRGP4 Controls_MenuEvent
 ASGNP4
-line 1392
-;1392:	s_controls.sensitivity.minvalue		     = 2;
+line 1380
+;1380:	s_controls.sensitivity.minvalue		     = 2;
 ADDRGP4 s_controls+2184+60
 CNSTF4 1073741824
 ASGNF4
-line 1393
-;1393:	s_controls.sensitivity.maxvalue		     = 30;
+line 1381
+;1381:	s_controls.sensitivity.maxvalue		     = 30;
 ADDRGP4 s_controls+2184+64
 CNSTF4 1106247680
 ASGNF4
-line 1394
-;1394:	s_controls.sensitivity.generic.statusbar = Controls_StatusBar;
+line 1382
+;1382:	s_controls.sensitivity.generic.statusbar = Controls_StatusBar;
 ADDRGP4 s_controls+2184+52
 ADDRGP4 Controls_StatusBar
 ASGNP4
-line 1396
-;1395:
-;1396:	s_controls.gesture.generic.type	     = MTYPE_ACTION;
+line 1384
+;1383:
+;1384:	s_controls.gesture.generic.type	     = MTYPE_ACTION;
 ADDRGP4 s_controls+2060
 CNSTI4 2
 ASGNI4
-line 1397
-;1397:	s_controls.gesture.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
+line 1385
+;1385:	s_controls.gesture.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
 ADDRGP4 s_controls+2060+44
 CNSTU4 12548
 ASGNU4
-line 1398
-;1398:	s_controls.gesture.generic.callback  = Controls_ActionEvent;
+line 1386
+;1386:	s_controls.gesture.generic.callback  = Controls_ActionEvent;
 ADDRGP4 s_controls+2060+48
 ADDRGP4 Controls_ActionEvent
 ASGNP4
-line 1399
-;1399:	s_controls.gesture.generic.ownerdraw = Controls_DrawKeyBinding;
+line 1387
+;1387:	s_controls.gesture.generic.ownerdraw = Controls_DrawKeyBinding;
 ADDRGP4 s_controls+2060+56
 ADDRGP4 Controls_DrawKeyBinding
 ASGNP4
-line 1400
-;1400:	s_controls.gesture.generic.id        = ID_GESTURE;
+line 1388
+;1388:	s_controls.gesture.generic.id        = ID_GESTURE;
 ADDRGP4 s_controls+2060+8
 CNSTI4 29
 ASGNI4
-line 1402
-;1401:
-;1402:	s_controls.chat.generic.type	  = MTYPE_ACTION;
+line 1390
+;1389:
+;1390:	s_controls.chat.generic.type	  = MTYPE_ACTION;
 ADDRGP4 s_controls+3684
 CNSTI4 2
 ASGNI4
-line 1403
-;1403:	s_controls.chat.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
+line 1391
+;1391:	s_controls.chat.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
 ADDRGP4 s_controls+3684+44
 CNSTU4 12548
 ASGNU4
-line 1404
-;1404:	s_controls.chat.generic.callback  = Controls_ActionEvent;
+line 1392
+;1392:	s_controls.chat.generic.callback  = Controls_ActionEvent;
 ADDRGP4 s_controls+3684+48
 ADDRGP4 Controls_ActionEvent
 ASGNP4
-line 1405
-;1405:	s_controls.chat.generic.ownerdraw = Controls_DrawKeyBinding;
+line 1393
+;1393:	s_controls.chat.generic.ownerdraw = Controls_DrawKeyBinding;
 ADDRGP4 s_controls+3684+56
 ADDRGP4 Controls_DrawKeyBinding
 ASGNP4
-line 1406
-;1406:	s_controls.chat.generic.id        = ID_CHAT;
+line 1394
+;1394:	s_controls.chat.generic.id        = ID_CHAT;
 ADDRGP4 s_controls+3684+8
 CNSTI4 30
 ASGNI4
-line 1408
-;1407:
-;1408:	s_controls.chat2.generic.type	   = MTYPE_ACTION;
+line 1396
+;1395:
+;1396:	s_controls.chat2.generic.type	   = MTYPE_ACTION;
 ADDRGP4 s_controls+3744
 CNSTI4 2
 ASGNI4
-line 1409
-;1409:	s_controls.chat2.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
+line 1397
+;1397:	s_controls.chat2.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
 ADDRGP4 s_controls+3744+44
 CNSTU4 12548
 ASGNU4
-line 1410
-;1410:	s_controls.chat2.generic.callback  = Controls_ActionEvent;
+line 1398
+;1398:	s_controls.chat2.generic.callback  = Controls_ActionEvent;
 ADDRGP4 s_controls+3744+48
 ADDRGP4 Controls_ActionEvent
 ASGNP4
-line 1411
-;1411:	s_controls.chat2.generic.ownerdraw = Controls_DrawKeyBinding;
+line 1399
+;1399:	s_controls.chat2.generic.ownerdraw = Controls_DrawKeyBinding;
 ADDRGP4 s_controls+3744+56
 ADDRGP4 Controls_DrawKeyBinding
 ASGNP4
-line 1412
-;1412:	s_controls.chat2.generic.id        = ID_CHAT2;
+line 1400
+;1400:	s_controls.chat2.generic.id        = ID_CHAT2;
 ADDRGP4 s_controls+3744+8
 CNSTI4 31
 ASGNI4
-line 1414
-;1413:
-;1414:	s_controls.chat3.generic.type	   = MTYPE_ACTION;
+line 1402
+;1401:
+;1402:	s_controls.chat3.generic.type	   = MTYPE_ACTION;
 ADDRGP4 s_controls+3804
 CNSTI4 2
 ASGNI4
-line 1415
-;1415:	s_controls.chat3.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
+line 1403
+;1403:	s_controls.chat3.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
 ADDRGP4 s_controls+3804+44
 CNSTU4 12548
 ASGNU4
-line 1416
-;1416:	s_controls.chat3.generic.callback  = Controls_ActionEvent;
+line 1404
+;1404:	s_controls.chat3.generic.callback  = Controls_ActionEvent;
 ADDRGP4 s_controls+3804+48
 ADDRGP4 Controls_ActionEvent
 ASGNP4
-line 1417
-;1417:	s_controls.chat3.generic.ownerdraw = Controls_DrawKeyBinding;
+line 1405
+;1405:	s_controls.chat3.generic.ownerdraw = Controls_DrawKeyBinding;
 ADDRGP4 s_controls+3804+56
 ADDRGP4 Controls_DrawKeyBinding
 ASGNP4
-line 1418
-;1418:	s_controls.chat3.generic.id        = ID_CHAT3;
+line 1406
+;1406:	s_controls.chat3.generic.id        = ID_CHAT3;
 ADDRGP4 s_controls+3804+8
 CNSTI4 32
 ASGNI4
-line 1420
-;1419:
-;1420:	s_controls.chat4.generic.type	   = MTYPE_ACTION;
+line 1408
+;1407:
+;1408:	s_controls.chat4.generic.type	   = MTYPE_ACTION;
 ADDRGP4 s_controls+3864
 CNSTI4 2
 ASGNI4
-line 1421
-;1421:	s_controls.chat4.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
+line 1409
+;1409:	s_controls.chat4.generic.flags     = QMF_LEFT_JUSTIFY|QMF_PULSEIFFOCUS|QMF_GRAYED|QMF_HIDDEN;
 ADDRGP4 s_controls+3864+44
 CNSTU4 12548
 ASGNU4
-line 1422
-;1422:	s_controls.chat4.generic.callback  = Controls_ActionEvent;
+line 1410
+;1410:	s_controls.chat4.generic.callback  = Controls_ActionEvent;
 ADDRGP4 s_controls+3864+48
 ADDRGP4 Controls_ActionEvent
 ASGNP4
-line 1423
-;1423:	s_controls.chat4.generic.ownerdraw = Controls_DrawKeyBinding;
+line 1411
+;1411:	s_controls.chat4.generic.ownerdraw = Controls_DrawKeyBinding;
 ADDRGP4 s_controls+3864+56
 ADDRGP4 Controls_DrawKeyBinding
 ASGNP4
-line 1424
-;1424:	s_controls.chat4.generic.id        = ID_CHAT4;
+line 1412
+;1412:	s_controls.chat4.generic.id        = ID_CHAT4;
 ADDRGP4 s_controls+3864+8
 CNSTI4 33
 ASGNI4
-line 1444
-;1425:/*
-;1426:	s_controls.joyenable.generic.type      = MTYPE_RADIOBUTTON;
-;1427:	s_controls.joyenable.generic.flags	   = QMF_SMALLFONT;
-;1428:	s_controls.joyenable.generic.x	       = SCREEN_WIDTH/2;
-;1429:	s_controls.joyenable.generic.name	   = "joystick";
-;1430:	s_controls.joyenable.generic.id        = ID_JOYENABLE;
-;1431:	s_controls.joyenable.generic.callback  = Controls_MenuEvent;
-;1432:	s_controls.joyenable.generic.statusbar = Controls_StatusBar;
-;1433:
-;1434:	s_controls.joythreshold.generic.type	  = MTYPE_SLIDER;
-;1435:	s_controls.joythreshold.generic.x		  = SCREEN_WIDTH/2;
-;1436:	s_controls.joythreshold.generic.flags	  = QMF_SMALLFONT;
-;1437:	s_controls.joythreshold.generic.name	  = "joystick threshold";
-;1438:	s_controls.joythreshold.generic.id 	      = ID_JOYTHRESHOLD;
-;1439:	s_controls.joythreshold.generic.callback  = Controls_MenuEvent;
-;1440:	s_controls.joythreshold.minvalue		  = 0.05f;
-;1441:	s_controls.joythreshold.maxvalue		  = 0.75f;
-;1442:	s_controls.joythreshold.generic.statusbar = Controls_StatusBar;
-;1443:*/
-;1444:	s_controls.name.generic.type	= MTYPE_PTEXT;
+line 1432
+;1413:/*
+;1414:	s_controls.joyenable.generic.type      = MTYPE_RADIOBUTTON;
+;1415:	s_controls.joyenable.generic.flags	   = QMF_SMALLFONT;
+;1416:	s_controls.joyenable.generic.x	       = SCREEN_WIDTH/2;
+;1417:	s_controls.joyenable.generic.name	   = "joystick";
+;1418:	s_controls.joyenable.generic.id        = ID_JOYENABLE;
+;1419:	s_controls.joyenable.generic.callback  = Controls_MenuEvent;
+;1420:	s_controls.joyenable.generic.statusbar = Controls_StatusBar;
+;1421:
+;1422:	s_controls.joythreshold.generic.type	  = MTYPE_SLIDER;
+;1423:	s_controls.joythreshold.generic.x		  = SCREEN_WIDTH/2;
+;1424:	s_controls.joythreshold.generic.flags	  = QMF_SMALLFONT;
+;1425:	s_controls.joythreshold.generic.name	  = "joystick threshold";
+;1426:	s_controls.joythreshold.generic.id 	      = ID_JOYTHRESHOLD;
+;1427:	s_controls.joythreshold.generic.callback  = Controls_MenuEvent;
+;1428:	s_controls.joythreshold.minvalue		  = 0.05f;
+;1429:	s_controls.joythreshold.maxvalue		  = 0.75f;
+;1430:	s_controls.joythreshold.generic.statusbar = Controls_StatusBar;
+;1431:*/
+;1432:	s_controls.name.generic.type	= MTYPE_PTEXT;
 ADDRGP4 s_controls+4264
 CNSTI4 9
 ASGNI4
-line 1445
-;1445:	s_controls.name.generic.flags	= QMF_CENTER_JUSTIFY|QMF_INACTIVE;
+line 1433
+;1433:	s_controls.name.generic.flags	= QMF_CENTER_JUSTIFY|QMF_INACTIVE;
 ADDRGP4 s_controls+4264+44
 CNSTU4 16392
 ASGNU4
-line 1446
-;1446:	s_controls.name.generic.x		= 320;
+line 1434
+;1434:	s_controls.name.generic.x		= 320;
 ADDRGP4 s_controls+4264+12
 CNSTI4 320
 ASGNI4
-line 1447
-;1447:	s_controls.name.generic.y		= 440;
+line 1435
+;1435:	s_controls.name.generic.y		= 440;
 ADDRGP4 s_controls+4264+16
 CNSTI4 440
 ASGNI4
-line 1448
-;1448:	s_controls.name.string			= playername;
+line 1436
+;1436:	s_controls.name.string			= playername;
 ADDRGP4 s_controls+4264+60
-ADDRGP4 $602
+ADDRGP4 $596
 ASGNP4
-line 1449
-;1449:	s_controls.name.style			= UI_CENTER;
+line 1437
+;1437:	s_controls.name.style			= UI_CENTER;
 ADDRGP4 s_controls+4264+64
 CNSTI4 1
 ASGNI4
-line 1450
-;1450:	s_controls.name.color			= color_yellow;
+line 1438
+;1438:	s_controls.name.color			= color_yellow;
 ADDRGP4 s_controls+4264+68
 ADDRGP4 color_yellow
 ASGNP4
-line 1452
-;1451:
-;1452:	Menu_AddItem( &s_controls.menu, &s_controls.banner );
+line 1440
+;1439:
+;1440:	Menu_AddItem( &s_controls.menu, &s_controls.banner );
 ADDRGP4 s_controls
 ARGP4
 ADDRGP4 s_controls+288
+ARGP4
+ADDRGP4 Menu_AddItem
+CALLV
+pop
+line 1443
+;1441://	Menu_AddItem( &s_controls.menu, &s_controls.framel );
+;1442://	Menu_AddItem( &s_controls.menu, &s_controls.framer );
+;1443:	Menu_AddItem( &s_controls.menu, &s_controls.player );
+ADDRGP4 s_controls
+ARGP4
+ADDRGP4 s_controls+360
+ARGP4
+ADDRGP4 Menu_AddItem
+CALLV
+pop
+line 1444
+;1444:	Menu_AddItem( &s_controls.menu, &s_controls.name );
+ADDRGP4 s_controls
+ARGP4
+ADDRGP4 s_controls+4264
+ARGP4
+ADDRGP4 Menu_AddItem
+CALLV
+pop
+line 1446
+;1445:
+;1446:	Menu_AddItem( &s_controls.menu, &s_controls.looking );
+ADDRGP4 s_controls
+ARGP4
+ADDRGP4 s_controls+520
+ARGP4
+ADDRGP4 Menu_AddItem
+CALLV
+pop
+line 1447
+;1447:	Menu_AddItem( &s_controls.menu, &s_controls.movement );
+ADDRGP4 s_controls
+ARGP4
+ADDRGP4 s_controls+448
+ARGP4
+ADDRGP4 Menu_AddItem
+CALLV
+pop
+line 1448
+;1448:	Menu_AddItem( &s_controls.menu, &s_controls.weapons );
+ADDRGP4 s_controls
+ARGP4
+ADDRGP4 s_controls+592
+ARGP4
+ADDRGP4 Menu_AddItem
+CALLV
+pop
+line 1449
+;1449:	Menu_AddItem( &s_controls.menu, &s_controls.misc );
+ADDRGP4 s_controls
+ARGP4
+ADDRGP4 s_controls+664
+ARGP4
+ADDRGP4 Menu_AddItem
+CALLV
+pop
+line 1451
+;1450:
+;1451:	Menu_AddItem( &s_controls.menu, &s_controls.sensitivity );
+ADDRGP4 s_controls
+ARGP4
+ADDRGP4 s_controls+2184
+ARGP4
+ADDRGP4 Menu_AddItem
+CALLV
+pop
+line 1452
+;1452:	Menu_AddItem( &s_controls.menu, &s_controls.smoothmouse );
+ADDRGP4 s_controls
+ARGP4
+ADDRGP4 s_controls+2260
+ARGP4
+ADDRGP4 Menu_AddItem
+CALLV
+pop
+line 1453
+;1453:	Menu_AddItem( &s_controls.menu, &s_controls.invertmouse );
+ADDRGP4 s_controls
+ARGP4
+ADDRGP4 s_controls+2120
+ARGP4
+ADDRGP4 Menu_AddItem
+CALLV
+pop
+line 1454
+;1454:	Menu_AddItem( &s_controls.menu, &s_controls.lookup );
+ADDRGP4 s_controls
+ARGP4
+ADDRGP4 s_controls+1696
 ARGP4
 ADDRGP4 Menu_AddItem
 CALLV
 pop
 line 1455
-;1453://	Menu_AddItem( &s_controls.menu, &s_controls.framel );
-;1454://	Menu_AddItem( &s_controls.menu, &s_controls.framer );
-;1455:	Menu_AddItem( &s_controls.menu, &s_controls.player );
-ADDRGP4 s_controls
-ARGP4
-ADDRGP4 s_controls+360
-ARGP4
-ADDRGP4 Menu_AddItem
-CALLV
-pop
-line 1456
-;1456:	Menu_AddItem( &s_controls.menu, &s_controls.name );
-ADDRGP4 s_controls
-ARGP4
-ADDRGP4 s_controls+4264
-ARGP4
-ADDRGP4 Menu_AddItem
-CALLV
-pop
-line 1458
-;1457:
-;1458:	Menu_AddItem( &s_controls.menu, &s_controls.looking );
-ADDRGP4 s_controls
-ARGP4
-ADDRGP4 s_controls+520
-ARGP4
-ADDRGP4 Menu_AddItem
-CALLV
-pop
-line 1459
-;1459:	Menu_AddItem( &s_controls.menu, &s_controls.movement );
-ADDRGP4 s_controls
-ARGP4
-ADDRGP4 s_controls+448
-ARGP4
-ADDRGP4 Menu_AddItem
-CALLV
-pop
-line 1460
-;1460:	Menu_AddItem( &s_controls.menu, &s_controls.weapons );
-ADDRGP4 s_controls
-ARGP4
-ADDRGP4 s_controls+592
-ARGP4
-ADDRGP4 Menu_AddItem
-CALLV
-pop
-line 1461
-;1461:	Menu_AddItem( &s_controls.menu, &s_controls.misc );
-ADDRGP4 s_controls
-ARGP4
-ADDRGP4 s_controls+664
-ARGP4
-ADDRGP4 Menu_AddItem
-CALLV
-pop
-line 1463
-;1462:
-;1463:	Menu_AddItem( &s_controls.menu, &s_controls.sensitivity );
-ADDRGP4 s_controls
-ARGP4
-ADDRGP4 s_controls+2184
-ARGP4
-ADDRGP4 Menu_AddItem
-CALLV
-pop
-line 1464
-;1464:	Menu_AddItem( &s_controls.menu, &s_controls.smoothmouse );
-ADDRGP4 s_controls
-ARGP4
-ADDRGP4 s_controls+2260
-ARGP4
-ADDRGP4 Menu_AddItem
-CALLV
-pop
-line 1465
-;1465:	Menu_AddItem( &s_controls.menu, &s_controls.invertmouse );
-ADDRGP4 s_controls
-ARGP4
-ADDRGP4 s_controls+2120
-ARGP4
-ADDRGP4 Menu_AddItem
-CALLV
-pop
-line 1466
-;1466:	Menu_AddItem( &s_controls.menu, &s_controls.lookup );
-ADDRGP4 s_controls
-ARGP4
-ADDRGP4 s_controls+1696
-ARGP4
-ADDRGP4 Menu_AddItem
-CALLV
-pop
-line 1467
-;1467:	Menu_AddItem( &s_controls.menu, &s_controls.lookdown );
+;1455:	Menu_AddItem( &s_controls.menu, &s_controls.lookdown );
 ADDRGP4 s_controls
 ARGP4
 ADDRGP4 s_controls+1756
@@ -6294,8 +6258,8 @@ ARGP4
 ADDRGP4 Menu_AddItem
 CALLV
 pop
-line 1468
-;1468:	Menu_AddItem( &s_controls.menu, &s_controls.mouselook );
+line 1456
+;1456:	Menu_AddItem( &s_controls.menu, &s_controls.mouselook );
 ADDRGP4 s_controls
 ARGP4
 ADDRGP4 s_controls+1816
@@ -6303,8 +6267,8 @@ ARGP4
 ADDRGP4 Menu_AddItem
 CALLV
 pop
-line 1469
-;1469:	Menu_AddItem( &s_controls.menu, &s_controls.freelook );
+line 1457
+;1457:	Menu_AddItem( &s_controls.menu, &s_controls.freelook );
 ADDRGP4 s_controls
 ARGP4
 ADDRGP4 s_controls+1876
@@ -6312,8 +6276,8 @@ ARGP4
 ADDRGP4 Menu_AddItem
 CALLV
 pop
-line 1470
-;1470:	Menu_AddItem( &s_controls.menu, &s_controls.centerview );
+line 1458
+;1458:	Menu_AddItem( &s_controls.menu, &s_controls.centerview );
 ADDRGP4 s_controls
 ARGP4
 ADDRGP4 s_controls+1940
@@ -6321,8 +6285,8 @@ ARGP4
 ADDRGP4 Menu_AddItem
 CALLV
 pop
-line 1471
-;1471:	Menu_AddItem( &s_controls.menu, &s_controls.zoomview );
+line 1459
+;1459:	Menu_AddItem( &s_controls.menu, &s_controls.zoomview );
 ADDRGP4 s_controls
 ARGP4
 ADDRGP4 s_controls+2000
@@ -6330,11 +6294,11 @@ ARGP4
 ADDRGP4 Menu_AddItem
 CALLV
 pop
-line 1475
-;1472://	Menu_AddItem( &s_controls.menu, &s_controls.joyenable );
-;1473://	Menu_AddItem( &s_controls.menu, &s_controls.joythreshold );
-;1474:
-;1475:	Menu_AddItem( &s_controls.menu, &s_controls.walkforward );
+line 1463
+;1460://	Menu_AddItem( &s_controls.menu, &s_controls.joyenable );
+;1461://	Menu_AddItem( &s_controls.menu, &s_controls.joythreshold );
+;1462:
+;1463:	Menu_AddItem( &s_controls.menu, &s_controls.walkforward );
 ADDRGP4 s_controls
 ARGP4
 ADDRGP4 s_controls+736
@@ -6342,8 +6306,8 @@ ARGP4
 ADDRGP4 Menu_AddItem
 CALLV
 pop
-line 1476
-;1476:	Menu_AddItem( &s_controls.menu, &s_controls.backpedal );
+line 1464
+;1464:	Menu_AddItem( &s_controls.menu, &s_controls.backpedal );
 ADDRGP4 s_controls
 ARGP4
 ADDRGP4 s_controls+796
@@ -6351,8 +6315,8 @@ ARGP4
 ADDRGP4 Menu_AddItem
 CALLV
 pop
-line 1477
-;1477:	Menu_AddItem( &s_controls.menu, &s_controls.stepleft );
+line 1465
+;1465:	Menu_AddItem( &s_controls.menu, &s_controls.stepleft );
 ADDRGP4 s_controls
 ARGP4
 ADDRGP4 s_controls+856
@@ -6360,8 +6324,8 @@ ARGP4
 ADDRGP4 Menu_AddItem
 CALLV
 pop
-line 1478
-;1478:	Menu_AddItem( &s_controls.menu, &s_controls.stepright );
+line 1466
+;1466:	Menu_AddItem( &s_controls.menu, &s_controls.stepright );
 ADDRGP4 s_controls
 ARGP4
 ADDRGP4 s_controls+916
@@ -6369,8 +6333,8 @@ ARGP4
 ADDRGP4 Menu_AddItem
 CALLV
 pop
-line 1479
-;1479:	Menu_AddItem( &s_controls.menu, &s_controls.moveup );
+line 1467
+;1467:	Menu_AddItem( &s_controls.menu, &s_controls.moveup );
 ADDRGP4 s_controls
 ARGP4
 ADDRGP4 s_controls+976
@@ -6378,8 +6342,8 @@ ARGP4
 ADDRGP4 Menu_AddItem
 CALLV
 pop
-line 1480
-;1480:	Menu_AddItem( &s_controls.menu, &s_controls.movedown );
+line 1468
+;1468:	Menu_AddItem( &s_controls.menu, &s_controls.movedown );
 ADDRGP4 s_controls
 ARGP4
 ADDRGP4 s_controls+1036
@@ -6387,8 +6351,8 @@ ARGP4
 ADDRGP4 Menu_AddItem
 CALLV
 pop
-line 1481
-;1481:	Menu_AddItem( &s_controls.menu, &s_controls.turnleft );
+line 1469
+;1469:	Menu_AddItem( &s_controls.menu, &s_controls.turnleft );
 ADDRGP4 s_controls
 ARGP4
 ADDRGP4 s_controls+1096
@@ -6396,8 +6360,8 @@ ARGP4
 ADDRGP4 Menu_AddItem
 CALLV
 pop
-line 1482
-;1482:	Menu_AddItem( &s_controls.menu, &s_controls.turnright );
+line 1470
+;1470:	Menu_AddItem( &s_controls.menu, &s_controls.turnright );
 ADDRGP4 s_controls
 ARGP4
 ADDRGP4 s_controls+1156
@@ -6405,8 +6369,8 @@ ARGP4
 ADDRGP4 Menu_AddItem
 CALLV
 pop
-line 1483
-;1483:	Menu_AddItem( &s_controls.menu, &s_controls.sidestep );
+line 1471
+;1471:	Menu_AddItem( &s_controls.menu, &s_controls.sidestep );
 ADDRGP4 s_controls
 ARGP4
 ADDRGP4 s_controls+1216
@@ -6414,9 +6378,9 @@ ARGP4
 ADDRGP4 Menu_AddItem
 CALLV
 pop
-line 1485
-;1484:
-;1485:	Menu_AddItem( &s_controls.menu, &s_controls.attack );
+line 1473
+;1472:
+;1473:	Menu_AddItem( &s_controls.menu, &s_controls.attack );
 ADDRGP4 s_controls
 ARGP4
 ADDRGP4 s_controls+1516
@@ -6424,8 +6388,8 @@ ARGP4
 ADDRGP4 Menu_AddItem
 CALLV
 pop
-line 1486
-;1486:	Menu_AddItem( &s_controls.menu, &s_controls.nextweapon );
+line 1474
+;1474:	Menu_AddItem( &s_controls.menu, &s_controls.nextweapon );
 ADDRGP4 s_controls
 ARGP4
 ADDRGP4 s_controls+1636
@@ -6433,8 +6397,8 @@ ARGP4
 ADDRGP4 Menu_AddItem
 CALLV
 pop
-line 1487
-;1487:	Menu_AddItem( &s_controls.menu, &s_controls.prevweapon );
+line 1475
+;1475:	Menu_AddItem( &s_controls.menu, &s_controls.prevweapon );
 ADDRGP4 s_controls
 ARGP4
 ADDRGP4 s_controls+1576
@@ -6442,8 +6406,8 @@ ARGP4
 ADDRGP4 Menu_AddItem
 CALLV
 pop
-line 1488
-;1488:	Menu_AddItem( &s_controls.menu, &s_controls.autoswitch );
+line 1476
+;1476:	Menu_AddItem( &s_controls.menu, &s_controls.autoswitch );
 ADDRGP4 s_controls
 ARGP4
 ADDRGP4 s_controls+2448
@@ -6451,8 +6415,8 @@ ARGP4
 ADDRGP4 Menu_AddItem
 CALLV
 pop
-line 1489
-;1489:	Menu_AddItem( &s_controls.menu, &s_controls.chainsaw );
+line 1477
+;1477:	Menu_AddItem( &s_controls.menu, &s_controls.chainsaw );
 ADDRGP4 s_controls
 ARGP4
 ADDRGP4 s_controls+1396
@@ -6460,8 +6424,8 @@ ARGP4
 ADDRGP4 Menu_AddItem
 CALLV
 pop
-line 1490
-;1490:	Menu_AddItem( &s_controls.menu, &s_controls.machinegun );
+line 1478
+;1478:	Menu_AddItem( &s_controls.menu, &s_controls.machinegun );
 ADDRGP4 s_controls
 ARGP4
 ADDRGP4 s_controls+1336
@@ -6469,8 +6433,8 @@ ARGP4
 ADDRGP4 Menu_AddItem
 CALLV
 pop
-line 1491
-;1491:	Menu_AddItem( &s_controls.menu, &s_controls.shotgun );
+line 1479
+;1479:	Menu_AddItem( &s_controls.menu, &s_controls.shotgun );
 ADDRGP4 s_controls
 ARGP4
 ADDRGP4 s_controls+1456
@@ -6478,9 +6442,9 @@ ARGP4
 ADDRGP4 Menu_AddItem
 CALLV
 pop
-line 1493
-;1492:
-;1493:	Menu_AddItem( &s_controls.menu, &s_controls.showscores );
+line 1481
+;1480:
+;1481:	Menu_AddItem( &s_controls.menu, &s_controls.showscores );
 ADDRGP4 s_controls
 ARGP4
 ADDRGP4 s_controls+2388
@@ -6488,8 +6452,8 @@ ARGP4
 ADDRGP4 Menu_AddItem
 CALLV
 pop
-line 1494
-;1494:	Menu_AddItem( &s_controls.menu, &s_controls.useitem );
+line 1482
+;1482:	Menu_AddItem( &s_controls.menu, &s_controls.useitem );
 ADDRGP4 s_controls
 ARGP4
 ADDRGP4 s_controls+2512
@@ -6497,8 +6461,8 @@ ARGP4
 ADDRGP4 Menu_AddItem
 CALLV
 pop
-line 1495
-;1495:	Menu_AddItem( &s_controls.menu, &s_controls.gesture );
+line 1483
+;1483:	Menu_AddItem( &s_controls.menu, &s_controls.gesture );
 ADDRGP4 s_controls
 ARGP4
 ADDRGP4 s_controls+2060
@@ -6506,8 +6470,8 @@ ARGP4
 ADDRGP4 Menu_AddItem
 CALLV
 pop
-line 1496
-;1496:	Menu_AddItem( &s_controls.menu, &s_controls.chat );
+line 1484
+;1484:	Menu_AddItem( &s_controls.menu, &s_controls.chat );
 ADDRGP4 s_controls
 ARGP4
 ADDRGP4 s_controls+3684
@@ -6515,8 +6479,8 @@ ARGP4
 ADDRGP4 Menu_AddItem
 CALLV
 pop
-line 1497
-;1497:	Menu_AddItem( &s_controls.menu, &s_controls.chat2 );
+line 1485
+;1485:	Menu_AddItem( &s_controls.menu, &s_controls.chat2 );
 ADDRGP4 s_controls
 ARGP4
 ADDRGP4 s_controls+3744
@@ -6524,8 +6488,8 @@ ARGP4
 ADDRGP4 Menu_AddItem
 CALLV
 pop
-line 1498
-;1498:	Menu_AddItem( &s_controls.menu, &s_controls.chat3 );
+line 1486
+;1486:	Menu_AddItem( &s_controls.menu, &s_controls.chat3 );
 ADDRGP4 s_controls
 ARGP4
 ADDRGP4 s_controls+3804
@@ -6533,8 +6497,8 @@ ARGP4
 ADDRGP4 Menu_AddItem
 CALLV
 pop
-line 1499
-;1499:	Menu_AddItem( &s_controls.menu, &s_controls.chat4 );
+line 1487
+;1487:	Menu_AddItem( &s_controls.menu, &s_controls.chat4 );
 ADDRGP4 s_controls
 ARGP4
 ADDRGP4 s_controls+3864
@@ -6542,9 +6506,9 @@ ARGP4
 ADDRGP4 Menu_AddItem
 CALLV
 pop
-line 1501
-;1500:
-;1501:	Menu_AddItem( &s_controls.menu, &s_controls.back );
+line 1489
+;1488:
+;1489:	Menu_AddItem( &s_controls.menu, &s_controls.back );
 ADDRGP4 s_controls
 ARGP4
 ADDRGP4 s_controls+4176
@@ -6552,10 +6516,10 @@ ARGP4
 ADDRGP4 Menu_AddItem
 CALLV
 pop
-line 1503
-;1502:
-;1503:	trap_Cvar_VariableStringBuffer( "name", s_controls.name.string, 16 );
-ADDRGP4 $1096
+line 1491
+;1490:
+;1491:	trap_Cvar_VariableStringBuffer( "name", s_controls.name.string, 16 );
+ADDRGP4 $1090
 ARGP4
 ADDRGP4 s_controls+4264+60
 INDIRP4
@@ -6565,117 +6529,117 @@ ARGI4
 ADDRGP4 trap_Cvar_VariableStringBuffer
 CALLV
 pop
-line 1504
-;1504:	Q_CleanStr( s_controls.name.string );
+line 1492
+;1492:	Q_CleanStr( s_controls.name.string );
 ADDRGP4 s_controls+4264+60
 INDIRP4
 ARGP4
 ADDRGP4 Q_CleanStr
 CALLP4
 pop
-line 1507
-;1505:
-;1506:	// initialize the configurable cvars
-;1507:	Controls_InitCvars();
+line 1495
+;1493:
+;1494:	// initialize the configurable cvars
+;1495:	Controls_InitCvars();
 ADDRGP4 Controls_InitCvars
 CALLV
 pop
-line 1510
-;1508:
-;1509:	// initialize the current config
-;1510:	Controls_GetConfig();
+line 1498
+;1496:
+;1497:	// initialize the current config
+;1498:	Controls_GetConfig();
 ADDRGP4 Controls_GetConfig
 CALLV
 pop
-line 1513
-;1511:
-;1512:	// intialize the model
-;1513:	Controls_InitModel();
+line 1501
+;1499:
+;1500:	// intialize the model
+;1501:	Controls_InitModel();
 ADDRGP4 Controls_InitModel
 CALLV
 pop
-line 1516
-;1514:
-;1515:	// intialize the weapons
-;1516:	Controls_InitWeapons ();
+line 1504
+;1502:
+;1503:	// intialize the weapons
+;1504:	Controls_InitWeapons ();
 ADDRGP4 Controls_InitWeapons
 CALLV
 pop
-line 1519
-;1517:
-;1518:	// initial default section
-;1519:	s_controls.section = C_LOOKING;
+line 1507
+;1505:
+;1506:	// initial default section
+;1507:	s_controls.section = C_LOOKING;
 ADDRGP4 s_controls+4064
 CNSTI4 1
 ASGNI4
-line 1522
-;1520:
-;1521:	// update the ui
-;1522:	Controls_Update();
+line 1510
+;1508:
+;1509:	// update the ui
+;1510:	Controls_Update();
 ADDRGP4 Controls_Update
 CALLV
 pop
-line 1523
-;1523:}
-LABELV $601
+line 1511
+;1511:}
+LABELV $595
 endproc Controls_MenuInit 0 12
 export Controls_Cache
 proc Controls_Cache 0 4
-line 1531
-;1524:
-;1525:
-;1526:/*
-;1527:=================
-;1528:Controls_Cache
-;1529:=================
-;1530:*/
-;1531:void Controls_Cache( void ) {
-line 1532
-;1532:	trap_R_RegisterShaderNoMip( ART_BACK0 );
-ADDRGP4 $695
+line 1519
+;1512:
+;1513:
+;1514:/*
+;1515:=================
+;1516:Controls_Cache
+;1517:=================
+;1518:*/
+;1519:void Controls_Cache( void ) {
+line 1520
+;1520:	trap_R_RegisterShaderNoMip( ART_BACK0 );
+ADDRGP4 $689
 ARGP4
 ADDRGP4 trap_R_RegisterShaderNoMip
 CALLI4
 pop
-line 1533
-;1533:	trap_R_RegisterShaderNoMip( ART_BACK1 );
-ADDRGP4 $712
+line 1521
+;1521:	trap_R_RegisterShaderNoMip( ART_BACK1 );
+ADDRGP4 $706
 ARGP4
 ADDRGP4 trap_R_RegisterShaderNoMip
 CALLI4
 pop
-line 1536
-;1534://	trap_R_RegisterShaderNoMip( ART_FRAMEL );
-;1535://	trap_R_RegisterShaderNoMip( ART_FRAMER );
-;1536:}
-LABELV $1102
+line 1524
+;1522://	trap_R_RegisterShaderNoMip( ART_FRAMEL );
+;1523://	trap_R_RegisterShaderNoMip( ART_FRAMER );
+;1524:}
+LABELV $1096
 endproc Controls_Cache 0 4
 export UI_ControlsMenu
 proc UI_ControlsMenu 0 4
-line 1544
-;1537:
-;1538:
-;1539:/*
-;1540:=================
-;1541:UI_ControlsMenu
-;1542:=================
-;1543:*/
-;1544:void UI_ControlsMenu( void ) {
-line 1545
-;1545:	Controls_MenuInit();
+line 1532
+;1525:
+;1526:
+;1527:/*
+;1528:=================
+;1529:UI_ControlsMenu
+;1530:=================
+;1531:*/
+;1532:void UI_ControlsMenu( void ) {
+line 1533
+;1533:	Controls_MenuInit();
 ADDRGP4 Controls_MenuInit
 CALLV
 pop
-line 1546
-;1546:	UI_PushMenu( &s_controls.menu );
+line 1534
+;1534:	UI_PushMenu( &s_controls.menu );
 ADDRGP4 s_controls
 ARGP4
 ADDRGP4 UI_PushMenu
 CALLV
 pop
-line 1547
-;1547:}
-LABELV $1103
+line 1535
+;1535:}
+LABELV $1097
 endproc UI_ControlsMenu 0 4
 bss
 align 4
@@ -7148,14 +7112,14 @@ import srand
 import qsort
 lit
 align 1
-LABELV $1096
+LABELV $1090
 byte 1 110
 byte 1 97
 byte 1 109
 byte 1 101
 byte 1 0
 align 1
-LABELV $987
+LABELV $981
 byte 1 109
 byte 1 111
 byte 1 117
@@ -7169,7 +7133,7 @@ byte 1 101
 byte 1 100
 byte 1 0
 align 1
-LABELV $973
+LABELV $967
 byte 1 97
 byte 1 117
 byte 1 116
@@ -7190,7 +7154,7 @@ byte 1 110
 byte 1 115
 byte 1 0
 align 1
-LABELV $959
+LABELV $953
 byte 1 115
 byte 1 109
 byte 1 111
@@ -7205,7 +7169,7 @@ byte 1 115
 byte 1 101
 byte 1 0
 align 1
-LABELV $945
+LABELV $939
 byte 1 105
 byte 1 110
 byte 1 118
@@ -7220,7 +7184,7 @@ byte 1 115
 byte 1 101
 byte 1 0
 align 1
-LABELV $895
+LABELV $889
 byte 1 102
 byte 1 114
 byte 1 101
@@ -7232,7 +7196,7 @@ byte 1 111
 byte 1 107
 byte 1 0
 align 1
-LABELV $712
+LABELV $706
 byte 1 109
 byte 1 101
 byte 1 110
@@ -7250,7 +7214,7 @@ byte 1 95
 byte 1 49
 byte 1 0
 align 1
-LABELV $695
+LABELV $689
 byte 1 109
 byte 1 101
 byte 1 110
@@ -7268,14 +7232,14 @@ byte 1 95
 byte 1 48
 byte 1 0
 align 1
-LABELV $687
+LABELV $681
 byte 1 77
 byte 1 73
 byte 1 83
 byte 1 67
 byte 1 0
 align 1
-LABELV $669
+LABELV $663
 byte 1 83
 byte 1 72
 byte 1 79
@@ -7283,21 +7247,21 @@ byte 1 79
 byte 1 84
 byte 1 0
 align 1
-LABELV $651
+LABELV $645
 byte 1 77
 byte 1 79
 byte 1 86
 byte 1 69
 byte 1 0
 align 1
-LABELV $633
+LABELV $627
 byte 1 76
 byte 1 79
 byte 1 79
 byte 1 75
 byte 1 0
 align 1
-LABELV $615
+LABELV $609
 byte 1 67
 byte 1 79
 byte 1 78
@@ -7308,7 +7272,7 @@ byte 1 76
 byte 1 83
 byte 1 0
 align 1
-LABELV $561
+LABELV $555
 byte 1 83
 byte 1 69
 byte 1 84
@@ -7327,7 +7291,7 @@ byte 1 83
 byte 1 63
 byte 1 0
 align 1
-LABELV $537
+LABELV $531
 byte 1 99
 byte 1 111
 byte 1 110
@@ -7363,7 +7327,7 @@ byte 1 115
 byte 1 46
 byte 1 0
 align 1
-LABELV $536
+LABELV $530
 byte 1 87
 byte 1 65
 byte 1 82
@@ -7394,10 +7358,10 @@ byte 1 108
 byte 1 108
 byte 1 0
 align 1
-LABELV $521
+LABELV $515
 byte 1 0
 align 1
-LABELV $450
+LABELV $444
 byte 1 105
 byte 1 110
 byte 1 95
@@ -7411,7 +7375,7 @@ byte 1 116
 byte 1 10
 byte 1 0
 align 1
-LABELV $441
+LABELV $435
 byte 1 99
 byte 1 108
 byte 1 95
@@ -7420,7 +7384,7 @@ byte 1 117
 byte 1 110
 byte 1 0
 align 1
-LABELV $384
+LABELV $378
 byte 1 109
 byte 1 111
 byte 1 100
@@ -7428,7 +7392,7 @@ byte 1 101
 byte 1 108
 byte 1 0
 align 1
-LABELV $382
+LABELV $376
 byte 1 85
 byte 1 115
 byte 1 101
@@ -7464,7 +7428,7 @@ byte 1 103
 byte 1 101
 byte 1 0
 align 1
-LABELV $376
+LABELV $370
 byte 1 80
 byte 1 114
 byte 1 101
@@ -7491,7 +7455,7 @@ byte 1 97
 byte 1 114
 byte 1 0
 align 1
-LABELV $375
+LABELV $369
 byte 1 80
 byte 1 114
 byte 1 101
@@ -7524,7 +7488,7 @@ byte 1 103
 byte 1 101
 byte 1 0
 align 1
-LABELV $374
+LABELV $368
 byte 1 87
 byte 1 97
 byte 1 105
@@ -7567,14 +7531,14 @@ byte 1 101
 byte 1 108
 byte 1 0
 align 1
-LABELV $367
+LABELV $361
 byte 1 32
 byte 1 111
 byte 1 114
 byte 1 32
 byte 1 0
 align 1
-LABELV $363
+LABELV $357
 byte 1 63
 byte 1 63
 byte 1 63

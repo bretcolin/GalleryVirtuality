@@ -32,12 +32,12 @@ void G_BounceProjectile( vec3_t start, vec3_t impact, vec3_t dir, vec3_t endout 
 /*
 ======================================================================
 
-GAUNTLET
+GRAPPLING_HOOK
 
 ======================================================================
 */
 
-void Weapon_Gauntlet( gentity_t *ent ) {
+void Weapon_GRAPPLING_HOOK( gentity_t *ent ) {
 
 }
 
@@ -544,15 +544,15 @@ void weapon_railgun_fire (gentity_t *ent) {
 /*
 ======================================================================
 
-GRAPPLING HOOK
+HAND
 
 ======================================================================
 */
 
-void Weapon_GrapplingHook_Fire (gentity_t *ent)
+void Weapon_Hand_Fire (gentity_t *ent)
 {
 	if (!ent->client->fireHeld && !ent->client->hook)
-		fire_grapple (ent, muzzle, forward);
+		fire_hand (ent, muzzle, forward);
 
 	ent->client->fireHeld = qtrue;
 }
@@ -560,7 +560,7 @@ void Weapon_GrapplingHook_Fire (gentity_t *ent)
 void Weapon_HookFree (gentity_t *ent)
 {
 	ent->parent->client->hook = NULL;
-	ent->parent->client->ps.pm_flags &= ~PMF_GRAPPLE_PULL;
+	ent->parent->client->ps.pm_flags &= ~PMF_HAND_PULL;
 	G_FreeEntity( ent );
 }
 
@@ -578,7 +578,7 @@ void Weapon_HookThink (gentity_t *ent)
 		G_SetOrigin( ent, v );
 	}
 
-	VectorCopy( ent->r.currentOrigin, ent->parent->client->ps.grapplePoint);
+	VectorCopy( ent->r.currentOrigin, ent->parent->client->ps.handPoint);
 }
 
 /*
@@ -802,7 +802,7 @@ void FireWeapon( gentity_t *ent ) {
 #endif
 
 	// track shots taken for accuracy tracking.  Grapple is not a weapon and gauntet is just not tracked
-	if( ent->s.weapon != WP_GRAPPLING_HOOK && ent->s.weapon != WP_GAUNTLET ) {
+	if( ent->s.weapon != WP_HAND && ent->s.weapon != WP_HAND ) {
 #ifdef MISSIONPACK
 		if( ent->s.weapon == WP_NAILGUN ) {
 			ent->client->accuracy_shots += NUM_NAILSHOTS;
@@ -821,51 +821,9 @@ void FireWeapon( gentity_t *ent ) {
 
 	// fire the specific weapon
 	switch( ent->s.weapon ) {
-	case WP_GAUNTLET:
-		Weapon_Gauntlet( ent );
+	case WP_HAND:
+		Weapon_Hand_Fire( ent );
 		break;
-	case WP_LIGHTNING:
-		Weapon_LightningFire( ent );
-		break;
-	case WP_SHOTGUN:
-		weapon_supershotgun_fire( ent );
-		break;
-	case WP_MACHINEGUN:
-		if ( g_gametype.integer != GT_TEAM ) {
-			Bullet_Fire( ent, MACHINEGUN_SPREAD, MACHINEGUN_DAMAGE );
-		} else {
-			Bullet_Fire( ent, MACHINEGUN_SPREAD, MACHINEGUN_TEAM_DAMAGE );
-		}
-		break;
-	case WP_GRENADE_LAUNCHER:
-		weapon_grenadelauncher_fire( ent );
-		break;
-	case WP_ROCKET_LAUNCHER:
-		Weapon_RocketLauncher_Fire( ent );
-		break;
-	case WP_PLASMAGUN:
-		Weapon_Plasmagun_Fire( ent );
-		break;
-	case WP_RAILGUN:
-		weapon_railgun_fire( ent );
-		break;
-	case WP_BFG:
-		BFG_Fire( ent );
-		break;
-	case WP_GRAPPLING_HOOK:
-		Weapon_GrapplingHook_Fire( ent );
-		break;
-#ifdef MISSIONPACK
-	case WP_NAILGUN:
-		Weapon_Nailgun_Fire( ent );
-		break;
-	case WP_PROX_LAUNCHER:
-		weapon_proxlauncher_fire( ent );
-		break;
-	case WP_CHAINGUN:
-		Bullet_Fire( ent, CHAINGUN_SPREAD, MACHINEGUN_DAMAGE );
-		break;
-#endif
 	default:
 // FIXME		G_Error( "Bad ent->s.weapon" );
 		break;
@@ -873,7 +831,7 @@ void FireWeapon( gentity_t *ent ) {
 }
 
 
-#ifdef MISSIONPACK
+
 
 /*
 ===============
@@ -929,14 +887,14 @@ static void KamikazeRadiusDamage( vec3_t origin, gentity_t *attacker, float dama
 			continue;
 		}
 
-//		if( CanDamage (ent, origin) ) {
+		if( CanDamage (ent, origin) ) {
 			VectorSubtract (ent->r.currentOrigin, origin, dir);
 			// push the center of mass higher than the origin so players
 			// get knocked into the air more
 			dir[2] += 24;
 			G_Damage( ent, NULL, attacker, dir, origin, damage, DAMAGE_RADIUS|DAMAGE_NO_TEAM_PROTECTION, MOD_KAMIKAZE );
 			ent->kamikazeTime = level.time + 3000;
-//		}
+		}
 	}
 }
 
@@ -1122,7 +1080,7 @@ void G_StartKamikaze( gentity_t *ent ) {
 	te->r.svFlags |= SVF_BROADCAST;
 	te->s.eventParm = GTS_KAMIKAZE;
 }
-#endif
+
 /*
 ============
 Info Sight Stuff

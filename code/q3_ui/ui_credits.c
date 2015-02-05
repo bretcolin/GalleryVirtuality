@@ -42,7 +42,8 @@ cr_line credits[] = { // edit this as necessary for your credits
 { "Designed by Bret C. Sheppard", UI_CENTER|UI_SMALLFONT, &color_headertext },
 { "", UI_CENTER|UI_SMALLFONT, &color_blue },
 { "Special Thanks To:", UI_CENTER|UI_SMALLFONT, &color_headertext },
-{ "ID Software", UI_CENTER|UI_SMALLFONT, &color_maintext },
+{ "Andre Miripolsky", UI_CENTER|UI_SMALLFONT, &color_maintext },
+{ "", UI_CENTER|UI_SMALLFONT, &color_blue },
 { "Code 3 Arena", UI_CENTER|UI_SMALLFONT, &color_maintext },
 { "Justin Thyme: Clean Quake 3 project", UI_CENTER|UI_SMALLFONT, &color_maintext },
 { "", UI_CENTER|UI_SMALLFONT, &color_blue },
@@ -65,6 +66,13 @@ cr_line credits[] = { // edit this as necessary for your credits
 { "", UI_CENTER|UI_SMALLFONT, &color_blue },
 { "Credits Music By", UI_CENTER|UI_SMALLFONT, &color_headertext },
 { "James Sanger", UI_CENTER|UI_SMALLFONT, &color_maintext },
+{ "What if We Become", UI_CENTER|UI_SMALLFONT, &color_maintext },
+{ "", UI_CENTER|UI_SMALLFONT, &color_blue },
+{ "10dens: Michael Geelen & Jurriën Voetberg", UI_CENTER|UI_SMALLFONT, &color_maintext },
+{ "Alone on the Moon", UI_CENTER|UI_SMALLFONT, &color_headertext },
+{ "", UI_CENTER|UI_SMALLFONT, &color_blue },
+{ "Karen Christine Patrick", UI_CENTER|UI_SMALLFONT, &color_maintext },
+{ "Classical Brick", UI_CENTER|UI_SMALLFONT, &color_maintext },
 
   {NULL}
 };
@@ -199,7 +207,7 @@ void UI_CreditMenu( void ) {
 	mvolume = trap_Cvar_VariableValue( "s_musicvolume" );
 	if(mvolume < 0.5)
 		trap_Cmd_ExecuteText( EXEC_APPEND, "s_musicvolume 0.5\n" );
-	trap_Cmd_ExecuteText( EXEC_APPEND, "music music/fla22k_02\n" );
+	trap_Cmd_ExecuteText( EXEC_APPEND, "music music/james\n" );
 
 	// load the background shader
 #ifdef BACKGROUND_SHADER

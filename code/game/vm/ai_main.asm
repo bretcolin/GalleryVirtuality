@@ -410,7 +410,7 @@ line 145
 ;144:
 ;145:	ent = &g_entities[clientNum];
 ADDRLP4 0
-CNSTI4 808
+CNSTI4 816
 ADDRFP4 0
 INDIRI4
 MULI4
@@ -491,7 +491,7 @@ line 165
 ;164:
 ;165:	ent = &g_entities[entityNum];
 ADDRLP4 0
-CNSTI4 808
+CNSTI4 816
 ADDRFP4 0
 INDIRI4
 MULI4
@@ -8584,7 +8584,7 @@ LABELV $585
 line 1391
 ;1390:			}
 ;1391:			if( g_entities[i].client->pers.connected != CON_CONNECTED ) {
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 0
 INDIRI4
 MULI4
@@ -8932,7 +8932,7 @@ LABELV $619
 line 1442
 ;1442:			ent = &g_entities[i];
 ADDRLP4 4
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 0
 INDIRI4
 MULI4
@@ -9018,7 +9018,7 @@ LABELV $627
 line 1456
 ;1454:			}
 ;1455:			// do not update missiles
-;1456:			if (ent->s.eType == ET_MISSILE && ent->s.weapon != WP_GRAPPLING_HOOK) {
+;1456:			if (ent->s.eType == ET_MISSILE && ent->s.weapon != WP_HAND) {
 ADDRLP4 4
 INDIRP4
 CNSTI4 4
@@ -9031,7 +9031,7 @@ INDIRP4
 CNSTI4 192
 ADDP4
 INDIRI4
-CNSTI4 10
+CNSTI4 1
 EQI4 $629
 line 1457
 ;1457:				trap_BotLibUpdateEntity(i, NULL);
@@ -9455,7 +9455,7 @@ LABELV $665
 line 1522
 ;1521:
 ;1522:			if (g_entities[i].client->pers.connected == CON_CONNECTED) {
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 0
 INDIRI4
 MULI4
@@ -9540,7 +9540,7 @@ LABELV $674
 line 1534
 ;1533:		}
 ;1534:		if( g_entities[i].client->pers.connected != CON_CONNECTED ) {
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 0
 INDIRI4
 MULI4
@@ -11192,7 +11192,7 @@ import TeleportPlayer
 import trigger_teleporter_touch
 import Touch_DoorTrigger
 import G_RunMover
-import fire_grapple
+import fire_hand
 import fire_bfg
 import fire_rocket
 import fire_grenade

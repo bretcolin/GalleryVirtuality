@@ -867,7 +867,7 @@ ADDRLP4 16
 CNSTI4 1
 ASGNI4
 ADDRLP4 4
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 16
 INDIRI4
 MULI4
@@ -958,7 +958,7 @@ ASGNI4
 ADDRLP4 0
 ADDRLP4 4
 INDIRP4
-CNSTI4 808
+CNSTI4 816
 ADDP4
 ASGNP4
 ADDRGP4 $149
@@ -1155,7 +1155,7 @@ ASGNI4
 ADDRLP4 0
 ADDRLP4 0
 INDIRP4
-CNSTI4 808
+CNSTI4 816
 ADDP4
 ASGNP4
 LABELV $149
@@ -1177,7 +1177,7 @@ ASGNI4
 ADDRLP4 4
 ADDRLP4 4
 INDIRP4
-CNSTI4 808
+CNSTI4 816
 ADDP4
 ASGNP4
 LABELV $138
@@ -1821,7 +1821,7 @@ ADDRGP4 g_entities
 ARGP4
 CNSTI4 0
 ARGI4
-CNSTI4 827392
+CNSTI4 835584
 ARGI4
 ADDRGP4 memset
 CALLP4
@@ -1867,7 +1867,7 @@ JUMPV
 LABELV $229
 line 447
 ;447:		g_entities[i].client = level.clients + i;
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 0
 INDIRI4
 MULI4
@@ -1916,7 +1916,7 @@ ARGP4
 ADDRGP4 level+12
 INDIRI4
 ARGI4
-CNSTI4 808
+CNSTI4 816
 ARGI4
 ADDRGP4 level
 INDIRP4
@@ -2469,7 +2469,7 @@ line 608
 ;606:
 ;607:	// set them to free-for-all team
 ;608:	SetTeam( &g_entities[ nextInLine - level.clients ], "f" );
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 8
 INDIRP4
 CVPU4 4
@@ -2551,7 +2551,7 @@ line 632
 ;630:
 ;631:	// make them a spectator
 ;632:	SetTeam( &g_entities[ clientNum ], "s" );
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 0
 INDIRI4
 MULI4
@@ -2623,7 +2623,7 @@ line 654
 ;652:
 ;653:	// make them a spectator
 ;654:	SetTeam( &g_entities[ clientNum ], "s" );
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 0
 INDIRI4
 MULI4
@@ -3259,7 +3259,7 @@ ADDI4
 ASGNI4
 line 773
 ;773:					if ( !(g_entities[i].r.svFlags & SVF_BOT) ) {
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 0
 INDIRI4
 MULI4
@@ -4000,7 +4000,7 @@ CNSTI4 2
 NEI4 $459
 line 876
 ;876:			DeathmatchScoreboardMessage( g_entities + i );
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 0
 INDIRI4
 MULI4
@@ -4460,7 +4460,7 @@ LABELV $499
 line 980
 ;980:		client = g_entities + i;
 ADDRLP4 0
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 4
 INDIRI4
 MULI4
@@ -5271,7 +5271,7 @@ LABELV $591
 line 1189
 ;1188:		}
 ;1189:		if ( g_entities[cl->ps.clientNum].r.svFlags & SVF_BOT ) {
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 0
 INDIRP4
 CNSTI4 140
@@ -7217,7 +7217,7 @@ JUMPV
 LABELV $890
 line 1591
 ;1591:			if (!(g_entities[i].r.svFlags & SVF_BOT)) {
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 0
 INDIRI4
 MULI4
@@ -8195,7 +8195,7 @@ ASGNI4
 ADDRLP4 0
 ADDRLP4 0
 INDIRP4
-CNSTI4 808
+CNSTI4 816
 ADDP4
 ASGNP4
 LABELV $966
@@ -8272,7 +8272,7 @@ ASGNI4
 ADDRLP4 0
 ADDRLP4 0
 INDIRP4
-CNSTI4 808
+CNSTI4 816
 ADDP4
 ASGNP4
 LABELV $997
@@ -8364,7 +8364,7 @@ ARGP4
 ADDRLP4 4
 INDIRI4
 ARGI4
-CNSTI4 808
+CNSTI4 816
 ADDRLP4 4
 INDIRI4
 MULI4
@@ -8774,7 +8774,7 @@ skip 272
 export g_entities
 align 4
 LABELV g_entities
-skip 827392
+skip 835584
 export level
 align 4
 LABELV level
@@ -8867,7 +8867,7 @@ import TeleportPlayer
 import trigger_teleporter_touch
 import Touch_DoorTrigger
 import G_RunMover
-import fire_grapple
+import fire_hand
 import fire_bfg
 import fire_rocket
 import fire_grenade
@@ -11034,12 +11034,12 @@ byte 1 100
 byte 1 0
 align 1
 LABELV $58
-byte 1 74
-byte 1 97
-byte 1 110
+byte 1 70
+byte 1 101
+byte 1 98
 byte 1 32
+byte 1 48
 byte 1 49
-byte 1 55
 byte 1 32
 byte 1 50
 byte 1 48
@@ -11063,8 +11063,8 @@ byte 1 98
 byte 1 97
 byte 1 115
 byte 1 101
-byte 1 113
-byte 1 51
+byte 1 103
+byte 1 49
 byte 1 0
 align 1
 LABELV $55

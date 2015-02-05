@@ -310,11 +310,11 @@ byte 4 656
 byte 4 2
 skip 4
 address $82
-byte 4 796
+byte 4 804
 byte 4 1
 skip 4
 address $83
-byte 4 800
+byte 4 808
 byte 4 1
 skip 4
 address $84
@@ -2308,12 +2308,12 @@ pop
 line 577
 ;576:
 ;577:	g_entities[ENTITYNUM_WORLD].s.number = ENTITYNUM_WORLD;
-ADDRGP4 g_entities+825776
+ADDRGP4 g_entities+833952
 CNSTI4 1022
 ASGNI4
 line 578
 ;578:	g_entities[ENTITYNUM_WORLD].classname = "worldspawn";
-ADDRGP4 g_entities+825776+524
+ADDRGP4 g_entities+833952+524
 ADDRGP4 $279
 ASGNP4
 line 581
@@ -2862,7 +2862,7 @@ import TeleportPlayer
 import trigger_teleporter_touch
 import Touch_DoorTrigger
 import G_RunMover
-import fire_grapple
+import fire_hand
 import fire_bfg
 import fire_rocket
 import fire_grenade
@@ -3251,8 +3251,6 @@ byte 1 97
 byte 1 115
 byte 1 101
 byte 1 103
-byte 1 49
-byte 1 45
 byte 1 49
 byte 1 0
 align 1
