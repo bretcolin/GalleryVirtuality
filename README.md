@@ -170,4 +170,4 @@ with regular Quake3.
 Working Notes
 -----------------------------
 
-- still working on weopon removal.
+- still working on weopon removal. //done
