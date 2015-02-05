@@ -1,5 +1,4 @@
 Gallery Virtuality
-A Quake3 Engine Project
 by Bret C. Sheppard
 bretcolin@gmail.com            
 						
